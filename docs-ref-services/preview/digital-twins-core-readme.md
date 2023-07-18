@@ -1,15 +1,14 @@
 ---
 title: Azure Azure Digital Twins Core client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/digital-twins-core, digitaltwins
-author: johngallardo
-ms.author: jgalla
-ms.date: 04/04/2022
+author: sjiherzig
+ms.author: seherzig
+ms.date: 07/18/2023
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
-ms.service: digital-twins
+ms.service: digitaltwins
 ---
-# Azure Azure Digital Twins Core client library for JavaScript - version 1.1.0-beta.1 
+# Azure Azure Digital Twins Core client library for JavaScript - version 2.0.0-alpha.20230419.1 
 
 
 This package contains an isomorphic SDK for Azure Digital Twins API to provide access to the Azure Digital Twins service for managing twins, models, relationships, etc.
@@ -18,14 +17,14 @@ This package contains an isomorphic SDK for Azure Digital Twins API to provide a
 
 ### Currently supported environments
 
-- [LTS versions of Node.js](https://nodejs.org/about/releases/)
+- [LTS versions of Node.js](https://github.com/nodejs/release#release-schedule)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/digital-twins-core_1.1.0-beta.1/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/main/SUPPORT.md) for more details.
 
 ### Prerequisites
 
-- An [Azure Digital Twins instance](https://docs.microsoft.com/azure/digital-twins/how-to-set-up-instance-portal).
+- An [Azure Digital Twins instance](/azure/digital-twins/how-to-set-up-instance-portal).
 
 ### Install the `@azure/digital-twins-core` package
 
@@ -46,7 +45,7 @@ To use this client library in the browser, first you need to use a bundler. For 
 
 Azure Digital Twins doesn't currently support Cross-Origin Resource Sharing (CORS).
 As a result, this library cannot be used to make direct calls to the template service from a browser.
-Please refer to [this document](https://github.com/Azure/azure-sdk-for-js/blob/@azure/digital-twins-core_1.1.0-beta.1/samples/cors/ts/README.md) for guidance.
+Please refer to [this document](https://github.com/Azure/azure-sdk-for-js/blob/main/samples/cors/ts/README.md) for guidance.
 
 ## Key concepts
 
@@ -54,7 +53,7 @@ Please refer to [this document](https://github.com/Azure/azure-sdk-for-js/blob/@
 
 Azure Digital Twins is an Azure IoT service that creates comprehensive models of the physical environment.
 It can create spatial intelligence graphs to model the relationships and interactions between people, spaces, and devices.
-You can learn more about Azure Digital Twins by visiting [Azure Digital Twins Documentation](https://docs.microsoft.com/azure/digital-twins/).
+You can learn more about Azure Digital Twins by visiting [Azure Digital Twins Documentation](/azure/digital-twins/).
 
 ### `DigitalTwinsClient`
 
@@ -95,9 +94,9 @@ const myComponent = {
     {
       "@type": "Property",
       name: "ComponentProp1",
-      schema: "string"
-    }
-  ]
+      schema: "string",
+    },
+  ],
 };
 
 const models = await serviceClient.createModels([myComponent]);
@@ -157,13 +156,13 @@ We can get a digital twin using `getDigitalTwin` with the digital twin ID.
 ```javascript
 const digitalTwinId = "myTwin";
 const twin = await serviceClient.getDigitalTwin(digitalTwinId);
-console.log(`DigitalTwin's etag: ${twin.eTag}`);
-console.log(`DigitalTwin: ${twin.body}`);
+console.log(`DigitalTwin's etag: ${twin.etag}`);
+console.log(`DigitalTwin: ${twin}`);
 ```
 
 #### Query digital twins
 
-Query the Azure Digital Twins instance for digital twins using the [Azure Digital Twins query language](https://docs.microsoft.com/azure/digital-twins/how-to-query-graph).
+Query the Azure Digital Twins instance for digital twins using the [Azure Digital Twins query language](/azure/digital-twins/how-to-query-graph).
 Here's an example of how to query for digital twins and how to iterate over the results.
 
 ```javascript
@@ -208,10 +207,10 @@ const componentPath = "Component1";
 const patch = {
   op: "replace",
   path: "/ComponentProp1",
-  value: "value2"
+  value: "value2",
 };
 const updateComponentResponse = await serviceClient.updateComponent(digitalTwinId, componentPath, [
-  patch
+  patch,
 ]);
 ```
 
@@ -228,7 +227,7 @@ const relationship = {
   $sourceId: "BuildingTwin",
   $relationshipName: "has",
   $targetId: "FloorTwin",
-  isAccessRestricted: false
+  isAccessRestricted: false,
 };
 
 await serviceClient.upsertRelationship(
@@ -263,7 +262,7 @@ for await (const incomingRelationship of incomingRelationships) {
 #### Create event route
 
 To create an event route, provide an ID of an event route (in this case, "myEventRouteId") and event route data containing the endpoint and optional filter like the example shown below.
-For more information on filtering events, see [this documentation](https://docs.microsoft.com/azure/digital-twins/how-to-manage-routes-apis-cli#filter-events).
+For more information on filtering events, see [this documentation](/azure/digital-twins/how-to-manage-routes-apis-cli#filter-events).
 
 ```javascript
 const eventHubEndpointName = "myEventHubEndpointName";
@@ -335,7 +334,7 @@ const response = await serviceClient.publishComponentTelemetry(
 ### Additional Examples
 
 Additional examples can be found in the
-[samples directory](https://github.com/Azure/azure-sdk-for-js/tree/@azure/digital-twins-core_1.1.0-beta.1/sdk/digitaltwins/digital-twins-core/samples).
+[samples directory](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/digitaltwins/digital-twins-core/samples).
 
 ## Troubleshooting
 
@@ -344,21 +343,21 @@ Additional examples can be found in the
 Enabling logging may help uncover useful information about failures. In order to see a log of HTTP requests and responses, set the `AZURE_LOG_LEVEL` environment variable to `info`. Alternatively, logging can be enabled at runtime by calling `setLogLevel` in the `@azure/logger`:
 
 ```javascript
-import { setLogLevel } from "@azure/logger";
+const { setlogLevel } = require("@azure/logger");
 
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/digital-twins-core_1.1.0-beta.1/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 ## Next steps
 
-- Take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/digital-twins-core_1.1.0-beta.1/sdk/digitaltwins/digital-twins-core/samples) directory for detailed examples that demonstrate how to use the client libraries.
-- Explore the Azure Digital Twins [documentation](https://docs.microsoft.com/azure/digital-twins/)
+- Take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/digitaltwins/digital-twins-core/samples) directory for detailed examples that demonstrate how to use the client libraries.
+- Explore the Azure Digital Twins [documentation](/azure/digital-twins/)
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/digital-twins-core_1.1.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
