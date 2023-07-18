@@ -1,7 +1,7 @@
 {
   "Name": "@azure/storage-queue",
   "Version": "12.20.0-alpha.20230622.3",
-  "DevVersion": "12.20.0-alpha.20230718.1",
+  "DevVersion": "12.20.0-alpha.20230718.2",
   "DirectoryPath": "sdk/storage/storage-queue",
   "ServiceDirectory": "storage",
   "ReadMePath": "sdk/storage/storage-queue/README.md",

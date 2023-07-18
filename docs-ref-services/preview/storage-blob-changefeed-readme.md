@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: javascript
 ms.service: storage
 ---
-# Azure Storage Blob Change Feed client library for JavaScript - version 12.0.0-alpha.20230626.1 
+# Azure Storage Blob Change Feed client library for JavaScript - version 12.0.0-alpha.20230718.2 
 
 
 > Server Version: 2019-12-12 or later.
