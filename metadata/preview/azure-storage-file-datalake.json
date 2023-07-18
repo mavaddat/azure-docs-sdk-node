@@ -1,7 +1,7 @@
 {
   "Name": "@azure/storage-file-datalake",
   "Version": "12.20.0-alpha.20230622.3",
-  "DevVersion": "12.20.0-alpha.20230718.2",
+  "DevVersion": "12.20.0-alpha.20230718.3",
   "DirectoryPath": "sdk/storage/storage-file-datalake",
   "ServiceDirectory": "storage",
   "ReadMePath": "sdk/storage/storage-file-datalake/README.md",
