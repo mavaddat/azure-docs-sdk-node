@@ -1,7 +1,7 @@
 {
   "Name": "@azure/keyvault-admin",
   "Version": "4.4.1-alpha.20230418.1",
-  "DevVersion": "4.4.1-alpha.20230718.1",
+  "DevVersion": "4.4.1-alpha.20230718.2",
   "DirectoryPath": "sdk/keyvault/keyvault-admin",
   "ServiceDirectory": "keyvault",
   "ReadMePath": "sdk/keyvault/keyvault-admin/README.md",
