@@ -3,12 +3,12 @@ title: Azure Key Vault Common client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/keyvault-common, keyvault
 author: timovv
 ms.author: timov
-ms.date: 11/09/2022
+ms.date: 07/18/2023
 ms.topic: reference
 ms.devlang: javascript
 ms.service: keyvault
 ---
-# Azure Key Vault Common client library for JavaScript - version 1.0.0-beta.1 
+# Azure Key Vault Common client library for JavaScript - version 1.0.1-alpha.20230418.1 
 
 
 An internal support library for the various Azure Key Vault client libraries.
@@ -19,10 +19,10 @@ This package contains common code that needs to be shared among the other Azure 
 
 The following client libraries use this package:
 
-- [@azure/keyvault-admin](https://github.com/Azure/azure-sdk-for-js/blob/@azure/keyvault-common_1.0.0-beta.1/sdk/keyvault/keyvault-admin/README.md)
-- [@azure/keyvault-certificates](https://github.com/Azure/azure-sdk-for-js/blob/@azure/keyvault-common_1.0.0-beta.1/sdk/keyvault/keyvault-certificates/README.md)
-- [@azure/keyvault-keys](https://github.com/Azure/azure-sdk-for-js/blob/@azure/keyvault-common_1.0.0-beta.1/sdk/keyvault/keyvault-keys/README.md)
-- [@azure/keyvault-secrets](https://github.com/Azure/azure-sdk-for-js/blob/@azure/keyvault-common_1.0.0-beta.1/sdk/keyvault/keyvault-secrets/README.md)
+- [@azure/keyvault-admin](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/keyvault/keyvault-admin/README.md)
+- [@azure/keyvault-certificates](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/keyvault/keyvault-certificates/README.md)
+- [@azure/keyvault-keys](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/keyvault/keyvault-keys/README.md)
+- [@azure/keyvault-secrets](https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/keyvault/keyvault-secrets/README.md)
 
 ## Getting started
 
@@ -46,7 +46,7 @@ If you run into issues while using this library, directly or indirectly, please 
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/keyvault-common_1.0.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fkeyvault%2Fkeyvault-common%2FREADME.png)
 
