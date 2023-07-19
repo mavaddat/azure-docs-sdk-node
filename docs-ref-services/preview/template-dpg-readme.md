@@ -1,6 +1,6 @@
 ---
 title: Azure Template client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/template, template
+keywords: Azure, javascript, SDK, API, @azure/template-dpg, template
 author: ckairen
 ms.author: albertcheng
 ms.date: 07/19/2023
@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: javascript
 ms.service: template
 ---
-# Azure Template client library for JavaScript - version 1.0.12-alpha.20230719.5 
+# Azure Template client library for JavaScript - version 1.0.0-alpha.20230717.1 
 
 
 <!-- NOTE: This README file is a template. Read through it and replace the instructions (keeping an eye out for package names like "@azure/template") with the ones that pertain to your package. For a complete example based on the real Azure App Configuration SDK, see README-TEMPLATE.md in this directory. -->
