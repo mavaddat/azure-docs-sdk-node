@@ -1,7 +1,7 @@
 {
   "Name": "@azure/keyvault-certificates",
   "Version": "4.7.1-alpha.20230418.1",
-  "DevVersion": "4.7.1-alpha.20230718.3",
+  "DevVersion": "4.7.1-alpha.20230719.1",
   "DirectoryPath": "sdk/keyvault/keyvault-certificates",
   "ServiceDirectory": "keyvault",
   "ReadMePath": "sdk/keyvault/keyvault-certificates/README.md",
