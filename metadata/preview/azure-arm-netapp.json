@@ -1,0 +1,14 @@
+{
+  "Name": "@azure/arm-netapp",
+  "Version": "18.1.0-alpha.20230718.2",
+  "DevVersion": "18.1.0-alpha.20230719.1",
+  "DirectoryPath": "sdk/netapp/arm-netapp",
+  "ServiceDirectory": "netapp",
+  "ReadMePath": "sdk/netapp/arm-netapp/README.md",
+  "ChangeLogPath": "sdk/netapp/arm-netapp/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-netapp",
+  "ReleaseStatus": "2023-07-03"
+}
