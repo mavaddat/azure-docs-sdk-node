@@ -3,7 +3,7 @@ title:
 keywords: Azure, javascript, SDK, API, @azure/web-pubsub-client-protobuf, web-pubsub
 author: vicancy
 ms.author: lianwei
-ms.date: 03/28/2023
+ms.date: 07/21/2023
 ms.topic: reference
 ms.devlang: javascript
 ms.service: web-pubsub
@@ -48,7 +48,7 @@ let client = new WebPubSubClient("client-access-url", { protocol: WebPubSubProto
 export AZURE_LOG_LEVEL=verbose
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/web-pubsub-client-protobuf_1.0.0-beta.1/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/core/logger).
 
 - ### Live Trace
 
@@ -64,7 +64,7 @@ For more detailed instructions on how to enable logs, you can look at the [@azur
 ---
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/web-pubsub-client-protobuf_1.0.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/main/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 
 [azure_sub]: https://azure.microsoft.com/free/
