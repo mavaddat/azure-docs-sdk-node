@@ -4502,3 +4502,17 @@ Removed @azure/web-pubsub-client-protobuf@1.0.0-beta.1 because of docs package v
 	  pid: 73,
 	  stdout: null,
 	  stderr: null }
+Removed @azure-rest/ai-document-translator@1.0.0-beta.1 because of docs package validation failure on 2023-07-20 23:58 +00:00
+	npm ERR! code E500
+	npm ERR! 500 Internal Server Error - GET https://registry.npmjs.org/@azure-rest%2fai-document-translator - KV PUT failed: 500 Internal Server Error
+	System.Management.Automation.RemoteException
+	npm ERR! A complete log of this run can be found in:
+	npm ERR!     /home/vsts/.npm/_logs/2023-07-20T23_53_09_315Z-debug-0.log
+Removed @azure/arm-quantum@1.0.0-beta.1 because of docs package validation failure on 2023-07-20 23:58 +00:00
+	npm ERR! code ETARGET
+	npm ERR! notarget No matching version found for @azure/arm-quantum@1.0.0-beta.1.
+	npm ERR! notarget In most cases you or one of your dependencies are requesting
+	npm ERR! notarget a package version that doesn't exist.
+	System.Management.Automation.RemoteException
+	npm ERR! A complete log of this run can be found in:
+	npm ERR!     /home/vsts/.npm/_logs/2023-07-20T23_57_44_802Z-debug-0.log

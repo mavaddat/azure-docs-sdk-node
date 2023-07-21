@@ -318,10 +318,6 @@
     href: ~/docs-ref-services/{moniker}/cognitive-services.md
     landingPageType: Service
     items:
-    - name: Document Translation
-      href: ~/docs-ref-services/{moniker}/ai-document-translator-rest-readme.md
-      children:
-      - '@azure-rest/ai-document-translator'
     - name: Personalizer
       href: ~/docs-ref-services/{moniker}/ai-personalizer-rest-readme.md
       children:
@@ -838,7 +834,7 @@
         href: ~/docs-ref-services/{moniker}/arm-devtestlabs-readme.md
         children:
         - '@azure/arm-devtestlabs'
-  - name: Dns
+  - name: DNS
     href: ~/docs-ref-services/{moniker}/dns.md
     landingPageType: Service
     items:
@@ -2452,6 +2448,10 @@
       href: ~/docs-ref-services/{moniker}/web-pubsub-client-readme.md
       children:
       - '@azure/web-pubsub-client'
+    - name: WebPubSub Client SDK Protobuf
+      href: ~/docs-ref-services/{moniker}/web-pubsub-client-protobuf-readme.md
+      children:
+      - '@azure/web-pubsub-client-protobuf'
     - name: Management
       items:
       - name: Resource Management - Web PubSub
