@@ -1,15 +1,15 @@
 ---
-title: Azure Advisor modules for JavaScript
-description: Reference for Azure Advisor modules for JavaScript
-author: KumudD
-ms.author: kumud
+title: Azure Advisor SDK for JavaScript
+description: Reference for Azure Advisor SDK for JavaScript
+author: xirzec
+ms.author: jeffish
+ms.data: 07/22/2023
+ms.topic: reference
+ms.devlang: javascript
+ms.service: advisor
 manager: jeconnoc
 ms.date: 07/18/2017
-ms.topic: reference
-ms.devlang: nodejs
-ms.service: Advisor
 ---
-
 # Azure Advisor modules for JavaScript
 
 ## Overview

@@ -1871,7 +1871,13 @@
   - name: Quantum
     href: ~/docs-ref-services/{moniker}/quantum.md
     landingPageType: Service
-    items: []
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Quantum
+        href: ~/docs-ref-services/{moniker}/arm-quantum-readme.md
+        children:
+        - '@azure/arm-quantum'
   - name: Qumulo
     href: ~/docs-ref-services/{moniker}/qumulo.md
     landingPageType: Service
@@ -2452,6 +2458,10 @@
       href: ~/docs-ref-services/{moniker}/web-pubsub-client-readme.md
       children:
       - '@azure/web-pubsub-client'
+    - name: WebPubSub Client SDK Protobuf
+      href: ~/docs-ref-services/{moniker}/web-pubsub-client-protobuf-readme.md
+      children:
+      - '@azure/web-pubsub-client-protobuf'
     - name: Management
       items:
       - name: Resource Management - Web PubSub
