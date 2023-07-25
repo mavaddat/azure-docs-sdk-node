@@ -1,7 +1,7 @@
 {
   "Name": "@azure/arm-batch",
-  "Version": "7.0.0-beta.1",
-  "DevVersion": null,
+  "Version": "9.0.0-alpha.20230725.2",
+  "DevVersion": "9.0.0-alpha.20230725.2",
   "DirectoryPath": "sdk/batch/arm-batch",
   "ServiceDirectory": "batch",
   "ReadMePath": "sdk/batch/arm-batch/README.md",
@@ -10,5 +10,5 @@
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-arm-batch",
-  "ReleaseStatus": "2021-11-18"
+  "ReleaseStatus": "2023-06-30"
 }
