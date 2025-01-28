@@ -9,7 +9,7 @@ summary: >-
   Use this as a reference when creating the `processEvents` function to process
   the events
 
-  recieved from an Event Hub when using the `EventHubConsumerClient`.
+  received from an Event Hub when using the `EventHubConsumerClient`.
 fullName: ReceivedEventData
 remarks: ''
 isDeprecated: false
@@ -166,4 +166,4 @@ methods:
       content: 'function getRawAmqpMessage(): AmqpAnnotatedMessage'
       return:
         description: ''
-        type: AmqpAnnotatedMessage
+        type: <xref uid="@azure/core-amqp.AmqpAnnotatedMessage" />

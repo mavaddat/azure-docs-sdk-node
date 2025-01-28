@@ -54,7 +54,7 @@ constructors:
           type: >-
             <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential"
             /> | <xref uid="@azure/storage-file-datalake.AnonymousCredential" />
-            | TokenCredential
+            | <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
             credential from the `@azure/identity` package to authenticate
@@ -125,7 +125,7 @@ inheritedProperties:
         type: >-
           <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential" />
           | <xref uid="@azure/storage-file-datalake.AnonymousCredential" /> |
-          TokenCredential
+          <xref uid="@azure/core-auth.TokenCredential" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [DataLakePathClient.credential](xref:@azure/storage-file-datalake.DataLakePathClient.credential)
@@ -604,7 +604,7 @@ inheritedMethods:
     syntax:
       content: >-
         function setPermissions(permissions: PathPermissions, options?:
-        PathSetPermissionsOptions): Promise<PathSetAccessControlResponse>
+        PathSetPermissionsOptions): Promise<PathSetPermissionsResponse>
       parameters:
         - id: permissions
           type: <xref uid="@azure/storage-file-datalake.PathPermissions" />
@@ -620,7 +620,7 @@ inheritedMethods:
         description: ''
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-file-datalake.PathSetAccessControlResponse" />&gt;
+          uid="@azure/storage-file-datalake.PathSetPermissionsResponse" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [DataLakePathClient.setPermissions](xref:@azure/storage-file-datalake.DataLakePathClient.setPermissions)
@@ -805,6 +805,36 @@ methods:
           Promise&lt;<xref
           uid="@azure/storage-file-datalake.PathCreateIfNotExistsResponse"
           />&gt;
+  - name: generateSasStringToSign(DirectoryGenerateSasUrlOptions)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeDirectoryClient.generateSasStringToSign
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateSasStringToSign(options:
+        DirectoryGenerateSasUrlOptions): string
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.DirectoryGenerateSasUrlOptions" />
+          description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
   - name: generateSasUrl(DirectoryGenerateSasUrlOptions)
     uid: '@azure/storage-file-datalake.DataLakeDirectoryClient.generateSasUrl'
     package: '@azure/storage-file-datalake'
@@ -833,6 +863,80 @@ methods:
             <xref
             uid="@azure/storage-file-datalake.DirectoryGenerateSasUrlOptions" />
           description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: Promise&lt;string&gt;
+  - name: >-
+      generateUserDelegationSasStringToSign(DirectoryGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeDirectoryClient.generateUserDelegationSasStringToSign
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasStringToSign(options:
+        DirectoryGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        string
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.DirectoryGenerateSasUrlOptions" />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
+  - name: >-
+      generateUserDelegationSasUrl(DirectoryGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeDirectoryClient.generateUserDelegationSasUrl
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates a Service Shared Access Signature (SAS) URI based on the client
+      properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasUrl(options:
+        DirectoryGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        Promise<string>
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.DirectoryGenerateSasUrlOptions" />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
       return:
         description: >-
           The SAS URI consisting of the URI to the resource represented by this

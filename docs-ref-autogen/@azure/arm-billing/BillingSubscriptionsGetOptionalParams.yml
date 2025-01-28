@@ -7,6 +7,21 @@ fullName: BillingSubscriptionsGetOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
+properties:
+  - name: expand
+    uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.expand'
+    package: '@azure/arm-billing'
+    summary: >-
+      Can be used to expand `Reseller`, `ConsumptionCostCenter`,
+      `LastMonthCharges` and `MonthToDateCharges`
+    fullName: expand
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'expand?: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.abortSignal'
@@ -19,7 +34,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.onResponse'
@@ -35,7 +50,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.requestOptions'
@@ -48,7 +63,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.serializerOptions'
@@ -61,7 +76,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-billing.BillingSubscriptionsGetOptionalParams.tracingOptions'
@@ -74,6 +89,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

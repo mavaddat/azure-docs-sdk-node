@@ -8,6 +8,41 @@ remarks: ''
 isDeprecated: false
 type: interface
 inheritedProperties:
+  - name: confidentialComputeProperties
+    uid: '@azure/arm-containerinstance.ContainerGroup.confidentialComputeProperties'
+    package: '@azure/arm-containerinstance'
+    summary: The properties for confidential container group
+    fullName: confidentialComputeProperties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'confidentialComputeProperties?: ConfidentialComputeProperties'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerinstance.ConfidentialComputeProperties"
+          />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContainerGroupProperties.confidentialComputeProperties](xref:@azure/arm-containerinstance.ContainerGroupProperties.confidentialComputeProperties)
+  - name: containerGroupProfile
+    uid: '@azure/arm-containerinstance.ContainerGroup.containerGroupProfile'
+    package: '@azure/arm-containerinstance'
+    summary: The reference container group profile properties.
+    fullName: containerGroupProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'containerGroupProfile?: ContainerGroupProfileReferenceDefinition'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerinstance.ContainerGroupProfileReferenceDefinition"
+          />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContainerGroupProperties.containerGroupProfile](xref:@azure/arm-containerinstance.ContainerGroupProperties.containerGroupProfile)
   - name: containers
     uid: '@azure/arm-containerinstance.ContainerGroup.containers'
     package: '@azure/arm-containerinstance'
@@ -186,26 +221,26 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ContainerGroupProperties.ipAddress](xref:@azure/arm-containerinstance.ContainerGroupProperties.ipAddress)
-  - name: isCustomProvisioningTimeout
-    uid: '@azure/arm-containerinstance.ContainerGroup.isCustomProvisioningTimeout'
+  - name: isCreatedFromStandbyPool
+    uid: '@azure/arm-containerinstance.ContainerGroup.isCreatedFromStandbyPool'
     package: '@azure/arm-containerinstance'
     summary: >-
-      Flag indicating whether a custom value was provided for the
-      provisioningTimeoutInSeconds property
+      The flag indicating whether the container group is created by standby
+      pool.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
-    fullName: isCustomProvisioningTimeout
+    fullName: isCreatedFromStandbyPool
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'isCustomProvisioningTimeout?: string'
+      content: 'isCreatedFromStandbyPool?: boolean'
       return:
         description: ''
-        type: string
+        type: boolean
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [ContainerGroupProperties.isCustomProvisioningTimeout](xref:@azure/arm-containerinstance.ContainerGroupProperties.isCustomProvisioningTimeout)
+      [ContainerGroupProperties.isCreatedFromStandbyPool](xref:@azure/arm-containerinstance.ContainerGroupProperties.isCreatedFromStandbyPool)
   - name: location
     uid: '@azure/arm-containerinstance.ContainerGroup.location'
     package: '@azure/arm-containerinstance'
@@ -250,13 +285,28 @@ inheritedProperties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'osType: string'
+      content: 'osType?: string'
       return:
         description: ''
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ContainerGroupProperties.osType](xref:@azure/arm-containerinstance.ContainerGroupProperties.osType)
+  - name: priority
+    uid: '@azure/arm-containerinstance.ContainerGroup.priority'
+    package: '@azure/arm-containerinstance'
+    summary: The priority of the container group.
+    fullName: priority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'priority?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContainerGroupProperties.priority](xref:@azure/arm-containerinstance.ContainerGroupProperties.priority)
   - name: provisioningState
     uid: '@azure/arm-containerinstance.ContainerGroup.provisioningState'
     package: '@azure/arm-containerinstance'
@@ -277,24 +327,6 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ContainerGroupProperties.provisioningState](xref:@azure/arm-containerinstance.ContainerGroupProperties.provisioningState)
-  - name: provisioningTimeoutInSeconds
-    uid: '@azure/arm-containerinstance.ContainerGroup.provisioningTimeoutInSeconds'
-    package: '@azure/arm-containerinstance'
-    summary: >-
-      Time in seconds in which a container group deployment would timeout and
-      fail. The allowed maximum value is 1800 seconds. If value is not provided,
-      property is given maximum value by default.
-    fullName: provisioningTimeoutInSeconds
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'provisioningTimeoutInSeconds?: number'
-      return:
-        description: ''
-        type: number
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ContainerGroupProperties.provisioningTimeoutInSeconds](xref:@azure/arm-containerinstance.ContainerGroupProperties.provisioningTimeoutInSeconds)
   - name: restartPolicy
     uid: '@azure/arm-containerinstance.ContainerGroup.restartPolicy'
     package: '@azure/arm-containerinstance'
@@ -329,6 +361,23 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ContainerGroupProperties.sku](xref:@azure/arm-containerinstance.ContainerGroupProperties.sku)
+  - name: standbyPoolProfile
+    uid: '@azure/arm-containerinstance.ContainerGroup.standbyPoolProfile'
+    package: '@azure/arm-containerinstance'
+    summary: The reference standby pool profile properties.
+    fullName: standbyPoolProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'standbyPoolProfile?: StandbyPoolProfileDefinition'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerinstance.StandbyPoolProfileDefinition"
+          />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ContainerGroupProperties.standbyPoolProfile](xref:@azure/arm-containerinstance.ContainerGroupProperties.standbyPoolProfile)
   - name: subnetIds
     uid: '@azure/arm-containerinstance.ContainerGroup.subnetIds'
     package: '@azure/arm-containerinstance'

@@ -1,9 +1,7 @@
 ---
 title: 
 keywords: Azure, javascript, SDK, API, @azure/opentelemetry-instrumentation-azure-sdk, instrumentation
-author: joheredi
-ms.author: joheredi
-ms.date: 08/11/2023
+ms.date: 10/08/2024
 ms.topic: reference
 ms.devlang: javascript
 ms.service: instrumentation
@@ -17,7 +15,7 @@ ms.service: instrumentation
 - [LTS versions of Node.js](https://github.com/nodejs/release#release-schedule)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.5/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.7/SUPPORT.md) for more details.
 
 ### Prerequisites
 
@@ -68,6 +66,8 @@ registerInstrumentations({
 // Continue to import any Azure SDK client libraries after registering the instrumentation.
 
 const { KeyClient } = require("@azure/keyvault-keys");
+const { DefaultAzureCredential } = require("@azure/identity"); 
+
 const keyClient = new KeyClient(url, new DefaultAzureCredential()); 
 
 async function main() {
@@ -102,11 +102,15 @@ const { setLogLevel } = require("@azure/logger");
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.5/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.7/sdk/core/logger).
+
+### Instrumentation for ES Modules
+
+This package utilizes [@opentelemetry/instrumentation](https://www.npmjs.com/package/@opentelemetry/instrumentation) to setup the necessary hooks and loaders. Please refer to [@opentelemetry/instrumentation's README](https://github.com/open-telemetry/opentelemetry-js/blob/main/experimental/packages/opentelemetry-instrumentation/README.md#instrumentation-for-es-modules-in-nodejs-experimental) for instructions on configuring tracing for ESM packages.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.5/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/opentelemetry-instrumentation-azure-sdk_1.0.0-beta.7/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
@@ -114,8 +118,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Ftemplate%2Ftemplate%2FREADME.png)
 
-[azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
 [otel_instrumentation]: https://www.npmjs.com/package/@opentelemetry/instrumentation
-[otel_documentation]: https://opentelemetry.io/docs/js/
+[otel_documentation]: https://opentelemetry.io/docs/languages/js/
 

@@ -8,6 +8,21 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: environmentId
+    uid: '@azure/arm-appservice.CheckNameAvailabilityOptionalParams.environmentId'
+    package: '@azure/arm-appservice'
+    summary: >-
+      Azure Resource Manager ID of the customer's selected Container Apps
+      Environment on which to host the Function app. This must be of the form
+      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.App/managedEnvironments/{managedEnvironmentName}
+    fullName: environmentId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'environmentId?: string'
+      return:
+        description: ''
+        type: string
   - name: isFqdn
     uid: '@azure/arm-appservice.CheckNameAvailabilityOptionalParams.isFqdn'
     package: '@azure/arm-appservice'
@@ -32,7 +47,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-appservice.CheckNameAvailabilityOptionalParams.onResponse'
@@ -48,7 +63,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-appservice.CheckNameAvailabilityOptionalParams.requestOptions'
@@ -61,7 +76,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -75,7 +90,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-appservice.CheckNameAvailabilityOptionalParams.tracingOptions'
@@ -88,6 +103,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

@@ -16,7 +16,6 @@ classes:
   - '@azure/eventgrid.EventGridPublisherClient'
 interfaces:
   - '@azure/eventgrid.AcknowledgeCloudEventsOptions'
-  - '@azure/eventgrid.AcknowledgeOptions'
   - '@azure/eventgrid.AcknowledgeResult'
   - '@azure/eventgrid.AcsChatEventBase'
   - '@azure/eventgrid.AcsChatEventInThreadBase'
@@ -63,7 +62,6 @@ interfaces:
   - '@azure/eventgrid.AppEventTypeDetail'
   - '@azure/eventgrid.AppServicePlanEventTypeDetail'
   - '@azure/eventgrid.BrokerProperties'
-  - '@azure/eventgrid.ClientOptions'
   - '@azure/eventgrid.CloudEvent'
   - '@azure/eventgrid.CloudEventSendOptions'
   - '@azure/eventgrid.CommunicationIdentifierModel'
@@ -89,6 +87,7 @@ interfaces:
   - '@azure/eventgrid.DeviceTwinInfoProperties'
   - '@azure/eventgrid.DeviceTwinInfoX509Thumbprint'
   - '@azure/eventgrid.DeviceTwinMetadata'
+  - '@azure/eventgrid.EventGridClientOptions'
   - '@azure/eventgrid.EventGridEvent'
   - '@azure/eventgrid.EventHubCaptureFileCreatedEventData'
   - '@azure/eventgrid.FailedLockToken'
@@ -135,6 +134,7 @@ interfaces:
   - '@azure/eventgrid.MediaLiveEventIngestHeartbeatEventData'
   - '@azure/eventgrid.MediaLiveEventTrackDiscontinuityDetectedEventData'
   - '@azure/eventgrid.MicrosoftTeamsUserIdentifierModel'
+  - '@azure/eventgrid.OperationRestOptions'
   - '@azure/eventgrid.PhoneNumberIdentifierModel'
   - '@azure/eventgrid.PolicyInsightsPolicyStateChangedEventData'
   - '@azure/eventgrid.PolicyInsightsPolicyStateCreatedEventData'
@@ -146,12 +146,11 @@ interfaces:
   - '@azure/eventgrid.ReceiveDetails'
   - '@azure/eventgrid.ReceiveResult'
   - '@azure/eventgrid.RejectCloudEventsOptions'
-  - '@azure/eventgrid.RejectOptions'
   - '@azure/eventgrid.RejectResult'
   - '@azure/eventgrid.ReleaseCloudEventsOptions'
-  - '@azure/eventgrid.ReleaseOptions'
   - '@azure/eventgrid.ReleaseResult'
-  - '@azure/eventgrid.RequestOptions'
+  - '@azure/eventgrid.RenewCloudEventLocksOptions'
+  - '@azure/eventgrid.RenewCloudEventLocksResult'
   - '@azure/eventgrid.ResourceActionCancelEventData'
   - '@azure/eventgrid.ResourceActionFailureEventData'
   - '@azure/eventgrid.ResourceActionSuccessEventData'
@@ -261,6 +260,7 @@ typeAliases:
   - '@azure/eventgrid.RecordingChannelType'
   - '@azure/eventgrid.RecordingContentType'
   - '@azure/eventgrid.RecordingFormatType'
+  - '@azure/eventgrid.ReleaseDelay'
   - '@azure/eventgrid.SendOptions'
   - '@azure/eventgrid.StampKind'
   - '@azure/eventgrid.StorageTaskCompletedStatus'
@@ -290,7 +290,7 @@ functions:
             The endpoint for the topic or domain you wish to generate a shared
             access signature for.
         - id: credential
-          type: KeyCredential
+          type: <xref uid="@azure/core-auth.KeyCredential" />
           description: The credential to use when generating the shared access signatrue.
         - id: expiresOnUtc
           type: Date

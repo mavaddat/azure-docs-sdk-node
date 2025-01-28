@@ -22,7 +22,7 @@ constructors:
         subscriptionId: string, options?: StorageManagementClientOptionalParams)
       parameters:
         - id: credentials
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Subscription credentials which uniquely identify client
             subscription.
@@ -167,6 +167,23 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-storage.ManagementPolicies" />
+  - name: networkSecurityPerimeterConfigurations
+    uid: >-
+      @azure/arm-storage.StorageManagementClient.networkSecurityPerimeterConfigurations
+    package: '@azure/arm-storage'
+    summary: ''
+    fullName: networkSecurityPerimeterConfigurations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        networkSecurityPerimeterConfigurations:
+        NetworkSecurityPerimeterConfigurations
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-storage.NetworkSecurityPerimeterConfigurations"
+          />
   - name: objectReplicationPoliciesOperations
     uid: >-
       @azure/arm-storage.StorageManagementClient.objectReplicationPoliciesOperations
@@ -264,6 +281,50 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-storage.StorageAccounts" />
+  - name: storageTaskAssignmentInstancesReport
+    uid: >-
+      @azure/arm-storage.StorageManagementClient.storageTaskAssignmentInstancesReport
+    package: '@azure/arm-storage'
+    summary: ''
+    fullName: storageTaskAssignmentInstancesReport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        storageTaskAssignmentInstancesReport:
+        StorageTaskAssignmentInstancesReport
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-storage.StorageTaskAssignmentInstancesReport" />
+  - name: storageTaskAssignments
+    uid: '@azure/arm-storage.StorageManagementClient.storageTaskAssignments'
+    package: '@azure/arm-storage'
+    summary: ''
+    fullName: storageTaskAssignments
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'storageTaskAssignments: StorageTaskAssignments'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-storage.StorageTaskAssignments" />
+  - name: storageTaskAssignmentsInstancesReport
+    uid: >-
+      @azure/arm-storage.StorageManagementClient.storageTaskAssignmentsInstancesReport
+    package: '@azure/arm-storage'
+    summary: ''
+    fullName: storageTaskAssignmentsInstancesReport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        storageTaskAssignmentsInstancesReport:
+        StorageTaskAssignmentsInstancesReport
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-storage.StorageTaskAssignmentsInstancesReport"
+          />
   - name: subscriptionId
     uid: '@azure/arm-storage.StorageManagementClient.subscriptionId'
     package: '@azure/arm-storage'
@@ -324,7 +385,7 @@ inheritedProperties:
       content: 'pipeline: Pipeline'
       return:
         description: ''
-        type: Pipeline
+        type: <xref uid="@azure/core-rest-pipeline.Pipeline" />
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.pipeline
 inheritedMethods:
   - name: sendOperationRequest<T>(OperationArguments, OperationSpec)
@@ -339,12 +400,12 @@ inheritedMethods:
         operationSpec: OperationSpec): Promise<T>
       parameters:
         - id: operationArguments
-          type: OperationArguments
+          type: <xref uid="@azure/core-client.OperationArguments" />
           description: >-
             The arguments that the HTTP request's templated values will be
             populated from.
         - id: operationSpec
-          type: OperationSpec
+          type: <xref uid="@azure/core-client.OperationSpec" />
           description: The OperationSpec to use to populate the httpRequest.
       return:
         description: ''
@@ -362,10 +423,12 @@ inheritedMethods:
         Promise<PipelineResponse>
       parameters:
         - id: request
-          type: PipelineRequest
+          type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;PipelineResponse&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-rest-pipeline.PipelineResponse"
+          />&gt;
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.sendRequest
-extends: ServiceClient
+extends: <xref uid="@azure/core-client.ServiceClient" />

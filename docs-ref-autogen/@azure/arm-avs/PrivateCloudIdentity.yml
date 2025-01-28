@@ -2,7 +2,7 @@
 name: PrivateCloudIdentity
 uid: '@azure/arm-avs.PrivateCloudIdentity'
 package: '@azure/arm-avs'
-summary: Identity for the virtual machine.
+summary: Managed service identity (either system assigned, or none)
 fullName: PrivateCloudIdentity
 remarks: ''
 isDeprecated: false
@@ -12,8 +12,8 @@ properties:
     uid: '@azure/arm-avs.PrivateCloudIdentity.principalId'
     package: '@azure/arm-avs'
     summary: >-
-      The principal ID of private cloud identity. This property will only be
-      provided for a system assigned identity.
+      The service principal ID of the system assigned identity. This property
+      will only be provided for a system assigned identity.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -29,8 +29,8 @@ properties:
     uid: '@azure/arm-avs.PrivateCloudIdentity.tenantId'
     package: '@azure/arm-avs'
     summary: >-
-      The tenant ID associated with the private cloud. This property will only
-      be provided for a system assigned identity.
+      The tenant ID of the system assigned identity. This property will only be
+      provided for a system assigned identity.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -45,15 +45,12 @@ properties:
   - name: type
     uid: '@azure/arm-avs.PrivateCloudIdentity.type'
     package: '@azure/arm-avs'
-    summary: >-
-      The type of identity used for the private cloud. The type 'SystemAssigned'
-      refers to an implicitly created identity. The type 'None' will remove any
-      identities from the Private Cloud.
+    summary: Type of managed service identity (either system assigned, or none).
     fullName: type
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'type?: string'
+      content: 'type: string'
       return:
         description: ''
         type: string

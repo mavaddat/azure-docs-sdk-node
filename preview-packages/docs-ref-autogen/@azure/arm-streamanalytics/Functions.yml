@@ -25,7 +25,7 @@ methods:
       content: >-
         function beginTest(resourceGroupName: string, jobName: string,
         functionName: string, options?: FunctionsTestOptionalParams):
-        Promise<PollerLike<PollOperationState<ResourceTestStatus>,
+        Promise<SimplePollerLike<OperationState<ResourceTestStatus>,
         ResourceTestStatus>>
       parameters:
         - id: resourceGroupName
@@ -45,7 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-streamanalytics.ResourceTestStatus" />&gt;, <xref
           uid="@azure/arm-streamanalytics.ResourceTestStatus" />&gt;&gt;
   - name: beginTestAndWait(string, string, string, FunctionsTestOptionalParams)
@@ -217,9 +218,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-streamanalytics.FunctionModel" />, <xref
-          uid="@azure/arm-streamanalytics.FunctionModel" />[], PageSettings&gt;
+          uid="@azure/arm-streamanalytics.FunctionModel" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       retrieveDefaultDefinition(string, string, string,
       FunctionsRetrieveDefaultDefinitionOptionalParams)

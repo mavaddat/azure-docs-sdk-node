@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, serviceName:
         string, appName: string, deploymentName: string, deploymentResource:
         DeploymentResource, options?: DeploymentsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<DeploymentResource>,
+        Promise<SimplePollerLike<OperationState<DeploymentResource>,
         DeploymentResource>>
       parameters:
         - id: resourceGroupName
@@ -51,7 +51,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appplatform.DeploymentResource" />&gt;, <xref
           uid="@azure/arm-appplatform.DeploymentResource" />&gt;&gt;
   - name: >-
@@ -111,7 +112,7 @@ methods:
         function beginDelete(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, options?:
         DeploymentsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -135,7 +136,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       DeploymentsDeleteOptionalParams)
@@ -174,6 +177,172 @@ methods:
         description: ''
         type: Promise&lt;void&gt;
   - name: >-
+      beginDisableRemoteDebugging(string, string, string, string,
+      DeploymentsDisableRemoteDebuggingOptionalParams)
+    uid: '@azure/arm-appplatform.Deployments.beginDisableRemoteDebugging'
+    package: '@azure/arm-appplatform'
+    summary: Disable remote debugging.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDisableRemoteDebugging(resourceGroupName: string,
+        serviceName: string, appName: string, deploymentName: string, options?:
+        DeploymentsDisableRemoteDebuggingOptionalParams):
+        Promise<SimplePollerLike<OperationState<RemoteDebugging>,
+        RemoteDebugging>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: serviceName
+          type: string
+          description: The name of the Service resource.
+        - id: appName
+          type: string
+          description: The name of the App resource.
+        - id: deploymentName
+          type: string
+          description: The name of the Deployment resource.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appplatform.DeploymentsDisableRemoteDebuggingOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appplatform.RemoteDebugging" />&gt;, <xref
+          uid="@azure/arm-appplatform.RemoteDebugging" />&gt;&gt;
+  - name: >-
+      beginDisableRemoteDebuggingAndWait(string, string, string, string,
+      DeploymentsDisableRemoteDebuggingOptionalParams)
+    uid: '@azure/arm-appplatform.Deployments.beginDisableRemoteDebuggingAndWait'
+    package: '@azure/arm-appplatform'
+    summary: Disable remote debugging.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDisableRemoteDebuggingAndWait(resourceGroupName: string,
+        serviceName: string, appName: string, deploymentName: string, options?:
+        DeploymentsDisableRemoteDebuggingOptionalParams):
+        Promise<RemoteDebugging>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: serviceName
+          type: string
+          description: The name of the Service resource.
+        - id: appName
+          type: string
+          description: The name of the App resource.
+        - id: deploymentName
+          type: string
+          description: The name of the Deployment resource.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appplatform.DeploymentsDisableRemoteDebuggingOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appplatform.RemoteDebugging" />&gt;
+  - name: >-
+      beginEnableRemoteDebugging(string, string, string, string,
+      DeploymentsEnableRemoteDebuggingOptionalParams)
+    uid: '@azure/arm-appplatform.Deployments.beginEnableRemoteDebugging'
+    package: '@azure/arm-appplatform'
+    summary: Enable remote debugging.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginEnableRemoteDebugging(resourceGroupName: string,
+        serviceName: string, appName: string, deploymentName: string, options?:
+        DeploymentsEnableRemoteDebuggingOptionalParams):
+        Promise<SimplePollerLike<OperationState<RemoteDebugging>,
+        RemoteDebugging>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: serviceName
+          type: string
+          description: The name of the Service resource.
+        - id: appName
+          type: string
+          description: The name of the App resource.
+        - id: deploymentName
+          type: string
+          description: The name of the Deployment resource.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appplatform.DeploymentsEnableRemoteDebuggingOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appplatform.RemoteDebugging" />&gt;, <xref
+          uid="@azure/arm-appplatform.RemoteDebugging" />&gt;&gt;
+  - name: >-
+      beginEnableRemoteDebuggingAndWait(string, string, string, string,
+      DeploymentsEnableRemoteDebuggingOptionalParams)
+    uid: '@azure/arm-appplatform.Deployments.beginEnableRemoteDebuggingAndWait'
+    package: '@azure/arm-appplatform'
+    summary: Enable remote debugging.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginEnableRemoteDebuggingAndWait(resourceGroupName: string,
+        serviceName: string, appName: string, deploymentName: string, options?:
+        DeploymentsEnableRemoteDebuggingOptionalParams):
+        Promise<RemoteDebugging>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: serviceName
+          type: string
+          description: The name of the Service resource.
+        - id: appName
+          type: string
+          description: The name of the App resource.
+        - id: deploymentName
+          type: string
+          description: The name of the Deployment resource.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appplatform.DeploymentsEnableRemoteDebuggingOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appplatform.RemoteDebugging" />&gt;
+  - name: >-
       beginGenerateHeapDump(string, string, string, string,
       DiagnosticParameters, DeploymentsGenerateHeapDumpOptionalParams)
     uid: '@azure/arm-appplatform.Deployments.beginGenerateHeapDump'
@@ -187,7 +356,7 @@ methods:
         string, appName: string, deploymentName: string, diagnosticParameters:
         DiagnosticParameters, options?:
         DeploymentsGenerateHeapDumpOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -215,7 +384,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginGenerateHeapDumpAndWait(string, string, string, string,
       DiagnosticParameters, DeploymentsGenerateHeapDumpOptionalParams)
@@ -272,7 +443,7 @@ methods:
         string, appName: string, deploymentName: string, diagnosticParameters:
         DiagnosticParameters, options?:
         DeploymentsGenerateThreadDumpOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -300,7 +471,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginGenerateThreadDumpAndWait(string, string, string, string,
       DiagnosticParameters, DeploymentsGenerateThreadDumpOptionalParams)
@@ -356,7 +529,7 @@ methods:
         function beginRestart(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, options?:
         DeploymentsRestartOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -380,7 +553,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestartAndWait(string, string, string, string,
       DeploymentsRestartOptionalParams)
@@ -429,7 +604,7 @@ methods:
         function beginStart(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, options?:
         DeploymentsStartOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -451,7 +626,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStartAndWait(string, string, string, string,
       DeploymentsStartOptionalParams)
@@ -500,7 +677,7 @@ methods:
         function beginStartJFR(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, diagnosticParameters:
         DiagnosticParameters, options?: DeploymentsStartJFROptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -527,7 +704,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStartJFRAndWait(string, string, string, string, DiagnosticParameters,
       DeploymentsStartJFROptionalParams)
@@ -580,7 +759,7 @@ methods:
         function beginStop(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, options?:
         DeploymentsStopOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -602,7 +781,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStopAndWait(string, string, string, string,
       DeploymentsStopOptionalParams)
@@ -651,7 +832,7 @@ methods:
         function beginUpdate(resourceGroupName: string, serviceName: string,
         appName: string, deploymentName: string, deploymentResource:
         DeploymentResource, options?: DeploymentsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<DeploymentResource>,
+        Promise<SimplePollerLike<OperationState<DeploymentResource>,
         DeploymentResource>>
       parameters:
         - id: resourceGroupName
@@ -680,7 +861,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appplatform.DeploymentResource" />&gt;, <xref
           uid="@azure/arm-appplatform.DeploymentResource" />&gt;&gt;
   - name: >-
@@ -801,6 +983,45 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/arm-appplatform.LogFileUrlResponse"
           />&gt;
+  - name: >-
+      getRemoteDebuggingConfig(string, string, string, string,
+      DeploymentsGetRemoteDebuggingConfigOptionalParams)
+    uid: '@azure/arm-appplatform.Deployments.getRemoteDebuggingConfig'
+    package: '@azure/arm-appplatform'
+    summary: Get remote debugging config.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRemoteDebuggingConfig(resourceGroupName: string,
+        serviceName: string, appName: string, deploymentName: string, options?:
+        DeploymentsGetRemoteDebuggingConfigOptionalParams):
+        Promise<RemoteDebugging>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: serviceName
+          type: string
+          description: The name of the Service resource.
+        - id: appName
+          type: string
+          description: The name of the App resource.
+        - id: deploymentName
+          type: string
+          description: The name of the Deployment resource.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appplatform.DeploymentsGetRemoteDebuggingConfigOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appplatform.RemoteDebugging" />&gt;
   - name: list(string, string, string, DeploymentsListOptionalParams)
     uid: '@azure/arm-appplatform.Deployments.list'
     package: '@azure/arm-appplatform'
@@ -832,9 +1053,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appplatform.DeploymentResource" />, <xref
-          uid="@azure/arm-appplatform.DeploymentResource" />[], PageSettings&gt;
+          uid="@azure/arm-appplatform.DeploymentResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listForCluster(string, string, DeploymentsListForClusterOptionalParams)
     uid: '@azure/arm-appplatform.Deployments.listForCluster'
     package: '@azure/arm-appplatform'
@@ -866,6 +1088,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appplatform.DeploymentResource" />, <xref
-          uid="@azure/arm-appplatform.DeploymentResource" />[], PageSettings&gt;
+          uid="@azure/arm-appplatform.DeploymentResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

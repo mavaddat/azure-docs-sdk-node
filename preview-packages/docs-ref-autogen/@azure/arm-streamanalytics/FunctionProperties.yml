@@ -75,7 +75,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'type: "Scalar" | "Aggregate"'
+      content: 'type: "Aggregate" | "Scalar"'
       return:
         description: ''
-        type: '"Scalar" | "Aggregate"'
+        type: '"Aggregate" | "Scalar"'

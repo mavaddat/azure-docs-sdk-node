@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string,
         dnsForwardingRulesetName: string, parameters: DnsForwardingRuleset,
         options?: DnsForwardingRulesetsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<DnsForwardingRuleset>,
+        Promise<SimplePollerLike<OperationState<DnsForwardingRuleset>,
         DnsForwardingRuleset>>
       parameters:
         - id: resourceGroupName
@@ -42,7 +42,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />&gt;, <xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />&gt;&gt;
   - name: >-
@@ -95,7 +96,7 @@ methods:
         function beginDelete(resourceGroupName: string,
         dnsForwardingRulesetName: string, options?:
         DnsForwardingRulesetsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -111,7 +112,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string,
       DnsForwardingRulesetsDeleteOptionalParams)
@@ -158,7 +161,7 @@ methods:
         function beginUpdate(resourceGroupName: string,
         dnsForwardingRulesetName: string, parameters: DnsForwardingRulesetPatch,
         options?: DnsForwardingRulesetsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<DnsForwardingRuleset>,
+        Promise<SimplePollerLike<OperationState<DnsForwardingRuleset>,
         DnsForwardingRuleset>>
       parameters:
         - id: resourceGroupName
@@ -179,7 +182,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />&gt;, <xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />&gt;&gt;
   - name: >-
@@ -267,10 +271,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />, <xref
-          uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />[],
-          PageSettings&gt;
+          uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroup(string,
       DnsForwardingRulesetsListByResourceGroupOptionalParams)
@@ -298,10 +302,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />, <xref
-          uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />[],
-          PageSettings&gt;
+          uid="@azure/arm-dnsresolver.DnsForwardingRuleset" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByVirtualNetwork(string, string,
       DnsForwardingRulesetsListByVirtualNetworkOptionalParams)
@@ -333,7 +337,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dnsresolver.VirtualNetworkDnsForwardingRuleset" />,
           <xref uid="@azure/arm-dnsresolver.VirtualNetworkDnsForwardingRuleset"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;

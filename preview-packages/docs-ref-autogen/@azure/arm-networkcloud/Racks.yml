@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.Rack" />&gt;, <xref
           uid="@azure/arm-networkcloud.Rack" />&gt;&gt;
   - name: >-
@@ -102,7 +103,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, rackName: string,
         options?: RacksDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -116,8 +118,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, RacksDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.Racks.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -133,7 +137,7 @@ methods:
     syntax:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string, rackName: string,
-        options?: RacksDeleteOptionalParams): Promise<void>
+        options?: RacksDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -146,7 +150,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginUpdate(string, string, RacksUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.Racks.beginUpdate'
     package: '@azure/arm-networkcloud'
@@ -175,7 +181,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.Rack" />&gt;, <xref
           uid="@azure/arm-networkcloud.Rack" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, RacksUpdateOptionalParams)
@@ -252,8 +259,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-networkcloud.Rack"
-          />, <xref uid="@azure/arm-networkcloud.Rack" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-networkcloud.Rack" />, <xref
+          uid="@azure/arm-networkcloud.Rack" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(RacksListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.Racks.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -275,5 +284,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-networkcloud.Rack"
-          />, <xref uid="@azure/arm-networkcloud.Rack" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-networkcloud.Rack" />, <xref
+          uid="@azure/arm-networkcloud.Rack" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

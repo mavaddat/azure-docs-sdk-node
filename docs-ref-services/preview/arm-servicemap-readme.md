@@ -1,11 +1,8 @@
 ---
 title: Azure Service client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-servicemap, service-map
-author: qiaozha
-ms.author: qiaozha
 ms.date: 01/21/2022
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: azure-maps
 ---

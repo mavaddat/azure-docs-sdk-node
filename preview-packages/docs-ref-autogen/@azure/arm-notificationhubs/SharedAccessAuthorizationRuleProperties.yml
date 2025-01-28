@@ -13,7 +13,7 @@ properties:
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.claimType
     package: '@azure/arm-notificationhubs'
     summary: >-
-      A string that describes the claim type
+      Gets a string that describes the claim type
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -30,7 +30,7 @@ properties:
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.claimValue
     package: '@azure/arm-notificationhubs'
     summary: >-
-      A string that describes the claim value
+      Gets a string that describes the claim value
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -47,7 +47,7 @@ properties:
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.createdTime
     package: '@azure/arm-notificationhubs'
     summary: >-
-      The created time for this rule
+      Gets the created time for this rule
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -55,16 +55,16 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'createdTime?: string'
+      content: 'createdTime?: Date'
       return:
         description: ''
-        type: string
+        type: Date
   - name: keyName
     uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.keyName
     package: '@azure/arm-notificationhubs'
     summary: >-
-      A string that describes the authorization rule.
+      Gets a string that describes the authorization rule.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -81,7 +81,7 @@ properties:
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.modifiedTime
     package: '@azure/arm-notificationhubs'
     summary: >-
-      The last modified time for this rule
+      Gets the last modified time for this rule
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -89,20 +89,17 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'modifiedTime?: string'
+      content: 'modifiedTime?: Date'
       return:
         description: ''
-        type: string
+        type: Date
   - name: primaryKey
     uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.primaryKey
     package: '@azure/arm-notificationhubs'
-    summary: >-
-      A base64-encoded 256-bit primary key for signing and validating the SAS
-      token.
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: |-
+      Gets a base64-encoded 256-bit primary key for signing and
+      validating the SAS token.
     fullName: primaryKey
     remarks: ''
     isDeprecated: false
@@ -116,7 +113,7 @@ properties:
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.revision
     package: '@azure/arm-notificationhubs'
     summary: >-
-      The revision number for the rule
+      Gets the revision number for the rule
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -131,25 +128,22 @@ properties:
   - name: rights
     uid: '@azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.rights'
     package: '@azure/arm-notificationhubs'
-    summary: The rights associated with the rule.
+    summary: Gets or sets the rights associated with the rule.
     fullName: rights
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'rights?: AccessRights[]'
+      content: 'rights: string[]'
       return:
         description: ''
-        type: <xref uid="@azure/arm-notificationhubs.AccessRights" />[]
+        type: string[]
   - name: secondaryKey
     uid: >-
       @azure/arm-notificationhubs.SharedAccessAuthorizationRuleProperties.secondaryKey
     package: '@azure/arm-notificationhubs'
-    summary: >-
-      A base64-encoded 256-bit primary key for signing and validating the SAS
-      token.
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: |-
+      Gets a base64-encoded 256-bit primary key for signing and
+      validating the SAS token.
     fullName: secondaryKey
     remarks: ''
     isDeprecated: false

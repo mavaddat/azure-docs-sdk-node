@@ -1,4 +1,4 @@
-### YamlMime:TSTypeAlias
+### YamlMime:TSType
 name: RawOutputDatasource
 uid: '@azure/arm-streamanalytics.RawOutputDatasource'
 package: '@azure/arm-streamanalytics'
@@ -10,8 +10,35 @@ summary: >-
 fullName: RawOutputDatasource
 remarks: ''
 isDeprecated: false
-syntax: |
-  type RawOutputDatasource = OutputDataSource & {
-    payloadUri?: string
-    type: "Raw"
-  }
+type: interface
+properties:
+  - name: payloadUri
+    uid: '@azure/arm-streamanalytics.RawOutputDatasource.payloadUri'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The SAS URL to a blob where the output should be written. If this property
+      is not set, output data will be written into a temporary storage, and a
+      SAS URL to that temporary storage will be included in the result.
+    fullName: payloadUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'payloadUri?: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: '@azure/arm-streamanalytics.RawOutputDatasource.type'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      Polymorphic discriminator, which specifies the different types this object
+      can be
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: "Raw"'
+      return:
+        description: ''
+        type: '"Raw"'
+extends: <xref uid="@azure/arm-streamanalytics.OutputDataSource" />

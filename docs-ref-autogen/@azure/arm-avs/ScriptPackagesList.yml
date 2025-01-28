@@ -2,7 +2,7 @@
 name: ScriptPackagesList
 uid: '@azure/arm-avs.ScriptPackagesList'
 package: '@azure/arm-avs'
-summary: A list of the available script packages
+summary: The response of a ScriptPackage list operation.
 fullName: ScriptPackagesList
 remarks: ''
 isDeprecated: false
@@ -11,11 +11,7 @@ properties:
   - name: nextLink
     uid: '@azure/arm-avs.ScriptPackagesList.nextLink'
     package: '@azure/arm-avs'
-    summary: >-
-      URL to get the next page if any
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The link to the next page of items
     fullName: nextLink
     remarks: ''
     isDeprecated: false
@@ -27,16 +23,12 @@ properties:
   - name: value
     uid: '@azure/arm-avs.ScriptPackagesList.value'
     package: '@azure/arm-avs'
-    summary: >-
-      List of script package resources
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The ScriptPackage items on this page
     fullName: value
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'value?: ScriptPackage[]'
+      content: 'value: ScriptPackage[]'
       return:
         description: ''
         type: <xref uid="@azure/arm-avs.ScriptPackage" />[]

@@ -43,7 +43,9 @@ properties:
   - name: globalParameters
     uid: '@azure/arm-selfhelp.DiagnosticResource.globalParameters'
     package: '@azure/arm-selfhelp'
-    summary: Global parameters that can be passed to all solutionIds.
+    summary: >-
+      Global parameters is an optional map which can be used to add key and 
+      value to request body to improve the diagnostics results
     fullName: globalParameters
     remarks: ''
     isDeprecated: false
@@ -85,8 +87,8 @@ inheritedProperties:
     uid: '@azure/arm-selfhelp.DiagnosticResource.id'
     package: '@azure/arm-selfhelp'
     summary: >-
-      Fully qualified resource ID for the resource. Ex -
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

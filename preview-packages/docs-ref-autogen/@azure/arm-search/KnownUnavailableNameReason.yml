@@ -13,8 +13,8 @@ fields:
   - name: AlreadyExists
     uid: '@azure/arm-search.KnownUnavailableNameReason.AlreadyExists'
     package: '@azure/arm-search'
-    summary: ''
+    summary: The search service name is already assigned to a different search service.
   - name: Invalid
     uid: '@azure/arm-search.KnownUnavailableNameReason.Invalid'
     package: '@azure/arm-search'
-    summary: ''
+    summary: The search service name doesn't match naming requirements.

@@ -7,4 +7,4 @@ fullName: BareMetalMachinesStartResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type BareMetalMachinesStartResponse = BareMetalMachinesStartHeaders
+  type BareMetalMachinesStartResponse = OperationStatusResult

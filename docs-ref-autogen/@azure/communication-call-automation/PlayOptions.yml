@@ -11,7 +11,7 @@ properties:
   - name: loop
     uid: '@azure/communication-call-automation.PlayOptions.loop'
     package: '@azure/communication-call-automation'
-    summary: ''
+    summary: Determine if it is looping
     fullName: loop
     remarks: ''
     isDeprecated: false
@@ -20,10 +20,27 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: operationCallbackUrl
+    uid: '@azure/communication-call-automation.PlayOptions.operationCallbackUrl'
+    package: '@azure/communication-call-automation'
+    summary: >-
+      Set a callback URL that overrides the default callback URL set by
+      CreateCall/AnswerCall for this operation.
+
+      This setup is per-action. If this is not set, the default callback URI set
+      by CreateCall/AnswerCall will be used.
+    fullName: operationCallbackUrl
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'operationCallbackUrl?: string'
+      return:
+        description: ''
+        type: string
   - name: operationContext
     uid: '@azure/communication-call-automation.PlayOptions.operationContext'
     package: '@azure/communication-call-automation'
-    summary: ''
+    summary: The value to identify context of the operation.
     fullName: operationContext
     remarks: ''
     isDeprecated: false
@@ -44,7 +61,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/communication-call-automation.PlayOptions.onResponse'
@@ -60,7 +77,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/communication-call-automation.PlayOptions.requestOptions'
@@ -73,7 +90,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/communication-call-automation.PlayOptions.serializerOptions'
@@ -86,7 +103,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/communication-call-automation.PlayOptions.tracingOptions'
@@ -99,6 +116,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

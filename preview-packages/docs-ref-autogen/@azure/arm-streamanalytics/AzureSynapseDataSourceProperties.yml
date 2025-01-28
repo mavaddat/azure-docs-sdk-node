@@ -8,6 +8,19 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: authenticationMode
+    uid: >-
+      @azure/arm-streamanalytics.AzureSynapseDataSourceProperties.authenticationMode
+    package: '@azure/arm-streamanalytics'
+    summary: Authentication Mode.
+    fullName: authenticationMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: string'
+      return:
+        description: ''
+        type: string
   - name: database
     uid: '@azure/arm-streamanalytics.AzureSynapseDataSourceProperties.database'
     package: '@azure/arm-streamanalytics'

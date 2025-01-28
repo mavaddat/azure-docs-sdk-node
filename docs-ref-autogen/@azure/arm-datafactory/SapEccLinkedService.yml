@@ -14,8 +14,7 @@ properties:
     summary: >-
       The encrypted credential used for authentication. Credentials are
       encrypted using the integration runtime credential manager. Either
-      encryptedCredential or username/password must be provided. Type: string
-      (or Expression with resultType string).
+      encryptedCredential or username/password must be provided. Type: string.
     fullName: encryptedCredential
     remarks: ''
     isDeprecated: false
@@ -61,10 +60,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'url: string'
+      content: 'url: any'
       return:
         description: ''
-        type: string
+        type: any
   - name: username
     uid: '@azure/arm-datafactory.SapEccLinkedService.username'
     package: '@azure/arm-datafactory'
@@ -75,10 +74,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'username?: string'
+      content: 'username?: any'
       return:
         description: ''
-        type: string
+        type: any
 inheritedProperties:
   - name: annotations
     uid: '@azure/arm-datafactory.SapEccLinkedService.annotations'
@@ -142,4 +141,19 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [LinkedService.parameters](xref:@azure/arm-datafactory.LinkedService.parameters)
+  - name: version
+    uid: '@azure/arm-datafactory.SapEccLinkedService.version'
+    package: '@azure/arm-datafactory'
+    summary: Version of the linked service.
+    fullName: version
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [LinkedService.version](xref:@azure/arm-datafactory.LinkedService.version)
 extends: <xref uid="@azure/arm-datafactory.LinkedService" />

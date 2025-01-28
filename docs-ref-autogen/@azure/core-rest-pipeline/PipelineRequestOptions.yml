@@ -21,7 +21,7 @@ properties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
   - name: allowInsecureConnection
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.allowInsecureConnection'
     package: '@azure/core-rest-pipeline'
@@ -119,6 +119,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/core-rest-pipeline.HttpMethods" />
+  - name: multipartBody
+    uid: '@azure/core-rest-pipeline.PipelineRequestOptions.multipartBody'
+    package: '@azure/core-rest-pipeline'
+    summary: Body for a multipart request.
+    fullName: multipartBody
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multipartBody?: MultipartRequestBody'
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.MultipartRequestBody" />
   - name: onDownloadProgress
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.onDownloadProgress'
     package: '@azure/core-rest-pipeline'
@@ -210,7 +222,7 @@ properties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
   - name: url
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.url'
     package: '@azure/core-rest-pipeline'

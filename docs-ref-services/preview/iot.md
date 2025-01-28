@@ -1,9 +1,7 @@
 ---
 title: Azure IoT SDK for JavaScript
 description: Reference for Azure IoT SDK for JavaScript
-author: xirzec
-ms.author: jeffish
-ms.data: 09/14/2023
+ms.date: 01/27/2025
 ms.topic: reference
 ms.devlang: javascript
 ms.service: iot

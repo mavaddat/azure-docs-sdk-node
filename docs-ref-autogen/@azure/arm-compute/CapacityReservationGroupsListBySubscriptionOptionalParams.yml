@@ -25,6 +25,26 @@ properties:
       return:
         description: ''
         type: string
+  - name: resourceIdsOnly
+    uid: >-
+      @azure/arm-compute.CapacityReservationGroupsListBySubscriptionOptionalParams.resourceIdsOnly
+    package: '@azure/arm-compute'
+    summary: >-
+      The query option to fetch Capacity Reservation Group Resource Ids. <br>
+      'CreatedInSubscription' enables fetching Resource Ids for all capacity
+      reservation group resources created in the subscription. <br>
+      'SharedWithSubscription' enables fetching Resource Ids for all capacity
+      reservation group resources shared with the subscription. <br> 'All'
+      enables fetching Resource Ids for all capacity reservation group resources
+      shared with the subscription and created in the subscription.
+    fullName: resourceIdsOnly
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resourceIdsOnly?: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: abortSignal
     uid: >-
@@ -38,7 +58,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: >-
@@ -55,7 +75,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: >-
@@ -69,7 +89,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -83,7 +103,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: >-
@@ -97,6 +117,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

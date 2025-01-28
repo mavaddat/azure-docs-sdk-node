@@ -2,7 +2,7 @@
 name: ScriptExecutionsList
 uid: '@azure/arm-avs.ScriptExecutionsList'
 package: '@azure/arm-avs'
-summary: Pageable list of script executions
+summary: The response of a ScriptExecution list operation.
 fullName: ScriptExecutionsList
 remarks: ''
 isDeprecated: false
@@ -11,11 +11,7 @@ properties:
   - name: nextLink
     uid: '@azure/arm-avs.ScriptExecutionsList.nextLink'
     package: '@azure/arm-avs'
-    summary: >-
-      URL to get the next page if any
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The link to the next page of items
     fullName: nextLink
     remarks: ''
     isDeprecated: false
@@ -27,16 +23,12 @@ properties:
   - name: value
     uid: '@azure/arm-avs.ScriptExecutionsList.value'
     package: '@azure/arm-avs'
-    summary: >-
-      List of scripts
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The ScriptExecution items on this page
     fullName: value
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'value?: ScriptExecution[]'
+      content: 'value: ScriptExecution[]'
       return:
         description: ''
         type: <xref uid="@azure/arm-avs.ScriptExecution" />[]

@@ -14,3 +14,5 @@ syntax: |
     | EventHubV2StreamInputDataSource
     | IoTHubStreamInputDataSource
     | RawStreamInputDataSource
+    | GatewayMessageBusStreamInputDataSource
+    | EventGridStreamInputDataSource

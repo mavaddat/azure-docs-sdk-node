@@ -45,7 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />&gt;, <xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />&gt;&gt;
   - name: >-
@@ -96,7 +97,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, kubernetesClusterName:
         string, options?: KubernetesClustersDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -113,8 +115,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, KubernetesClustersDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.KubernetesClusters.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -125,7 +129,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         kubernetesClusterName: string, options?:
-        KubernetesClustersDeleteOptionalParams): Promise<void>
+        KubernetesClustersDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -141,7 +145,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: >-
       beginRestartNode(string, string, KubernetesClusterRestartNodeParameters,
       KubernetesClustersRestartNodeOptionalParams)
@@ -156,8 +162,8 @@ methods:
         kubernetesClusterName: string, kubernetesClusterRestartNodeParameters:
         KubernetesClusterRestartNodeParameters, options?:
         KubernetesClustersRestartNodeOptionalParams):
-        Promise<SimplePollerLike<OperationState<KubernetesClustersRestartNodeHeaders>,
-        KubernetesClustersRestartNodeHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -180,11 +186,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.KubernetesClustersRestartNodeHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.KubernetesClustersRestartNodeHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginRestartNodeAndWait(string, string,
       KubernetesClusterRestartNodeParameters,
@@ -200,7 +205,7 @@ methods:
         kubernetesClusterName: string, kubernetesClusterRestartNodeParameters:
         KubernetesClusterRestartNodeParameters, options?:
         KubernetesClustersRestartNodeOptionalParams):
-        Promise<KubernetesClustersRestartNodeHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -223,8 +228,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.KubernetesClustersRestartNodeHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: beginUpdate(string, string, KubernetesClustersUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.KubernetesClusters.beginUpdate'
@@ -258,7 +262,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />&gt;, <xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, KubernetesClustersUpdateOptionalParams)
@@ -349,9 +354,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />, <xref
-          uid="@azure/arm-networkcloud.KubernetesCluster" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.KubernetesCluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(KubernetesClustersListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.KubernetesClusters.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -374,6 +380,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.KubernetesCluster" />, <xref
-          uid="@azure/arm-networkcloud.KubernetesCluster" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.KubernetesCluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

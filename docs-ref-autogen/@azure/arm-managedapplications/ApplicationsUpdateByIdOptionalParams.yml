@@ -17,10 +17,38 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'parameters?: Application'
+      content: 'parameters?: ApplicationPatchable'
       return:
         description: ''
-        type: <xref uid="@azure/arm-managedapplications.Application" />
+        type: <xref uid="@azure/arm-managedapplications.ApplicationPatchable" />
+  - name: resumeFrom
+    uid: >-
+      @azure/arm-managedapplications.ApplicationsUpdateByIdOptionalParams.resumeFrom
+    package: '@azure/arm-managedapplications'
+    summary: >-
+      A serialized poller which can be used to resume an existing paused
+      Long-Running-Operation.
+    fullName: resumeFrom
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resumeFrom?: string'
+      return:
+        description: ''
+        type: string
+  - name: updateIntervalInMs
+    uid: >-
+      @azure/arm-managedapplications.ApplicationsUpdateByIdOptionalParams.updateIntervalInMs
+    package: '@azure/arm-managedapplications'
+    summary: Delay to wait until next poll, in milliseconds.
+    fullName: updateIntervalInMs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'updateIntervalInMs?: number'
+      return:
+        description: ''
+        type: number
 inheritedProperties:
   - name: abortSignal
     uid: >-
@@ -34,7 +62,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: >-
@@ -51,7 +79,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: >-
@@ -65,7 +93,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -79,7 +107,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: >-
@@ -93,6 +121,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

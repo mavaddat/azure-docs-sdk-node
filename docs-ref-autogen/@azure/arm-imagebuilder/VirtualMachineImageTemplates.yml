@@ -37,8 +37,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginCancelAndWait(string, string,
       VirtualMachineImageTemplatesCancelOptionalParams)
@@ -101,7 +101,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />&gt;, <xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />&gt;&gt;
   - name: >-
@@ -150,7 +151,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, imageTemplateName:
         string, options?: VirtualMachineImageTemplatesDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<VirtualMachineImageTemplatesDeleteHeaders>,
+        VirtualMachineImageTemplatesDeleteHeaders>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -167,8 +169,12 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-imagebuilder.VirtualMachineImageTemplatesDeleteHeaders"
+          />&gt;, <xref
+          uid="@azure/arm-imagebuilder.VirtualMachineImageTemplatesDeleteHeaders"
+          />&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string,
       VirtualMachineImageTemplatesDeleteOptionalParams)
@@ -181,7 +187,8 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         imageTemplateName: string, options?:
-        VirtualMachineImageTemplatesDeleteOptionalParams): Promise<void>
+        VirtualMachineImageTemplatesDeleteOptionalParams):
+        Promise<VirtualMachineImageTemplatesDeleteHeaders>
       parameters:
         - id: resourceGroupName
           type: string
@@ -197,7 +204,10 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-imagebuilder.VirtualMachineImageTemplatesDeleteHeaders"
+          />&gt;
   - name: beginRun(string, string, VirtualMachineImageTemplatesRunOptionalParams)
     uid: '@azure/arm-imagebuilder.VirtualMachineImageTemplates.beginRun'
     package: '@azure/arm-imagebuilder'
@@ -225,8 +235,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRunAndWait(string, string,
       VirtualMachineImageTemplatesRunOptionalParams)
@@ -289,7 +299,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />&gt;, <xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />&gt;&gt;
   - name: >-
@@ -407,9 +418,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />, <xref
-          uid="@azure/arm-imagebuilder.ImageTemplate" />[], PageSettings&gt;
+          uid="@azure/arm-imagebuilder.ImageTemplate" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroup(string,
       VirtualMachineImageTemplatesListByResourceGroupOptionalParams)
@@ -438,9 +450,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-imagebuilder.ImageTemplate" />, <xref
-          uid="@azure/arm-imagebuilder.ImageTemplate" />[], PageSettings&gt;
+          uid="@azure/arm-imagebuilder.ImageTemplate" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listRunOutputs(string, string,
       VirtualMachineImageTemplatesListRunOutputsOptionalParams)
@@ -471,6 +484,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-imagebuilder.RunOutput" />, <xref
-          uid="@azure/arm-imagebuilder.RunOutput" />[], PageSettings&gt;
+          uid="@azure/arm-imagebuilder.RunOutput" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

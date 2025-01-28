@@ -48,7 +48,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-cosmosdb.ClusterResource" />&gt;, <xref
           uid="@azure/arm-cosmosdb.ClusterResource" />&gt;&gt;
   - name: >-
@@ -123,8 +124,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeallocateAndWait(string, string,
       CassandraClustersDeallocateOptionalParams)
@@ -187,8 +188,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, CassandraClustersDeleteOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.beginDeleteAndWait'
     package: '@azure/arm-cosmosdb'
@@ -247,7 +248,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-cosmosdb.CommandOutput" />&gt;, <xref
           uid="@azure/arm-cosmosdb.CommandOutput" />&gt;&gt;
   - name: >-
@@ -282,6 +284,79 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-cosmosdb.CommandOutput" />&gt;
+  - name: >-
+      beginInvokeCommandAsync(string, string, CommandAsyncPostBody,
+      CassandraClustersInvokeCommandAsyncOptionalParams)
+    uid: '@azure/arm-cosmosdb.CassandraClusters.beginInvokeCommandAsync'
+    package: '@azure/arm-cosmosdb'
+    summary: Invoke a command like nodetool for cassandra maintenance asynchronously
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginInvokeCommandAsync(resourceGroupName: string, clusterName:
+        string, body: CommandAsyncPostBody, options?:
+        CassandraClustersInvokeCommandAsyncOptionalParams):
+        Promise<SimplePollerLike<OperationState<CommandPublicResource>,
+        CommandPublicResource>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: Managed Cassandra cluster name.
+        - id: body
+          type: <xref uid="@azure/arm-cosmosdb.CommandAsyncPostBody" />
+          description: Specification which command to run where
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.CassandraClustersInvokeCommandAsyncOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-cosmosdb.CommandPublicResource" />&gt;, <xref
+          uid="@azure/arm-cosmosdb.CommandPublicResource" />&gt;&gt;
+  - name: >-
+      beginInvokeCommandAsyncAndWait(string, string, CommandAsyncPostBody,
+      CassandraClustersInvokeCommandAsyncOptionalParams)
+    uid: '@azure/arm-cosmosdb.CassandraClusters.beginInvokeCommandAsyncAndWait'
+    package: '@azure/arm-cosmosdb'
+    summary: Invoke a command like nodetool for cassandra maintenance asynchronously
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginInvokeCommandAsyncAndWait(resourceGroupName: string,
+        clusterName: string, body: CommandAsyncPostBody, options?:
+        CassandraClustersInvokeCommandAsyncOptionalParams):
+        Promise<CommandPublicResource>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: Managed Cassandra cluster name.
+        - id: body
+          type: <xref uid="@azure/arm-cosmosdb.CommandAsyncPostBody" />
+          description: Specification which command to run where
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.CassandraClustersInvokeCommandAsyncOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-cosmosdb.CommandPublicResource"
+          />&gt;
   - name: beginStart(string, string, CassandraClustersStartOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.beginStart'
     package: '@azure/arm-cosmosdb'
@@ -315,8 +390,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginStartAndWait(string, string, CassandraClustersStartOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.beginStartAndWait'
     package: '@azure/arm-cosmosdb'
@@ -381,7 +456,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-cosmosdb.ClusterResource" />&gt;, <xref
           uid="@azure/arm-cosmosdb.ClusterResource" />&gt;&gt;
   - name: >-
@@ -474,6 +550,41 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-cosmosdb.BackupResource" />&gt;
+  - name: >-
+      getCommandAsync(string, string, string,
+      CassandraClustersGetCommandAsyncOptionalParams)
+    uid: '@azure/arm-cosmosdb.CassandraClusters.getCommandAsync'
+    package: '@azure/arm-cosmosdb'
+    summary: Get details about a specified command that was run asynchronously.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getCommandAsync(resourceGroupName: string, clusterName: string,
+        commandId: string, options?:
+        CassandraClustersGetCommandAsyncOptionalParams):
+        Promise<CommandPublicResource>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: Managed Cassandra cluster name.
+        - id: commandId
+          type: string
+          description: Managed Cassandra cluster command id.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.CassandraClustersGetCommandAsyncOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-cosmosdb.CommandPublicResource"
+          />&gt;
   - name: listBackups(string, string, CassandraClustersListBackupsOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.listBackups'
     package: '@azure/arm-cosmosdb'
@@ -502,9 +613,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-cosmosdb.BackupResource" />, <xref
-          uid="@azure/arm-cosmosdb.BackupResource" />[], PageSettings&gt;
+          uid="@azure/arm-cosmosdb.BackupResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroup(string,
       CassandraClustersListByResourceGroupOptionalParams)
@@ -532,9 +644,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-cosmosdb.ClusterResource" />, <xref
-          uid="@azure/arm-cosmosdb.ClusterResource" />[], PageSettings&gt;
+          uid="@azure/arm-cosmosdb.ClusterResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(CassandraClustersListBySubscriptionOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.listBySubscription'
     package: '@azure/arm-cosmosdb'
@@ -557,9 +670,42 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-cosmosdb.ClusterResource" />, <xref
-          uid="@azure/arm-cosmosdb.ClusterResource" />[], PageSettings&gt;
+          uid="@azure/arm-cosmosdb.ClusterResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: listCommand(string, string, CassandraClustersListCommandOptionalParams)
+    uid: '@azure/arm-cosmosdb.CassandraClusters.listCommand'
+    package: '@azure/arm-cosmosdb'
+    summary: List all commands currently running on ring info
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listCommand(resourceGroupName: string, clusterName: string,
+        options?: CassandraClustersListCommandOptionalParams):
+        PagedAsyncIterableIterator<CommandPublicResource,
+        CommandPublicResource[], PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: Managed Cassandra cluster name.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-cosmosdb.CassandraClustersListCommandOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-cosmosdb.CommandPublicResource" />, <xref
+          uid="@azure/arm-cosmosdb.CommandPublicResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: status(string, string, CassandraClustersStatusOptionalParams)
     uid: '@azure/arm-cosmosdb.CassandraClusters.status'
     package: '@azure/arm-cosmosdb'

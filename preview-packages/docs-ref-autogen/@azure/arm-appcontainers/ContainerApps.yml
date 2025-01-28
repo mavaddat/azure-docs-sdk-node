@@ -41,7 +41,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.ContainerApp" />&gt;, <xref
           uid="@azure/arm-appcontainers.ContainerApp" />&gt;&gt;
   - name: >-
@@ -102,8 +103,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, ContainerAppsDeleteOptionalParams)
     uid: '@azure/arm-appcontainers.ContainerApps.beginDeleteAndWait'
     package: '@azure/arm-appcontainers'
@@ -129,6 +130,118 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: beginStart(string, string, ContainerAppsStartOptionalParams)
+    uid: '@azure/arm-appcontainers.ContainerApps.beginStart'
+    package: '@azure/arm-appcontainers'
+    summary: Start a container app
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginStart(resourceGroupName: string, containerAppName: string,
+        options?: ContainerAppsStartOptionalParams):
+        Promise<SimplePollerLike<OperationState<ContainerApp>, ContainerApp>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: containerAppName
+          type: string
+          description: Name of the Container App.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appcontainers.ContainerAppsStartOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appcontainers.ContainerApp" />&gt;, <xref
+          uid="@azure/arm-appcontainers.ContainerApp" />&gt;&gt;
+  - name: beginStartAndWait(string, string, ContainerAppsStartOptionalParams)
+    uid: '@azure/arm-appcontainers.ContainerApps.beginStartAndWait'
+    package: '@azure/arm-appcontainers'
+    summary: Start a container app
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginStartAndWait(resourceGroupName: string, containerAppName:
+        string, options?: ContainerAppsStartOptionalParams):
+        Promise<ContainerApp>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: containerAppName
+          type: string
+          description: Name of the Container App.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appcontainers.ContainerAppsStartOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.ContainerApp" />&gt;
+  - name: beginStop(string, string, ContainerAppsStopOptionalParams)
+    uid: '@azure/arm-appcontainers.ContainerApps.beginStop'
+    package: '@azure/arm-appcontainers'
+    summary: Stop a container app
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginStop(resourceGroupName: string, containerAppName: string,
+        options?: ContainerAppsStopOptionalParams):
+        Promise<SimplePollerLike<OperationState<ContainerApp>, ContainerApp>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: containerAppName
+          type: string
+          description: Name of the Container App.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-appcontainers.ContainerAppsStopOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appcontainers.ContainerApp" />&gt;, <xref
+          uid="@azure/arm-appcontainers.ContainerApp" />&gt;&gt;
+  - name: beginStopAndWait(string, string, ContainerAppsStopOptionalParams)
+    uid: '@azure/arm-appcontainers.ContainerApps.beginStopAndWait'
+    package: '@azure/arm-appcontainers'
+    summary: Stop a container app
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginStopAndWait(resourceGroupName: string, containerAppName:
+        string, options?: ContainerAppsStopOptionalParams):
+        Promise<ContainerApp>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: containerAppName
+          type: string
+          description: Name of the Container App.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-appcontainers.ContainerAppsStopOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.ContainerApp" />&gt;
   - name: >-
       beginUpdate(string, string, ContainerApp,
       ContainerAppsUpdateOptionalParams)
@@ -161,7 +274,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.ContainerApp" />&gt;, <xref
           uid="@azure/arm-appcontainers.ContainerApp" />&gt;&gt;
   - name: >-
@@ -275,9 +389,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appcontainers.ContainerApp" />, <xref
-          uid="@azure/arm-appcontainers.ContainerApp" />[], PageSettings&gt;
+          uid="@azure/arm-appcontainers.ContainerApp" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(ContainerAppsListBySubscriptionOptionalParams)
     uid: '@azure/arm-appcontainers.ContainerApps.listBySubscription'
     package: '@azure/arm-appcontainers'
@@ -299,9 +414,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appcontainers.ContainerApp" />, <xref
-          uid="@azure/arm-appcontainers.ContainerApp" />[], PageSettings&gt;
+          uid="@azure/arm-appcontainers.ContainerApp" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listCustomHostNameAnalysis(string, string,
       ContainerAppsListCustomHostNameAnalysisOptionalParams)

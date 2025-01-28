@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, clusterName:
         string, parameters: Cluster, options?:
         ClustersCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Cluster>, Cluster>>
+        Promise<SimplePollerLike<OperationState<Cluster>, Cluster>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -40,7 +40,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-eventhub.Cluster" />&gt;, <xref
           uid="@azure/arm-eventhub.Cluster" />&gt;&gt;
   - name: >-
@@ -84,7 +85,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, clusterName: string,
         options?: ClustersDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -97,7 +98,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, ClustersDeleteOptionalParams)
     uid: '@azure/arm-eventhub.Clusters.beginDeleteAndWait'
     package: '@azure/arm-eventhub'
@@ -133,7 +136,7 @@ methods:
       content: >-
         function beginUpdate(resourceGroupName: string, clusterName: string,
         parameters: Cluster, options?: ClustersUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Cluster>, Cluster>>
+        Promise<SimplePollerLike<OperationState<Cluster>, Cluster>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -150,7 +153,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-eventhub.Cluster" />&gt;, <xref
           uid="@azure/arm-eventhub.Cluster" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, Cluster, ClustersUpdateOptionalParams)
@@ -255,8 +259,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-eventhub.Cluster"
-          />, <xref uid="@azure/arm-eventhub.Cluster" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-eventhub.Cluster" />, <xref
+          uid="@azure/arm-eventhub.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(ClustersListBySubscriptionOptionalParams)
     uid: '@azure/arm-eventhub.Clusters.listBySubscription'
     package: '@azure/arm-eventhub'
@@ -278,8 +284,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-eventhub.Cluster"
-          />, <xref uid="@azure/arm-eventhub.Cluster" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-eventhub.Cluster" />, <xref
+          uid="@azure/arm-eventhub.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listNamespaces(string, string, ClustersListNamespacesOptionalParams)
     uid: '@azure/arm-eventhub.Clusters.listNamespaces'
     package: '@azure/arm-eventhub'

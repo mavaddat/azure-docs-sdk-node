@@ -20,6 +20,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: elasticSanResourceId
+    uid: '@azure/arm-compute.CreationData.elasticSanResourceId'
+    package: '@azure/arm-compute'
+    summary: >-
+      Required if createOption is CopyFromSanSnapshot. This is the ARM id of the
+      source elastic san volume snapshot.
+    fullName: elasticSanResourceId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'elasticSanResourceId?: string'
+      return:
+        description: ''
+        type: string
   - name: galleryImageReference
     uid: '@azure/arm-compute.CreationData.galleryImageReference'
     package: '@azure/arm-compute'
@@ -77,6 +91,20 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: provisionedBandwidthCopySpeed
+    uid: '@azure/arm-compute.CreationData.provisionedBandwidthCopySpeed'
+    package: '@azure/arm-compute'
+    summary: >-
+      If this field is set on a snapshot and createOption is CopyStart, the
+      snapshot will be copied at a quicker speed.
+    fullName: provisionedBandwidthCopySpeed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'provisionedBandwidthCopySpeed?: string'
+      return:
+        description: ''
+        type: string
   - name: securityDataUri
     uid: '@azure/arm-compute.CreationData.securityDataUri'
     package: '@azure/arm-compute'

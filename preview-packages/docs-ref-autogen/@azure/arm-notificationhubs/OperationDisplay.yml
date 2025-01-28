@@ -8,11 +8,27 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: description
+    uid: '@azure/arm-notificationhubs.OperationDisplay.description'
+    package: '@azure/arm-notificationhubs'
+    summary: >-
+      Human-friendly operation description.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description?: string'
+      return:
+        description: ''
+        type: string
   - name: operation
     uid: '@azure/arm-notificationhubs.OperationDisplay.operation'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Operation type: Read, write, delete, etc.
+      Gets operation type: Read, write, delete, etc.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -28,7 +44,7 @@ properties:
     uid: '@azure/arm-notificationhubs.OperationDisplay.provider'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Service provider: Microsoft.NotificationHubs
+      Gets service provider: Microsoft.NotificationHubs
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -44,7 +60,7 @@ properties:
     uid: '@azure/arm-notificationhubs.OperationDisplay.resource'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource on which the operation is performed: Invoice, etc.
+      Gets resource on which the operation is performed: Invoice, etc.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

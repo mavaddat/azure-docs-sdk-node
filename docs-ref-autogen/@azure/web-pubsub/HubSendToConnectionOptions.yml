@@ -7,6 +7,29 @@ fullName: HubSendToConnectionOptions
 remarks: ''
 isDeprecated: false
 type: interface
+properties:
+  - name: messageTtlSeconds
+    uid: '@azure/web-pubsub.HubSendToConnectionOptions.messageTtlSeconds'
+    package: '@azure/web-pubsub'
+    summary: >-
+      The time-to-live (TTL) value in seconds for messages sent to the service.
+
+      0 is the default value, which means the message never expires.
+
+      300 is the maximum value.
+
+      If this parameter is non-zero, messages that are not consumed by the
+      client within the specified TTL will be dropped by the service.
+
+      This parameter can help when the client's bandwidth is limited.
+    fullName: messageTtlSeconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'messageTtlSeconds?: number'
+      return:
+        description: ''
+        type: number
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/web-pubsub.HubSendToConnectionOptions.abortSignal'
@@ -19,7 +42,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/web-pubsub.HubSendToConnectionOptions.onResponse'
@@ -35,7 +58,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/web-pubsub.HubSendToConnectionOptions.requestOptions'
@@ -48,7 +71,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/web-pubsub.HubSendToConnectionOptions.serializerOptions'
@@ -61,7 +84,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/web-pubsub.HubSendToConnectionOptions.tracingOptions'
@@ -74,6 +97,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

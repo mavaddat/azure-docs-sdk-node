@@ -83,7 +83,23 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'headers?: any'
+      content: 'headers?: {[propertyName: string]: any}'
+      return:
+        description: ''
+        type: '{[propertyName: string]: any}'
+  - name: httpRequestTimeout
+    uid: '@azure/arm-datafactory.WebActivity.httpRequestTimeout'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Timeout for the HTTP request to get a response. Format is in TimeSpan
+      (hh:mm:ss). This value is the timeout to get a response, not the activity
+      timeout. The default value is 00:01:00 (1 minute). The range is from 1 to
+      10 minutes
+    fullName: httpRequestTimeout
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'httpRequestTimeout?: any'
       return:
         description: ''
         type: any
@@ -111,6 +127,22 @@ properties:
       return:
         description: ''
         type: string
+  - name: turnOffAsync
+    uid: '@azure/arm-datafactory.WebActivity.turnOffAsync'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Option to disable invoking HTTP GET on location given in response header
+      of a HTTP 202 Response. If set true, it stops invoking HTTP GET on http
+      location given in response header. If set false then continues to invoke
+      HTTP GET call on location given in http response headers.
+    fullName: turnOffAsync
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'turnOffAsync?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: type
     uid: '@azure/arm-datafactory.WebActivity.type'
     package: '@azure/arm-datafactory'
@@ -200,6 +232,24 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ExecutionActivity.name](xref:@azure/arm-datafactory.ExecutionActivity.name)
+  - name: onInactiveMarkAs
+    uid: '@azure/arm-datafactory.WebActivity.onInactiveMarkAs'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Status result of the activity when the state is set to Inactive. This is
+      an optional property and if not provided when the activity is inactive,
+      the status will be Succeeded by default.
+    fullName: onInactiveMarkAs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'onInactiveMarkAs?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ExecutionActivity.onInactiveMarkAs](xref:@azure/arm-datafactory.ExecutionActivity.onInactiveMarkAs)
   - name: policy
     uid: '@azure/arm-datafactory.WebActivity.policy'
     package: '@azure/arm-datafactory'
@@ -215,6 +265,23 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ExecutionActivity.policy](xref:@azure/arm-datafactory.ExecutionActivity.policy)
+  - name: state
+    uid: '@azure/arm-datafactory.WebActivity.state'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Activity state. This is an optional property and if not provided, the
+      state will be Active by default.
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ExecutionActivity.state](xref:@azure/arm-datafactory.ExecutionActivity.state)
   - name: userProperties
     uid: '@azure/arm-datafactory.WebActivity.userProperties'
     package: '@azure/arm-datafactory'

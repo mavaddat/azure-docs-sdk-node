@@ -7,34 +7,6 @@ fullName: PolicyExemptionsListNextOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
-  - name: filter
-    uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.filter'
-    package: '@azure/arm-policy'
-    summary: >-
-      The filter to apply on the operation. Valid values for $filter are:
-      'atScope()', 'atExactScope()', 'excludeExpired()' or 'policyAssignmentId
-      eq '{value}''. If $filter is not provided, no filtering is performed. If
-      $filter is not provided, the unfiltered list includes all policy
-      exemptions associated with the scope, including those that apply directly
-      or apply from containing scopes. If $filter=atScope() is provided, the
-      returned list only includes all policy exemptions that apply to the scope,
-      which is everything in the unfiltered list except those applied to sub
-      scopes contained within the given scope. If $filter=atExactScope() is
-      provided, the returned list only includes all policy exemptions that at
-      the given scope. If $filter=excludeExpired() is provided, the returned
-      list only includes all policy exemptions that either haven't expired or
-      didn't set expiration date. If $filter=policyAssignmentId eq '{value}' is
-      provided. the returned list only includes all policy exemptions that are
-      associated with the give policyAssignmentId.
-    fullName: filter
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'filter?: string'
-      return:
-        description: ''
-        type: string
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.abortSignal'
@@ -47,7 +19,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.onResponse'
@@ -63,7 +35,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.requestOptions'
@@ -76,7 +48,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.serializerOptions'
@@ -89,7 +61,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-policy.PolicyExemptionsListNextOptionalParams.tracingOptions'
@@ -102,6 +74,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

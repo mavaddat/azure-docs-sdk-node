@@ -44,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.ClusterManager" />&gt;, <xref
           uid="@azure/arm-networkcloud.ClusterManager" />&gt;&gt;
   - name: >-
@@ -92,7 +93,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, clusterManagerName:
         string, options?: ClusterManagersDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -108,8 +110,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, ClusterManagersDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.ClusterManagers.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -120,7 +124,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         clusterManagerName: string, options?:
-        ClusterManagersDeleteOptionalParams): Promise<void>
+        ClusterManagersDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -135,7 +139,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: get(string, string, ClusterManagersGetOptionalParams)
     uid: '@azure/arm-networkcloud.ClusterManagers.get'
     package: '@azure/arm-networkcloud'
@@ -188,9 +194,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.ClusterManager" />, <xref
-          uid="@azure/arm-networkcloud.ClusterManager" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.ClusterManager" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(ClusterManagersListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.ClusterManagers.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -213,9 +220,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.ClusterManager" />, <xref
-          uid="@azure/arm-networkcloud.ClusterManager" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.ClusterManager" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: update(string, string, ClusterManagersUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.ClusterManagers.update'
     package: '@azure/arm-networkcloud'

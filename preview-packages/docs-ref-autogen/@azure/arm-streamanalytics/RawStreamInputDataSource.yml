@@ -1,4 +1,4 @@
-### YamlMime:TSTypeAlias
+### YamlMime:TSType
 name: RawStreamInputDataSource
 uid: '@azure/arm-streamanalytics.RawStreamInputDataSource'
 package: '@azure/arm-streamanalytics'
@@ -10,9 +10,48 @@ summary: >-
 fullName: RawStreamInputDataSource
 remarks: ''
 isDeprecated: false
-syntax: |
-  type RawStreamInputDataSource = StreamInputDataSource & {
-    payload?: string
-    payloadUri?: string
-    type: "Raw"
-  }
+type: interface
+properties:
+  - name: payload
+    uid: '@azure/arm-streamanalytics.RawStreamInputDataSource.payload'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The JSON serialized content of the input data. Either payload or
+      payloadUri must be set, but not both.
+    fullName: payload
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'payload?: string'
+      return:
+        description: ''
+        type: string
+  - name: payloadUri
+    uid: '@azure/arm-streamanalytics.RawStreamInputDataSource.payloadUri'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The SAS URL to a blob containing the JSON serialized content of the input
+      data. Either payload or payloadUri must be set, but not both.
+    fullName: payloadUri
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'payloadUri?: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: '@azure/arm-streamanalytics.RawStreamInputDataSource.type'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      Polymorphic discriminator, which specifies the different types this object
+      can be
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: "Raw"'
+      return:
+        description: ''
+        type: '"Raw"'
+extends: <xref uid="@azure/arm-streamanalytics.StreamInputDataSource" />

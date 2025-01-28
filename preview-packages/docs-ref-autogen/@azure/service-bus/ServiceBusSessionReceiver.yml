@@ -248,6 +248,24 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ServiceBusReceiver.deferMessage](xref:@azure/service-bus.ServiceBusReceiver.deferMessage)
+  - name: deleteMessages(DeleteMessagesOptions)
+    uid: '@azure/service-bus.ServiceBusSessionReceiver.deleteMessages'
+    package: '@azure/service-bus'
+    summary: Delete messages. If no option is specified, all messages will be deleted.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function deleteMessages(options: DeleteMessagesOptions): Promise<number>'
+      parameters:
+        - id: options
+          type: <xref uid="@azure/service-bus.DeleteMessagesOptions" />
+          description: Options to configure the operation.
+      return:
+        description: number of messages that have been deleted.
+        type: Promise&lt;number&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ServiceBusReceiver.deleteMessages](xref:@azure/service-bus.ServiceBusReceiver.deleteMessages)
   - name: getMessageIterator(GetMessageIteratorOptions)
     uid: '@azure/service-bus.ServiceBusSessionReceiver.getMessageIterator'
     package: '@azure/service-bus'
@@ -316,6 +334,31 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ServiceBusReceiver.peekMessages](xref:@azure/service-bus.ServiceBusReceiver.peekMessages)
+  - name: purgeMessages(PurgeMessagesOptions)
+    uid: '@azure/service-bus.ServiceBusSessionReceiver.purgeMessages'
+    package: '@azure/service-bus'
+    summary: >-
+      Attempts to purge all messages from an entity.  Locked messages are not
+      eligible for removal and
+
+      will remain in the entity.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function purgeMessages(options?: PurgeMessagesOptions): Promise<number>'
+      parameters:
+        - id: options
+          type: <xref uid="@azure/service-bus.PurgeMessagesOptions" />
+          description: >-
+            Options that allow to specify the cutoff time for deletion. Only
+            messages that were enqueued
+                             before this time will be deleted.  If not specified, current time will be used.
+      return:
+        description: number of messages deleted.
+        type: Promise&lt;number&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ServiceBusReceiver.purgeMessages](xref:@azure/service-bus.ServiceBusReceiver.purgeMessages)
   - name: receiveDeferredMessages(Long | Long[], OperationOptionsBase)
     uid: '@azure/service-bus.ServiceBusSessionReceiver.receiveDeferredMessages'
     package: '@azure/service-bus'

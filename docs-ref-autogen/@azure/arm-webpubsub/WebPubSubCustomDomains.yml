@@ -25,10 +25,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -47,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-webpubsub.CustomDomain" />&gt;, <xref
           uid="@azure/arm-webpubsub.CustomDomain" />&gt;&gt;
   - name: >-
@@ -67,10 +65,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -105,10 +100,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -124,8 +116,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       WebPubSubCustomDomainsDeleteOptionalParams)
@@ -142,10 +134,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -175,10 +164,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -208,10 +194,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -224,6 +207,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-webpubsub.CustomDomain" />, <xref
-          uid="@azure/arm-webpubsub.CustomDomain" />[], PageSettings&gt;
+          uid="@azure/arm-webpubsub.CustomDomain" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

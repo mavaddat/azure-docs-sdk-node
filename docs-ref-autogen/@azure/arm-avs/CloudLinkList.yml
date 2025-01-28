@@ -2,7 +2,7 @@
 name: CloudLinkList
 uid: '@azure/arm-avs.CloudLinkList'
 package: '@azure/arm-avs'
-summary: A paged list of cloud links
+summary: The response of a CloudLink list operation.
 fullName: CloudLinkList
 remarks: ''
 isDeprecated: false
@@ -11,11 +11,7 @@ properties:
   - name: nextLink
     uid: '@azure/arm-avs.CloudLinkList.nextLink'
     package: '@azure/arm-avs'
-    summary: >-
-      URL to get the next page if any
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The link to the next page of items
     fullName: nextLink
     remarks: ''
     isDeprecated: false
@@ -27,16 +23,12 @@ properties:
   - name: value
     uid: '@azure/arm-avs.CloudLinkList.value'
     package: '@azure/arm-avs'
-    summary: >-
-      The items on a page
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The CloudLink items on this page
     fullName: value
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'value?: CloudLink[]'
+      content: 'value: CloudLink[]'
       return:
         description: ''
         type: <xref uid="@azure/arm-avs.CloudLink" />[]

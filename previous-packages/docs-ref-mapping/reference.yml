@@ -29,13 +29,13 @@
     landingPageType: Service
     items:
     - name: Anomaly Detector (deprecated)
-      href: ~/docs-ref-services/legacy/ai-anomaly-detector-readme.md
-      children:
-      - '@azure/ai-anomaly-detector'
-    - name: Anomaly Detector (deprecated)
       children:
       - '@azure/cognitiveservices-anomalydetector'
       landingPageType: Service
+    - name: Anomaly Detector (deprecated)
+      href: ~/docs-ref-services/legacy/ai-anomaly-detector-readme.md
+      children:
+      - '@azure/ai-anomaly-detector'
     - name: Form Recognizer (deprecated)
       children:
       - '@azure/cognitiveservices-formrecognizer'
@@ -44,6 +44,14 @@
       children:
       - '@azure/cognitiveservices-textanalytics'
       landingPageType: Service
+  - name: Communication
+    href: ~/docs-ref-services/legacy/communication.md
+    landingPageType: Service
+    items:
+    - name: Communication Network Traversal (deprecated)
+      href: ~/docs-ref-services/legacy/communication-network-traversal-readme.md
+      children:
+      - '@azure/communication-network-traversal'
   - name: Event Grid
     href: ~/docs-ref-services/legacy/event-grid.md
     landingPageType: Service
@@ -60,12 +68,18 @@
       children:
       - '@azure/event-processor-host'
       landingPageType: Service
-    - name: Management
-      items:
-      - name: Resource Management - Event Hubs (deprecated)
-        children:
-        - azure-arm-eventhub
-        landingPageType: Service
+  - name: Functions
+    href: ~/docs-ref-services/legacy/functions.md
+    landingPageType: Service
+    items:
+    - name: Azure Functions
+      children:
+      - '@azure/functions'
+      landingPageType: Service
+    - name: Durable Functions
+      children:
+      - durable-functions
+      landingPageType: Service
   - name: Key Vault
     href: ~/docs-ref-services/legacy/key-vault.md
     landingPageType: Service
@@ -102,10 +116,18 @@
       href: ~/docs-ref-services/legacy/purview-account-rest-readme.md
       children:
       - '@azure-rest/purview-account'
+    - name: Purview Catalog (deprecated)
+      href: ~/docs-ref-services/legacy/purview-catalog-rest-readme.md
+      children:
+      - '@azure-rest/purview-catalog'
   - name: Search
     href: ~/docs-ref-services/legacy/search.md
     landingPageType: Service
     items:
+    - name: Cognitive Search (deprecated)
+      children:
+      - '@azure/search'
+      landingPageType: Service
     - name: Management
       items:
       - name: Resource Management - Cognitive Search (deprecated)
@@ -166,6 +188,20 @@
         children:
         - '@azure/arm-storsimple8000series'
         landingPageType: Service
+  - name: Video Analyzer
+    href: ~/docs-ref-services/legacy/video-analyzer.md
+    landingPageType: Service
+    items:
+    - name: Video Analyzer Edge (deprecated)
+      href: ~/docs-ref-services/legacy/video-analyzer-edge-readme.md
+      children:
+      - '@azure/video-analyzer-edge'
+    - name: Management
+      items:
+      - name: Resource Management - Video Analyzer (deprecated)
+        href: ~/docs-ref-services/legacy/arm-videoanalyzer-readme.md
+        children:
+        - '@azure/arm-videoanalyzer'
   - name: Other
     landingPageType: Service
     items:

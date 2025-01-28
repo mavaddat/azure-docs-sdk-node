@@ -68,6 +68,30 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: enablePrivateOnlyBastion
+    uid: '@azure/arm-network.BastionHost.enablePrivateOnlyBastion'
+    package: '@azure/arm-network'
+    summary: Enable/Disable Private Only feature of the Bastion Host resource.
+    fullName: enablePrivateOnlyBastion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enablePrivateOnlyBastion?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: enableSessionRecording
+    uid: '@azure/arm-network.BastionHost.enableSessionRecording'
+    package: '@azure/arm-network'
+    summary: Enable/Disable Session Recording feature of the Bastion Host resource.
+    fullName: enableSessionRecording
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enableSessionRecording?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: enableShareableLink
     uid: '@azure/arm-network.BastionHost.enableShareableLink'
     package: '@azure/arm-network'
@@ -120,6 +144,20 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-network.BastionHostIPConfiguration" />[]
+  - name: networkAcls
+    uid: '@azure/arm-network.BastionHost.networkAcls'
+    package: '@azure/arm-network'
+    summary: ''
+    fullName: networkAcls
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'networkAcls?: BastionHostPropertiesFormatNetworkAcls'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-network.BastionHostPropertiesFormatNetworkAcls"
+          />
   - name: provisioningState
     uid: '@azure/arm-network.BastionHost.provisioningState'
     package: '@azure/arm-network'
@@ -160,6 +198,34 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-network.Sku" />
+  - name: virtualNetwork
+    uid: '@azure/arm-network.BastionHost.virtualNetwork'
+    package: '@azure/arm-network'
+    summary: >-
+      Reference to an existing virtual network required for Developer Bastion
+      Host only.
+    fullName: virtualNetwork
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'virtualNetwork?: SubResource'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-network.SubResource" />
+  - name: zones
+    uid: '@azure/arm-network.BastionHost.zones'
+    package: '@azure/arm-network'
+    summary: >-
+      A list of availability zones denoting where the resource needs to come
+      from.
+    fullName: zones
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        description: ''
+        type: string[]
 inheritedProperties:
   - name: id
     uid: '@azure/arm-network.BastionHost.id'

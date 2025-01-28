@@ -1,9 +1,7 @@
 ---
 title: Azure Compute SDK for JavaScript
 description: Reference for Azure Compute SDK for JavaScript
-author: xirzec
-ms.author: jeffish
-ms.data: 09/14/2023
+ms.date: 01/27/2025
 ms.topic: reference
 ms.devlang: javascript
 ms.service: compute

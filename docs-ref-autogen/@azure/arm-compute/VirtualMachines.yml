@@ -38,7 +38,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineAssessPatchesResult" />&gt;,
           <xref uid="@azure/arm-compute.VirtualMachineAssessPatchesResult"
           />&gt;&gt;
@@ -73,6 +74,84 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/arm-compute.VirtualMachineAssessPatchesResult" />&gt;
+  - name: >-
+      beginAttachDetachDataDisks(string, string, AttachDetachDataDisksRequest,
+      VirtualMachinesAttachDetachDataDisksOptionalParams)
+    uid: '@azure/arm-compute.VirtualMachines.beginAttachDetachDataDisks'
+    package: '@azure/arm-compute'
+    summary: Attach and detach data disks to/from the virtual machine.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginAttachDetachDataDisks(resourceGroupName: string, vmName:
+        string, parameters: AttachDetachDataDisksRequest, options?:
+        VirtualMachinesAttachDetachDataDisksOptionalParams):
+        Promise<SimplePollerLike<OperationState<StorageProfile>,
+        StorageProfile>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: <xref uid="@azure/arm-compute.AttachDetachDataDisksRequest" />
+          description: >-
+            Parameters supplied to the attach and detach data disks operation on
+            the virtual
+                              machine.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachinesAttachDetachDataDisksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-compute.StorageProfile" />&gt;, <xref
+          uid="@azure/arm-compute.StorageProfile" />&gt;&gt;
+  - name: >-
+      beginAttachDetachDataDisksAndWait(string, string,
+      AttachDetachDataDisksRequest,
+      VirtualMachinesAttachDetachDataDisksOptionalParams)
+    uid: '@azure/arm-compute.VirtualMachines.beginAttachDetachDataDisksAndWait'
+    package: '@azure/arm-compute'
+    summary: Attach and detach data disks to/from the virtual machine.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginAttachDetachDataDisksAndWait(resourceGroupName: string,
+        vmName: string, parameters: AttachDetachDataDisksRequest, options?:
+        VirtualMachinesAttachDetachDataDisksOptionalParams):
+        Promise<StorageProfile>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmName
+          type: string
+          description: The name of the virtual machine.
+        - id: parameters
+          type: <xref uid="@azure/arm-compute.AttachDetachDataDisksRequest" />
+          description: >-
+            Parameters supplied to the attach and detach data disks operation on
+            the virtual
+                              machine.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachinesAttachDetachDataDisksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-compute.StorageProfile" />&gt;
   - name: >-
       beginCapture(string, string, VirtualMachineCaptureParameters,
       VirtualMachinesCaptureOptionalParams)
@@ -110,7 +189,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineCaptureResult" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachineCaptureResult" />&gt;&gt;
   - name: >-
@@ -184,8 +264,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginConvertToManagedDisksAndWait(string, string,
       VirtualMachinesConvertToManagedDisksOptionalParams)
@@ -257,7 +337,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachine" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachine" />&gt;&gt;
   - name: >-
@@ -326,8 +407,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeallocateAndWait(string, string,
       VirtualMachinesDeallocateOptionalParams)
@@ -386,8 +467,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, VirtualMachinesDeleteOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.beginDeleteAndWait'
     package: '@azure/arm-compute'
@@ -450,7 +531,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineInstallPatchesResult" />&gt;,
           <xref uid="@azure/arm-compute.VirtualMachineInstallPatchesResult"
           />&gt;&gt;
@@ -521,8 +603,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPerformMaintenanceAndWait(string, string,
       VirtualMachinesPerformMaintenanceOptionalParams)
@@ -560,7 +642,10 @@ methods:
       can be restarted with the
 
       same provisioned resources. You are still charged for this virtual
-      machine.
+      machine. NOTE: This operation is
+
+      not allowed on a virtual machine that is being deallocated or has already
+      been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -583,8 +668,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPowerOffAndWait(string, string,
       VirtualMachinesPowerOffOptionalParams)
@@ -595,7 +680,10 @@ methods:
       can be restarted with the
 
       same provisioned resources. You are still charged for this virtual
-      machine.
+      machine. NOTE: This operation is
+
+      not allowed on a virtual machine that is being deallocated or has already
+      been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -643,8 +731,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginReapplyAndWait(string, string, VirtualMachinesReapplyOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.beginReapplyAndWait'
     package: '@azure/arm-compute'
@@ -698,8 +786,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRedeployAndWait(string, string,
       VirtualMachinesRedeployOptionalParams)
@@ -771,8 +859,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginReimageAndWait(string, string, VirtualMachinesReimageOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.beginReimageAndWait'
     package: '@azure/arm-compute'
@@ -840,8 +928,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginRestartAndWait(string, string, VirtualMachinesRestartOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.beginRestartAndWait'
     package: '@azure/arm-compute'
@@ -900,7 +988,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.RunCommandResult" />&gt;, <xref
           uid="@azure/arm-compute.RunCommandResult" />&gt;&gt;
   - name: >-
@@ -958,8 +1047,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginStartAndWait(string, string, VirtualMachinesStartOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.beginStartAndWait'
     package: '@azure/arm-compute'
@@ -1016,7 +1105,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachine" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachine" />&gt;&gt;
   - name: >-
@@ -1062,12 +1152,12 @@ methods:
 
       generalized VM in
 
-      Azure](https://docs.microsoft.com/azure/virtual-machines/windows/capture-image-resource).
+      Azure](https://learn.microsoft.com/azure/virtual-machines/windows/capture-image-resource).
       For Linux,
 
       please refer to [How to create an image of a virtual machine or
 
-      VHD](https://docs.microsoft.com/azure/virtual-machines/linux/capture-image).
+      VHD](https://learn.microsoft.com/azure/virtual-machines/linux/capture-image).
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1169,9 +1259,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachine" />, <xref
-          uid="@azure/arm-compute.VirtualMachine" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listAll(VirtualMachinesListAllOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.listAll'
     package: '@azure/arm-compute'
@@ -1196,9 +1287,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachine" />, <xref
-          uid="@azure/arm-compute.VirtualMachine" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAvailableSizes(string, string,
       VirtualMachinesListAvailableSizesOptionalParams)
@@ -1231,9 +1323,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineSize" />, <xref
-          uid="@azure/arm-compute.VirtualMachineSize" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineSize" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByLocation(string, VirtualMachinesListByLocationOptionalParams)
     uid: '@azure/arm-compute.VirtualMachines.listByLocation'
     package: '@azure/arm-compute'
@@ -1263,9 +1356,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachine" />, <xref
-          uid="@azure/arm-compute.VirtualMachine" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       retrieveBootDiagnosticsData(string, string,
       VirtualMachinesRetrieveBootDiagnosticsDataOptionalParams)

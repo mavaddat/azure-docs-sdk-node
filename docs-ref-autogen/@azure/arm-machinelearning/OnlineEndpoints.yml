@@ -21,7 +21,8 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, workspaceName:
         string, endpointName: string, body: OnlineEndpoint, options?:
         OnlineEndpointsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<OnlineEndpoint>, OnlineEndpoint>>
+        Promise<SimplePollerLike<OperationState<OnlineEndpoint>,
+        OnlineEndpoint>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -44,7 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-machinelearning.OnlineEndpoint" />&gt;, <xref
           uid="@azure/arm-machinelearning.OnlineEndpoint" />&gt;&gt;
   - name: >-
@@ -95,7 +97,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, workspaceName: string,
         endpointName: string, options?: OnlineEndpointsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -114,7 +116,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       OnlineEndpointsDeleteOptionalParams)
@@ -162,7 +166,7 @@ methods:
         function beginRegenerateKeys(resourceGroupName: string, workspaceName:
         string, endpointName: string, body: RegenerateEndpointKeysRequest,
         options?: OnlineEndpointsRegenerateKeysOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -186,7 +190,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRegenerateKeysAndWait(string, string, string,
       RegenerateEndpointKeysRequest,
@@ -242,7 +248,8 @@ methods:
         function beginUpdate(resourceGroupName: string, workspaceName: string,
         endpointName: string, body: PartialMinimalTrackedResourceWithIdentity,
         options?: OnlineEndpointsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<OnlineEndpoint>, OnlineEndpoint>>
+        Promise<SimplePollerLike<OperationState<OnlineEndpoint>,
+        OnlineEndpoint>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -268,7 +275,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-machinelearning.OnlineEndpoint" />&gt;, <xref
           uid="@azure/arm-machinelearning.OnlineEndpoint" />&gt;&gt;
   - name: >-
@@ -348,7 +356,7 @@ methods:
     uid: '@azure/arm-machinelearning.OnlineEndpoints.getToken'
     package: '@azure/arm-machinelearning'
     summary: >-
-      Retrieve a valid AAD token for an Endpoint using AMLToken-based
+      Retrieve a valid AML token for an Endpoint using AMLToken-based
       authentication.
     remarks: ''
     isDeprecated: false
@@ -406,9 +414,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-machinelearning.OnlineEndpoint" />, <xref
-          uid="@azure/arm-machinelearning.OnlineEndpoint" />[], PageSettings&gt;
+          uid="@azure/arm-machinelearning.OnlineEndpoint" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listKeys(string, string, string, OnlineEndpointsListKeysOptionalParams)
     uid: '@azure/arm-machinelearning.OnlineEndpoints.listKeys'
     package: '@azure/arm-machinelearning'

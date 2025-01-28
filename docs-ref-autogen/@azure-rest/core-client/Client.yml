@@ -15,16 +15,19 @@ properties:
       This method will be used to send request that would check the path to
       provide
 
-      strong types. When used by the codegen this type gets overriden wit the
+      strong types. When used by the codegen this type gets overridden with the
       generated
 
       types. For example:
 
-      ```typescript
+      ```typescript snippet:path_example
 
-      export type MyClient = Client & {
-         path: Routes;
-      }
+      import { Client } from "@azure-rest/core-client";
+
+
+      type MyClient = Client & {
+        path: Routes;
+      };
 
       ```
     fullName: path
@@ -58,4 +61,4 @@ properties:
       content: 'pipeline: Pipeline'
       return:
         description: ''
-        type: Pipeline
+        type: <xref uid="@azure/core-rest-pipeline.Pipeline" />

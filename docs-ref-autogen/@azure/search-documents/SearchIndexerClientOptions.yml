@@ -14,7 +14,8 @@ properties:
     summary: The API version to use when communicating with the service.
     fullName: apiVersion
     remarks: ''
-    isDeprecated: false
+    isDeprecated: true
+    customDeprecatedMessage: use {@Link serviceVersion} instead
     syntax:
       content: 'apiVersion?: string'
       return:
@@ -39,6 +40,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: serviceVersion
+    uid: '@azure/search-documents.SearchIndexerClientOptions.serviceVersion'
+    package: '@azure/search-documents'
+    summary: The service version to use when communicating with the service.
+    fullName: serviceVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'serviceVersion?: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: additionalPolicies
     uid: '@azure/search-documents.SearchIndexerClientOptions.additionalPolicies'
@@ -51,7 +64,7 @@ inheritedProperties:
       content: 'additionalPolicies?: AdditionalPolicyConfig[]'
       return:
         description: ''
-        type: AdditionalPolicyConfig[]
+        type: <xref uid="@azure/core-client.AdditionalPolicyConfig" />[]
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.additionalPolicies
   - name: allowInsecureConnection
     uid: '@azure/search-documents.SearchIndexerClientOptions.allowInsecureConnection'
@@ -77,7 +90,7 @@ inheritedProperties:
       content: 'httpClient?: HttpClient'
       return:
         description: ''
-        type: HttpClient
+        type: <xref uid="@azure/core-rest-pipeline.HttpClient" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.httpClient
   - name: keepAliveOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.keepAliveOptions'
@@ -90,7 +103,7 @@ inheritedProperties:
       content: 'keepAliveOptions?: KeepAliveOptions'
       return:
         description: ''
-        type: KeepAliveOptions
+        type: <xref uid="@azure/core-http-compat.KeepAliveOptions" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.keepAliveOptions
   - name: proxyOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.proxyOptions'
@@ -103,7 +116,7 @@ inheritedProperties:
       content: 'proxyOptions?: ProxySettings'
       return:
         description: ''
-        type: ProxySettings
+        type: <xref uid="@azure/core-rest-pipeline.ProxySettings" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.proxyOptions
   - name: redirectOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.redirectOptions'
@@ -116,7 +129,9 @@ inheritedProperties:
       content: 'redirectOptions?: RedirectPolicyOptions & RedirectOptions'
       return:
         description: ''
-        type: RedirectPolicyOptions & RedirectOptions
+        type: >-
+          <xref uid="@azure/core-rest-pipeline.RedirectPolicyOptions" /> & <xref
+          uid="@azure/core-http-compat.RedirectOptions" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.redirectOptions
   - name: retryOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.retryOptions'
@@ -129,7 +144,7 @@ inheritedProperties:
       content: 'retryOptions?: PipelineRetryOptions'
       return:
         description: ''
-        type: PipelineRetryOptions
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRetryOptions" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.retryOptions
   - name: telemetryOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.telemetryOptions'
@@ -144,7 +159,7 @@ inheritedProperties:
       content: 'telemetryOptions?: TelemetryOptions'
       return:
         description: ''
-        type: TelemetryOptions
+        type: <xref uid="@azure/core-rest-pipeline.TelemetryOptions" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.telemetryOptions
   - name: tlsOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.tlsOptions'
@@ -157,7 +172,7 @@ inheritedProperties:
       content: 'tlsOptions?: TlsSettings'
       return:
         description: ''
-        type: TlsSettings
+        type: <xref uid="@azure/core-rest-pipeline.TlsSettings" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.tlsOptions
   - name: userAgentOptions
     uid: '@azure/search-documents.SearchIndexerClientOptions.userAgentOptions'
@@ -170,6 +185,6 @@ inheritedProperties:
       content: 'userAgentOptions?: UserAgentPolicyOptions'
       return:
         description: ''
-        type: UserAgentPolicyOptions
+        type: <xref uid="@azure/core-rest-pipeline.UserAgentPolicyOptions" />
     inheritanceDescription: <b>Inherited From</b> ExtendedCommonClientOptions.userAgentOptions
-extends: ExtendedCommonClientOptions
+extends: <xref uid="@azure/core-http-compat.ExtendedCommonClientOptions" />

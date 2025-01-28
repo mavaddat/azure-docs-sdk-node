@@ -27,10 +27,7 @@ inheritedMethods:
   - name: at(number)
     uid: azure-arm-storage.StorageManagementModels.StorageAccountListResult.at
     package: azure-arm-storage
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1195,7 +1192,7 @@ inheritedMethods:
         type: >-
           IterableIterator&lt;<xref
           uid="azure-arm-storage.StorageManagementModels.StorageAccount" />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@431
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@432
   - name: '[unscopables]()'
     uid: >-
       azure-arm-storage.StorageManagementModels.StorageAccountListResult.[unscopables]
@@ -1215,7 +1212,7 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@433
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@434
 extends: >-
   Array&lt;<xref uid="azure-arm-storage.StorageManagementModels.StorageAccount"
   />&gt;

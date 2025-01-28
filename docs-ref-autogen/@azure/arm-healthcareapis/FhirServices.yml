@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, workspaceName:
         string, fhirServiceName: string, fhirservice: FhirService, options?:
         FhirServicesCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<FhirService>, FhirService>>
+        Promise<SimplePollerLike<OperationState<FhirService>, FhirService>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -44,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-healthcareapis.FhirService" />&gt;, <xref
           uid="@azure/arm-healthcareapis.FhirService" />&gt;&gt;
   - name: >-
@@ -93,7 +94,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, fhirServiceName: string,
         workspaceName: string, options?: FhirServicesDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -111,7 +112,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       FhirServicesDeleteOptionalParams)
@@ -156,7 +159,7 @@ methods:
         function beginUpdate(resourceGroupName: string, fhirServiceName: string,
         workspaceName: string, fhirservicePatchResource:
         FhirServicePatchResource, options?: FhirServicesUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<FhirService>, FhirService>>
+        Promise<SimplePollerLike<OperationState<FhirService>, FhirService>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -178,7 +181,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-healthcareapis.FhirService" />&gt;, <xref
           uid="@azure/arm-healthcareapis.FhirService" />&gt;&gt;
   - name: >-
@@ -272,6 +276,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-healthcareapis.FhirService" />, <xref
-          uid="@azure/arm-healthcareapis.FhirService" />[], PageSettings&gt;
+          uid="@azure/arm-healthcareapis.FhirService" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

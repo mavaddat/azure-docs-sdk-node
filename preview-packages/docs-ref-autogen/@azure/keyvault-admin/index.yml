@@ -34,7 +34,7 @@ interfaces:
   - '@azure/keyvault-admin.KeyVaultRoleDefinition'
   - '@azure/keyvault-admin.KeyVaultSelectiveKeyRestoreOperationState'
   - '@azure/keyvault-admin.KeyVaultSelectiveKeyRestoreResult'
-  - '@azure/keyvault-admin.KeyVaultSettingCommon'
+  - '@azure/keyvault-admin.KeyVaultSetting'
   - '@azure/keyvault-admin.ListRoleAssignmentsOptions'
   - '@azure/keyvault-admin.ListRoleAssignmentsPageSettings'
   - '@azure/keyvault-admin.ListRoleDefinitionsOptions'
@@ -43,11 +43,29 @@ interfaces:
   - '@azure/keyvault-admin.ListSettingsResponse'
   - '@azure/keyvault-admin.SetRoleDefinitionOptions'
   - '@azure/keyvault-admin.SettingsClientOptions'
-  - '@azure/keyvault-admin.UnknownKeyVaultSetting'
   - '@azure/keyvault-admin.UpdateSettingOptions'
 typeAliases:
   - '@azure/keyvault-admin.KeyVaultBackupOperationState'
   - '@azure/keyvault-admin.KeyVaultDataAction'
   - '@azure/keyvault-admin.KeyVaultRoleScope'
-  - '@azure/keyvault-admin.KeyVaultSetting'
   - '@azure/keyvault-admin.SUPPORTED_API_VERSIONS'
+functions:
+  - name: isBooleanSetting(KeyVaultSetting)
+    uid: '@azure/keyvault-admin.isBooleanSetting'
+    package: '@azure/keyvault-admin'
+    summary: >-
+      Determines whether a given
+      [KeyVaultSetting](xref:@azure/keyvault-admin.KeyVaultSetting) is a
+      [BooleanKeyVaultSetting](xref:@azure/keyvault-admin.BooleanKeyVaultSetting),
+      i.e. has a boolean value.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isBooleanSetting(setting: KeyVaultSetting): setting'
+      parameters:
+        - id: setting
+          type: <xref uid="@azure/keyvault-admin.KeyVaultSetting" />
+          description: ''
+      return:
+        description: ''
+        type: setting

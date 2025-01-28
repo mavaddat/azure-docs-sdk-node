@@ -35,6 +35,7 @@ interfaces:
   - '@azure-rest/maps-route.GetRouteDirections'
   - '@azure-rest/maps-route.GetRouteRange'
   - '@azure-rest/maps-route.LatLongPairOutput'
+  - '@azure-rest/maps-route.MapsRouteClientOptions'
   - '@azure-rest/maps-route.RequestRouteDirectionsBatch'
   - '@azure-rest/maps-route.RequestRouteDirectionsBatchSync'
   - '@azure-rest/maps-route.RequestRouteMatrix'
@@ -113,6 +114,7 @@ interfaces:
   - '@azure-rest/maps-route.RouteSectionTecOutput'
   - '@azure-rest/maps-route.RouteSummaryOutput'
   - '@azure-rest/maps-route.Routes'
+  - '@azure-rest/maps-route.SimplePollerLike'
 typeAliases:
   - '@azure-rest/maps-route.GeoJsonGeometry'
   - '@azure-rest/maps-route.GeoJsonObject'
@@ -128,6 +130,26 @@ typeAliases:
   - '@azure-rest/maps-route.RouteRequestRouteMatrixParameters'
   - '@azure-rest/maps-route.RouteRequestRouteMatrixSyncParameters'
 functions:
+  - name: buildMultiCollection(string[], string)
+    uid: '@azure-rest/maps-route.buildMultiCollection'
+    package: '@azure-rest/maps-route'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildMultiCollection(items: string[], parameterName: string):
+        string
+      parameters:
+        - id: items
+          type: string[]
+          description: ''
+        - id: parameterName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
   - name: >-
       createRouteDirectionsBatchRequest(RouteGetRouteDirectionsQueryParamProperties[])
     uid: '@azure-rest/maps-route.createRouteDirectionsBatchRequest'
@@ -173,12 +195,12 @@ functions:
         ClientOptions): MapsRouteClient
       parameters:
         - id: credential
-          type: AzureKeyCredential
+          type: <xref uid="@azure/core-auth.AzureKeyCredential" />
           description: >-
             An AzureKeyCredential instance used to authenticate requests to the
             service
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Route Client
       return:
         description: ''
@@ -192,7 +214,7 @@ functions:
       **Example**
 
       ```ts
-      import MapsRoute from "@azure/maps-route";
+      import MapsRoute from "@azure-rest/maps-route";
       import { DefaultAzureCredential } from "@azure/identity";
 
       const credential = new DefaultAzureCredential();
@@ -207,7 +229,7 @@ functions:
         string, options?: ClientOptions): MapsRouteClient
       parameters:
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An TokenCredential instance used to authenticate requests to the
             service
@@ -215,14 +237,56 @@ functions:
           type: string
           description: The Azure Maps client id of a specific map resource
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
+          description: Options used to configure the Route Client
+      return:
+        description: ''
+        type: <xref uid="@azure-rest/maps-route.MapsRouteClient" />
+  - name: default(AzureSASCredential, ClientOptions)
+    uid: '@azure-rest/maps-route.default_2'
+    package: '@azure-rest/maps-route'
+    summary: >+
+      Creates an instance of MapsRoute from an Azure Identity
+      `AzureSASCredential`.
+
+
+      **Example**
+
+
+      ```ts
+
+      import MapsRoute from "@azure-rest/maps-route";
+
+      import { AzureSASCredential } from "@azure/core-auth";
+
+
+      const credential = new AzureSASCredential("<SAS Token>");
+
+      const client = MapsRoute(credential);
+
+      ```
+
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function default(credential: AzureSASCredential, options?:
+        ClientOptions): MapsRouteClient
+      parameters:
+        - id: credential
+          type: <xref uid="@azure/core-auth.AzureSASCredential" />
+          description: >-
+            An AzureSASCredential instance used to authenticate requests to the
+            service
+        - id: options
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Route Client
       return:
         description: ''
         type: <xref uid="@azure-rest/maps-route.MapsRouteClient" />
   - name: >-
-      getLongRunningPoller<TResult>(Client, TResult, LroEngineOptions<TResult,
-      PollOperationState<TResult>>)
+      getLongRunningPoller<TResult>(Client, TResult,
+      CreateHttpPollerOptions<TResult, OperationState<TResult>>)
     uid: '@azure-rest/maps-route.getLongRunningPoller'
     package: '@azure-rest/maps-route'
     summary: >-
@@ -233,24 +297,29 @@ functions:
     syntax:
       content: >-
         function getLongRunningPoller<TResult>(client: Client, initialResponse:
-        TResult, options?: LroEngineOptions<TResult,
-        PollOperationState<TResult>>): PollerLike<PollOperationState<TResult>,
-        TResult>
+        TResult, options?: CreateHttpPollerOptions<TResult,
+        OperationState<TResult>>):
+        Promise<SimplePollerLike<OperationState<TResult>, TResult>>
       parameters:
         - id: client
-          type: Client
+          type: <xref uid="@azure-rest/core-client.Client" />
           description: Client to use for sending the request to get additional pages.
         - id: initialResponse
           type: TResult
           description: The initial response.
         - id: options
-          type: LroEngineOptions&lt;TResult, PollOperationState&lt;TResult&gt;&gt;
+          type: >-
+            <xref uid="@azure/core-lro.CreateHttpPollerOptions" />&lt;TResult,
+            <xref uid="@azure/core-lro.OperationState" />&lt;TResult&gt;&gt;
           description: Options to set a resume state or custom polling interval.
       return:
         description: >-
           - A poller object to poll for operation state updates and eventually
           get the final response.
-        type: PollerLike&lt;PollOperationState&lt;TResult&gt;, TResult&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure-rest/maps-route.SimplePollerLike"
+          />&lt;<xref uid="@azure/core-lro.OperationState" />&lt;TResult&gt;,
+          TResult&gt;&gt;
   - name: >-
       isUnexpected(RouteRequestRouteMatrixSync200Response |
       RouteRequestRouteMatrixSync408Response |
@@ -394,7 +463,7 @@ functions:
       content: 'function toColonDelimitedLatLonString(coordinates: LatLon[]): string'
       parameters:
         - id: coordinates
-          type: LatLon[]
+          type: <xref uid="@azure/maps-common.LatLon" />[]
           description: An array of Latitude/Longtitute pair to transform.
       return:
         description: The transformed string.

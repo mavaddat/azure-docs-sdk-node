@@ -8,6 +8,21 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: pstnDialOutEnabled
+    uid: '@azure/communication-rooms.UpdateRoomOptions.pstnDialOutEnabled'
+    package: '@azure/communication-rooms'
+    summary: >-
+      Set this flag to true if, at the time of the call, dial out to a PSTN
+      number is enabled in a particular room. By default, this flag is set to
+      false.
+    fullName: pstnDialOutEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pstnDialOutEnabled?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: validFrom
     uid: '@azure/communication-rooms.UpdateRoomOptions.validFrom'
     package: '@azure/communication-rooms'
@@ -48,7 +63,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/communication-rooms.UpdateRoomOptions.onResponse'
@@ -64,7 +79,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/communication-rooms.UpdateRoomOptions.requestOptions'
@@ -77,7 +92,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/communication-rooms.UpdateRoomOptions.serializerOptions'
@@ -90,7 +105,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/communication-rooms.UpdateRoomOptions.tracingOptions'
@@ -103,6 +118,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

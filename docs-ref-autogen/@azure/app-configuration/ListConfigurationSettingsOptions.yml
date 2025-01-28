@@ -14,6 +14,19 @@ fullName: ListConfigurationSettingsOptions
 remarks: ''
 isDeprecated: false
 type: interface
+properties:
+  - name: pageEtags
+    uid: '@azure/app-configuration.ListConfigurationSettingsOptions.pageEtags'
+    package: '@azure/app-configuration'
+    summary: Etags list for page
+    fullName: pageEtags
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pageEtags?: string[]'
+      return:
+        description: ''
+        type: string[]
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/app-configuration.ListConfigurationSettingsOptions.abortSignal'
@@ -26,7 +39,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: acceptDateTime
     uid: '@azure/app-configuration.ListConfigurationSettingsOptions.acceptDateTime'
@@ -145,7 +158,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/app-configuration.ListConfigurationSettingsOptions.requestOptions'
@@ -158,7 +171,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -172,8 +185,25 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
+  - name: tagsFilter
+    uid: '@azure/app-configuration.ListConfigurationSettingsOptions.tagsFilter'
+    package: '@azure/app-configuration'
+    summary: >-
+      A filter used to query by tags. Syntax reference:
+      https://aka.ms/azconfig/docs/keyvaluefiltering
+    fullName: tagsFilter
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tagsFilter?: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ListSettingsOptions.tagsFilter](xref:@azure/app-configuration.ListSettingsOptions.tagsFilter)
   - name: tracingOptions
     uid: '@azure/app-configuration.ListConfigurationSettingsOptions.tracingOptions'
     package: '@azure/app-configuration'
@@ -185,6 +215,8 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions,<xref uid="@azure/app-configuration.ListSettingsOptions" />
+extends: >-
+  <xref uid="@azure/core-client.OperationOptions" />,<xref
+  uid="@azure/app-configuration.ListSettingsOptions" />

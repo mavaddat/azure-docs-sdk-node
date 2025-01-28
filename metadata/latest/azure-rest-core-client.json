@@ -1,6 +1,6 @@
 {
   "Name": "@azure-rest/core-client",
-  "Version": "1.1.4",
+  "Version": "2.3.2",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/core-client-rest",
   "ServiceDirectory": "core",
@@ -10,5 +10,18 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-rest-core-client",
-  "ReleaseStatus": "2023-07-06"
+  "ReleaseStatus": "2025-01-10",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": [
+    "@azure-rest/synapse-access-control",
+    "@azure/arm-resources",
+    "@azure/identity",
+    "@azure/service-bus",
+    "@azure/template"
+  ],
+  "ArtifactDetails": {
+    "name": "azure-rest-core-client",
+    "safeName": "azurerestcoreclient"
+  },
+  "CIMatrixConfigs": []
 }

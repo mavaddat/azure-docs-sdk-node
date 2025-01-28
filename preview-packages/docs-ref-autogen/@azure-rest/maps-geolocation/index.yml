@@ -14,6 +14,7 @@ interfaces:
   - '@azure-rest/maps-geolocation.GeolocationGetLocationQueryParamProperties'
   - '@azure-rest/maps-geolocation.GetLocation'
   - '@azure-rest/maps-geolocation.IpAddressToLocationResultOutput'
+  - '@azure-rest/maps-geolocation.MapsGeolocationClientOptions'
   - '@azure-rest/maps-geolocation.Routes'
 typeAliases:
   - '@azure-rest/maps-geolocation.GeolocationGetLocationParameters'
@@ -43,12 +44,12 @@ functions:
         ClientOptions): MapsGeolocationClient
       parameters:
         - id: credential
-          type: AzureKeyCredential
+          type: <xref uid="@azure/core-auth.AzureKeyCredential" />
           description: >-
             An AzureKeyCredential instance used to authenticate requests to the
             service
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Geolocation Client
       return:
         description: ''
@@ -66,7 +67,7 @@ functions:
 
       ```ts
 
-      import MapsGeolocation from "@azure/maps-geo-location";
+      import MapsGeolocation from "@azure-rest/maps-geo-location";
 
       import { DefaultAzureCredential } from "@azure/identity";
 
@@ -85,7 +86,7 @@ functions:
         string, options?: ClientOptions): MapsGeolocationClient
       parameters:
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An TokenCredential instance used to authenticate requests to the
             service
@@ -93,8 +94,50 @@ functions:
           type: string
           description: The Azure Maps client id of a specific map resource
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Route Client
+      return:
+        description: ''
+        type: <xref uid="@azure-rest/maps-geolocation.MapsGeolocationClient" />
+  - name: default(AzureSASCredential, ClientOptions)
+    uid: '@azure-rest/maps-geolocation.default_2'
+    package: '@azure-rest/maps-geolocation'
+    summary: >+
+      Creates an instance of MapsGeolocation from an Azure Identity
+      `AzureSASCredential`.
+
+
+      **Example**
+
+
+      ```ts
+
+      import MapsGeolocation from "@azure-rest/maps-geo-location";
+
+      import { AzureSASCredential } from "@azure/core-auth";
+
+
+      const credential = new AzureSASCredential("<SAS Token>");
+
+      const client = MapsGeolocation(credential);
+
+      ```
+
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function default(credential: AzureSASCredential, options?:
+        ClientOptions): MapsGeolocationClient
+      parameters:
+        - id: credential
+          type: <xref uid="@azure/core-auth.AzureSASCredential" />
+          description: >-
+            An AzureSASCredential instance used to authenticate requests to the
+            service
+        - id: options
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
+          description: Options used to configure the Geolocation Client
       return:
         description: ''
         type: <xref uid="@azure-rest/maps-geolocation.MapsGeolocationClient" />

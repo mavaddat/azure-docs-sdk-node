@@ -13,7 +13,7 @@ methods:
       CloudLinksCreateOrUpdateOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.beginCreateOrUpdate'
     package: '@azure/arm-avs'
-    summary: Create or update a cloud link in a private cloud
+    summary: Create a CloudLink
     remarks: ''
     isDeprecated: false
     syntax:
@@ -28,20 +28,21 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: privateCloudName
           type: string
-          description: The name of the private cloud.
+          description: Name of the private cloud
         - id: cloudLinkName
           type: string
-          description: Name of the cloud link resource
+          description: Name of the cloud link.
         - id: cloudLink
           type: <xref uid="@azure/arm-avs.CloudLink" />
-          description: A cloud link in the private cloud
+          description: Resource create parameters.
         - id: options
           type: <xref uid="@azure/arm-avs.CloudLinksCreateOrUpdateOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-avs.CloudLink" />&gt;, <xref
           uid="@azure/arm-avs.CloudLink" />&gt;&gt;
   - name: >-
@@ -49,7 +50,7 @@ methods:
       CloudLinksCreateOrUpdateOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.beginCreateOrUpdateAndWait'
     package: '@azure/arm-avs'
-    summary: Create or update a cloud link in a private cloud
+    summary: Create a CloudLink
     remarks: ''
     isDeprecated: false
     syntax:
@@ -63,13 +64,13 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: privateCloudName
           type: string
-          description: The name of the private cloud.
+          description: Name of the private cloud
         - id: cloudLinkName
           type: string
-          description: Name of the cloud link resource
+          description: Name of the cloud link.
         - id: cloudLink
           type: <xref uid="@azure/arm-avs.CloudLink" />
-          description: A cloud link in the private cloud
+          description: Resource create parameters.
         - id: options
           type: <xref uid="@azure/arm-avs.CloudLinksCreateOrUpdateOptionalParams" />
           description: The options parameters.
@@ -79,7 +80,7 @@ methods:
   - name: beginDelete(string, string, string, CloudLinksDeleteOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.beginDelete'
     package: '@azure/arm-avs'
-    summary: Delete a cloud link in a private cloud
+    summary: Delete a CloudLink
     remarks: ''
     isDeprecated: false
     syntax:
@@ -97,19 +98,19 @@ methods:
           description: Name of the private cloud
         - id: cloudLinkName
           type: string
-          description: Name of the cloud link resource
+          description: Name of the cloud link.
         - id: options
           type: <xref uid="@azure/arm-avs.CloudLinksDeleteOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, CloudLinksDeleteOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.beginDeleteAndWait'
     package: '@azure/arm-avs'
-    summary: Delete a cloud link in a private cloud
+    summary: Delete a CloudLink
     remarks: ''
     isDeprecated: false
     syntax:
@@ -126,7 +127,7 @@ methods:
           description: Name of the private cloud
         - id: cloudLinkName
           type: string
-          description: Name of the cloud link resource
+          description: Name of the cloud link.
         - id: options
           type: <xref uid="@azure/arm-avs.CloudLinksDeleteOptionalParams" />
           description: The options parameters.
@@ -136,7 +137,7 @@ methods:
   - name: get(string, string, string, CloudLinksGetOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.get'
     package: '@azure/arm-avs'
-    summary: Get an cloud link by name in a private cloud
+    summary: Get a CloudLink
     remarks: ''
     isDeprecated: false
     syntax:
@@ -153,7 +154,7 @@ methods:
           description: Name of the private cloud
         - id: cloudLinkName
           type: string
-          description: Name of the cloud link resource
+          description: Name of the cloud link.
         - id: options
           type: <xref uid="@azure/arm-avs.CloudLinksGetOptionalParams" />
           description: The options parameters.
@@ -163,7 +164,7 @@ methods:
   - name: list(string, string, CloudLinksListOptionalParams)
     uid: '@azure/arm-avs.CloudLinks.list'
     package: '@azure/arm-avs'
-    summary: List cloud link in a private cloud
+    summary: List CloudLink resources by PrivateCloud
     remarks: ''
     isDeprecated: false
     syntax:
@@ -184,5 +185,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-avs.CloudLink" />,
-          <xref uid="@azure/arm-avs.CloudLink" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-avs.CloudLink" />, <xref
+          uid="@azure/arm-avs.CloudLink" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

@@ -9,6 +9,97 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginContinueUpdateVersion(string, string,
+      ClusterContinueUpdateVersionParameters,
+      ClustersContinueUpdateVersionOptionalParams)
+    uid: '@azure/arm-networkcloud.Clusters.beginContinueUpdateVersion'
+    package: '@azure/arm-networkcloud'
+    summary: >-
+      Trigger the continuation of an update for a cluster with a matching update
+      strategy that has paused
+
+      after completing a segment of the update.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginContinueUpdateVersion(resourceGroupName: string,
+        clusterName: string, clusterContinueUpdateVersionParameters:
+        ClusterContinueUpdateVersionParameters, options?:
+        ClustersContinueUpdateVersionOptionalParams):
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: clusterContinueUpdateVersionParameters
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClusterContinueUpdateVersionParameters"
+            />
+          description: The request body.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClustersContinueUpdateVersionOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
+  - name: >-
+      beginContinueUpdateVersionAndWait(string, string,
+      ClusterContinueUpdateVersionParameters,
+      ClustersContinueUpdateVersionOptionalParams)
+    uid: '@azure/arm-networkcloud.Clusters.beginContinueUpdateVersionAndWait'
+    package: '@azure/arm-networkcloud'
+    summary: >-
+      Trigger the continuation of an update for a cluster with a matching update
+      strategy that has paused
+
+      after completing a segment of the update.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginContinueUpdateVersionAndWait(resourceGroupName: string,
+        clusterName: string, clusterContinueUpdateVersionParameters:
+        ClusterContinueUpdateVersionParameters, options?:
+        ClustersContinueUpdateVersionOptionalParams):
+        Promise<OperationStatusResult>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: clusterContinueUpdateVersionParameters
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClusterContinueUpdateVersionParameters"
+            />
+          description: The request body.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClustersContinueUpdateVersionOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
+  - name: >-
       beginCreateOrUpdate(string, string, Cluster,
       ClustersCreateOrUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.beginCreateOrUpdate'
@@ -41,7 +132,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.Cluster" />&gt;, <xref
           uid="@azure/arm-networkcloud.Cluster" />&gt;&gt;
   - name: >-
@@ -86,7 +178,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, clusterName: string,
         options?: ClustersDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -100,8 +193,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, ClustersDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -111,7 +206,8 @@ methods:
     syntax:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string, clusterName:
-        string, options?: ClustersDeleteOptionalParams): Promise<void>
+        string, options?: ClustersDeleteOptionalParams):
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -124,19 +220,21 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginDeploy(string, string, ClustersDeployOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.beginDeploy'
     package: '@azure/arm-networkcloud'
-    summary: Deploy the cluster to the provided rack.
+    summary: Deploy the cluster using the rack configuration provided during creation.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function beginDeploy(resourceGroupName: string, clusterName: string,
         options?: ClustersDeployOptionalParams):
-        Promise<SimplePollerLike<OperationState<ClustersDeployHeaders>,
-        ClustersDeployHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -150,20 +248,21 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.ClustersDeployHeaders" />&gt;, <xref
-          uid="@azure/arm-networkcloud.ClustersDeployHeaders" />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeployAndWait(string, string, ClustersDeployOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.beginDeployAndWait'
     package: '@azure/arm-networkcloud'
-    summary: Deploy the cluster to the provided rack.
+    summary: Deploy the cluster using the rack configuration provided during creation.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function beginDeployAndWait(resourceGroupName: string, clusterName:
         string, options?: ClustersDeployOptionalParams):
-        Promise<ClustersDeployHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -177,7 +276,74 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="@azure/arm-networkcloud.ClustersDeployHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
+  - name: beginScanRuntime(string, string, ClustersScanRuntimeOptionalParams)
+    uid: '@azure/arm-networkcloud.Clusters.beginScanRuntime'
+    package: '@azure/arm-networkcloud'
+    summary: >-
+      Triggers the execution of a runtime protection scan to detect and
+      remediate detected issues, in
+
+      accordance with the cluster configuration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginScanRuntime(resourceGroupName: string, clusterName:
+        string, options?: ClustersScanRuntimeOptionalParams):
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClustersScanRuntimeOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
+  - name: beginScanRuntimeAndWait(string, string, ClustersScanRuntimeOptionalParams)
+    uid: '@azure/arm-networkcloud.Clusters.beginScanRuntimeAndWait'
+    package: '@azure/arm-networkcloud'
+    summary: >-
+      Triggers the execution of a runtime protection scan to detect and
+      remediate detected issues, in
+
+      accordance with the cluster configuration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginScanRuntimeAndWait(resourceGroupName: string, clusterName:
+        string, options?: ClustersScanRuntimeOptionalParams):
+        Promise<OperationStatusResult>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the cluster.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-networkcloud.ClustersScanRuntimeOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: beginUpdate(string, string, ClustersUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.beginUpdate'
@@ -207,7 +373,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.Cluster" />&gt;, <xref
           uid="@azure/arm-networkcloud.Cluster" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, ClustersUpdateOptionalParams)
@@ -252,8 +419,8 @@ methods:
         function beginUpdateVersion(resourceGroupName: string, clusterName:
         string, clusterUpdateVersionParameters: ClusterUpdateVersionParameters,
         options?: ClustersUpdateVersionOptionalParams):
-        Promise<SimplePollerLike<OperationState<ClustersUpdateVersionHeaders>,
-        ClustersUpdateVersionHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -274,10 +441,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.ClustersUpdateVersionHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.ClustersUpdateVersionHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginUpdateVersionAndWait(string, string, ClusterUpdateVersionParameters,
       ClustersUpdateVersionOptionalParams)
@@ -293,8 +460,7 @@ methods:
         function beginUpdateVersionAndWait(resourceGroupName: string,
         clusterName: string, clusterUpdateVersionParameters:
         ClusterUpdateVersionParameters, options?:
-        ClustersUpdateVersionOptionalParams):
-        Promise<ClustersUpdateVersionHeaders>
+        ClustersUpdateVersionOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -315,8 +481,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.ClustersUpdateVersionHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: get(string, string, ClustersGetOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.get'
     package: '@azure/arm-networkcloud'
@@ -364,9 +530,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.Cluster" />, <xref
-          uid="@azure/arm-networkcloud.Cluster" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(ClustersListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.Clusters.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -388,6 +555,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.Cluster" />, <xref
-          uid="@azure/arm-networkcloud.Cluster" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
