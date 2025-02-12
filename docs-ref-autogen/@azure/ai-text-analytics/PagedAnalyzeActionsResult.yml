@@ -58,11 +58,11 @@ inheritedMethods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/ai-text-analytics.AnalyzeActionsResult" />, <xref
-          uid="@azure/ai-text-analytics.AnalyzeActionsResult" />,
-          PageSettings&gt;
+          uid="@azure/ai-text-analytics.AnalyzeActionsResult" />, <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
-      PagedAsyncIterableAnalyzeActionsResult.__@asyncIterator@447
+      PagedAsyncIterableAnalyzeActionsResult.__@asyncIterator@456
 extends: <xref uid="@azure/ai-text-analytics.PagedAsyncIterableAnalyzeActionsResult" />

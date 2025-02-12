@@ -20,6 +20,21 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: enabledFilteringCriteria
+    uid: '@azure/arm-network.FlowLog.enabledFilteringCriteria'
+    package: '@azure/arm-network'
+    summary: >-
+      Optional field to filter network traffic logs based on SrcIP, SrcPort,
+      DstIP, DstPort, Protocol, Encryption, Direction and Action. If not
+      specified, all network traffic will be logged.
+    fullName: enabledFilteringCriteria
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enabledFilteringCriteria?: string'
+      return:
+        description: ''
+        type: string
   - name: etag
     uid: '@azure/arm-network.FlowLog.etag'
     package: '@azure/arm-network'
@@ -60,6 +75,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-network.FlowLogFormatParameters" />
+  - name: identity
+    uid: '@azure/arm-network.FlowLog.identity'
+    package: '@azure/arm-network'
+    summary: FlowLog resource Managed Identity
+    fullName: identity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'identity?: ManagedServiceIdentity'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-network.ManagedServiceIdentity" />
   - name: provisioningState
     uid: '@azure/arm-network.FlowLog.provisioningState'
     package: '@azure/arm-network'

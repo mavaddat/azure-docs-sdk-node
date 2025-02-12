@@ -45,8 +45,8 @@ constructors:
           description: The endpoint to connect to
         - id: credential
           type: >-
-            <xref uid="@azure/web-pubsub.AzureKeyCredential" /> |
-            TokenCredential
+            <xref uid="@azure/web-pubsub.AzureKeyCredential" /> | <xref
+            uid="@azure/core-auth.TokenCredential" />
           description: An AzureKeyCredential holding your service key
         - id: hubName
           type: string
@@ -127,6 +127,29 @@ properties:
         description: ''
         type: string
 methods:
+  - name: addConnectionsToGroups(string[], string, GroupAddConnectionOptions)
+    uid: '@azure/web-pubsub.WebPubSubServiceClient.addConnectionsToGroups'
+    package: '@azure/web-pubsub'
+    summary: Add filtered connections to multiple groups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addConnectionsToGroups(groups: string[], filter: string,
+        options?: GroupAddConnectionOptions): Promise<void>
+      parameters:
+        - id: groups
+          type: string[]
+          description: A list of groups which target connections will be added into
+        - id: filter
+          type: string
+          description: An OData filter which target connections satisfy
+        - id: options
+          type: <xref uid="@azure/web-pubsub.GroupAddConnectionOptions" />
+          description: Additional options
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: closeAllConnections(HubCloseAllConnectionsOptions)
     uid: '@azure/web-pubsub.WebPubSubServiceClient.closeAllConnections'
     package: '@azure/web-pubsub'
@@ -322,6 +345,31 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      removeConnectionsFromGroups(string[], string,
+      GroupRemoveConnectionOptions)
+    uid: '@azure/web-pubsub.WebPubSubServiceClient.removeConnectionsFromGroups'
+    package: '@azure/web-pubsub'
+    summary: Remove filtered connections from multiple groups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function removeConnectionsFromGroups(groups: string[], filter: string,
+        options?: GroupRemoveConnectionOptions): Promise<void>
+      parameters:
+        - id: groups
+          type: string[]
+          description: A list of groups which target connections will be removed from
+        - id: filter
+          type: string
+          description: An OData filter which target connections satisfy
+        - id: options
+          type: <xref uid="@azure/web-pubsub.GroupRemoveConnectionOptions" />
+          description: Additional options
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: removeUserFromAllGroups(string, HubCloseConnectionOptions)
     uid: '@azure/web-pubsub.WebPubSubServiceClient.removeUserFromAllGroups'
     package: '@azure/web-pubsub'
@@ -397,7 +445,7 @@ methods:
         HubSendToAllOptions): Promise<void>
       parameters:
         - id: message
-          type: RequestBodyType
+          type: <xref uid="@azure/core-rest-pipeline.RequestBodyType" />
           description: The message to send
         - id: options
           type: <xref uid="@azure/web-pubsub.HubSendToAllOptions" />
@@ -466,7 +514,7 @@ methods:
           type: string
           description: Connection id to send to
         - id: message
-          type: RequestBodyType
+          type: <xref uid="@azure/core-rest-pipeline.RequestBodyType" />
           description: The binary message
         - id: options
           type: >-
@@ -540,7 +588,7 @@ methods:
           type: string
           description: The user name to send to
         - id: message
-          type: RequestBodyType
+          type: <xref uid="@azure/core-rest-pipeline.RequestBodyType" />
           description: The binary message to send
         - id: options
           type: >-

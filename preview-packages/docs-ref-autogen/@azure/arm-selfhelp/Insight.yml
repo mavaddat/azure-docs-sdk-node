@@ -2,9 +2,7 @@
 name: Insight
 uid: '@azure/arm-selfhelp.Insight'
 package: '@azure/arm-selfhelp'
-summary: >-
-  Detailed insights(s) obtained via the invocation of an insight diagnostic
-  troubleshooter.
+summary: Detailed insights(s) obtained via the invocation of an insight diagnostic
 fullName: Insight
 remarks: ''
 isDeprecated: false

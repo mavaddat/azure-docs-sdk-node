@@ -1,9 +1,7 @@
 ---
 title: Azure Visual Search SDK for JavaScript
 description: Reference for Azure Visual Search SDK for JavaScript
-author: xirzec
-ms.author: jeffish
-ms.data: 09/14/2023
+ms.date: 02/11/2025
 ms.topic: reference
 ms.devlang: javascript
 ms.service: visualsearch

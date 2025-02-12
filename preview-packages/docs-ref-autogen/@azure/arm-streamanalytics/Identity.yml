@@ -11,7 +11,11 @@ properties:
   - name: principalId
     uid: '@azure/arm-streamanalytics.Identity.principalId'
     package: '@azure/arm-streamanalytics'
-    summary: ''
+    summary: >-
+      The principalId of the identity.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: principalId
     remarks: ''
     isDeprecated: false
@@ -23,7 +27,11 @@ properties:
   - name: tenantId
     uid: '@azure/arm-streamanalytics.Identity.tenantId'
     package: '@azure/arm-streamanalytics'
-    summary: ''
+    summary: >-
+      The tenantId of the identity.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: tenantId
     remarks: ''
     isDeprecated: false
@@ -35,7 +43,7 @@ properties:
   - name: type
     uid: '@azure/arm-streamanalytics.Identity.type'
     package: '@azure/arm-streamanalytics'
-    summary: ''
+    summary: The type of identity, can be SystemAssigned or UserAssigned.
     fullName: type
     remarks: ''
     isDeprecated: false
@@ -44,3 +52,17 @@ properties:
       return:
         description: ''
         type: string
+  - name: userAssignedIdentities
+    uid: '@azure/arm-streamanalytics.Identity.userAssignedIdentities'
+    package: '@azure/arm-streamanalytics'
+    summary: The user assigned identities associated with the streaming job resource.
+    fullName: userAssignedIdentities
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        userAssignedIdentities?: {[propertyName: string]: Record<string,
+        unknown>}
+      return:
+        description: ''
+        type: '{[propertyName: string]: Record&lt;string, unknown&gt;}'

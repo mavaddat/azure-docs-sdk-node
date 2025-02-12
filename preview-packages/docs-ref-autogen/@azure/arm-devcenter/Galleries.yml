@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, devCenterName:
         string, galleryName: string, body: Gallery, options?:
         GalleriesCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Gallery>, Gallery>>
+        Promise<SimplePollerLike<OperationState<Gallery>, Gallery>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -43,7 +43,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Gallery" />&gt;, <xref
           uid="@azure/arm-devcenter.Gallery" />&gt;&gt;
   - name: >-
@@ -90,7 +91,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, devCenterName: string,
         galleryName: string, options?: GalleriesDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -106,7 +107,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, GalleriesDeleteOptionalParams)
     uid: '@azure/arm-devcenter.Galleries.beginDeleteAndWait'
     package: '@azure/arm-devcenter'
@@ -187,5 +190,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-devcenter.Gallery"
-          />, <xref uid="@azure/arm-devcenter.Gallery" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.Gallery" />, <xref
+          uid="@azure/arm-devcenter.Gallery" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

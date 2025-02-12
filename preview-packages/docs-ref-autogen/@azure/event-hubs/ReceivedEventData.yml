@@ -99,10 +99,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'offset: number'
+      content: 'offset: string'
       return:
         description: ''
-        type: number
+        type: string
   - name: partitionKey
     uid: '@azure/event-hubs.ReceivedEventData.partitionKey'
     package: '@azure/event-hubs'
@@ -166,4 +166,4 @@ methods:
       content: 'function getRawAmqpMessage(): AmqpAnnotatedMessage'
       return:
         description: ''
-        type: AmqpAnnotatedMessage
+        type: <xref uid="@azure/core-amqp.AmqpAnnotatedMessage" />

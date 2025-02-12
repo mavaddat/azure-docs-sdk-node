@@ -1,6 +1,6 @@
 {
   "Name": "@azure/core-amqp",
-  "Version": "3.3.0",
+  "Version": "4.3.5",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/core-amqp",
   "ServiceDirectory": "core",
@@ -10,5 +10,18 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-amqp",
-  "ReleaseStatus": "2023-04-06"
+  "ReleaseStatus": "2025-02-06",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": [
+    "@azure-rest/synapse-access-control",
+    "@azure/arm-resources",
+    "@azure/identity",
+    "@azure/service-bus",
+    "@azure/template"
+  ],
+  "ArtifactDetails": {
+    "name": "azure-core-amqp",
+    "safeName": "azurecoreamqp"
+  },
+  "CIMatrixConfigs": []
 }

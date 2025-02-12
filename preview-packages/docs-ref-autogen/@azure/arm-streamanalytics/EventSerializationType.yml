@@ -18,7 +18,9 @@ summary: >-
 
   **CustomClr** \
 
-  **Parquet**
+  **Parquet** \
+
+  **Delta**
 fullName: EventSerializationType
 remarks: ''
 isDeprecated: false

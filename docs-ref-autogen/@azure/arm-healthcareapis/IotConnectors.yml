@@ -23,7 +23,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, workspaceName:
         string, iotConnectorName: string, iotConnector: IotConnector, options?:
         IotConnectorsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<IotConnector>, IotConnector>>
+        Promise<SimplePollerLike<OperationState<IotConnector>, IotConnector>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-healthcareapis.IotConnector" />&gt;, <xref
           uid="@azure/arm-healthcareapis.IotConnector" />&gt;&gt;
   - name: >-
@@ -98,7 +99,7 @@ methods:
         function beginDelete(resourceGroupName: string, iotConnectorName:
         string, workspaceName: string, options?:
         IotConnectorsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -116,7 +117,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       IotConnectorsDeleteOptionalParams)
@@ -161,7 +164,7 @@ methods:
         function beginUpdate(resourceGroupName: string, iotConnectorName:
         string, workspaceName: string, iotConnectorPatchResource:
         IotConnectorPatchResource, options?: IotConnectorsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<IotConnector>, IotConnector>>
+        Promise<SimplePollerLike<OperationState<IotConnector>, IotConnector>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -183,7 +186,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-healthcareapis.IotConnector" />&gt;, <xref
           uid="@azure/arm-healthcareapis.IotConnector" />&gt;&gt;
   - name: >-
@@ -279,6 +283,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-healthcareapis.IotConnector" />, <xref
-          uid="@azure/arm-healthcareapis.IotConnector" />[], PageSettings&gt;
+          uid="@azure/arm-healthcareapis.IotConnector" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

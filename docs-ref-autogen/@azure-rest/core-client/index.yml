@@ -13,6 +13,7 @@ interfaces:
   - '@azure-rest/core-client.InnerError'
   - '@azure-rest/core-client.OperationOptions'
   - '@azure-rest/core-client.OperationRequestOptions'
+  - '@azure-rest/core-client.PathParameterWithOptions'
   - '@azure-rest/core-client.ResourceMethods'
 typeAliases:
   - '@azure-rest/core-client.ClientOptions'
@@ -38,13 +39,13 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function addCredentialPipelinePolicy(pipeline: Pipeline, baseUrl:
+        function addCredentialPipelinePolicy(pipeline: Pipeline, endpoint:
         string, options?: AddCredentialPipelinePolicyOptions)
       parameters:
         - id: pipeline
-          type: Pipeline
+          type: <xref uid="@azure/core-rest-pipeline.Pipeline" />
           description: ''
-        - id: baseUrl
+        - id: endpoint
           type: string
           description: ''
         - id: options
@@ -52,10 +53,25 @@ functions:
             <xref
             uid="@azure-rest/core-client.AddCredentialPipelinePolicyOptions" />
           description: ''
-  - name: createRestError(string, PathUncheckedResponse)
+  - name: createRestError(PathUncheckedResponse)
     uid: '@azure-rest/core-client.createRestError'
     package: '@azure-rest/core-client'
     summary: Creates a rest error from a PathUnchecked response
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createRestError(response: PathUncheckedResponse): RestError'
+      parameters:
+        - id: response
+          type: <xref uid="@azure-rest/core-client.PathUncheckedResponse" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.RestError" />
+  - name: createRestError(string, PathUncheckedResponse)
+    uid: '@azure-rest/core-client.createRestError_1'
+    package: '@azure-rest/core-client'
+    summary: Creates a rest error from an error message and a PathUnchecked response
     remarks: ''
     isDeprecated: false
     syntax:
@@ -71,7 +87,7 @@ functions:
           description: ''
       return:
         description: ''
-        type: RestError
+        type: <xref uid="@azure/core-rest-pipeline.RestError" />
   - name: getClient(string, ClientOptions)
     uid: '@azure-rest/core-client.getClient'
     package: '@azure-rest/core-client'
@@ -79,9 +95,9 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getClient(baseUrl: string, options?: ClientOptions): Client'
+      content: 'function getClient(endpoint: string, options?: ClientOptions): Client'
       parameters:
-        - id: baseUrl
+        - id: endpoint
           type: string
           description: Base endpoint for the client
         - id: options
@@ -98,14 +114,16 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function getClient(baseUrl: string, credentials?: TokenCredential |
+        function getClient(endpoint: string, credentials?: TokenCredential |
         KeyCredential, options?: ClientOptions): Client
       parameters:
-        - id: baseUrl
+        - id: endpoint
           type: string
           description: Base endpoint for the client
         - id: credentials
-          type: TokenCredential | KeyCredential
+          type: >-
+            <xref uid="@azure/core-auth.TokenCredential" /> | <xref
+            uid="@azure/core-auth.KeyCredential" />
           description: Credentials to authenticate the requests
         - id: options
           type: <xref uid="@azure-rest/core-client.ClientOptions" />

@@ -7,44 +7,6 @@ fullName: ModelContainersListNextOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
-  - name: count
-    uid: '@azure/arm-machinelearning.ModelContainersListNextOptionalParams.count'
-    package: '@azure/arm-machinelearning'
-    summary: Maximum number of results to return.
-    fullName: count
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'count?: number'
-      return:
-        description: ''
-        type: number
-  - name: listViewType
-    uid: >-
-      @azure/arm-machinelearning.ModelContainersListNextOptionalParams.listViewType
-    package: '@azure/arm-machinelearning'
-    summary: View type for including/excluding (for example) archived entities.
-    fullName: listViewType
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'listViewType?: string'
-      return:
-        description: ''
-        type: string
-  - name: skip
-    uid: '@azure/arm-machinelearning.ModelContainersListNextOptionalParams.skip'
-    package: '@azure/arm-machinelearning'
-    summary: Continuation token for pagination.
-    fullName: skip
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'skip?: string'
-      return:
-        description: ''
-        type: string
 inheritedProperties:
   - name: abortSignal
     uid: >-
@@ -58,7 +20,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: >-
@@ -75,7 +37,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: >-
@@ -89,7 +51,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -103,7 +65,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: >-
@@ -117,6 +79,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

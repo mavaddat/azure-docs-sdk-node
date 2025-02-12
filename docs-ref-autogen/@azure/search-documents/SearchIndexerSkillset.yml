@@ -63,12 +63,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'encryptionKey?: null | SearchResourceEncryptionKey'
+      content: 'encryptionKey?: SearchResourceEncryptionKey'
       return:
         description: ''
-        type: >-
-          null | <xref uid="@azure/search-documents.SearchResourceEncryptionKey"
-          />
+        type: <xref uid="@azure/search-documents.SearchResourceEncryptionKey" />
   - name: etag
     uid: '@azure/search-documents.SearchIndexerSkillset.etag'
     package: '@azure/search-documents'
@@ -81,6 +79,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: indexProjection
+    uid: '@azure/search-documents.SearchIndexerSkillset.indexProjection'
+    package: '@azure/search-documents'
+    summary: Definition of additional projections to secondary search index(es).
+    fullName: indexProjection
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'indexProjection?: SearchIndexerIndexProjection'
+      return:
+        description: ''
+        type: <xref uid="@azure/search-documents.SearchIndexerIndexProjection" />
   - name: knowledgeStore
     uid: '@azure/search-documents.SearchIndexerSkillset.knowledgeStore'
     package: '@azure/search-documents'

@@ -19,17 +19,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetNetworkTracesSlotV2200Response |
-        WebAppsGetNetworkTracesSlotV2defaultResponse>
+        StreamableMethod<WebAppsGetNetworkTracesSlotV2200Response |
+        WebAppsGetNetworkTracesSlotV2DefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetNetworkTracesSlotV2200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetNetworkTracesSlotV2defaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetNetworkTracesSlotV2DefaultResponse"
           />&gt;

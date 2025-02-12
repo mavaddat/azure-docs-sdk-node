@@ -5,20 +5,39 @@ summary: ''
 type: package
 enums:
   - '@azure/arm-containerservicefleet.KnownActionType'
+  - '@azure/arm-containerservicefleet.KnownAutoUpgradeNodeImageSelectionType'
+  - '@azure/arm-containerservicefleet.KnownAutoUpgradeProfileProvisioningState'
   - '@azure/arm-containerservicefleet.KnownCreatedByType'
   - '@azure/arm-containerservicefleet.KnownFleetMemberProvisioningState'
   - '@azure/arm-containerservicefleet.KnownFleetProvisioningState'
+  - '@azure/arm-containerservicefleet.KnownFleetUpdateStrategyProvisioningState'
   - '@azure/arm-containerservicefleet.KnownManagedClusterUpgradeType'
   - '@azure/arm-containerservicefleet.KnownManagedServiceIdentityType'
   - '@azure/arm-containerservicefleet.KnownNodeImageSelectionType'
   - '@azure/arm-containerservicefleet.KnownOrigin'
+  - '@azure/arm-containerservicefleet.KnownTargetType'
   - '@azure/arm-containerservicefleet.KnownUpdateRunProvisioningState'
   - '@azure/arm-containerservicefleet.KnownUpdateState'
+  - '@azure/arm-containerservicefleet.KnownUpgradeChannel'
 classes:
   - '@azure/arm-containerservicefleet.ContainerServiceFleetClient'
 interfaces:
   - '@azure/arm-containerservicefleet.APIServerAccessProfile'
   - '@azure/arm-containerservicefleet.AgentProfile'
+  - '@azure/arm-containerservicefleet.AutoUpgradeNodeImageSelection'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfile'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfileListResult'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfiles'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesCreateOrUpdateHeaders'
+  - >-
+    @azure/arm-containerservicefleet.AutoUpgradeProfilesCreateOrUpdateOptionalParams
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesDeleteHeaders'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesDeleteOptionalParams'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesGetOptionalParams'
+  - >-
+    @azure/arm-containerservicefleet.AutoUpgradeProfilesListByFleetNextOptionalParams
+  - >-
+    @azure/arm-containerservicefleet.AutoUpgradeProfilesListByFleetOptionalParams
   - '@azure/arm-containerservicefleet.ContainerServiceFleetClientOptionalParams'
   - '@azure/arm-containerservicefleet.ErrorAdditionalInfo'
   - '@azure/arm-containerservicefleet.ErrorDetail'
@@ -42,6 +61,19 @@ interfaces:
   - '@azure/arm-containerservicefleet.FleetMembersUpdateHeaders'
   - '@azure/arm-containerservicefleet.FleetMembersUpdateOptionalParams'
   - '@azure/arm-containerservicefleet.FleetPatch'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategies'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesCreateOrUpdateHeaders'
+  - >-
+    @azure/arm-containerservicefleet.FleetUpdateStrategiesCreateOrUpdateOptionalParams
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesDeleteHeaders'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesDeleteOptionalParams'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesGetOptionalParams'
+  - >-
+    @azure/arm-containerservicefleet.FleetUpdateStrategiesListByFleetNextOptionalParams
+  - >-
+    @azure/arm-containerservicefleet.FleetUpdateStrategiesListByFleetOptionalParams
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategy'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategyListResult'
   - '@azure/arm-containerservicefleet.Fleets'
   - '@azure/arm-containerservicefleet.FleetsCreateOrUpdateHeaders'
   - '@azure/arm-containerservicefleet.FleetsCreateOrUpdateOptionalParams'
@@ -70,6 +102,8 @@ interfaces:
   - '@azure/arm-containerservicefleet.OperationsListOptionalParams'
   - '@azure/arm-containerservicefleet.ProxyResource'
   - '@azure/arm-containerservicefleet.Resource'
+  - '@azure/arm-containerservicefleet.SkipProperties'
+  - '@azure/arm-containerservicefleet.SkipTarget'
   - '@azure/arm-containerservicefleet.SystemData'
   - '@azure/arm-containerservicefleet.TrackedResource'
   - '@azure/arm-containerservicefleet.UpdateGroup'
@@ -86,6 +120,8 @@ interfaces:
   - '@azure/arm-containerservicefleet.UpdateRunsGetOptionalParams'
   - '@azure/arm-containerservicefleet.UpdateRunsListByFleetNextOptionalParams'
   - '@azure/arm-containerservicefleet.UpdateRunsListByFleetOptionalParams'
+  - '@azure/arm-containerservicefleet.UpdateRunsSkipHeaders'
+  - '@azure/arm-containerservicefleet.UpdateRunsSkipOptionalParams'
   - '@azure/arm-containerservicefleet.UpdateRunsStartHeaders'
   - '@azure/arm-containerservicefleet.UpdateRunsStartOptionalParams'
   - '@azure/arm-containerservicefleet.UpdateRunsStopHeaders'
@@ -97,6 +133,13 @@ interfaces:
   - '@azure/arm-containerservicefleet.WaitStatus'
 typeAliases:
   - '@azure/arm-containerservicefleet.ActionType'
+  - '@azure/arm-containerservicefleet.AutoUpgradeNodeImageSelectionType'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfileProvisioningState'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesCreateOrUpdateResponse'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesDeleteResponse'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesGetResponse'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesListByFleetNextResponse'
+  - '@azure/arm-containerservicefleet.AutoUpgradeProfilesListByFleetResponse'
   - '@azure/arm-containerservicefleet.CreatedByType'
   - '@azure/arm-containerservicefleet.FleetMemberProvisioningState'
   - '@azure/arm-containerservicefleet.FleetMembersCreateResponse'
@@ -105,6 +148,12 @@ typeAliases:
   - '@azure/arm-containerservicefleet.FleetMembersListByFleetResponse'
   - '@azure/arm-containerservicefleet.FleetMembersUpdateResponse'
   - '@azure/arm-containerservicefleet.FleetProvisioningState'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesCreateOrUpdateResponse'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesGetResponse'
+  - >-
+    @azure/arm-containerservicefleet.FleetUpdateStrategiesListByFleetNextResponse
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategiesListByFleetResponse'
+  - '@azure/arm-containerservicefleet.FleetUpdateStrategyProvisioningState'
   - '@azure/arm-containerservicefleet.FleetsCreateOrUpdateResponse'
   - '@azure/arm-containerservicefleet.FleetsGetResponse'
   - '@azure/arm-containerservicefleet.FleetsListByResourceGroupNextResponse'
@@ -119,14 +168,17 @@ typeAliases:
   - '@azure/arm-containerservicefleet.OperationsListNextResponse'
   - '@azure/arm-containerservicefleet.OperationsListResponse'
   - '@azure/arm-containerservicefleet.Origin'
+  - '@azure/arm-containerservicefleet.TargetType'
   - '@azure/arm-containerservicefleet.UpdateRunProvisioningState'
   - '@azure/arm-containerservicefleet.UpdateRunsCreateOrUpdateResponse'
   - '@azure/arm-containerservicefleet.UpdateRunsGetResponse'
   - '@azure/arm-containerservicefleet.UpdateRunsListByFleetNextResponse'
   - '@azure/arm-containerservicefleet.UpdateRunsListByFleetResponse'
+  - '@azure/arm-containerservicefleet.UpdateRunsSkipResponse'
   - '@azure/arm-containerservicefleet.UpdateRunsStartResponse'
   - '@azure/arm-containerservicefleet.UpdateRunsStopResponse'
   - '@azure/arm-containerservicefleet.UpdateState'
+  - '@azure/arm-containerservicefleet.UpgradeChannel'
 functions:
   - name: getContinuationToken(unknown)
     uid: '@azure/arm-containerservicefleet.getContinuationToken'

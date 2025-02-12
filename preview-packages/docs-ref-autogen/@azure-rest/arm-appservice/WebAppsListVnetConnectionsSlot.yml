@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListVnetConnectionsSlot200Response |
-        WebAppsListVnetConnectionsSlotdefaultResponse>
+        StreamableMethod<WebAppsListVnetConnectionsSlot200Response |
+        WebAppsListVnetConnectionsSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListVnetConnectionsSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListVnetConnectionsSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListVnetConnectionsSlotDefaultResponse"
           />&gt;

@@ -11,7 +11,7 @@ properties:
   - name: container
     uid: '@azure/arm-streamanalytics.External.container'
     package: '@azure/arm-streamanalytics'
-    summary: ''
+    summary: The UserCustomCode container.
     fullName: container
     remarks: ''
     isDeprecated: false
@@ -23,7 +23,7 @@ properties:
   - name: path
     uid: '@azure/arm-streamanalytics.External.path'
     package: '@azure/arm-streamanalytics'
-    summary: ''
+    summary: The UserCustomCode path.
     fullName: path
     remarks: ''
     isDeprecated: false
@@ -32,6 +32,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: refreshConfiguration
+    uid: '@azure/arm-streamanalytics.External.refreshConfiguration'
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The refresh parameters for any/all updatable user defined functions
+      present in the job config.
+    fullName: refreshConfiguration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'refreshConfiguration?: RefreshConfiguration'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-streamanalytics.RefreshConfiguration" />
   - name: storageAccount
     uid: '@azure/arm-streamanalytics.External.storageAccount'
     package: '@azure/arm-streamanalytics'

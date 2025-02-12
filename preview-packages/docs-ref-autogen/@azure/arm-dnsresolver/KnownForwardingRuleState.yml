@@ -13,8 +13,8 @@ fields:
   - name: Disabled
     uid: '@azure/arm-dnsresolver.KnownForwardingRuleState.Disabled'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Disabled
   - name: Enabled
     uid: '@azure/arm-dnsresolver.KnownForwardingRuleState.Enabled'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Enabled

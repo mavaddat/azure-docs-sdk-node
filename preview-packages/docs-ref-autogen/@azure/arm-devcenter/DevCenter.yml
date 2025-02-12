@@ -12,7 +12,7 @@ properties:
     uid: '@azure/arm-devcenter.DevCenter.devCenterUri'
     package: '@azure/arm-devcenter'
     summary: >-
-      The URI of the resource.
+      The URI of the Dev Center.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -24,6 +24,32 @@ properties:
       return:
         description: ''
         type: string
+  - name: displayName
+    uid: '@azure/arm-devcenter.DevCenter.displayName'
+    package: '@azure/arm-devcenter'
+    summary: The display name of the devcenter.
+    fullName: displayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'displayName?: string'
+      return:
+        description: ''
+        type: string
+  - name: encryption
+    uid: '@azure/arm-devcenter.DevCenter.encryption'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Encryption settings to be used for server-side encryption for proprietary
+      content (such as catalogs, logs, customizations).
+    fullName: encryption
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'encryption?: Encryption'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.Encryption" />
   - name: identity
     uid: '@azure/arm-devcenter.DevCenter.identity'
     package: '@azure/arm-devcenter'

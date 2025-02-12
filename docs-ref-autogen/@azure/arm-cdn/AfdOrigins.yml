@@ -21,7 +21,7 @@ methods:
         function beginCreate(resourceGroupName: string, profileName: string,
         originGroupName: string, originName: string, origin: AFDOrigin,
         options?: AfdOriginsCreateOptionalParams):
-        Promise<PollerLike<PollOperationState<AFDOrigin>, AFDOrigin>>
+        Promise<SimplePollerLike<OperationState<AFDOrigin>, AFDOrigin>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -47,7 +47,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-cdn.AFDOrigin" />&gt;, <xref
           uid="@azure/arm-cdn.AFDOrigin" />&gt;&gt;
   - name: >-
@@ -101,7 +102,7 @@ methods:
         function beginDelete(resourceGroupName: string, profileName: string,
         originGroupName: string, originName: string, options?:
         AfdOriginsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -123,7 +124,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       AfdOriginsDeleteOptionalParams)
@@ -172,7 +175,7 @@ methods:
         function beginUpdate(resourceGroupName: string, profileName: string,
         originGroupName: string, originName: string, originUpdateProperties:
         AFDOriginUpdateParameters, options?: AfdOriginsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<AFDOrigin>, AFDOrigin>>
+        Promise<SimplePollerLike<OperationState<AFDOrigin>, AFDOrigin>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -198,7 +201,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-cdn.AFDOrigin" />&gt;, <xref
           uid="@azure/arm-cdn.AFDOrigin" />&gt;&gt;
   - name: >-
@@ -308,5 +312,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-cdn.AFDOrigin" />,
-          <xref uid="@azure/arm-cdn.AFDOrigin" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-cdn.AFDOrigin" />, <xref
+          uid="@azure/arm-cdn.AFDOrigin" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

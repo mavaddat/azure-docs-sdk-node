@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, serviceName:
         string, appName: string, bindingName: string, bindingResource:
         BindingResource, options?: BindingsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<BindingResource>,
+        Promise<SimplePollerLike<OperationState<BindingResource>,
         BindingResource>>
       parameters:
         - id: resourceGroupName
@@ -50,7 +50,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appplatform.BindingResource" />&gt;, <xref
           uid="@azure/arm-appplatform.BindingResource" />&gt;&gt;
   - name: >-
@@ -105,7 +106,7 @@ methods:
         function beginDelete(resourceGroupName: string, serviceName: string,
         appName: string, bindingName: string, options?:
         BindingsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -127,7 +128,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       BindingsDeleteOptionalParams)
@@ -176,7 +179,7 @@ methods:
         function beginUpdate(resourceGroupName: string, serviceName: string,
         appName: string, bindingName: string, bindingResource: BindingResource,
         options?: BindingsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<BindingResource>,
+        Promise<SimplePollerLike<OperationState<BindingResource>,
         BindingResource>>
       parameters:
         - id: resourceGroupName
@@ -203,7 +206,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appplatform.BindingResource" />&gt;, <xref
           uid="@azure/arm-appplatform.BindingResource" />&gt;&gt;
   - name: >-
@@ -309,6 +313,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appplatform.BindingResource" />, <xref
-          uid="@azure/arm-appplatform.BindingResource" />[], PageSettings&gt;
+          uid="@azure/arm-appplatform.BindingResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

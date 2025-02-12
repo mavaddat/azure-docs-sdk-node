@@ -22,7 +22,7 @@ methods:
         dnsForwardingRulesetName: string, virtualNetworkLinkName: string,
         parameters: VirtualNetworkLink, options?:
         VirtualNetworkLinksCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<VirtualNetworkLink>,
+        Promise<SimplePollerLike<OperationState<VirtualNetworkLink>,
         VirtualNetworkLink>>
       parameters:
         - id: resourceGroupName
@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-dnsresolver.VirtualNetworkLink" />&gt;, <xref
           uid="@azure/arm-dnsresolver.VirtualNetworkLink" />&gt;&gt;
   - name: >-
@@ -105,7 +106,7 @@ methods:
         function beginDelete(resourceGroupName: string,
         dnsForwardingRulesetName: string, virtualNetworkLinkName: string,
         options?: VirtualNetworkLinksDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -124,7 +125,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       VirtualNetworkLinksDeleteOptionalParams)
@@ -175,7 +178,7 @@ methods:
         dnsForwardingRulesetName: string, virtualNetworkLinkName: string,
         parameters: VirtualNetworkLinkPatch, options?:
         VirtualNetworkLinksUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<VirtualNetworkLink>,
+        Promise<SimplePollerLike<OperationState<VirtualNetworkLink>,
         VirtualNetworkLink>>
       parameters:
         - id: resourceGroupName
@@ -199,7 +202,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-dnsresolver.VirtualNetworkLink" />&gt;, <xref
           uid="@azure/arm-dnsresolver.VirtualNetworkLink" />&gt;&gt;
   - name: >-
@@ -299,6 +303,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dnsresolver.VirtualNetworkLink" />, <xref
-          uid="@azure/arm-dnsresolver.VirtualNetworkLink" />[], PageSettings&gt;
+          uid="@azure/arm-dnsresolver.VirtualNetworkLink" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

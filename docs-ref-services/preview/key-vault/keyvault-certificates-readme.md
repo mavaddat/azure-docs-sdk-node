@@ -1,15 +1,11 @@
 ---
 title: Azure Key Vault Certificates client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/keyvault-certificates, keyvault
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 09/07/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: key-vault
 ---
-
 # Azure Key Vault Certificates client library for JavaScript - version 4.4.0-beta.1 
 
 

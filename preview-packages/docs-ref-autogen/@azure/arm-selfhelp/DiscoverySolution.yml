@@ -8,43 +8,41 @@ remarks: ''
 isDeprecated: false
 type: interface
 methods:
-  - name: list(string, DiscoverySolutionListOptionalParams)
+  - name: list(DiscoverySolutionListOptionalParams)
     uid: '@azure/arm-selfhelp.DiscoverySolution.list'
     package: '@azure/arm-selfhelp'
     summary: >-
-      Solutions Discovery is the initial point of entry within Help API, which
-      helps you identify the
+      Lists the relevant Azure Diagnostics, Solutions and Troubleshooters using
+      [problemClassification
 
-      relevant solutions for your Azure issue.<br/><br/> You can discover
-      solutions using resourceUri OR
+      API](https://learn.microsoft.com/rest/api/support/problem-classifications/list?tabs=HTTP))
+      AND
 
-      resourceUri + problemClassificationId.<br/><br/>We will do our best in
-      returning relevant
+      resourceUri or resourceType.<br/> Discovery Solutions is the initial entry
+      point within Help API,
 
-      diagnostics for your Azure issue.<br/><br/> Get the
-      problemClassificationId(s) using this
+      which identifies relevant Azure diagnostics and solutions. <br/><br/>
+      Required Input :
 
-      [reference](https://learn.microsoft.com/rest/api/support/problem-classifications/list?tabs=HTTP).<br/><br/>
+      problemClassificationId (Use the [problemClassification
 
-      <b>Note: </b> ‘requiredParameterSets’ from Solutions Discovery API
-      response must be passed via
+      API](https://learn.microsoft.com/rest/api/support/problem-classifications/list?tabs=HTTP))
 
-      ‘additionalParameters’ as an input to Diagnostics API.
+      <br/>Optional input: resourceUri OR resource Type <br/><br/> <b>Note:
+      </b>  ‘requiredInputs’ from
+
+      Discovery solutions response must be passed via ‘additionalParameters’ as
+      an input to Diagnostics
+
+      and Solutions API.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function list(scope: string, options?:
-        DiscoverySolutionListOptionalParams):
+        function list(options?: DiscoverySolutionListOptionalParams):
         PagedAsyncIterableIterator<SolutionMetadataResource,
         SolutionMetadataResource[], PageSettings>
       parameters:
-        - id: scope
-          type: string
-          description: >-
-            This is an extension resource provider and only resource level
-            extension is supported
-                         at the moment.
         - id: options
           type: >-
             <xref uid="@azure/arm-selfhelp.DiscoverySolutionListOptionalParams"
@@ -53,7 +51,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-selfhelp.SolutionMetadataResource" />, <xref
-          uid="@azure/arm-selfhelp.SolutionMetadataResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-selfhelp.SolutionMetadataResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

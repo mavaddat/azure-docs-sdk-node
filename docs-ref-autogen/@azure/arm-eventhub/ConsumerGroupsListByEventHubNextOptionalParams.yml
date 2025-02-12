@@ -7,37 +7,6 @@ fullName: ConsumerGroupsListByEventHubNextOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
-  - name: skip
-    uid: '@azure/arm-eventhub.ConsumerGroupsListByEventHubNextOptionalParams.skip'
-    package: '@azure/arm-eventhub'
-    summary: >-
-      Skip is only used if a previous operation returned a partial result. If a
-      previous response contains a nextLink element, the value of the nextLink
-      element will include a skip parameter that specifies a starting point to
-      use for subsequent calls.
-    fullName: skip
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'skip?: number'
-      return:
-        description: ''
-        type: number
-  - name: top
-    uid: '@azure/arm-eventhub.ConsumerGroupsListByEventHubNextOptionalParams.top'
-    package: '@azure/arm-eventhub'
-    summary: >-
-      May be used to limit the number of results to the most recent N
-      usageDetails.
-    fullName: top
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'top?: number'
-      return:
-        description: ''
-        type: number
 inheritedProperties:
   - name: abortSignal
     uid: >-
@@ -51,7 +20,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: >-
@@ -68,7 +37,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: >-
@@ -82,7 +51,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -96,7 +65,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: >-
@@ -110,6 +79,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

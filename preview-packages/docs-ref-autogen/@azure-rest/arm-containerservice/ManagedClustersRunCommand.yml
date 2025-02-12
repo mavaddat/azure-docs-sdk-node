@@ -22,7 +22,7 @@ methods:
         function post(options: ManagedClustersRunCommandParameters):
         StreamableMethod<ManagedClustersRunCommand200Response |
         ManagedClustersRunCommand202Response |
-        ManagedClustersRunCommanddefaultResponse>
+        ManagedClustersRunCommandDefaultResponse>
       parameters:
         - id: options
           type: >-
@@ -33,10 +33,10 @@ methods:
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-containerservice.ManagedClustersRunCommand200Response"
           /> | <xref
           uid="@azure-rest/arm-containerservice.ManagedClustersRunCommand202Response"
           /> | <xref
-          uid="@azure-rest/arm-containerservice.ManagedClustersRunCommanddefaultResponse"
+          uid="@azure-rest/arm-containerservice.ManagedClustersRunCommandDefaultResponse"
           />&gt;

@@ -29,7 +29,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: virtualNetworkName
           type: string
           description: The name of the virtual network.
@@ -45,8 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       SubnetServiceAssociationLinkDeleteOptionalParams)
@@ -68,7 +68,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: virtualNetworkName
           type: string
           description: The name of the virtual network.

@@ -123,26 +123,30 @@ properties:
         "CassandraTable" | "CommonDataServiceForAppsEntity" | "ConcurObject" |
         "CosmosDbMongoDbApiCollection" | "CosmosDbSqlApiCollection" |
         "CouchbaseTable" | "CustomDataset" | "Excel" | "Parquet" |
-        "DelimitedText" | "Json" | "Xml" | "Orc" | "DocumentDbCollection" |
-        "DynamicsEntity" | "DynamicsCrmEntity" | "Office365Table" | "FileShare"
-        | "MongoDbCollection" | "MongoDbAtlasCollection" | "MongoDbV2Collection"
-        | "ODataResource" | "OracleTable" | "TeradataTable" | "Db2Table" |
-        "RelationalTable" | "InformixTable" | "OdbcTable" | "MySqlTable" |
-        "PostgreSqlTable" | "MicrosoftAccessTable" | "SalesforceObject" |
+        "DelimitedText" | "Json" | "Xml" | "Orc" | "Iceberg" |
+        "DocumentDbCollection" | "DynamicsEntity" | "DynamicsCrmEntity" |
+        "Office365Table" | "FileShare" | "MongoDbCollection" |
+        "MongoDbAtlasCollection" | "MongoDbV2Collection" | "ODataResource" |
+        "OracleTable" | "TeradataTable" | "Db2Table" | "RelationalTable" |
+        "InformixTable" | "OdbcTable" | "MySqlTable" | "PostgreSqlTable" |
+        "PostgreSqlV2Table" | "MicrosoftAccessTable" | "SalesforceObject" |
         "SalesforceServiceCloudObject" | "SybaseTable" | "SapBwCube" |
         "SapCloudForCustomerResource" | "SapEccResource" | "SapHanaTable" |
         "SapOpenHubTable" | "SqlServerTable" | "RestResource" |
         "SapTableResource" | "SapOdpResource" | "WebTable" | "HttpFile" |
         "DrillTable" | "EloquaObject" | "GoogleBigQueryObject" |
-        "GreenplumTable" | "HBaseObject" | "HiveObject" | "HubspotObject" |
-        "ImpalaObject" | "JiraObject" | "MagentoObject" | "MariaDBTable" |
-        "MarketoObject" | "PaypalObject" | "PhoenixObject" | "PrestoObject" |
-        "QuickBooksObject" | "ServiceNowObject" | "ShopifyObject" |
-        "SparkObject" | "SquareObject" | "XeroObject" | "ZohoObject" |
-        "NetezzaTable" | "VerticaTable" | "SalesforceMarketingCloudObject" |
-        "ResponsysObject" | "DynamicsAXResource" | "OracleServiceCloudObject" |
-        "GoogleAdWordsObject" | "SnowflakeTable" |
-        "SharePointOnlineListResource"
+        "GoogleBigQueryV2Object" | "GreenplumTable" | "HBaseObject" |
+        "HiveObject" | "HubspotObject" | "ImpalaObject" | "JiraObject" |
+        "MagentoObject" | "MariaDBTable" | "MarketoObject" | "PaypalObject" |
+        "PhoenixObject" | "PrestoObject" | "QuickBooksObject" |
+        "ServiceNowObject" | "ShopifyObject" | "SparkObject" | "SquareObject" |
+        "XeroObject" | "ZohoObject" | "NetezzaTable" | "VerticaTable" |
+        "SalesforceMarketingCloudObject" | "ResponsysObject" |
+        "DynamicsAXResource" | "OracleServiceCloudObject" |
+        "GoogleAdWordsObject" | "SnowflakeTable" | "SnowflakeV2Table" |
+        "SharePointOnlineListResource" | "LakeHouseTable" | "SalesforceV2Object"
+        | "SalesforceServiceCloudV2Object" | "WarehouseTable" |
+        "ServiceNowV2Object"
       return:
         description: ''
         type: >-
@@ -156,24 +160,27 @@ properties:
           "CassandraTable" | "CommonDataServiceForAppsEntity" | "ConcurObject" |
           "CosmosDbMongoDbApiCollection" | "CosmosDbSqlApiCollection" |
           "CouchbaseTable" | "CustomDataset" | "Excel" | "Parquet" |
-          "DelimitedText" | "Json" | "Xml" | "Orc" | "DocumentDbCollection" |
-          "DynamicsEntity" | "DynamicsCrmEntity" | "Office365Table" |
-          "FileShare" | "MongoDbCollection" | "MongoDbAtlasCollection" |
-          "MongoDbV2Collection" | "ODataResource" | "OracleTable" |
-          "TeradataTable" | "Db2Table" | "RelationalTable" | "InformixTable" |
-          "OdbcTable" | "MySqlTable" | "PostgreSqlTable" |
-          "MicrosoftAccessTable" | "SalesforceObject" |
+          "DelimitedText" | "Json" | "Xml" | "Orc" | "Iceberg" |
+          "DocumentDbCollection" | "DynamicsEntity" | "DynamicsCrmEntity" |
+          "Office365Table" | "FileShare" | "MongoDbCollection" |
+          "MongoDbAtlasCollection" | "MongoDbV2Collection" | "ODataResource" |
+          "OracleTable" | "TeradataTable" | "Db2Table" | "RelationalTable" |
+          "InformixTable" | "OdbcTable" | "MySqlTable" | "PostgreSqlTable" |
+          "PostgreSqlV2Table" | "MicrosoftAccessTable" | "SalesforceObject" |
           "SalesforceServiceCloudObject" | "SybaseTable" | "SapBwCube" |
           "SapCloudForCustomerResource" | "SapEccResource" | "SapHanaTable" |
           "SapOpenHubTable" | "SqlServerTable" | "RestResource" |
           "SapTableResource" | "SapOdpResource" | "WebTable" | "HttpFile" |
           "DrillTable" | "EloquaObject" | "GoogleBigQueryObject" |
-          "GreenplumTable" | "HBaseObject" | "HiveObject" | "HubspotObject" |
-          "ImpalaObject" | "JiraObject" | "MagentoObject" | "MariaDBTable" |
-          "MarketoObject" | "PaypalObject" | "PhoenixObject" | "PrestoObject" |
-          "QuickBooksObject" | "ServiceNowObject" | "ShopifyObject" |
-          "SparkObject" | "SquareObject" | "XeroObject" | "ZohoObject" |
-          "NetezzaTable" | "VerticaTable" | "SalesforceMarketingCloudObject" |
-          "ResponsysObject" | "DynamicsAXResource" | "OracleServiceCloudObject"
-          | "GoogleAdWordsObject" | "SnowflakeTable" |
-          "SharePointOnlineListResource"
+          "GoogleBigQueryV2Object" | "GreenplumTable" | "HBaseObject" |
+          "HiveObject" | "HubspotObject" | "ImpalaObject" | "JiraObject" |
+          "MagentoObject" | "MariaDBTable" | "MarketoObject" | "PaypalObject" |
+          "PhoenixObject" | "PrestoObject" | "QuickBooksObject" |
+          "ServiceNowObject" | "ShopifyObject" | "SparkObject" | "SquareObject"
+          | "XeroObject" | "ZohoObject" | "NetezzaTable" | "VerticaTable" |
+          "SalesforceMarketingCloudObject" | "ResponsysObject" |
+          "DynamicsAXResource" | "OracleServiceCloudObject" |
+          "GoogleAdWordsObject" | "SnowflakeTable" | "SnowflakeV2Table" |
+          "SharePointOnlineListResource" | "LakeHouseTable" |
+          "SalesforceV2Object" | "SalesforceServiceCloudV2Object" |
+          "WarehouseTable" | "ServiceNowV2Object"

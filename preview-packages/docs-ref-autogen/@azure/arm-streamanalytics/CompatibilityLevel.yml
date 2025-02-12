@@ -10,7 +10,9 @@ summary: >-
    this enum contains the known values that the service supports.
   ### Known values supported by the service
 
-  **1.0**
+  **1.0** \
+
+  **1.2**
 fullName: CompatibilityLevel
 remarks: ''
 isDeprecated: false

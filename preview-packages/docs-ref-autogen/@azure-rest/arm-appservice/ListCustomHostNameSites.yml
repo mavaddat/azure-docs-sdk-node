@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<ListCustomHostNameSites200Response |
-        ListCustomHostNameSitesdefaultResponse>
+        StreamableMethod<ListCustomHostNameSites200Response |
+        ListCustomHostNameSitesDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.ListCustomHostNameSites200Response" />
           | <xref
-          uid="@azure-rest/arm-appservice.ListCustomHostNameSitesdefaultResponse"
+          uid="@azure-rest/arm-appservice.ListCustomHostNameSitesDefaultResponse"
           />&gt;

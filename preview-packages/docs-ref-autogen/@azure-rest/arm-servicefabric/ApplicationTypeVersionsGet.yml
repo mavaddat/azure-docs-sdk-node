@@ -21,20 +21,20 @@ methods:
         function delete(options?: RequestParameters):
         StreamableMethod<ApplicationTypeVersionsDelete202Response |
         ApplicationTypeVersionsDelete204Response |
-        ApplicationTypeVersionsDeletedefaultResponse>
+        ApplicationTypeVersionsDeleteDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsDelete202Response"
           /> | <xref
           uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsDelete204Response"
           /> | <xref
-          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsDeletedefaultResponse"
+          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsDeleteDefaultResponse"
           />&gt;
   - name: get(RequestParameters)
     uid: '@azure-rest/arm-servicefabric.ApplicationTypeVersionsGet.get'
@@ -49,18 +49,18 @@ methods:
       content: >-
         function get(options?: RequestParameters):
         StreamableMethod<ApplicationTypeVersionsGet200Response |
-        ApplicationTypeVersionsGetdefaultResponse>
+        ApplicationTypeVersionsGetDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsGet200Response"
           /> | <xref
-          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsGetdefaultResponse"
+          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsGetDefaultResponse"
           />&gt;
   - name: put(ApplicationTypeVersionsCreateOrUpdateParameters)
     uid: '@azure-rest/arm-servicefabric.ApplicationTypeVersionsGet.put'
@@ -74,7 +74,7 @@ methods:
       content: >-
         function put(options: ApplicationTypeVersionsCreateOrUpdateParameters):
         StreamableMethod<ApplicationTypeVersionsCreateOrUpdate202Response |
-        ApplicationTypeVersionsCreateOrUpdatedefaultResponse>
+        ApplicationTypeVersionsCreateOrUpdateDefaultResponse>
       parameters:
         - id: options
           type: >-
@@ -85,8 +85,8 @@ methods:
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsCreateOrUpdate202Response"
           /> | <xref
-          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsCreateOrUpdatedefaultResponse"
+          uid="@azure-rest/arm-servicefabric.ApplicationTypeVersionsCreateOrUpdateDefaultResponse"
           />&gt;

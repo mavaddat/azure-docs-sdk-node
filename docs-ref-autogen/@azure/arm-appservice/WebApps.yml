@@ -296,7 +296,7 @@ methods:
         type: Promise&lt;<xref uid="@azure/arm-appservice.BackupItem" />&gt;
   - name: >-
       beginApproveOrRejectPrivateEndpointConnection(string, string, string,
-      PrivateLinkConnectionApprovalRequestResource,
+      RemotePrivateEndpointConnectionARMResource,
       WebAppsApproveOrRejectPrivateEndpointConnectionOptionalParams)
     uid: >-
       @azure/arm-appservice.WebApps.beginApproveOrRejectPrivateEndpointConnection
@@ -309,7 +309,7 @@ methods:
         function
         beginApproveOrRejectPrivateEndpointConnection(resourceGroupName: string,
         name: string, privateEndpointConnectionName: string,
-        privateEndpointWrapper: PrivateLinkConnectionApprovalRequestResource,
+        privateEndpointWrapper: RemotePrivateEndpointConnectionARMResource,
         options?:
         WebAppsApproveOrRejectPrivateEndpointConnectionOptionalParams):
         Promise<SimplePollerLike<OperationState<RemotePrivateEndpointConnectionARMResource>,
@@ -327,9 +327,9 @@ methods:
         - id: privateEndpointWrapper
           type: >-
             <xref
-            uid="@azure/arm-appservice.PrivateLinkConnectionApprovalRequestResource"
+            uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
             />
-          description: Private Endpoint Connection Approval ARM resource.
+          description: Remote Private Endpoint Connection ARM resource.
         - id: options
           type: >-
             <xref
@@ -339,14 +339,15 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />&gt;, <xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />&gt;&gt;
   - name: >-
       beginApproveOrRejectPrivateEndpointConnectionAndWait(string, string,
-      string, PrivateLinkConnectionApprovalRequestResource,
+      string, RemotePrivateEndpointConnectionARMResource,
       WebAppsApproveOrRejectPrivateEndpointConnectionOptionalParams)
     uid: >-
       @azure/arm-appservice.WebApps.beginApproveOrRejectPrivateEndpointConnectionAndWait
@@ -359,7 +360,7 @@ methods:
         function
         beginApproveOrRejectPrivateEndpointConnectionAndWait(resourceGroupName:
         string, name: string, privateEndpointConnectionName: string,
-        privateEndpointWrapper: PrivateLinkConnectionApprovalRequestResource,
+        privateEndpointWrapper: RemotePrivateEndpointConnectionARMResource,
         options?:
         WebAppsApproveOrRejectPrivateEndpointConnectionOptionalParams):
         Promise<RemotePrivateEndpointConnectionARMResource>
@@ -376,9 +377,9 @@ methods:
         - id: privateEndpointWrapper
           type: >-
             <xref
-            uid="@azure/arm-appservice.PrivateLinkConnectionApprovalRequestResource"
+            uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
             />
-          description: Private Endpoint Connection Approval ARM resource.
+          description: Remote Private Endpoint Connection ARM resource.
         - id: options
           type: >-
             <xref
@@ -393,7 +394,7 @@ methods:
           />&gt;
   - name: >-
       beginApproveOrRejectPrivateEndpointConnectionSlot(string, string, string,
-      string, PrivateLinkConnectionApprovalRequestResource,
+      string, RemotePrivateEndpointConnectionARMResource,
       WebAppsApproveOrRejectPrivateEndpointConnectionSlotOptionalParams)
     uid: >-
       @azure/arm-appservice.WebApps.beginApproveOrRejectPrivateEndpointConnectionSlot
@@ -407,7 +408,7 @@ methods:
         beginApproveOrRejectPrivateEndpointConnectionSlot(resourceGroupName:
         string, name: string, privateEndpointConnectionName: string, slot:
         string, privateEndpointWrapper:
-        PrivateLinkConnectionApprovalRequestResource, options?:
+        RemotePrivateEndpointConnectionARMResource, options?:
         WebAppsApproveOrRejectPrivateEndpointConnectionSlotOptionalParams):
         Promise<SimplePollerLike<OperationState<RemotePrivateEndpointConnectionARMResource>,
         RemotePrivateEndpointConnectionARMResource>>
@@ -427,9 +428,9 @@ methods:
         - id: privateEndpointWrapper
           type: >-
             <xref
-            uid="@azure/arm-appservice.PrivateLinkConnectionApprovalRequestResource"
+            uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
             />
-          description: Private Endpoint Connection Approval ARM resource.
+          description: Remote Private Endpoint Connection ARM resource.
         - id: options
           type: >-
             <xref
@@ -439,14 +440,15 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />&gt;, <xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />&gt;&gt;
   - name: >-
       beginApproveOrRejectPrivateEndpointConnectionSlotAndWait(string, string,
-      string, string, PrivateLinkConnectionApprovalRequestResource,
+      string, string, RemotePrivateEndpointConnectionARMResource,
       WebAppsApproveOrRejectPrivateEndpointConnectionSlotOptionalParams)
     uid: >-
       @azure/arm-appservice.WebApps.beginApproveOrRejectPrivateEndpointConnectionSlotAndWait
@@ -460,7 +462,7 @@ methods:
         beginApproveOrRejectPrivateEndpointConnectionSlotAndWait(resourceGroupName:
         string, name: string, privateEndpointConnectionName: string, slot:
         string, privateEndpointWrapper:
-        PrivateLinkConnectionApprovalRequestResource, options?:
+        RemotePrivateEndpointConnectionARMResource, options?:
         WebAppsApproveOrRejectPrivateEndpointConnectionSlotOptionalParams):
         Promise<RemotePrivateEndpointConnectionARMResource>
       parameters:
@@ -479,9 +481,9 @@ methods:
         - id: privateEndpointWrapper
           type: >-
             <xref
-            uid="@azure/arm-appservice.PrivateLinkConnectionApprovalRequestResource"
+            uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
             />
-          description: Private Endpoint Connection Approval ARM resource.
+          description: Remote Private Endpoint Connection ARM resource.
         - id: options
           type: >-
             <xref
@@ -530,7 +532,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.FunctionEnvelope" />&gt;, <xref
           uid="@azure/arm-appservice.FunctionEnvelope" />&gt;&gt;
   - name: >-
@@ -609,7 +612,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.FunctionEnvelope" />&gt;, <xref
           uid="@azure/arm-appservice.FunctionEnvelope" />&gt;&gt;
   - name: >-
@@ -689,7 +693,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;, <xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;&gt;
   - name: >-
@@ -771,7 +776,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;, <xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;&gt;
   - name: >-
@@ -853,7 +859,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;, <xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;&gt;
   - name: >-
@@ -927,7 +934,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;, <xref
           uid="@azure/arm-appservice.MSDeployStatus" />&gt;&gt;
   - name: >-
@@ -1006,7 +1014,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.Site" />&gt;, <xref
           uid="@azure/arm-appservice.Site" />&gt;&gt;
   - name: >-
@@ -1093,7 +1102,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.Site" />&gt;, <xref
           uid="@azure/arm-appservice.Site" />&gt;&gt;
   - name: >-
@@ -1175,7 +1185,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.SiteSourceControl" />&gt;, <xref
           uid="@azure/arm-appservice.SiteSourceControl" />&gt;&gt;
   - name: >-
@@ -1251,7 +1262,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.SiteSourceControl" />&gt;, <xref
           uid="@azure/arm-appservice.SiteSourceControl" />&gt;&gt;
   - name: >-
@@ -1328,7 +1340,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsDeletePrivateEndpointConnectionResponse"
           />&gt;, <xref
           uid="@azure/arm-appservice.WebAppsDeletePrivateEndpointConnectionResponse"
@@ -1407,7 +1420,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsDeletePrivateEndpointConnectionSlotResponse"
           />&gt;, <xref
           uid="@azure/arm-appservice.WebAppsDeletePrivateEndpointConnectionSlotResponse"
@@ -1488,7 +1502,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />&gt;, <xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />&gt;&gt;
   - name: >-
@@ -1568,7 +1583,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />&gt;, <xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />&gt;&gt;
   - name: >-
@@ -1648,7 +1664,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;, <xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;&gt;
   - name: >-
@@ -1727,7 +1744,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;, <xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />&gt;&gt;
   - name: >-
@@ -1800,7 +1818,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.User" />&gt;, <xref
           uid="@azure/arm-appservice.User" />&gt;&gt;
   - name: >-
@@ -1868,7 +1887,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.User" />&gt;, <xref
           uid="@azure/arm-appservice.User" />&gt;&gt;
   - name: >-
@@ -1940,7 +1960,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.Operation" />&gt;, <xref
           uid="@azure/arm-appservice.Operation" />&gt;&gt;
   - name: >-
@@ -2012,7 +2033,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.StorageMigrationResponse" />&gt;, <xref
           uid="@azure/arm-appservice.StorageMigrationResponse" />&gt;&gt;
   - name: >-
@@ -2087,8 +2109,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreAndWait(string, string, string, RestoreRequest,
       WebAppsRestoreOptionalParams)
@@ -2156,8 +2178,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreFromBackupBlobAndWait(string, string, RestoreRequest,
       WebAppsRestoreFromBackupBlobOptionalParams)
@@ -2229,8 +2251,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreFromBackupBlobSlotAndWait(string, string, string,
       RestoreRequest, WebAppsRestoreFromBackupBlobSlotOptionalParams)
@@ -2302,8 +2324,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreFromDeletedAppAndWait(string, string,
       DeletedAppRestoreRequest, WebAppsRestoreFromDeletedAppOptionalParams)
@@ -2374,8 +2396,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreFromDeletedAppSlotAndWait(string, string, string,
       DeletedAppRestoreRequest, WebAppsRestoreFromDeletedAppSlotOptionalParams)
@@ -2457,8 +2479,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreSlotAndWait(string, string, string, string, RestoreRequest,
       WebAppsRestoreSlotOptionalParams)
@@ -2536,8 +2558,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreSnapshotAndWait(string, string, SnapshotRestoreRequest,
       WebAppsRestoreSnapshotOptionalParams)
@@ -2613,8 +2635,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestoreSnapshotSlotAndWait(string, string, string,
       SnapshotRestoreRequest, WebAppsRestoreSnapshotSlotOptionalParams)
@@ -2685,7 +2707,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsStartNetworkTraceResponse" />&gt;,
           <xref uid="@azure/arm-appservice.WebAppsStartNetworkTraceResponse"
           />&gt;&gt;
@@ -2754,7 +2777,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsStartNetworkTraceSlotResponse"
           />&gt;, <xref
           uid="@azure/arm-appservice.WebAppsStartNetworkTraceSlotResponse"
@@ -2826,7 +2850,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsStartWebSiteNetworkTraceOperationResponse"
           />&gt;, <xref
           uid="@azure/arm-appservice.WebAppsStartWebSiteNetworkTraceOperationResponse"
@@ -2900,7 +2925,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appservice.WebAppsStartWebSiteNetworkTraceOperationSlotResponse"
           />&gt;, <xref
           uid="@azure/arm-appservice.WebAppsStartWebSiteNetworkTraceOperationSlotResponse"
@@ -2979,8 +3005,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginSwapSlotAndWait(string, string, string, CsmSlotEntity,
       WebAppsSwapSlotOptionalParams)
@@ -3049,8 +3075,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginSwapSlotWithProductionAndWait(string, string, CsmSlotEntity,
       WebAppsSwapSlotWithProductionOptionalParams)
@@ -3856,6 +3882,85 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/arm-appservice.RelayServiceConnectionEntity" />&gt;
+  - name: >-
+      createOrUpdateSiteContainer(string, string, string, SiteContainer,
+      WebAppsCreateOrUpdateSiteContainerOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.createOrUpdateSiteContainer'
+    package: '@azure/arm-appservice'
+    summary: Creates or Updates a site container for a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createOrUpdateSiteContainer(resourceGroupName: string, name:
+        string, containerName: string, request: SiteContainer, options?:
+        WebAppsCreateOrUpdateSiteContainerOptionalParams):
+        Promise<SiteContainer>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: request
+          type: <xref uid="@azure/arm-appservice.SiteContainer" />
+          description: Container Entity
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsCreateOrUpdateSiteContainerOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appservice.SiteContainer" />&gt;
+  - name: >-
+      createOrUpdateSiteContainerSlot(string, string, string, string,
+      SiteContainer, WebAppsCreateOrUpdateSiteContainerSlotOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.createOrUpdateSiteContainerSlot'
+    package: '@azure/arm-appservice'
+    summary: Creates or Updates a site container for a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createOrUpdateSiteContainerSlot(resourceGroupName: string,
+        name: string, slot: string, containerName: string, request:
+        SiteContainer, options?:
+        WebAppsCreateOrUpdateSiteContainerSlotOptionalParams):
+        Promise<SiteContainer>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: slot
+          type: string
+          description: >-
+            Name of the deployment slot. If a slot is not specified, the API
+            will create the
+                        container for the production slot.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: request
+          type: <xref uid="@azure/arm-appservice.SiteContainer" />
+          description: Container Entity
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsCreateOrUpdateSiteContainerSlotOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appservice.SiteContainer" />&gt;
   - name: >-
       createOrUpdateSwiftVirtualNetworkConnectionWithCheck(string, string,
       SwiftVirtualNetwork,
@@ -5235,6 +5340,76 @@ methods:
           type: >-
             <xref
             uid="@azure/arm-appservice.WebAppsDeleteRelayServiceConnectionSlotOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: >-
+      deleteSiteContainer(string, string, string,
+      WebAppsDeleteSiteContainerOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.deleteSiteContainer'
+    package: '@azure/arm-appservice'
+    summary: Deletes a site container for a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteSiteContainer(resourceGroupName: string, name: string,
+        containerName: string, options?:
+        WebAppsDeleteSiteContainerOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsDeleteSiteContainerOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: >-
+      deleteSiteContainerSlot(string, string, string, string,
+      WebAppsDeleteSiteContainerSlotOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.deleteSiteContainerSlot'
+    package: '@azure/arm-appservice'
+    summary: Deletes a site container for a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteSiteContainerSlot(resourceGroupName: string, name:
+        string, slot: string, containerName: string, options?:
+        WebAppsDeleteSiteContainerSlotOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: slot
+          type: string
+          description: >-
+            Name of the deployment slot. If a slot is not specified, the API
+            will delete the
+                        container for the production slot.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsDeleteSiteContainerSlotOptionalParams"
             />
           description: The options parameters.
       return:
@@ -8994,6 +9169,75 @@ methods:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-appservice.ApiKVReference" />&gt;
   - name: >-
+      getSiteContainer(string, string, string,
+      WebAppsGetSiteContainerOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.getSiteContainer'
+    package: '@azure/arm-appservice'
+    summary: Gets a site container of a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSiteContainer(resourceGroupName: string, name: string,
+        containerName: string, options?: WebAppsGetSiteContainerOptionalParams):
+        Promise<SiteContainer>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsGetSiteContainerOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appservice.SiteContainer" />&gt;
+  - name: >-
+      getSiteContainerSlot(string, string, string, string,
+      WebAppsGetSiteContainerSlotOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.getSiteContainerSlot'
+    package: '@azure/arm-appservice'
+    summary: Gets a site container of a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSiteContainerSlot(resourceGroupName: string, name: string,
+        slot: string, containerName: string, options?:
+        WebAppsGetSiteContainerSlotOptionalParams): Promise<SiteContainer>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: slot
+          type: string
+          description: >-
+            Name of the deployment slot. If a slot is not specified, the API
+            will get the Site
+                        Container for the production slot.
+        - id: containerName
+          type: string
+          description: Site Container Name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsGetSiteContainerSlotOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appservice.SiteContainer" />&gt;
+  - name: >-
       getSiteExtension(string, string, string,
       WebAppsGetSiteExtensionOptionalParams)
     uid: '@azure/arm-appservice.WebApps.getSiteExtension'
@@ -9849,8 +10093,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appservice.Site"
-          />, <xref uid="@azure/arm-appservice.Site" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.Site" />, <xref
+          uid="@azure/arm-appservice.Site" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listApplicationSettings(string, string,
       WebAppsListApplicationSettingsOptionalParams)
@@ -9949,9 +10195,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ApiKVReference" />, <xref
-          uid="@azure/arm-appservice.ApiKVReference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ApiKVReference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAppSettingsKeyVaultReferencesSlot(string, string, string,
       WebAppsGetAppSettingsKeyVaultReferencesSlotOptionalParams)
@@ -9988,9 +10235,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ApiKVReference" />, <xref
-          uid="@azure/arm-appservice.ApiKVReference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ApiKVReference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAzureStorageAccounts(string, string,
       WebAppsListAzureStorageAccountsOptionalParams)
@@ -10088,9 +10336,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.BackupItem" />, <xref
-          uid="@azure/arm-appservice.BackupItem" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.BackupItem" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listBackupsSlot(string, string, string,
       WebAppsListBackupsSlotOptionalParams)
@@ -10125,9 +10374,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.BackupItem" />, <xref
-          uid="@azure/arm-appservice.BackupItem" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.BackupItem" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listBackupStatusSecrets(string, string, string, BackupRequest,
       WebAppsListBackupStatusSecretsOptionalParams)
@@ -10253,11 +10503,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmPublishingCredentialsPoliciesEntity" />,
           <xref
           uid="@azure/arm-appservice.CsmPublishingCredentialsPoliciesEntity"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listBasicPublishingCredentialsPoliciesSlot(string, string, string,
       WebAppsListBasicPublishingCredentialsPoliciesSlotOptionalParams)
@@ -10296,11 +10546,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmPublishingCredentialsPoliciesEntity" />,
           <xref
           uid="@azure/arm-appservice.CsmPublishingCredentialsPoliciesEntity"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByResourceGroup(string, WebAppsListByResourceGroupOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listByResourceGroup'
     package: '@azure/arm-appservice'
@@ -10327,8 +10577,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appservice.Site"
-          />, <xref uid="@azure/arm-appservice.Site" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.Site" />, <xref
+          uid="@azure/arm-appservice.Site" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listConfigurations(string, string,
       WebAppsListConfigurationsOptionalParams)
@@ -10359,9 +10611,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteConfigResource" />, <xref
-          uid="@azure/arm-appservice.SiteConfigResource" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SiteConfigResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listConfigurationSnapshotInfo(string, string,
       WebAppsListConfigurationSnapshotInfoOptionalParams)
@@ -10396,10 +10649,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />, <xref
-          uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />[],
-          PageSettings&gt;
+          uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listConfigurationSnapshotInfoSlot(string, string, string,
       WebAppsListConfigurationSnapshotInfoSlotOptionalParams)
@@ -10441,10 +10694,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />, <xref
-          uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />[],
-          PageSettings&gt;
+          uid="@azure/arm-appservice.SiteConfigurationSnapshotInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listConfigurationsSlot(string, string, string,
       WebAppsListConfigurationsSlotOptionalParams)
@@ -10481,9 +10734,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteConfigResource" />, <xref
-          uid="@azure/arm-appservice.SiteConfigResource" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SiteConfigResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listConnectionStrings(string, string,
       WebAppsListConnectionStringsOptionalParams)
@@ -10583,9 +10837,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ContinuousWebJob" />, <xref
-          uid="@azure/arm-appservice.ContinuousWebJob" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ContinuousWebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listContinuousWebJobsSlot(string, string, string,
       WebAppsListContinuousWebJobsSlotOptionalParams)
@@ -10623,9 +10878,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ContinuousWebJob" />, <xref
-          uid="@azure/arm-appservice.ContinuousWebJob" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ContinuousWebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listDeploymentLog(string, string, string,
       WebAppsListDeploymentLogOptionalParams)
@@ -10732,9 +10988,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Deployment" />, <xref
-          uid="@azure/arm-appservice.Deployment" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Deployment" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listDeploymentsSlot(string, string, string,
       WebAppsListDeploymentsSlotOptionalParams)
@@ -10770,9 +11027,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Deployment" />, <xref
-          uid="@azure/arm-appservice.Deployment" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Deployment" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listDomainOwnershipIdentifiers(string, string,
       WebAppsListDomainOwnershipIdentifiersOptionalParams)
@@ -10804,9 +11062,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Identifier" />, <xref
-          uid="@azure/arm-appservice.Identifier" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Identifier" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listDomainOwnershipIdentifiersSlot(string, string, string,
       WebAppsListDomainOwnershipIdentifiersSlotOptionalParams)
@@ -10845,9 +11104,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Identifier" />, <xref
-          uid="@azure/arm-appservice.Identifier" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Identifier" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listFunctionKeys(string, string, string,
       WebAppsListFunctionKeysOptionalParams)
@@ -10945,9 +11205,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.FunctionEnvelope" />, <xref
-          uid="@azure/arm-appservice.FunctionEnvelope" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.FunctionEnvelope" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listFunctionSecrets(string, string, string,
       WebAppsListFunctionSecretsOptionalParams)
@@ -11105,9 +11366,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.HostNameBinding" />, <xref
-          uid="@azure/arm-appservice.HostNameBinding" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.HostNameBinding" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listHostNameBindingsSlot(string, string, string,
       WebAppsListHostNameBindingsSlotOptionalParams)
@@ -11145,9 +11407,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.HostNameBinding" />, <xref
-          uid="@azure/arm-appservice.HostNameBinding" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.HostNameBinding" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listHybridConnections(string, string,
       WebAppsListHybridConnectionsOptionalParams)
@@ -11248,9 +11511,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.FunctionEnvelope" />, <xref
-          uid="@azure/arm-appservice.FunctionEnvelope" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.FunctionEnvelope" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceIdentifiers(string, string,
       WebAppsListInstanceIdentifiersOptionalParams)
@@ -11281,10 +11545,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.WebSiteInstanceStatus" />, <xref
-          uid="@azure/arm-appservice.WebSiteInstanceStatus" />[],
-          PageSettings&gt;
+          uid="@azure/arm-appservice.WebSiteInstanceStatus" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceIdentifiersSlot(string, string, string,
       WebAppsListInstanceIdentifiersSlotOptionalParams)
@@ -11322,10 +11586,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.WebSiteInstanceStatus" />, <xref
-          uid="@azure/arm-appservice.WebSiteInstanceStatus" />[],
-          PageSettings&gt;
+          uid="@azure/arm-appservice.WebSiteInstanceStatus" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcesses(string, string, string,
       WebAppsListInstanceProcessesOptionalParams)
@@ -11366,9 +11630,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcessesSlot(string, string, string, string,
       WebAppsListInstanceProcessesSlotOptionalParams)
@@ -11415,9 +11680,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcessModules(string, string, string, string,
       WebAppsListInstanceProcessModulesOptionalParams)
@@ -11462,9 +11728,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessModuleInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessModuleInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessModuleInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcessModulesSlot(string, string, string, string, string,
       WebAppsListInstanceProcessModulesSlotOptionalParams)
@@ -11515,9 +11782,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessModuleInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessModuleInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessModuleInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcessThreads(string, string, string, string,
       WebAppsListInstanceProcessThreadsOptionalParams)
@@ -11562,9 +11830,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessThreadInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessThreadInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessThreadInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceProcessThreadsSlot(string, string, string, string, string,
       WebAppsListInstanceProcessThreadsSlotOptionalParams)
@@ -11615,9 +11884,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessThreadInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessThreadInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessThreadInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listInstanceWorkflowsSlot(string, string, string,
       WebAppsListInstanceWorkflowsSlotOptionalParams)
@@ -11652,9 +11922,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.WorkflowEnvelope" />, <xref
-          uid="@azure/arm-appservice.WorkflowEnvelope" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.WorkflowEnvelope" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listMetadata(string, string, WebAppsListMetadataOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listMetadata'
     package: '@azure/arm-appservice'
@@ -11818,9 +12089,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.PerfMonResponse" />, <xref
-          uid="@azure/arm-appservice.PerfMonResponse" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.PerfMonResponse" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listPerfMonCountersSlot(string, string, string,
       WebAppsListPerfMonCountersSlotOptionalParams)
@@ -11857,9 +12129,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.PerfMonResponse" />, <xref
-          uid="@azure/arm-appservice.PerfMonResponse" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.PerfMonResponse" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listPremierAddOns(string, string, WebAppsListPremierAddOnsOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listPremierAddOns'
     package: '@azure/arm-appservice'
@@ -11954,11 +12227,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />, <xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listPrivateEndpointConnectionListSlot(string, string, string,
       WebAppsGetPrivateEndpointConnectionListSlotOptionalParams)
@@ -11995,11 +12268,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
           />, <xref
           uid="@azure/arm-appservice.RemotePrivateEndpointConnectionARMResource"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listProcesses(string, string, WebAppsListProcessesOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listProcesses'
     package: '@azure/arm-appservice'
@@ -12030,9 +12303,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProcessesSlot(string, string, string,
       WebAppsListProcessesSlotOptionalParams)
@@ -12072,9 +12346,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProcessModules(string, string, string,
       WebAppsListProcessModulesOptionalParams)
@@ -12112,9 +12387,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessModuleInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessModuleInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessModuleInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProcessModulesSlot(string, string, string, string,
       WebAppsListProcessModulesSlotOptionalParams)
@@ -12159,9 +12435,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessModuleInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessModuleInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessModuleInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProcessThreads(string, string, string,
       WebAppsListProcessThreadsOptionalParams)
@@ -12199,9 +12476,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessThreadInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessThreadInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessThreadInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProcessThreadsSlot(string, string, string, string,
       WebAppsListProcessThreadsSlotOptionalParams)
@@ -12246,9 +12524,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ProcessThreadInfo" />, <xref
-          uid="@azure/arm-appservice.ProcessThreadInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ProcessThreadInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listProductionSiteDeploymentStatuses(string, string,
       WebAppsListProductionSiteDeploymentStatusesOptionalParams)
@@ -12280,9 +12559,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />, <xref
-          uid="@azure/arm-appservice.CsmDeploymentStatus" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.CsmDeploymentStatus" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listPublicCertificates(string, string,
       WebAppsListPublicCertificatesOptionalParams)
@@ -12313,9 +12593,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.PublicCertificate" />, <xref
-          uid="@azure/arm-appservice.PublicCertificate" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.PublicCertificate" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listPublicCertificatesSlot(string, string, string,
       WebAppsListPublicCertificatesSlotOptionalParams)
@@ -12353,9 +12634,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.PublicCertificate" />, <xref
-          uid="@azure/arm-appservice.PublicCertificate" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.PublicCertificate" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listPublishingProfileXmlWithSecrets(string, string,
       CsmPublishingProfileOptions,
@@ -12544,9 +12826,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.BackupItem" />, <xref
-          uid="@azure/arm-appservice.BackupItem" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.BackupItem" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSiteBackupsSlot(string, string, string,
       WebAppsListSiteBackupsSlotOptionalParams)
@@ -12582,9 +12865,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.BackupItem" />, <xref
-          uid="@azure/arm-appservice.BackupItem" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.BackupItem" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSiteConnectionStringKeyVaultReferences(string, string,
       WebAppsGetSiteConnectionStringKeyVaultReferencesOptionalParams)
@@ -12618,9 +12902,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ApiKVReference" />, <xref
-          uid="@azure/arm-appservice.ApiKVReference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ApiKVReference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSiteConnectionStringKeyVaultReferencesSlot(string, string, string,
       WebAppsGetSiteConnectionStringKeyVaultReferencesSlotOptionalParams)
@@ -12659,9 +12944,82 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.ApiKVReference" />, <xref
-          uid="@azure/arm-appservice.ApiKVReference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.ApiKVReference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listSiteContainers(string, string,
+      WebAppsListSiteContainersOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.listSiteContainers'
+    package: '@azure/arm-appservice'
+    summary: Lists all the site containers of a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listSiteContainers(resourceGroupName: string, name: string,
+        options?: WebAppsListSiteContainersOptionalParams):
+        PagedAsyncIterableIterator<SiteContainer, SiteContainer[], PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsListSiteContainersOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.SiteContainer" />, <xref
+          uid="@azure/arm-appservice.SiteContainer" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listSiteContainersSlot(string, string, string,
+      WebAppsListSiteContainersSlotOptionalParams)
+    uid: '@azure/arm-appservice.WebApps.listSiteContainersSlot'
+    package: '@azure/arm-appservice'
+    summary: Lists all the site containers of a site, or a deployment slot.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listSiteContainersSlot(resourceGroupName: string, name: string,
+        slot: string, options?: WebAppsListSiteContainersSlotOptionalParams):
+        PagedAsyncIterableIterator<SiteContainer, SiteContainer[], PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group to which the resource belongs.
+        - id: name
+          type: string
+          description: Name of the app.
+        - id: slot
+          type: string
+          description: >-
+            Name of the deployment slot. If a slot is not specified, the API
+            will get a list of site
+                        containers for the production slot.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-appservice.WebAppsListSiteContainersSlotOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.SiteContainer" />, <xref
+          uid="@azure/arm-appservice.SiteContainer" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSiteExtensions(string, string,
       WebAppsListSiteExtensionsOptionalParams)
@@ -12694,9 +13052,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />, <xref
-          uid="@azure/arm-appservice.SiteExtensionInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SiteExtensionInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSiteExtensionsSlot(string, string, string,
       WebAppsListSiteExtensionsSlotOptionalParams)
@@ -12735,9 +13094,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SiteExtensionInfo" />, <xref
-          uid="@azure/arm-appservice.SiteExtensionInfo" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SiteExtensionInfo" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSitePushSettings(string, string,
       WebAppsListSitePushSettingsOptionalParams)
@@ -12872,9 +13232,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SlotDifference" />, <xref
-          uid="@azure/arm-appservice.SlotDifference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SlotDifference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSlotDifferencesSlot(string, string, string, CsmSlotEntity,
       WebAppsListSlotDifferencesSlotOptionalParams)
@@ -12917,9 +13278,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.SlotDifference" />, <xref
-          uid="@azure/arm-appservice.SlotDifference" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.SlotDifference" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listSlots(string, string, WebAppsListSlotsOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listSlots'
     package: '@azure/arm-appservice'
@@ -12944,8 +13306,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appservice.Site"
-          />, <xref uid="@azure/arm-appservice.Site" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.Site" />, <xref
+          uid="@azure/arm-appservice.Site" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSlotSiteDeploymentStatusesSlot(string, string, string,
       WebAppsListSlotSiteDeploymentStatusesSlotOptionalParams)
@@ -12983,9 +13347,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmDeploymentStatus" />, <xref
-          uid="@azure/arm-appservice.CsmDeploymentStatus" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.CsmDeploymentStatus" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listSnapshots(string, string, WebAppsListSnapshotsOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listSnapshots'
     package: '@azure/arm-appservice'
@@ -13012,9 +13377,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Snapshot" />, <xref
-          uid="@azure/arm-appservice.Snapshot" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Snapshot" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSnapshotsFromDRSecondary(string, string,
       WebAppsListSnapshotsFromDRSecondaryOptionalParams)
@@ -13046,9 +13412,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Snapshot" />, <xref
-          uid="@azure/arm-appservice.Snapshot" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Snapshot" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSnapshotsFromDRSecondarySlot(string, string, string,
       WebAppsListSnapshotsFromDRSecondarySlotOptionalParams)
@@ -13084,9 +13451,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Snapshot" />, <xref
-          uid="@azure/arm-appservice.Snapshot" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Snapshot" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSnapshotsSlot(string, string, string,
       WebAppsListSnapshotsSlotOptionalParams)
@@ -13119,9 +13487,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.Snapshot" />, <xref
-          uid="@azure/arm-appservice.Snapshot" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.Snapshot" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listSyncFunctionTriggers(string, string,
       WebAppsListSyncFunctionTriggersOptionalParams)
@@ -13277,9 +13646,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.TriggeredJobHistory" />, <xref
-          uid="@azure/arm-appservice.TriggeredJobHistory" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.TriggeredJobHistory" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listTriggeredWebJobHistorySlot(string, string, string, string,
       WebAppsListTriggeredWebJobHistorySlotOptionalParams)
@@ -13322,9 +13692,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.TriggeredJobHistory" />, <xref
-          uid="@azure/arm-appservice.TriggeredJobHistory" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.TriggeredJobHistory" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listTriggeredWebJobs(string, string,
       WebAppsListTriggeredWebJobsOptionalParams)
@@ -13355,9 +13726,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.TriggeredWebJob" />, <xref
-          uid="@azure/arm-appservice.TriggeredWebJob" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.TriggeredWebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listTriggeredWebJobsSlot(string, string, string,
       WebAppsListTriggeredWebJobsSlotOptionalParams)
@@ -13395,9 +13767,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.TriggeredWebJob" />, <xref
-          uid="@azure/arm-appservice.TriggeredWebJob" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.TriggeredWebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listUsages(string, string, WebAppsListUsagesOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listUsages'
     package: '@azure/arm-appservice'
@@ -13424,9 +13797,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmUsageQuota" />, <xref
-          uid="@azure/arm-appservice.CsmUsageQuota" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.CsmUsageQuota" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listUsagesSlot(string, string, string,
       WebAppsListUsagesSlotOptionalParams)
@@ -13463,9 +13837,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.CsmUsageQuota" />, <xref
-          uid="@azure/arm-appservice.CsmUsageQuota" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.CsmUsageQuota" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listVnetConnections(string, string,
       WebAppsListVnetConnectionsOptionalParams)
@@ -13566,8 +13941,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appservice.WebJob"
-          />, <xref uid="@azure/arm-appservice.WebJob" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.WebJob" />, <xref
+          uid="@azure/arm-appservice.WebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listWebJobsSlot(string, string, string,
       WebAppsListWebJobsSlotOptionalParams)
@@ -13602,8 +13979,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appservice.WebJob"
-          />, <xref uid="@azure/arm-appservice.WebJob" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appservice.WebJob" />, <xref
+          uid="@azure/arm-appservice.WebJob" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listWorkflows(string, string, WebAppsListWorkflowsOptionalParams)
     uid: '@azure/arm-appservice.WebApps.listWorkflows'
     package: '@azure/arm-appservice'
@@ -13631,9 +14010,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appservice.WorkflowEnvelope" />, <xref
-          uid="@azure/arm-appservice.WorkflowEnvelope" />[], PageSettings&gt;
+          uid="@azure/arm-appservice.WorkflowEnvelope" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listWorkflowsConnections(string, string,
       WebAppsListWorkflowsConnectionsOptionalParams)

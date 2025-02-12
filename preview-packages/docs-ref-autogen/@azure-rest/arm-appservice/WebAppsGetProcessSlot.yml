@@ -19,22 +19,22 @@ methods:
     syntax:
       content: >-
         function delete(options?: RequestParameters):
-        Promise<WebAppsDeleteProcessSlot204Response |
+        StreamableMethod<WebAppsDeleteProcessSlot204Response |
         WebAppsDeleteProcessSlot404Response |
-        WebAppsDeleteProcessSlotdefaultResponse>
+        WebAppsDeleteProcessSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteProcessSlot204Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteProcessSlot404Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsDeleteProcessSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsDeleteProcessSlotDefaultResponse"
           />&gt;
   - name: get(RequestParameters)
     uid: '@azure-rest/arm-appservice.WebAppsGetProcessSlot.get'
@@ -47,19 +47,19 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetProcessSlot200Response |
-        WebAppsGetProcessSlot404Response | WebAppsGetProcessSlotdefaultResponse>
+        StreamableMethod<WebAppsGetProcessSlot200Response |
+        WebAppsGetProcessSlot404Response | WebAppsGetProcessSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetProcessSlot200Response" /> |
           <xref
           uid="@azure-rest/arm-appservice.WebAppsGetProcessSlot404Response" /> |
           <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetProcessSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetProcessSlotDefaultResponse"
           />&gt;

@@ -55,7 +55,7 @@ properties:
       @azure/arm-streamanalytics.AzureSqlDatabaseDataSourceProperties.maxWriterCount
     package: '@azure/arm-streamanalytics'
     summary: >-
-      Max Write r count, currently only 1(single writer) and 0(based on query
+      Max Writer count, currently only 1(single writer) and 0(based on query
       partition) are available. Optional on PUT requests.
     fullName: maxWriterCount
     remarks: ''

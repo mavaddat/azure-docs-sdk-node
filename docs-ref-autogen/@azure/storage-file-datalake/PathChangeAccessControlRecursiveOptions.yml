@@ -27,7 +27,7 @@ properties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
   - name: batchSize
     uid: >-
       @azure/storage-file-datalake.PathChangeAccessControlRecursiveOptions.batchSize
@@ -118,7 +118,7 @@ inheritedProperties:
     uid: >-
       @azure/storage-file-datalake.PathChangeAccessControlRecursiveOptions.tracingOptions
     package: '@azure/storage-file-datalake'
-    summary: Options to configure spans created when tracing is enabled.
+    summary: ''
     fullName: tracingOptions
     remarks: ''
     isDeprecated: false
@@ -126,7 +126,7 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [CommonOptions.tracingOptions](xref:@azure/storage-file-datalake.CommonOptions.tracingOptions)

@@ -21,6 +21,24 @@ properties:
         description: ''
         type: string
 inheritedProperties:
+  - name: artifactStreamingProfile
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfile.artifactStreamingProfile
+    package: '@azure/arm-containerservice'
+    summary: Configuration for using artifact streaming on AKS.
+    fullName: artifactStreamingProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'artifactStreamingProfile?: AgentPoolArtifactStreamingProfile'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerservice.AgentPoolArtifactStreamingProfile" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.artifactStreamingProfile](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.artifactStreamingProfile)
   - name: availabilityZones
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfile.availabilityZones
@@ -226,6 +244,45 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ManagedClusterAgentPoolProfileProperties.enableUltraSSD](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.enableUltraSSD)
+  - name: eTag
+    uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.eTag'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      Unique read-only string used to implement optimistic concurrency. The eTag
+      value will change when the resource is updated. Specify an if-match or
+      if-none-match header with the eTag value for a subsequent request to
+      enable optimistic concurrency per the normal etag convention.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: eTag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'eTag?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.eTag](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.eTag)
+  - name: gatewayProfile
+    uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.gatewayProfile'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      Profile specific to a managed agent pool in Gateway mode. This field
+      cannot be set if agent pool mode is not Gateway.
+    fullName: gatewayProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'gatewayProfile?: AgentPoolGatewayProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.AgentPoolGatewayProfile" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.gatewayProfile](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.gatewayProfile)
   - name: gpuInstanceProfile
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfile.gpuInstanceProfile
@@ -244,6 +301,21 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ManagedClusterAgentPoolProfileProperties.gpuInstanceProfile](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.gpuInstanceProfile)
+  - name: gpuProfile
+    uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.gpuProfile'
+    package: '@azure/arm-containerservice'
+    summary: The GPU settings of an agent pool.
+    fullName: gpuProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'gpuProfile?: AgentPoolGPUProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.AgentPoolGPUProfile" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.gpuProfile](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.gpuProfile)
   - name: hostGroupID
     uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.hostGroupID'
     package: '@azure/arm-containerservice'
@@ -427,6 +499,29 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ManagedClusterAgentPoolProfileProperties.nodeImageVersion](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeImageVersion)
+  - name: nodeInitializationTaints
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfile.nodeInitializationTaints
+    package: '@azure/arm-containerservice'
+    summary: >-
+      These taints will not be reconciled by AKS and can be removed with a
+      kubectl call. This field can be modified after node pool is created, but
+      nodes will not be recreated with new taints until another operation that
+      requires recreation (e.g. node image upgrade) happens. These taints allow
+      for required configuration to run before the node is ready to accept
+      workloads, for example 'key1=value1:NoSchedule' that then can be removed
+      with `kubectl taint nodes node1 key1=value1:NoSchedule-`
+    fullName: nodeInitializationTaints
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nodeInitializationTaints?: string[]'
+      return:
+        description: ''
+        type: string[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.nodeInitializationTaints](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeInitializationTaints)
   - name: nodeLabels
     uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.nodeLabels'
     package: '@azure/arm-containerservice'
@@ -575,6 +670,24 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ManagedClusterAgentPoolProfileProperties.osType](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.osType)
+  - name: podIPAllocationMode
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfile.podIPAllocationMode
+    package: '@azure/arm-containerservice'
+    summary: >-
+      The IP allocation mode for pods in the agent pool. Must be used with
+      podSubnetId. The default is 'DynamicIndividual'.
+    fullName: podIPAllocationMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'podIPAllocationMode?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.podIPAllocationMode](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.podIPAllocationMode)
   - name: podSubnetID
     uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.podSubnetID'
     package: '@azure/arm-containerservice'
@@ -780,6 +893,38 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ManagedClusterAgentPoolProfileProperties.upgradeSettings](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.upgradeSettings)
+  - name: virtualMachineNodesStatus
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfile.virtualMachineNodesStatus
+    package: '@azure/arm-containerservice'
+    summary: The status of nodes in a VirtualMachines agent pool.
+    fullName: virtualMachineNodesStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'virtualMachineNodesStatus?: VirtualMachineNodes[]'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.VirtualMachineNodes" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.virtualMachineNodesStatus](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.virtualMachineNodesStatus)
+  - name: virtualMachinesProfile
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfile.virtualMachinesProfile
+    package: '@azure/arm-containerservice'
+    summary: Specifications on VirtualMachines agent pool.
+    fullName: virtualMachinesProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'virtualMachinesProfile?: VirtualMachinesProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.VirtualMachinesProfile" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ManagedClusterAgentPoolProfileProperties.virtualMachinesProfile](xref:@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.virtualMachinesProfile)
   - name: vmSize
     uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfile.vmSize'
     package: '@azure/arm-containerservice'

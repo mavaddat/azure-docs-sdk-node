@@ -44,10 +44,10 @@ properties:
       should be assigned to. Virtual machines specified in the same availability
       set are allocated to different nodes to maximize availability. For more
       information about availability sets, see [Availability sets
-      overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview).
+      overview](https://learn.microsoft.com/azure/virtual-machines/availability-set-overview).
       For more information on Azure planned maintenance, see [Maintenance and
       updates for Virtual Machines in
-      Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates).
+      Azure](https://learn.microsoft.com/azure/virtual-machines/maintenance-and-updates).
       Currently, a VM can only be added to availability set at creation time.
       The availability set to which the VM is being added should be under the
       same resource group as the availability set resource. An existing VM
@@ -103,6 +103,23 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-compute.DiagnosticsProfile" />
+  - name: etag
+    uid: '@azure/arm-compute.VirtualMachine.etag'
+    package: '@azure/arm-compute'
+    summary: >-
+      Etag is property returned in Create/Update/Get response of the VM, so that
+      customer can supply it in the header to ensure optimistic updates.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: etag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'etag?: string'
+      return:
+        description: ''
+        type: string
   - name: evictionPolicy
     uid: '@azure/arm-compute.VirtualMachine.evictionPolicy'
     package: '@azure/arm-compute'
@@ -227,15 +244,33 @@ properties:
       values for Linux Server operating system are: <br><br> RHEL_BYOS (for
       RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see
       [Azure Hybrid Use Benefit for Windows
-      Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
+      Server](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
       <br><br> [Azure Hybrid Use Benefit for Linux
-      Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
+      Server](https://learn.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
       <br><br> Minimum api-version: 2015-06-15
     fullName: licenseType
     remarks: ''
     isDeprecated: false
     syntax:
       content: 'licenseType?: string'
+      return:
+        description: ''
+        type: string
+  - name: managedBy
+    uid: '@azure/arm-compute.VirtualMachine.managedBy'
+    package: '@azure/arm-compute'
+    summary: >-
+      ManagedBy is set to Virtual Machine Scale Set(VMSS) flex ARM resourceID,
+      if the VM is part of the VMSS. This property is used by platform for
+      internal resource group delete optimization.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: managedBy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'managedBy?: string'
       return:
         description: ''
         type: string
@@ -364,6 +399,20 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-compute.VirtualMachineExtension" />[]
+  - name: scheduledEventsPolicy
+    uid: '@azure/arm-compute.VirtualMachine.scheduledEventsPolicy'
+    package: '@azure/arm-compute'
+    summary: >-
+      Specifies Redeploy, Reboot and ScheduledEventsAdditionalPublishingTargets
+      Scheduled Event related configurations for the virtual machine.
+    fullName: scheduledEventsPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scheduledEventsPolicy?: ScheduledEventsPolicy'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-compute.ScheduledEventsPolicy" />
   - name: scheduledEventsProfile
     uid: '@azure/arm-compute.VirtualMachine.scheduledEventsProfile'
     package: '@azure/arm-compute'

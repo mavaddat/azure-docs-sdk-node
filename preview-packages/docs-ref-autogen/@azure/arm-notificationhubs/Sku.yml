@@ -11,7 +11,7 @@ properties:
   - name: capacity
     uid: '@azure/arm-notificationhubs.Sku.capacity'
     package: '@azure/arm-notificationhubs'
-    summary: The capacity of the resource
+    summary: Gets or sets the capacity of the resource
     fullName: capacity
     remarks: ''
     isDeprecated: false
@@ -23,7 +23,7 @@ properties:
   - name: family
     uid: '@azure/arm-notificationhubs.Sku.family'
     package: '@azure/arm-notificationhubs'
-    summary: The Sku Family
+    summary: Gets or sets the Sku Family
     fullName: family
     remarks: ''
     isDeprecated: false
@@ -35,7 +35,7 @@ properties:
   - name: name
     uid: '@azure/arm-notificationhubs.Sku.name'
     package: '@azure/arm-notificationhubs'
-    summary: Name of the notification hub sku
+    summary: Namespace SKU name.
     fullName: name
     remarks: ''
     isDeprecated: false
@@ -47,7 +47,7 @@ properties:
   - name: size
     uid: '@azure/arm-notificationhubs.Sku.size'
     package: '@azure/arm-notificationhubs'
-    summary: The Sku size
+    summary: Gets or sets the Sku size
     fullName: size
     remarks: ''
     isDeprecated: false
@@ -59,7 +59,7 @@ properties:
   - name: tier
     uid: '@azure/arm-notificationhubs.Sku.tier'
     package: '@azure/arm-notificationhubs'
-    summary: The tier of particular sku
+    summary: Gets or sets the tier of particular sku
     fullName: tier
     remarks: ''
     isDeprecated: false

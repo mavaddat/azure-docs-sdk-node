@@ -21,18 +21,18 @@ methods:
       content: >-
         function post(options?: RequestParameters):
         StreamableMethod<ManagedClustersStart202Response |
-        ManagedClustersStart204Response | ManagedClustersStartdefaultResponse>
+        ManagedClustersStart204Response | ManagedClustersStartDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-containerservice.ManagedClustersStart202Response"
           /> | <xref
           uid="@azure-rest/arm-containerservice.ManagedClustersStart204Response"
           /> | <xref
-          uid="@azure-rest/arm-containerservice.ManagedClustersStartdefaultResponse"
+          uid="@azure-rest/arm-containerservice.ManagedClustersStartDefaultResponse"
           />&gt;

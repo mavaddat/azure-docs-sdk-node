@@ -4,14 +4,10 @@ uid: >-
   @azure-rest/maps-route.RouteGetRouteDirectionsWithAdditionalParameters200Response
 package: '@azure-rest/maps-route'
 summary: >-
-  **Applies to**: see pricing [tiers](https://aka.ms/AzureMapsPricingTier).
-
-
-
-  Returns  a route between an origin and a destination, passing through
-  waypoints if they are specified. The route will take into account factors such
-  as current traffic and the typical road speeds on the requested day of the
-  week and time of day.
+  The `Post Route Directions` API is an HTTP `POST` request that returns a route
+  between an origin and a destination, passing through waypoints if they are
+  specified. The route will take into account factors such as current traffic
+  and the typical road speeds on the requested day of the week and time of day.
 
 
   Information returned includes the distance, estimated travel time, and a
@@ -68,7 +64,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: >-
@@ -82,6 +78,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

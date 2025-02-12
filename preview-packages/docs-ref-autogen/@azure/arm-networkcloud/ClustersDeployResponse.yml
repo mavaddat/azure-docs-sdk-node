@@ -7,4 +7,4 @@ fullName: ClustersDeployResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ClustersDeployResponse = ClustersDeployHeaders
+  type ClustersDeployResponse = OperationStatusResult

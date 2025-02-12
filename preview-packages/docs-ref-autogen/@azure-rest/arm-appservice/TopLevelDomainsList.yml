@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<TopLevelDomainsList200Response |
-        TopLevelDomainsListdefaultResponse>
+        StreamableMethod<TopLevelDomainsList200Response |
+        TopLevelDomainsListDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.TopLevelDomainsList200Response" /> |
           <xref
-          uid="@azure-rest/arm-appservice.TopLevelDomainsListdefaultResponse"
+          uid="@azure-rest/arm-appservice.TopLevelDomainsListDefaultResponse"
           />&gt;

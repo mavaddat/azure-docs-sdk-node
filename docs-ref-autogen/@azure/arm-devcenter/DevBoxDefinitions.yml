@@ -45,7 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />&gt;, <xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />&gt;&gt;
   - name: >-
@@ -96,7 +97,8 @@ methods:
         function beginDelete(resourceGroupName: string, devCenterName: string,
         devBoxDefinitionName: string, options?:
         DevBoxDefinitionsDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<DevBoxDefinitionsDeleteHeaders>,
+        DevBoxDefinitionsDeleteHeaders>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -115,8 +117,11 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-devcenter.DevBoxDefinitionsDeleteHeaders" />&gt;,
+          <xref uid="@azure/arm-devcenter.DevBoxDefinitionsDeleteHeaders"
+          />&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       DevBoxDefinitionsDeleteOptionalParams)
@@ -129,7 +134,8 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string, devCenterName:
         string, devBoxDefinitionName: string, options?:
-        DevBoxDefinitionsDeleteOptionalParams): Promise<void>
+        DevBoxDefinitionsDeleteOptionalParams):
+        Promise<DevBoxDefinitionsDeleteHeaders>
       parameters:
         - id: resourceGroupName
           type: string
@@ -147,7 +153,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-devcenter.DevBoxDefinitionsDeleteHeaders" />&gt;
   - name: >-
       beginUpdate(string, string, string, DevBoxDefinitionUpdate,
       DevBoxDefinitionsUpdateOptionalParams)
@@ -184,7 +192,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />&gt;, <xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />&gt;&gt;
   - name: >-
@@ -313,9 +322,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />, <xref
-          uid="@azure/arm-devcenter.DevBoxDefinition" />[], PageSettings&gt;
+          uid="@azure/arm-devcenter.DevBoxDefinition" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByProject(string, string,
       DevBoxDefinitionsListByProjectOptionalParams)
@@ -346,6 +356,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.DevBoxDefinition" />, <xref
-          uid="@azure/arm-devcenter.DevBoxDefinition" />[], PageSettings&gt;
+          uid="@azure/arm-devcenter.DevBoxDefinition" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

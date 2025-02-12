@@ -21,7 +21,28 @@ properties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
+  - name: agent
+    uid: '@azure/core-rest-pipeline.PipelineRequestOptions.agent'
+    package: '@azure/core-rest-pipeline'
+    summary: >-
+      NODEJS ONLY
+
+
+      A Node-only option to provide a custom `http.Agent`/`https.Agent`.
+
+      NOTE: usually this should be one instance shared by multiple requests so
+      that the underlying
+            connection to the service can be reused.
+      Does nothing when running in the browser.
+    fullName: agent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agent?: Agent'
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.Agent" />
   - name: allowInsecureConnection
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.allowInsecureConnection'
     package: '@azure/core-rest-pipeline'
@@ -119,6 +140,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/core-rest-pipeline.HttpMethods" />
+  - name: multipartBody
+    uid: '@azure/core-rest-pipeline.PipelineRequestOptions.multipartBody'
+    package: '@azure/core-rest-pipeline'
+    summary: Body for a multipart request.
+    fullName: multipartBody
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multipartBody?: MultipartRequestBody'
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.MultipartRequestBody" />
   - name: onDownloadProgress
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.onDownloadProgress'
     package: '@azure/core-rest-pipeline'
@@ -199,6 +232,18 @@ properties:
       return:
         description: ''
         type: number
+  - name: tlsSettings
+    uid: '@azure/core-rest-pipeline.PipelineRequestOptions.tlsSettings'
+    package: '@azure/core-rest-pipeline'
+    summary: Settings for configuring TLS authentication
+    fullName: tlsSettings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tlsSettings?: TlsSettings'
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.TlsSettings" />
   - name: tracingOptions
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.tracingOptions'
     package: '@azure/core-rest-pipeline'
@@ -210,7 +255,7 @@ properties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
   - name: url
     uid: '@azure/core-rest-pipeline.PipelineRequestOptions.url'
     package: '@azure/core-rest-pipeline'

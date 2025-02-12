@@ -21,18 +21,18 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitions200Response
+        StreamableMethod<AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitions200Response
         |
-        AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitionsdefaultResponse>
+        AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitionsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitions200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitionsdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListMultiRolePoolInstanceMetricDefinitionsDefaultResponse"
           />&gt;

@@ -1,4 +1,4 @@
-### YamlMime:TSTypeAlias
+### YamlMime:TSType
 name: AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters
 uid: >-
   @azure/arm-streamanalytics.AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters
@@ -9,10 +9,52 @@ summary: >-
 fullName: AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters
 remarks: ''
 isDeprecated: false
-syntax: |
-  type AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters =
-    FunctionRetrieveDefaultDefinitionParameters & {
-      bindingType: "Microsoft.MachineLearningServices"
-      executeEndpoint?: string
-      udfType?: "Scalar"
-    }
+type: interface
+properties:
+  - name: bindingType
+    uid: >-
+      @azure/arm-streamanalytics.AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters.bindingType
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      Polymorphic discriminator, which specifies the different types this object
+      can be
+    fullName: bindingType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bindingType: "Microsoft.MachineLearningServices"'
+      return:
+        description: ''
+        type: '"<xref uid="Microsoft.MachineLearningServices" />"'
+  - name: executeEndpoint
+    uid: >-
+      @azure/arm-streamanalytics.AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters.executeEndpoint
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      The Request-Response execute endpoint of the Azure Machine Learning web
+      service.
+    fullName: executeEndpoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'executeEndpoint?: string'
+      return:
+        description: ''
+        type: string
+  - name: udfType
+    uid: >-
+      @azure/arm-streamanalytics.AzureMachineLearningServiceFunctionRetrieveDefaultDefinitionParameters.udfType
+    package: '@azure/arm-streamanalytics'
+    summary: The function type.
+    fullName: udfType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'udfType?: "Scalar"'
+      return:
+        description: ''
+        type: '"Scalar"'
+extends: >-
+  <xref
+  uid="@azure/arm-streamanalytics.FunctionRetrieveDefaultDefinitionParameters"
+  />

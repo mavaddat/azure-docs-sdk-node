@@ -13,8 +13,8 @@ fields:
   - name: Dynamic
     uid: '@azure/arm-dnsresolver.KnownIpAllocationMethod.Dynamic'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Dynamic
   - name: Static
     uid: '@azure/arm-dnsresolver.KnownIpAllocationMethod.Static'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Static

@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<ContainerAppsRevisionsListRevisions200Response |
-        ContainerAppsRevisionsListRevisionsdefaultResponse>
+        StreamableMethod<ContainerAppsRevisionsListRevisions200Response |
+        ContainerAppsRevisionsListRevisionsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.ContainerAppsRevisionsListRevisions200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.ContainerAppsRevisionsListRevisionsdefaultResponse"
+          uid="@azure-rest/arm-appservice.ContainerAppsRevisionsListRevisionsDefaultResponse"
           />&gt;

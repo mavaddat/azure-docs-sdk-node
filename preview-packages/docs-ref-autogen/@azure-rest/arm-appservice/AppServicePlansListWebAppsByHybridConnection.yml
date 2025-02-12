@@ -18,17 +18,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServicePlansListWebAppsByHybridConnection200Response |
-        AppServicePlansListWebAppsByHybridConnectiondefaultResponse>
+        StreamableMethod<AppServicePlansListWebAppsByHybridConnection200Response
+        | AppServicePlansListWebAppsByHybridConnectionDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServicePlansListWebAppsByHybridConnection200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServicePlansListWebAppsByHybridConnectiondefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServicePlansListWebAppsByHybridConnectionDefaultResponse"
           />&gt;

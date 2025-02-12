@@ -17,14 +17,14 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<DomainsList200Response | DomainsListdefaultResponse>
+        StreamableMethod<DomainsList200Response | DomainsListDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.DomainsList200Response" /> | <xref
-          uid="@azure-rest/arm-appservice.DomainsListdefaultResponse" />&gt;
+          uid="@azure-rest/arm-appservice.DomainsListDefaultResponse" />&gt;

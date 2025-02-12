@@ -12,7 +12,11 @@ summary: >-
 
   **Basic** \
 
-  **Standard**
+  **Standard** \
+
+  **Developer** \
+
+  **Premium**
 fullName: BastionHostSkuName
 remarks: ''
 isDeprecated: false

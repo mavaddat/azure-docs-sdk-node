@@ -2,16 +2,28 @@
 name: JobExecution
 uid: '@azure/arm-appcontainers.JobExecution'
 package: '@azure/arm-appcontainers'
-summary: Container Apps Jobs execution.
+summary: Container Apps Job execution.
 fullName: JobExecution
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: detailedStatus
+    uid: '@azure/arm-appcontainers.JobExecution.detailedStatus'
+    package: '@azure/arm-appcontainers'
+    summary: Detailed status of the job execution.
+    fullName: detailedStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'detailedStatus?: ExecutionStatus'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-appcontainers.ExecutionStatus" />
   - name: endTime
     uid: '@azure/arm-appcontainers.JobExecution.endTime'
     package: '@azure/arm-appcontainers'
-    summary: Job execution start time.
+    summary: Job execution end time.
     fullName: endTime
     remarks: ''
     isDeprecated: false
@@ -87,7 +99,7 @@ properties:
   - name: type
     uid: '@azure/arm-appcontainers.JobExecution.type'
     package: '@azure/arm-appcontainers'
-    summary: Job Type.
+    summary: Job execution type
     fullName: type
     remarks: ''
     isDeprecated: false

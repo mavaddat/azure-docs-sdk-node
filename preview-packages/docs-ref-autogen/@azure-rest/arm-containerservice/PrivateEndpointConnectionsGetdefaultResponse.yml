@@ -1,18 +1,18 @@
 ### YamlMime:TSType
-name: PrivateEndpointConnectionsGetdefaultResponse
-uid: '@azure-rest/arm-containerservice.PrivateEndpointConnectionsGetdefaultResponse'
+name: PrivateEndpointConnectionsGetDefaultResponse
+uid: '@azure-rest/arm-containerservice.PrivateEndpointConnectionsGetDefaultResponse'
 package: '@azure-rest/arm-containerservice'
 summary: >-
   To learn more about private clusters, see:
   https://docs.microsoft.com/azure/aks/private-clusters
-fullName: PrivateEndpointConnectionsGetdefaultResponse
+fullName: PrivateEndpointConnectionsGetDefaultResponse
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
   - name: body
     uid: >-
-      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetdefaultResponse.body
+      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetDefaultResponse.body
     package: '@azure-rest/arm-containerservice'
     summary: ''
     fullName: body
@@ -25,7 +25,7 @@ properties:
         type: <xref uid="@azure-rest/arm-containerservice.CloudErrorOutput" />
   - name: status
     uid: >-
-      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetdefaultResponse.status
+      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetDefaultResponse.status
     package: '@azure-rest/arm-containerservice'
     summary: ''
     fullName: status
@@ -39,7 +39,7 @@ properties:
 inheritedProperties:
   - name: headers
     uid: >-
-      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetdefaultResponse.headers
+      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetDefaultResponse.headers
     package: '@azure-rest/arm-containerservice'
     summary: The HTTP response headers.
     fullName: headers
@@ -49,11 +49,11 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: >-
-      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetdefaultResponse.request
+      @azure-rest/arm-containerservice.PrivateEndpointConnectionsGetDefaultResponse.request
     package: '@azure-rest/arm-containerservice'
     summary: The request that generated this response.
     fullName: request
@@ -63,6 +63,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

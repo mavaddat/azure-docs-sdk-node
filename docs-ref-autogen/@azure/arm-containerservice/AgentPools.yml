@@ -50,7 +50,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-containerservice.AgentPoolsAbortLatestOperationHeaders"
           />&gt;, <xref
           uid="@azure/arm-containerservice.AgentPoolsAbortLatestOperationHeaders"
@@ -135,7 +136,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-containerservice.AgentPool" />&gt;, <xref
           uid="@azure/arm-containerservice.AgentPool" />&gt;&gt;
   - name: >-
@@ -203,7 +205,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-containerservice.AgentPoolsDeleteHeaders" />&gt;,
           <xref uid="@azure/arm-containerservice.AgentPoolsDeleteHeaders"
           />&gt;&gt;
@@ -238,6 +241,96 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/arm-containerservice.AgentPoolsDeleteHeaders" />&gt;
+  - name: >-
+      beginDeleteMachines(string, string, string,
+      AgentPoolDeleteMachinesParameter, AgentPoolsDeleteMachinesOptionalParams)
+    uid: '@azure/arm-containerservice.AgentPools.beginDeleteMachines'
+    package: '@azure/arm-containerservice'
+    summary: Deletes specific machines in an agent pool.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDeleteMachines(resourceGroupName: string, resourceName:
+        string, agentPoolName: string, machines:
+        AgentPoolDeleteMachinesParameter, options?:
+        AgentPoolsDeleteMachinesOptionalParams):
+        Promise<SimplePollerLike<OperationState<AgentPoolsDeleteMachinesHeaders>,
+        AgentPoolsDeleteMachinesHeaders>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the managed cluster resource.
+        - id: agentPoolName
+          type: string
+          description: The name of the agent pool.
+        - id: machines
+          type: >-
+            <xref
+            uid="@azure/arm-containerservice.AgentPoolDeleteMachinesParameter"
+            />
+          description: A list of machines from the agent pool to be deleted.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-containerservice.AgentPoolsDeleteMachinesOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-containerservice.AgentPoolsDeleteMachinesHeaders"
+          />&gt;, <xref
+          uid="@azure/arm-containerservice.AgentPoolsDeleteMachinesHeaders"
+          />&gt;&gt;
+  - name: >-
+      beginDeleteMachinesAndWait(string, string, string,
+      AgentPoolDeleteMachinesParameter, AgentPoolsDeleteMachinesOptionalParams)
+    uid: '@azure/arm-containerservice.AgentPools.beginDeleteMachinesAndWait'
+    package: '@azure/arm-containerservice'
+    summary: Deletes specific machines in an agent pool.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDeleteMachinesAndWait(resourceGroupName: string,
+        resourceName: string, agentPoolName: string, machines:
+        AgentPoolDeleteMachinesParameter, options?:
+        AgentPoolsDeleteMachinesOptionalParams):
+        Promise<AgentPoolsDeleteMachinesHeaders>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: resourceName
+          type: string
+          description: The name of the managed cluster resource.
+        - id: agentPoolName
+          type: string
+          description: The name of the agent pool.
+        - id: machines
+          type: >-
+            <xref
+            uid="@azure/arm-containerservice.AgentPoolDeleteMachinesParameter"
+            />
+          description: A list of machines from the agent pool to be deleted.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-containerservice.AgentPoolsDeleteMachinesOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-containerservice.AgentPoolsDeleteMachinesHeaders"
+          />&gt;
   - name: >-
       beginUpgradeNodeImageVersion(string, string, string,
       AgentPoolsUpgradeNodeImageVersionOptionalParams)
@@ -278,8 +371,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginUpgradeNodeImageVersionAndWait(string, string, string,
       AgentPoolsUpgradeNodeImageVersionOptionalParams)
@@ -447,6 +540,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-containerservice.AgentPool" />, <xref
-          uid="@azure/arm-containerservice.AgentPool" />[], PageSettings&gt;
+          uid="@azure/arm-containerservice.AgentPool" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

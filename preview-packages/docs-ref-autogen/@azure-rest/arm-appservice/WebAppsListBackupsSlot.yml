@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListBackupsSlot200Response |
-        WebAppsListBackupsSlotdefaultResponse>
+        StreamableMethod<WebAppsListBackupsSlot200Response |
+        WebAppsListBackupsSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListBackupsSlot200Response" />
           | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListBackupsSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListBackupsSlotDefaultResponse"
           />&gt;

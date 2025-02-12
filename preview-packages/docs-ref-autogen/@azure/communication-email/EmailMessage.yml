@@ -34,6 +34,21 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/communication-email.EmailContent" />
+  - name: disableUserEngagementTracking
+    uid: '@azure/communication-email.EmailMessage.disableUserEngagementTracking'
+    package: '@azure/communication-email'
+    summary: >-
+      Indicates whether user engagement tracking should be disabled for this
+      request if the resource-level user engagement tracking setting was already
+      enabled in the control plane.
+    fullName: disableUserEngagementTracking
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'disableUserEngagementTracking?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: headers
     uid: '@azure/communication-email.EmailMessage.headers'
     package: '@azure/communication-email'
@@ -82,18 +97,3 @@ properties:
       return:
         description: ''
         type: string
-  - name: userEngagementTrackingDisabled
-    uid: '@azure/communication-email.EmailMessage.userEngagementTrackingDisabled'
-    package: '@azure/communication-email'
-    summary: >-
-      Indicates whether user engagement tracking should be disabled for this
-      request if the resource-level user engagement tracking setting was already
-      enabled in the control plane.
-    fullName: userEngagementTrackingDisabled
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'userEngagementTrackingDisabled?: boolean'
-      return:
-        description: ''
-        type: boolean

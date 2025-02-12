@@ -16,9 +16,9 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'headers: RawHttpHeadersInput & NetworkGroupsCreateOrUpdateHeaders'
+      content: 'headers?: RawHttpHeadersInput & NetworkGroupsCreateOrUpdateHeaders'
       return:
         description: ''
         type: >-
-          RawHttpHeadersInput & <xref
+          <xref uid="@azure/core-rest-pipeline.RawHttpHeadersInput" /> & <xref
           uid="@azure-rest/arm-network.NetworkGroupsCreateOrUpdateHeaders" />

@@ -1,4 +1,4 @@
-### YamlMime:TSTypeAlias
+### YamlMime:TSType
 name: CSharpFunctionRetrieveDefaultDefinitionParameters
 uid: '@azure/arm-streamanalytics.CSharpFunctionRetrieveDefaultDefinitionParameters'
 package: '@azure/arm-streamanalytics'
@@ -8,10 +8,50 @@ summary: >-
 fullName: CSharpFunctionRetrieveDefaultDefinitionParameters
 remarks: ''
 isDeprecated: false
-syntax: |
-  type CSharpFunctionRetrieveDefaultDefinitionParameters =
-    FunctionRetrieveDefaultDefinitionParameters & {
-      bindingType: "Microsoft.StreamAnalytics/CLRUdf"
-      script?: string
-      udfType?: "Scalar"
-    }
+type: interface
+properties:
+  - name: bindingType
+    uid: >-
+      @azure/arm-streamanalytics.CSharpFunctionRetrieveDefaultDefinitionParameters.bindingType
+    package: '@azure/arm-streamanalytics'
+    summary: >-
+      Polymorphic discriminator, which specifies the different types this object
+      can be
+    fullName: bindingType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bindingType: "Microsoft.StreamAnalytics/CLRUdf"'
+      return:
+        description: ''
+        type: '"<xref uid="Microsoft.StreamAnalytics/CLRUdf" />"'
+  - name: script
+    uid: >-
+      @azure/arm-streamanalytics.CSharpFunctionRetrieveDefaultDefinitionParameters.script
+    package: '@azure/arm-streamanalytics'
+    summary: The CSharp code containing a single function definition.
+    fullName: script
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'script?: string'
+      return:
+        description: ''
+        type: string
+  - name: udfType
+    uid: >-
+      @azure/arm-streamanalytics.CSharpFunctionRetrieveDefaultDefinitionParameters.udfType
+    package: '@azure/arm-streamanalytics'
+    summary: The function type.
+    fullName: udfType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'udfType?: "Scalar"'
+      return:
+        description: ''
+        type: '"Scalar"'
+extends: >-
+  <xref
+  uid="@azure/arm-streamanalytics.FunctionRetrieveDefaultDefinitionParameters"
+  />

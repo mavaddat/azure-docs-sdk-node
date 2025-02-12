@@ -42,7 +42,7 @@ methods:
           description: >-
             Name of the event subscription to be created. Event subscription
             names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+                                         must be between 3 and 50 characters in length and use alphanumeric letters only.
         - id: eventSubscriptionInfo
           type: <xref uid="@azure/arm-eventgrid.Subscription" />
           description: |-
@@ -57,7 +57,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-eventgrid.Subscription" />&gt;, <xref
           uid="@azure/arm-eventgrid.Subscription" />&gt;&gt;
   - name: >-
@@ -95,7 +96,7 @@ methods:
           description: >-
             Name of the event subscription to be created. Event subscription
             names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+                                         must be between 3 and 50 characters in length and use alphanumeric letters only.
         - id: eventSubscriptionInfo
           type: <xref uid="@azure/arm-eventgrid.Subscription" />
           description: |-
@@ -136,10 +137,7 @@ methods:
           description: Name of the namespace topic.
         - id: eventSubscriptionName
           type: string
-          description: >-
-            Name of the event subscription to be created. Event subscription
-            names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+          description: Name of the event subscription to be deleted.
         - id: options
           type: >-
             <xref
@@ -149,8 +147,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       NamespaceTopicEventSubscriptionsDeleteOptionalParams)
@@ -176,10 +174,7 @@ methods:
           description: Name of the namespace topic.
         - id: eventSubscriptionName
           type: string
-          description: >-
-            Name of the event subscription to be created. Event subscription
-            names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+          description: Name of the event subscription to be deleted.
         - id: options
           type: >-
             <xref
@@ -216,10 +211,7 @@ methods:
           description: Name of the namespace topic.
         - id: eventSubscriptionName
           type: string
-          description: >-
-            Name of the event subscription to be created. Event subscription
-            names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+          description: Name of the event subscription to be updated.
         - id: eventSubscriptionUpdateParameters
           type: <xref uid="@azure/arm-eventgrid.SubscriptionUpdateParameters" />
           description: Updated event subscription information.
@@ -232,7 +224,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-eventgrid.Subscription" />&gt;, <xref
           uid="@azure/arm-eventgrid.Subscription" />&gt;&gt;
   - name: >-
@@ -263,10 +256,7 @@ methods:
           description: Name of the namespace topic.
         - id: eventSubscriptionName
           type: string
-          description: >-
-            Name of the event subscription to be created. Event subscription
-            names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+          description: Name of the event subscription to be updated.
         - id: eventSubscriptionUpdateParameters
           type: <xref uid="@azure/arm-eventgrid.SubscriptionUpdateParameters" />
           description: Updated event subscription information.
@@ -305,10 +295,7 @@ methods:
           description: Name of the namespace topic.
         - id: eventSubscriptionName
           type: string
-          description: >-
-            Name of the event subscription to be created. Event subscription
-            names
-                                         must be between 3 and 100 characters in length and use alphanumeric letters only.
+          description: Name of the event subscription to be found.
         - id: options
           type: >-
             <xref
@@ -318,6 +305,83 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-eventgrid.Subscription" />&gt;
+  - name: >-
+      getDeliveryAttributes(string, string, string, string,
+      NamespaceTopicEventSubscriptionsGetDeliveryAttributesOptionalParams)
+    uid: >-
+      @azure/arm-eventgrid.NamespaceTopicEventSubscriptions.getDeliveryAttributes
+    package: '@azure/arm-eventgrid'
+    summary: >-
+      Get all delivery attributes for an event subscription of a namespace
+      topic.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeliveryAttributes(resourceGroupName: string, namespaceName:
+        string, topicName: string, eventSubscriptionName: string, options?:
+        NamespaceTopicEventSubscriptionsGetDeliveryAttributesOptionalParams):
+        Promise<DeliveryAttributeListResult>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group within the user's subscription.
+        - id: namespaceName
+          type: string
+          description: Name of the namespace.
+        - id: topicName
+          type: string
+          description: Name of the namespace topic.
+        - id: eventSubscriptionName
+          type: string
+          description: Name of the event subscription.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-eventgrid.NamespaceTopicEventSubscriptionsGetDeliveryAttributesOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-eventgrid.DeliveryAttributeListResult" />&gt;
+  - name: >-
+      getFullUrl(string, string, string, string,
+      NamespaceTopicEventSubscriptionsGetFullUrlOptionalParams)
+    uid: '@azure/arm-eventgrid.NamespaceTopicEventSubscriptions.getFullUrl'
+    package: '@azure/arm-eventgrid'
+    summary: Get the full endpoint URL for an event subscription of a namespace topic.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getFullUrl(resourceGroupName: string, namespaceName: string,
+        topicName: string, eventSubscriptionName: string, options?:
+        NamespaceTopicEventSubscriptionsGetFullUrlOptionalParams):
+        Promise<SubscriptionFullUrl>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group within the user's subscription.
+        - id: namespaceName
+          type: string
+          description: Name of the namespace.
+        - id: topicName
+          type: string
+          description: Name of the namespace topic.
+        - id: eventSubscriptionName
+          type: string
+          description: Name of the event subscription.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-eventgrid.NamespaceTopicEventSubscriptionsGetFullUrlOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-eventgrid.SubscriptionFullUrl" />&gt;
   - name: >-
       listByNamespaceTopic(string, string, string,
       NamespaceTopicEventSubscriptionsListByNamespaceTopicOptionalParams)
@@ -351,6 +415,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-eventgrid.Subscription" />, <xref
-          uid="@azure/arm-eventgrid.Subscription" />[], PageSettings&gt;
+          uid="@azure/arm-eventgrid.Subscription" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

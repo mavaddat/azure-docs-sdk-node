@@ -21,18 +21,18 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponse200Response
+        StreamableMethod<CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponse200Response
         |
-        CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponsedefaultResponse>
+        CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponseDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponse200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponsedefaultResponse"
+          uid="@azure-rest/arm-appservice.CertificateOrdersDiagnosticsListAppServiceCertificateOrderDetectorResponseDefaultResponse"
           />&gt;

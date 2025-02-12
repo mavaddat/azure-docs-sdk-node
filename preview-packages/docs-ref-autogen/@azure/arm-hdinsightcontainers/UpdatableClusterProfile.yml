@@ -63,6 +63,32 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-hdinsightcontainers.ClusterPrometheusProfile" />
+  - name: rangerPluginProfile
+    uid: '@azure/arm-hdinsightcontainers.UpdatableClusterProfile.rangerPluginProfile'
+    package: '@azure/arm-hdinsightcontainers'
+    summary: Cluster Ranger plugin profile.
+    fullName: rangerPluginProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rangerPluginProfile?: ClusterRangerPluginProfile'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-hdinsightcontainers.ClusterRangerPluginProfile"
+          />
+  - name: rangerProfile
+    uid: '@azure/arm-hdinsightcontainers.UpdatableClusterProfile.rangerProfile'
+    package: '@azure/arm-hdinsightcontainers'
+    summary: The ranger cluster profile.
+    fullName: rangerProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rangerProfile?: RangerProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-hdinsightcontainers.RangerProfile" />
   - name: scriptActionProfiles
     uid: >-
       @azure/arm-hdinsightcontainers.UpdatableClusterProfile.scriptActionProfiles
@@ -76,6 +102,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-hdinsightcontainers.ScriptActionProfile" />[]
+  - name: secretsProfile
+    uid: '@azure/arm-hdinsightcontainers.UpdatableClusterProfile.secretsProfile'
+    package: '@azure/arm-hdinsightcontainers'
+    summary: The cluster secret profile.
+    fullName: secretsProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'secretsProfile?: SecretsProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-hdinsightcontainers.SecretsProfile" />
   - name: serviceConfigsProfiles
     uid: >-
       @azure/arm-hdinsightcontainers.UpdatableClusterProfile.serviceConfigsProfiles
@@ -103,3 +141,15 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-hdinsightcontainers.SshProfile" />
+  - name: trinoProfile
+    uid: '@azure/arm-hdinsightcontainers.UpdatableClusterProfile.trinoProfile'
+    package: '@azure/arm-hdinsightcontainers'
+    summary: Trino Cluster profile.
+    fullName: trinoProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'trinoProfile?: TrinoProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-hdinsightcontainers.TrinoProfile" />

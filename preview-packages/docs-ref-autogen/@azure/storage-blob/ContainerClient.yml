@@ -71,8 +71,8 @@ constructors:
         - id: credential
           type: >-
             <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> |
-            <xref uid="@azure/storage-blob.AnonymousCredential" /> |
-            TokenCredential
+            <xref uid="@azure/storage-blob.AnonymousCredential" /> | <xref
+            uid="@azure/core-auth.TokenCredential" />
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
             credential from the `@azure/identity` package to authenticate
@@ -155,7 +155,8 @@ inheritedProperties:
         description: ''
         type: >-
           <xref uid="@azure/storage-blob.StorageSharedKeyCredential" /> | <xref
-          uid="@azure/storage-blob.AnonymousCredential" /> | TokenCredential
+          uid="@azure/storage-blob.AnonymousCredential" /> | <xref
+          uid="@azure/core-auth.TokenCredential" />
     inheritanceDescription: <b>Inherited From</b> StorageClient.credential
   - name: url
     uid: '@azure/storage-blob.ContainerClient.url'
@@ -497,10 +498,42 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/storage-blob.FilterBlobItem" />, <xref
           uid="@azure/storage-blob.ContainerFindBlobsByTagsSegmentResponse" />,
-          PageSettings&gt;
+          <xref uid="@azure/core-paging.PageSettings" />&gt;
+  - name: generateSasStringToSign(ContainerGenerateSasUrlOptions)
+    uid: '@azure/storage-blob.ContainerClient.generateSasStringToSign'
+    package: '@azure/storage-blob'
+    summary: >-
+      Only available for ContainerClient constructed with a shared key
+      credential.
+
+
+      Generates string to sign for a Blob Container Service Shared Access
+      Signature (SAS) URI
+
+      based on the client properties and parameters passed in. The SAS is signed
+      by the shared key credential of the client.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateSasStringToSign(options:
+        ContainerGenerateSasUrlOptions): string
+      parameters:
+        - id: options
+          type: <xref uid="@azure/storage-blob.ContainerGenerateSasUrlOptions" />
+          description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
   - name: generateSasUrl(ContainerGenerateSasUrlOptions)
     uid: '@azure/storage-blob.ContainerClient.generateSasUrl'
     package: '@azure/storage-blob'
@@ -528,6 +561,74 @@ methods:
         - id: options
           type: <xref uid="@azure/storage-blob.ContainerGenerateSasUrlOptions" />
           description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: Promise&lt;string&gt;
+  - name: >-
+      generateUserDelegationSasStringToSign(ContainerGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: '@azure/storage-blob.ContainerClient.generateUserDelegationSasStringToSign'
+    package: '@azure/storage-blob'
+    summary: >-
+      Generates string to sign for a Blob Container Service Shared Access
+      Signature (SAS) URI
+
+      based on the client properties and parameters passed in. The SAS is signed
+      by the input user delegation key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasStringToSign(options:
+        ContainerGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        string
+      parameters:
+        - id: options
+          type: <xref uid="@azure/storage-blob.ContainerGenerateSasUrlOptions" />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-blob.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
+  - name: >-
+      generateUserDelegationSasUrl(ContainerGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: '@azure/storage-blob.ContainerClient.generateUserDelegationSasUrl'
+    package: '@azure/storage-blob'
+    summary: >-
+      Generates a Blob Container Service Shared Access Signature (SAS) URI based
+      on the client properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasUrl(options:
+        ContainerGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        Promise<string>
+      parameters:
+        - id: options
+          type: <xref uid="@azure/storage-blob.ContainerGenerateSasUrlOptions" />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-blob.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
       return:
         description: >-
           The SAS URI consisting of the URI to the resource represented by this
@@ -566,6 +667,38 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/storage-blob.ContainerGetAccessPolicyResponse" />&gt;
+  - name: getAccountInfo(ContainerGetAccountInfoOptions)
+    uid: '@azure/storage-blob.ContainerClient.getAccountInfo'
+    package: '@azure/storage-blob'
+    summary: >-
+      The Get Account Information operation returns the sku name and account
+      kind
+
+      for the specified account.
+
+      The Get Account Information operation is available on service versions
+      beginning
+
+      with version 2018-03-28.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/get-account-information
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccountInfo(options?: ContainerGetAccountInfoOptions):
+        Promise<ContainerGetAccountInfoResponse>
+      parameters:
+        - id: options
+          type: <xref uid="@azure/storage-blob.ContainerGetAccountInfoOptions" />
+          description: Options to the Service Get Account Info operation.
+      return:
+        description: Response data for the Service Get Account Info operation.
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/storage-blob.ContainerGetAccountInfoResponse" />&gt;
   - name: getAppendBlobClient(string)
     uid: '@azure/storage-blob.ContainerClient.getAppendBlobClient'
     package: '@azure/storage-blob'
@@ -838,11 +971,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;({ kind: "prefix" } & <xref
-          uid="@azure/storage-blob.BlobPrefix" />) | ({ kind: "blob" } & <xref
-          uid="@azure/storage-blob.BlobItem" />), <xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;({
+          kind: "prefix" } & <xref uid="@azure/storage-blob.BlobPrefix" />) | ({
+          kind: "blob" } & <xref uid="@azure/storage-blob.BlobItem" />), <xref
           uid="@azure/storage-blob.ContainerListBlobHierarchySegmentResponse"
-          />, PageSettings&gt;
+          />, <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBlobsFlat(ContainerListBlobsOptions)
     uid: '@azure/storage-blob.ContainerClient.listBlobsFlat'
     package: '@azure/storage-blob'
@@ -966,10 +1099,10 @@ methods:
       return:
         description: An asyncIterableIterator that supports paging.
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/storage-blob.BlobItem"
-          />, <xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/storage-blob.BlobItem" />, <xref
           uid="@azure/storage-blob.ContainerListBlobFlatSegmentResponse" />,
-          PageSettings&gt;
+          <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       setAccessPolicy(PublicAccessType, SignedIdentifier[],
       ContainerSetAccessPolicyOptions)
@@ -1061,7 +1194,7 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/storage-blob.ContainerSetMetadataResponse" />&gt;
-  - name: uploadBlockBlob(string, HttpRequestBody, number, BlockBlobUploadOptions)
+  - name: uploadBlockBlob(string, RequestBodyType, number, BlockBlobUploadOptions)
     uid: '@azure/storage-blob.ContainerClient.uploadBlockBlob'
     package: '@azure/storage-blob'
     summary: >-
@@ -1096,7 +1229,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function uploadBlockBlob(blobName: string, body: HttpRequestBody,
+        function uploadBlockBlob(blobName: string, body: RequestBodyType,
         contentLength: number, options?: BlockBlobUploadOptions): Promise<{
         blockBlobClient: BlockBlobClient, response: BlockBlobUploadResponse }>
       parameters:

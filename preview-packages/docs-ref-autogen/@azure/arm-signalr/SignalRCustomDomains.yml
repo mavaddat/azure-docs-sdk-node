@@ -21,14 +21,11 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, resourceName:
         string, name: string, parameters: CustomDomain, options?:
         SignalRCustomDomainsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<CustomDomain>, CustomDomain>>
+        Promise<SimplePollerLike<OperationState<CustomDomain>, CustomDomain>>
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -47,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-signalr.CustomDomain" />&gt;, <xref
           uid="@azure/arm-signalr.CustomDomain" />&gt;&gt;
   - name: >-
@@ -66,10 +64,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -100,14 +95,11 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, resourceName: string,
         name: string, options?: SignalRCustomDomainsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -121,7 +113,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       SignalRCustomDomainsDeleteOptionalParams)
@@ -138,10 +132,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -170,10 +161,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -202,10 +190,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group that contains the resource. You can
-            obtain
-                                     this value from the Azure Resource Manager API or the portal.
+          description: The name of the resource group. The name is case insensitive.
         - id: resourceName
           type: string
           description: The name of the resource.
@@ -217,6 +202,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-signalr.CustomDomain" />, <xref
-          uid="@azure/arm-signalr.CustomDomain" />[], PageSettings&gt;
+          uid="@azure/arm-signalr.CustomDomain" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

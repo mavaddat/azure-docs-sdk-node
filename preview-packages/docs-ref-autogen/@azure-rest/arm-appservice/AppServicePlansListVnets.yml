@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServicePlansListVnets200Response |
-        AppServicePlansListVnetsdefaultResponse>
+        StreamableMethod<AppServicePlansListVnets200Response |
+        AppServicePlansListVnetsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServicePlansListVnets200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServicePlansListVnetsdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServicePlansListVnetsDefaultResponse"
           />&gt;

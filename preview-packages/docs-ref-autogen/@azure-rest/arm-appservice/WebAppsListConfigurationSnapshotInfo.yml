@@ -19,17 +19,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListConfigurationSnapshotInfo200Response |
-        WebAppsListConfigurationSnapshotInfodefaultResponse>
+        StreamableMethod<WebAppsListConfigurationSnapshotInfo200Response |
+        WebAppsListConfigurationSnapshotInfoDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListConfigurationSnapshotInfo200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListConfigurationSnapshotInfodefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListConfigurationSnapshotInfoDefaultResponse"
           />&gt;

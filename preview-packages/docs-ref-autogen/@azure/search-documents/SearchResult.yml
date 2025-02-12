@@ -8,9 +8,9 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type SearchResult<TModel, TFields> = {
-    captions?: CaptionResult[]
+    captions?: QueryCaptionResult[]
     document: NarrowedModel<TModel, TFields>
-    documentDebugInfo?: DocumentDebugInfo[]
+    documentDebugInfo?: DocumentDebugInfo
     highlights?: { [k in SelectFields<TModel>]?: string[] }
     rerankerScore?: number
     score: number

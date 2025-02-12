@@ -1,20 +1,16 @@
 ---
 title: Azure Mixed Reality SDK for JavaScript
 description: Reference for Azure Mixed Reality SDK for JavaScript
-author: xirzec
-ms.author: jeffish
-ms.data: 09/14/2023
+ms.date: 02/11/2025
 ms.topic: reference
 ms.devlang: javascript
 ms.service: mixedreality
-ms.date: 06/15/2022
 ---
 # Azure Mixed Reality Resource Management Modules for JavaScript
 
 Microsoft provides a series of Azure services to empower Mixed Reality devices and applications. Currently, such services are provided:
 
-* [Azure Spatial Anchors](https://azure.microsoft.com/en-us/services/spatial-anchors/)
-* [Azure Remote Rendering (To be available soon...)](https://azure.microsoft.com/en-us/services/remote-rendering/)
+* [Azure Remote Rendering (To be available soon...)](https://azure.microsoft.com/services/remote-rendering/)
 
 ## Management Package
 
