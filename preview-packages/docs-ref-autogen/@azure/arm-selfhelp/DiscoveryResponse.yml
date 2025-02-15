@@ -23,7 +23,7 @@ properties:
   - name: value
     uid: '@azure/arm-selfhelp.DiscoveryResponse.value'
     package: '@azure/arm-selfhelp'
-    summary: The list of solution metadata.
+    summary: The list of metadata.
     fullName: value
     remarks: ''
     isDeprecated: false

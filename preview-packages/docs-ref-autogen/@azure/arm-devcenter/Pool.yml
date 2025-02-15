@@ -8,6 +8,22 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: devBoxCount
+    uid: '@azure/arm-devcenter.Pool.devBoxCount'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Indicates the number of provisioned Dev Boxes in this pool.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: devBoxCount
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'devBoxCount?: number'
+      return:
+        description: ''
+        type: number
   - name: devBoxDefinitionName
     uid: '@azure/arm-devcenter.Pool.devBoxDefinitionName'
     package: '@azure/arm-devcenter'
@@ -20,6 +36,53 @@ properties:
       return:
         description: ''
         type: string
+  - name: displayName
+    uid: '@azure/arm-devcenter.Pool.displayName'
+    package: '@azure/arm-devcenter'
+    summary: The display name of the pool.
+    fullName: displayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'displayName?: string'
+      return:
+        description: ''
+        type: string
+  - name: healthStatus
+    uid: '@azure/arm-devcenter.Pool.healthStatus'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Overall health status of the Pool. Indicates whether or not the Pool is
+      available to create Dev Boxes.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: healthStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'healthStatus?: string'
+      return:
+        description: ''
+        type: string
+  - name: healthStatusDetails
+    uid: '@azure/arm-devcenter.Pool.healthStatusDetails'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Details on the Pool health status to help diagnose issues. This is only
+      populated when the pool status indicates the pool is in a non-healthy
+      state
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: healthStatusDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'healthStatusDetails?: HealthStatusDetail[]'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.HealthStatusDetail" />[]
   - name: licenseType
     uid: '@azure/arm-devcenter.Pool.licenseType'
     package: '@azure/arm-devcenter'
@@ -48,6 +111,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: managedVirtualNetworkRegions
+    uid: '@azure/arm-devcenter.Pool.managedVirtualNetworkRegions'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      The regions of the managed virtual network (required when
+      managedNetworkType is Managed).
+    fullName: managedVirtualNetworkRegions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'managedVirtualNetworkRegions?: string[]'
+      return:
+        description: ''
+        type: string[]
   - name: networkConnectionName
     uid: '@azure/arm-devcenter.Pool.networkConnectionName'
     package: '@azure/arm-devcenter'
@@ -73,6 +150,48 @@ properties:
     isDeprecated: false
     syntax:
       content: 'provisioningState?: string'
+      return:
+        description: ''
+        type: string
+  - name: singleSignOnStatus
+    uid: '@azure/arm-devcenter.Pool.singleSignOnStatus'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Indicates whether Dev Boxes in this pool are created with single sign on
+      enabled. The also requires that single sign on be enabled on the tenant.
+    fullName: singleSignOnStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'singleSignOnStatus?: string'
+      return:
+        description: ''
+        type: string
+  - name: stopOnDisconnect
+    uid: '@azure/arm-devcenter.Pool.stopOnDisconnect'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Stop on disconnect configuration settings for Dev Boxes created in this
+      pool.
+    fullName: stopOnDisconnect
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stopOnDisconnect?: StopOnDisconnectConfiguration'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.StopOnDisconnectConfiguration" />
+  - name: virtualNetworkType
+    uid: '@azure/arm-devcenter.Pool.virtualNetworkType'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Indicates whether the pool uses a Virtual Network managed by Microsoft or
+      a customer provided network.
+    fullName: virtualNetworkType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'virtualNetworkType?: string'
       return:
         description: ''
         type: string

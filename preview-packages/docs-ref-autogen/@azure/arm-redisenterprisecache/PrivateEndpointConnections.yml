@@ -9,13 +9,89 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginDelete(string, string, string,
+      PrivateEndpointConnectionsDeleteOptionalParams)
+    uid: '@azure/arm-redisenterprisecache.PrivateEndpointConnections.beginDelete'
+    package: '@azure/arm-redisenterprisecache'
+    summary: >-
+      Deletes the specified private endpoint connection associated with the
+      Redis Enterprise cluster.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDelete(resourceGroupName: string, clusterName: string,
+        privateEndpointConnectionName: string, options?:
+        PrivateEndpointConnectionsDeleteOptionalParams):
+        Promise<SimplePollerLike<OperationState<void>, void>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the Redis Enterprise cluster.
+        - id: privateEndpointConnectionName
+          type: string
+          description: |-
+            The name of the private endpoint connection associated with the
+                                                 Azure resource
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-redisenterprisecache.PrivateEndpointConnectionsDeleteOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
+  - name: >-
+      beginDeleteAndWait(string, string, string,
+      PrivateEndpointConnectionsDeleteOptionalParams)
+    uid: >-
+      @azure/arm-redisenterprisecache.PrivateEndpointConnections.beginDeleteAndWait
+    package: '@azure/arm-redisenterprisecache'
+    summary: >-
+      Deletes the specified private endpoint connection associated with the
+      Redis Enterprise cluster.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDeleteAndWait(resourceGroupName: string, clusterName:
+        string, privateEndpointConnectionName: string, options?:
+        PrivateEndpointConnectionsDeleteOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: clusterName
+          type: string
+          description: The name of the Redis Enterprise cluster.
+        - id: privateEndpointConnectionName
+          type: string
+          description: |-
+            The name of the private endpoint connection associated with the
+                                                 Azure resource
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-redisenterprisecache.PrivateEndpointConnectionsDeleteOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: >-
       beginPut(string, string, string, PrivateEndpointConnection,
       PrivateEndpointConnectionsPutOptionalParams)
     uid: '@azure/arm-redisenterprisecache.PrivateEndpointConnections.beginPut'
     package: '@azure/arm-redisenterprisecache'
     summary: >-
       Updates the state of the specified private endpoint connection associated
-      with the RedisEnterprise
+      with the Redis Enterprise
 
       cluster.
     remarks: ''
@@ -34,7 +110,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: privateEndpointConnectionName
           type: string
           description: |-
@@ -54,7 +130,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.PrivateEndpointConnection"
           />&gt;, <xref
           uid="@azure/arm-redisenterprisecache.PrivateEndpointConnection"
@@ -66,7 +143,7 @@ methods:
     package: '@azure/arm-redisenterprisecache'
     summary: >-
       Updates the state of the specified private endpoint connection associated
-      with the RedisEnterprise
+      with the Redis Enterprise
 
       cluster.
     remarks: ''
@@ -84,7 +161,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: privateEndpointConnectionName
           type: string
           description: |-
@@ -106,48 +183,12 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/arm-redisenterprisecache.PrivateEndpointConnection" />&gt;
-  - name: >-
-      delete(string, string, string,
-      PrivateEndpointConnectionsDeleteOptionalParams)
-    uid: '@azure/arm-redisenterprisecache.PrivateEndpointConnections.delete'
-    package: '@azure/arm-redisenterprisecache'
-    summary: >-
-      Deletes the specified private endpoint connection associated with the
-      RedisEnterprise cluster.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function delete(resourceGroupName: string, clusterName: string,
-        privateEndpointConnectionName: string, options?:
-        PrivateEndpointConnectionsDeleteOptionalParams): Promise<void>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: clusterName
-          type: string
-          description: The name of the RedisEnterprise cluster.
-        - id: privateEndpointConnectionName
-          type: string
-          description: |-
-            The name of the private endpoint connection associated with the
-                                                 Azure resource
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-redisenterprisecache.PrivateEndpointConnectionsDeleteOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
   - name: get(string, string, string, PrivateEndpointConnectionsGetOptionalParams)
     uid: '@azure/arm-redisenterprisecache.PrivateEndpointConnections.get'
     package: '@azure/arm-redisenterprisecache'
     summary: >-
-      Gets the specified private endpoint connection associated with the
-      RedisEnterprise cluster.
+      Gets the specified private endpoint connection associated with the Redis
+      Enterprise cluster.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -162,7 +203,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: privateEndpointConnectionName
           type: string
           description: |-
@@ -183,8 +224,8 @@ methods:
     uid: '@azure/arm-redisenterprisecache.PrivateEndpointConnections.list'
     package: '@azure/arm-redisenterprisecache'
     summary: >-
-      Lists all the private endpoint connections associated with the
-      RedisEnterprise cluster.
+      Lists all the private endpoint connections associated with the Redis
+      Enterprise cluster.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -199,7 +240,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: options
           type: >-
             <xref
@@ -209,7 +250,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.PrivateEndpointConnection" />,
           <xref uid="@azure/arm-redisenterprisecache.PrivateEndpointConnection"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;

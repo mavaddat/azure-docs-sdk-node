@@ -98,3 +98,15 @@ properties:
       return:
         description: ''
         type: '"Stream" | "Reference"'
+  - name: watermarkSettings
+    uid: '@azure/arm-streamanalytics.InputProperties.watermarkSettings'
+    package: '@azure/arm-streamanalytics'
+    summary: Settings which determine whether to read watermark events.
+    fullName: watermarkSettings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'watermarkSettings?: InputWatermarkProperties'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-streamanalytics.InputWatermarkProperties" />

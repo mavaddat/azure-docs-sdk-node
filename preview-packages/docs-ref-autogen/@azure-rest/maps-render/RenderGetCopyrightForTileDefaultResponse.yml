@@ -3,16 +3,14 @@ name: RenderGetCopyrightForTileDefaultResponse
 uid: '@azure-rest/maps-render.RenderGetCopyrightForTileDefaultResponse'
 package: '@azure-rest/maps-render'
 summary: >-
-  **Applies to:** see pricing [tiers](https://aka.ms/AzureMapsPricingTier).
+  To obtain the copyright information for a particular tile, the request should
+  specify the tile's zoom level and x and y coordinates. For more information,
+  see [Zoom Levels and Tile Grid](/azure/azure-maps/zoom-levels-and-tile-grid).
 
 
-  Copyrights API is designed to serve copyright information for Render Tile 
-  service. In addition to basic copyright for the whole map, API is serving 
-  specific groups of copyrights for some countries/regions.
-
-  Returns the copyright information for a given tile. To obtain the copyright
-  information for a particular tile, the request should specify the tile's zoom
-  level and x and y coordinates (see: Zoom Levels and Tile Grid).
+  Copyrights API is designed to serve copyright information for Render service.
+  In addition to basic copyright for the whole map, API is serving specific
+  groups of copyrights for some countries/regions.
 fullName: RenderGetCopyrightForTileDefaultResponse
 remarks: ''
 isDeprecated: false
@@ -54,7 +52,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/maps-render.RenderGetCopyrightForTileDefaultResponse.request'
@@ -67,6 +65,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

@@ -42,7 +42,7 @@ properties:
   - name: backupId
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.backupId'
     package: '@azure/arm-netapp'
-    summary: UUID v4 or resource identifier used to identify the Backup.
+    summary: Resource identifier used to identify the Backup.
     fullName: backupId
     remarks: ''
     isDeprecated: false
@@ -110,6 +110,24 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: coolAccessRetrievalPolicy
+    uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.coolAccessRetrievalPolicy'
+    package: '@azure/arm-netapp'
+    summary: >-
+      coolAccessRetrievalPolicy determines the data retrieval behavior from the
+      cool tier to standard storage based on the read pattern for cool access
+      enabled volumes. The possible values for this field are:
+       Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
+       OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
+       Never - No client-driven data is pulled from cool tier to standard storage.
+    fullName: coolAccessRetrievalPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'coolAccessRetrievalPolicy?: string'
+      return:
+        description: ''
+        type: string
   - name: coolnessPeriod
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.coolnessPeriod'
     package: '@azure/arm-netapp'
@@ -209,6 +227,23 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: effectiveNetworkFeatures
+    uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.effectiveNetworkFeatures'
+    package: '@azure/arm-netapp'
+    summary: >-
+      The effective value of the network features type available to the volume,
+      or current effective state of update.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: effectiveNetworkFeatures
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'effectiveNetworkFeatures?: string'
+      return:
+        description: ''
+        type: string
   - name: enableSubvolumes
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.enableSubvolumes'
     package: '@azure/arm-netapp'
@@ -440,7 +475,9 @@ properties:
   - name: networkFeatures
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.networkFeatures'
     package: '@azure/arm-netapp'
-    summary: Basic network, or Standard features available to the volume.
+    summary: >-
+      The original value of the network features type available to the volume at
+      the time it was created.
     fullName: networkFeatures
     remarks: ''
     isDeprecated: false
@@ -581,7 +618,7 @@ properties:
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.smbAccessBasedEnumeration'
     package: '@azure/arm-netapp'
     summary: >-
-      Enables access based enumeration share property for SMB Shares. Only
+      Enables access-based enumeration share property for SMB Shares. Only
       applicable for SMB/DualProtocol volume
     fullName: smbAccessBasedEnumeration
     remarks: ''
@@ -624,7 +661,7 @@ properties:
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.smbNonBrowsable'
     package: '@azure/arm-netapp'
     summary: >-
-      Enables non browsable property for SMB Shares. Only applicable for
+      Enables non-browsable property for SMB Shares. Only applicable for
       SMB/DualProtocol volume
     fullName: smbNonBrowsable
     remarks: ''
@@ -652,7 +689,7 @@ properties:
   - name: snapshotId
     uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.snapshotId'
     package: '@azure/arm-netapp'
-    summary: UUID v4 or resource identifier used to identify the Snapshot.
+    summary: Resource identifier used to identify the Snapshot.
     fullName: snapshotId
     remarks: ''
     isDeprecated: false
@@ -773,8 +810,10 @@ properties:
     package: '@azure/arm-netapp'
     summary: >-
       Maximum storage quota allowed for a file system in bytes. This is a soft
-      quota used for alerting only. Minimum size is 100 GiB. Upper limit is
-      100TiB, 500Tib for LargeVolume. Specified in bytes.
+      quota used for alerting only. For regular volumes, valid values are in the
+      range 50GiB to 100TiB. For large volumes, valid values are in the range
+      100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB.
+      Values expressed in bytes as multiples of 1 GiB.
     fullName: usageThreshold
     remarks: ''
     isDeprecated: false
@@ -827,3 +866,15 @@ properties:
       return:
         description: ''
         type: string
+  - name: zones
+    uid: '@azure/arm-netapp.VolumeGroupVolumeProperties.zones'
+    package: '@azure/arm-netapp'
+    summary: Availability Zone
+    fullName: zones
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        description: ''
+        type: string[]

@@ -8,7 +8,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: EventGridClient(string, AzureKeyCredential, ClientOptions)
+  - name: EventGridClient(string, AzureKeyCredential, EventGridClientOptions)
     uid: '@azure/eventgrid.EventGridClient.constructor'
     package: '@azure/eventgrid'
     summary: Azure Messaging EventGrid Client
@@ -17,7 +17,7 @@ constructors:
     syntax:
       content: >-
         new EventGridClient(endpoint: string, credential: AzureKeyCredential,
-        options?: ClientOptions)
+        options?: EventGridClientOptions)
       parameters:
         - id: endpoint
           type: string
@@ -26,7 +26,7 @@ constructors:
           type: <xref uid="@azure/eventgrid.AzureKeyCredential" />
           description: ''
         - id: options
-          type: <xref uid="@azure/eventgrid.ClientOptions" />
+          type: <xref uid="@azure/eventgrid.EventGridClientOptions" />
           description: ''
 methods:
   - name: >-
@@ -225,3 +225,34 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/eventgrid.ReleaseResult" />&gt;
+  - name: >-
+      renewCloudEventLocks(string[], string, string,
+      RenewCloudEventLocksOptions)
+    uid: '@azure/eventgrid.EventGridClient.renewCloudEventLocks'
+    package: '@azure/eventgrid'
+    summary: Renew lock for batch of Cloud Events.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function renewCloudEventLocks(lockTokens: string[], topicName: string,
+        eventSubscriptionName: string, options?: RenewCloudEventLocksOptions):
+        Promise<RenewCloudEventLocksResult>
+      parameters:
+        - id: lockTokens
+          type: string[]
+          description: Lock Tokens
+        - id: topicName
+          type: string
+          description: Topic Name
+        - id: eventSubscriptionName
+          type: string
+          description: Name of the Event Subscription
+        - id: options
+          type: <xref uid="@azure/eventgrid.RenewCloudEventLocksOptions" />
+          description: Options to renew
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/eventgrid.RenewCloudEventLocksResult"
+          />&gt;

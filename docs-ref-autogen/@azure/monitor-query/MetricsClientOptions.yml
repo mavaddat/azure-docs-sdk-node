@@ -8,6 +8,24 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: audience
+    uid: '@azure/monitor-query.MetricsClientOptions.audience'
+    package: '@azure/monitor-query'
+    summary: >-
+      The Audience to use for authentication with Microsoft Entra ID. The
+
+      audience is not considered when using a shared key.
+
+      [KnownMonitorMetricsQueryAudience](xref:@azure/monitor-query.KnownMonitorMetricsQueryAudience)
+      can be used interchangeably with audience
+    fullName: audience
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'audience?: string'
+      return:
+        description: ''
+        type: string
   - name: endpoint
     uid: '@azure/monitor-query.MetricsClientOptions.endpoint'
     package: '@azure/monitor-query'
@@ -32,8 +50,21 @@ inheritedProperties:
       content: 'additionalPolicies?: AdditionalPolicyConfig[]'
       return:
         description: ''
-        type: AdditionalPolicyConfig[]
+        type: <xref uid="@azure/core-client.AdditionalPolicyConfig" />[]
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.additionalPolicies
+  - name: agent
+    uid: '@azure/monitor-query.MetricsClientOptions.agent'
+    package: '@azure/monitor-query'
+    summary: Options for configuring Agent instance for outgoing requests
+    fullName: agent
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'agent?: Agent'
+      return:
+        description: ''
+        type: <xref uid="@azure/core-rest-pipeline.Agent" />
+    inheritanceDescription: <b>Inherited From</b> CommonClientOptions.agent
   - name: allowInsecureConnection
     uid: '@azure/monitor-query.MetricsClientOptions.allowInsecureConnection'
     package: '@azure/monitor-query'
@@ -58,7 +89,7 @@ inheritedProperties:
       content: 'httpClient?: HttpClient'
       return:
         description: ''
-        type: HttpClient
+        type: <xref uid="@azure/core-rest-pipeline.HttpClient" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.httpClient
   - name: proxyOptions
     uid: '@azure/monitor-query.MetricsClientOptions.proxyOptions'
@@ -71,7 +102,7 @@ inheritedProperties:
       content: 'proxyOptions?: ProxySettings'
       return:
         description: ''
-        type: ProxySettings
+        type: <xref uid="@azure/core-rest-pipeline.ProxySettings" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.proxyOptions
   - name: redirectOptions
     uid: '@azure/monitor-query.MetricsClientOptions.redirectOptions'
@@ -84,7 +115,7 @@ inheritedProperties:
       content: 'redirectOptions?: RedirectPolicyOptions'
       return:
         description: ''
-        type: RedirectPolicyOptions
+        type: <xref uid="@azure/core-rest-pipeline.RedirectPolicyOptions" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.redirectOptions
   - name: retryOptions
     uid: '@azure/monitor-query.MetricsClientOptions.retryOptions'
@@ -97,7 +128,7 @@ inheritedProperties:
       content: 'retryOptions?: PipelineRetryOptions'
       return:
         description: ''
-        type: PipelineRetryOptions
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRetryOptions" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.retryOptions
   - name: telemetryOptions
     uid: '@azure/monitor-query.MetricsClientOptions.telemetryOptions'
@@ -112,7 +143,7 @@ inheritedProperties:
       content: 'telemetryOptions?: TelemetryOptions'
       return:
         description: ''
-        type: TelemetryOptions
+        type: <xref uid="@azure/core-rest-pipeline.TelemetryOptions" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.telemetryOptions
   - name: tlsOptions
     uid: '@azure/monitor-query.MetricsClientOptions.tlsOptions'
@@ -125,7 +156,7 @@ inheritedProperties:
       content: 'tlsOptions?: TlsSettings'
       return:
         description: ''
-        type: TlsSettings
+        type: <xref uid="@azure/core-rest-pipeline.TlsSettings" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.tlsOptions
   - name: userAgentOptions
     uid: '@azure/monitor-query.MetricsClientOptions.userAgentOptions'
@@ -138,6 +169,6 @@ inheritedProperties:
       content: 'userAgentOptions?: UserAgentPolicyOptions'
       return:
         description: ''
-        type: UserAgentPolicyOptions
+        type: <xref uid="@azure/core-rest-pipeline.UserAgentPolicyOptions" />
     inheritanceDescription: <b>Inherited From</b> CommonClientOptions.userAgentOptions
-extends: CommonClientOptions
+extends: <xref uid="@azure/core-client.CommonClientOptions" />

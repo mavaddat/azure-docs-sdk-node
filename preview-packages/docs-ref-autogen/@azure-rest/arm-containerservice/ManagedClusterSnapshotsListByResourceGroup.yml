@@ -21,16 +21,16 @@ methods:
       content: >-
         function get(options?: RequestParameters):
         StreamableMethod<ManagedClusterSnapshotsListByResourceGroup200Response |
-        ManagedClusterSnapshotsListByResourceGroupdefaultResponse>
+        ManagedClusterSnapshotsListByResourceGroupDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-containerservice.ManagedClusterSnapshotsListByResourceGroup200Response"
           /> | <xref
-          uid="@azure-rest/arm-containerservice.ManagedClusterSnapshotsListByResourceGroupdefaultResponse"
+          uid="@azure-rest/arm-containerservice.ManagedClusterSnapshotsListByResourceGroupDefaultResponse"
           />&gt;

@@ -51,7 +51,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-network.InboundSecurityRule" />&gt;, <xref
           uid="@azure/arm-network.InboundSecurityRule" />&gt;&gt;
   - name: >-
@@ -92,6 +93,37 @@ methods:
           type: >-
             <xref
             uid="@azure/arm-network.InboundSecurityRuleCreateOrUpdateOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-network.InboundSecurityRule" />&gt;
+  - name: get(string, string, string, InboundSecurityRuleGetOptionalParams)
+    uid: '@azure/arm-network.InboundSecurityRuleOperations.get'
+    package: '@azure/arm-network'
+    summary: >-
+      Retrieves the available specified Network Virtual Appliance Inbound
+      Security Rules Collection.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function get(resourceGroupName: string, networkVirtualApplianceName:
+        string, ruleCollectionName: string, options?:
+        InboundSecurityRuleGetOptionalParams): Promise<InboundSecurityRule>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkVirtualApplianceName
+          type: string
+          description: The name of the Network Virtual Appliance.
+        - id: ruleCollectionName
+          type: string
+          description: The name of security rule collection.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-network.InboundSecurityRuleGetOptionalParams"
             />
           description: The options parameters.
       return:

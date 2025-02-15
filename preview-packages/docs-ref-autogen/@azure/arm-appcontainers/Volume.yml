@@ -8,6 +8,20 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: mountOptions
+    uid: '@azure/arm-appcontainers.Volume.mountOptions'
+    package: '@azure/arm-appcontainers'
+    summary: >-
+      Mount options used while mounting the Azure file share or NFS Azure file
+      share. Must be a comma-separated string.
+    fullName: mountOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mountOptions?: string'
+      return:
+        description: ''
+        type: string
   - name: name
     uid: '@azure/arm-appcontainers.Volume.name'
     package: '@azure/arm-appcontainers'

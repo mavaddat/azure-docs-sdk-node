@@ -7,4 +7,4 @@ fullName: NamespacesListKeysResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type NamespacesListKeysResponse = SharedAccessAuthorizationRuleListResult
+  type NamespacesListKeysResponse = ResourceListKeys

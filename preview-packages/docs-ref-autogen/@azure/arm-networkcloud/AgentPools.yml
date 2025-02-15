@@ -47,7 +47,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.AgentPool" />&gt;, <xref
           uid="@azure/arm-networkcloud.AgentPool" />&gt;&gt;
   - name: >-
@@ -99,7 +100,8 @@ methods:
         function beginDelete(resourceGroupName: string, kubernetesClusterName:
         string, agentPoolName: string, options?:
         AgentPoolsDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -118,8 +120,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, AgentPoolsDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.AgentPools.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -130,7 +134,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         kubernetesClusterName: string, agentPoolName: string, options?:
-        AgentPoolsDeleteOptionalParams): Promise<void>
+        AgentPoolsDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -148,7 +152,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginUpdate(string, string, string, AgentPoolsUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.AgentPools.beginUpdate'
     package: '@azure/arm-networkcloud'
@@ -184,7 +190,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.AgentPool" />&gt;, <xref
           uid="@azure/arm-networkcloud.AgentPool" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, string, AgentPoolsUpdateOptionalParams)
@@ -278,6 +285,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.AgentPool" />, <xref
-          uid="@azure/arm-networkcloud.AgentPool" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.AgentPool" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

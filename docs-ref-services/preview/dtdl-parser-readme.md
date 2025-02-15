@@ -1,11 +1,8 @@
 ---
 title: Azure Model Parser client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/dtdl-parser, digitaltwins
-author: johngallardo
-ms.author: jgalla
 ms.date: 02/23/2022
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: digital-twins
 ---

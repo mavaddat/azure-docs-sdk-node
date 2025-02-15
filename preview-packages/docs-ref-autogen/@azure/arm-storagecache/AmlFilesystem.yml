@@ -10,6 +10,22 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: clientInfo
+    uid: '@azure/arm-storagecache.AmlFilesystem.clientInfo'
+    package: '@azure/arm-storagecache'
+    summary: >-
+      Client information for the AML file system.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: clientInfo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clientInfo?: AmlFilesystemClientInfo'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-storagecache.AmlFilesystemClientInfo" />
   - name: encryptionSettings
     uid: '@azure/arm-storagecache.AmlFilesystem.encryptionSettings'
     package: '@azure/arm-storagecache'
@@ -77,22 +93,6 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-storagecache.AmlFilesystemIdentity" />
-  - name: lustreVersion
-    uid: '@azure/arm-storagecache.AmlFilesystem.lustreVersion'
-    package: '@azure/arm-storagecache'
-    summary: >-
-      The version of Lustre running in the AML file system
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
-    fullName: lustreVersion
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'lustreVersion?: string'
-      return:
-        description: ''
-        type: string
   - name: maintenanceWindow
     uid: '@azure/arm-storagecache.AmlFilesystem.maintenanceWindow'
     package: '@azure/arm-storagecache'
@@ -108,39 +108,6 @@ properties:
           <xref
           uid="@azure/arm-storagecache.AmlFilesystemPropertiesMaintenanceWindow"
           />
-  - name: mgsAddress
-    uid: '@azure/arm-storagecache.AmlFilesystem.mgsAddress'
-    package: '@azure/arm-storagecache'
-    summary: >-
-      The IPv4 address used by clients to mount the AML file system's Lustre
-      Management Service (MGS).
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
-    fullName: mgsAddress
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'mgsAddress?: string'
-      return:
-        description: ''
-        type: string
-  - name: mountCommand
-    uid: '@azure/arm-storagecache.AmlFilesystem.mountCommand'
-    package: '@azure/arm-storagecache'
-    summary: >-
-      Recommended command to mount the AML file system
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
-    fullName: mountCommand
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'mountCommand?: string'
-      return:
-        description: ''
-        type: string
   - name: provisioningState
     uid: '@azure/arm-storagecache.AmlFilesystem.provisioningState'
     package: '@azure/arm-storagecache'
@@ -157,6 +124,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: rootSquashSettings
+    uid: '@azure/arm-storagecache.AmlFilesystem.rootSquashSettings'
+    package: '@azure/arm-storagecache'
+    summary: Specifies root squash settings of the AML file system.
+    fullName: rootSquashSettings
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'rootSquashSettings?: AmlFilesystemRootSquashSettings'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-storagecache.AmlFilesystemRootSquashSettings" />
   - name: sku
     uid: '@azure/arm-storagecache.AmlFilesystem.sku'
     package: '@azure/arm-storagecache'

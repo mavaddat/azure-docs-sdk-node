@@ -3,13 +3,10 @@ name: GeolocationGetLocationDefaultResponse
 uid: '@azure-rest/maps-geolocation.GeolocationGetLocationDefaultResponse'
 package: '@azure-rest/maps-geolocation'
 summary: >-
-  **Applies to:** see pricing [tiers](https://aka.ms/AzureMapsPricingTier).
-
-
-
-  This service will return the ISO country code for the provided IP address.
-  Developers can use this information  to block or alter certain content based
-  on geographical locations where the application is being viewed from.
+  The `Get IP To Location` API is an HTTP `GET` request that, given an IP
+  address, returns the ISO country code from which that IP address is located.
+  Developers can use this information to block or alter certain content based on
+  geographical locations where the application is being viewed from.
 fullName: GeolocationGetLocationDefaultResponse
 remarks: ''
 isDeprecated: false
@@ -51,7 +48,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/maps-geolocation.GeolocationGetLocationDefaultResponse.request'
@@ -64,6 +61,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

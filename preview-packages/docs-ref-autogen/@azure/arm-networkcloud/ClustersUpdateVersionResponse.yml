@@ -7,4 +7,4 @@ fullName: ClustersUpdateVersionResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ClustersUpdateVersionResponse = ClustersUpdateVersionHeaders
+  type ClustersUpdateVersionResponse = OperationStatusResult

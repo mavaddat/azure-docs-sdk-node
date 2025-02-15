@@ -2,7 +2,7 @@
 name: SystemScanRulesetsGetLatest200Response
 uid: '@azure-rest/purview-scanning.SystemScanRulesetsGetLatest200Response'
 package: '@azure-rest/purview-scanning'
-summary: Get the latest version of a system scan ruleset
+summary: Gets the latest version of a system scan ruleset.
 fullName: SystemScanRulesetsGetLatest200Response
 remarks: ''
 isDeprecated: false
@@ -16,10 +16,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'body: SystemScanRuleset'
+      content: 'body: SystemScanRulesetOutput'
       return:
         description: ''
-        type: <xref uid="@azure-rest/purview-scanning.SystemScanRuleset" />
+        type: <xref uid="@azure-rest/purview-scanning.SystemScanRulesetOutput" />
   - name: status
     uid: '@azure-rest/purview-scanning.SystemScanRulesetsGetLatest200Response.status'
     package: '@azure-rest/purview-scanning'
@@ -45,7 +45,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: >-
@@ -59,6 +59,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

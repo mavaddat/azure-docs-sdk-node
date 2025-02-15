@@ -24,13 +24,13 @@ constructors:
         DesktopVirtualizationAPIClientOptionalParams)
       parameters:
         - id: credentials
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Subscription credentials which uniquely identify client
             subscription.
         - id: subscriptionId
           type: string
-          description: The ID of the target subscription.
+          description: The ID of the target subscription. The value must be an UUID.
         - id: options
           type: >-
             <xref
@@ -62,6 +62,34 @@ properties:
       return:
         description: ''
         type: string
+  - name: appAttachPackageInfo
+    uid: >-
+      @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.appAttachPackageInfo
+    package: '@azure/arm-desktopvirtualization'
+    summary: ''
+    fullName: appAttachPackageInfo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'appAttachPackageInfo: AppAttachPackageInfo'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-desktopvirtualization.AppAttachPackageInfo" />
+  - name: appAttachPackageOperations
+    uid: >-
+      @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.appAttachPackageOperations
+    package: '@azure/arm-desktopvirtualization'
+    summary: ''
+    fullName: appAttachPackageOperations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'appAttachPackageOperations: AppAttachPackageOperations'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-desktopvirtualization.AppAttachPackageOperations" />
   - name: applicationGroups
     uid: >-
       @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.applicationGroups
@@ -149,6 +177,49 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-desktopvirtualization.Operations" />
+  - name: privateEndpointConnections
+    uid: >-
+      @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.privateEndpointConnections
+    package: '@azure/arm-desktopvirtualization'
+    summary: ''
+    fullName: privateEndpointConnections
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'privateEndpointConnections: PrivateEndpointConnections'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-desktopvirtualization.PrivateEndpointConnections" />
+  - name: privateLinkResources
+    uid: >-
+      @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.privateLinkResources
+    package: '@azure/arm-desktopvirtualization'
+    summary: ''
+    fullName: privateLinkResources
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'privateLinkResources: PrivateLinkResources'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-desktopvirtualization.PrivateLinkResources" />
+  - name: scalingPlanPersonalSchedules
+    uid: >-
+      @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.scalingPlanPersonalSchedules
+    package: '@azure/arm-desktopvirtualization'
+    summary: ''
+    fullName: scalingPlanPersonalSchedules
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scalingPlanPersonalSchedules: ScalingPlanPersonalSchedules'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-desktopvirtualization.ScalingPlanPersonalSchedules" />
   - name: scalingPlanPooledSchedules
     uid: >-
       @azure/arm-desktopvirtualization.DesktopVirtualizationAPIClient.scalingPlanPooledSchedules
@@ -253,7 +324,7 @@ inheritedProperties:
       content: 'pipeline: Pipeline'
       return:
         description: ''
-        type: Pipeline
+        type: <xref uid="@azure/core-rest-pipeline.Pipeline" />
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.pipeline
 inheritedMethods:
   - name: sendOperationRequest<T>(OperationArguments, OperationSpec)
@@ -269,12 +340,12 @@ inheritedMethods:
         operationSpec: OperationSpec): Promise<T>
       parameters:
         - id: operationArguments
-          type: OperationArguments
+          type: <xref uid="@azure/core-client.OperationArguments" />
           description: >-
             The arguments that the HTTP request's templated values will be
             populated from.
         - id: operationSpec
-          type: OperationSpec
+          type: <xref uid="@azure/core-client.OperationSpec" />
           description: The OperationSpec to use to populate the httpRequest.
       return:
         description: ''
@@ -293,10 +364,12 @@ inheritedMethods:
         Promise<PipelineResponse>
       parameters:
         - id: request
-          type: PipelineRequest
+          type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;PipelineResponse&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-rest-pipeline.PipelineResponse"
+          />&gt;
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.sendRequest
-extends: ServiceClient
+extends: <xref uid="@azure/core-client.ServiceClient" />

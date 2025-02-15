@@ -19,10 +19,12 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        component: "AzureBlobStorage" | "CosmosDBCassandra" | "CosmosDBMongo" |
-        "CosmosDBSql"
+        component: "BaseCosmosDataTransferDataSourceSink" | "CosmosDBCassandra"
+        | "CosmosDBMongo" | "CosmosDBMongoVCore" | "CosmosDBSql" |
+        "AzureBlobStorage"
       return:
         description: ''
         type: >-
-          "AzureBlobStorage" | "CosmosDBCassandra" | "CosmosDBMongo" |
-          "CosmosDBSql"
+          "BaseCosmosDataTransferDataSourceSink" | "CosmosDBCassandra" |
+          "CosmosDBMongo" | "CosmosDBMongoVCore" | "CosmosDBSql" |
+          "AzureBlobStorage"

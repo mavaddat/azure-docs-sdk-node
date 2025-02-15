@@ -48,6 +48,21 @@ properties:
         type: >-
           <xref uid="@azure/arm-containerservice.ManagedClusterAgentPoolProfile"
           />[]
+  - name: aiToolchainOperatorProfile
+    uid: '@azure/arm-containerservice.ManagedCluster.aiToolchainOperatorProfile'
+    package: '@azure/arm-containerservice'
+    summary: AI toolchain operator settings that apply to the whole cluster.
+    fullName: aiToolchainOperatorProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'aiToolchainOperatorProfile?: ManagedClusterAIToolchainOperatorProfile'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerservice.ManagedClusterAIToolchainOperatorProfile"
+          />
   - name: apiServerAccessProfile
     uid: '@azure/arm-containerservice.ManagedCluster.apiServerAccessProfile'
     package: '@azure/arm-containerservice'
@@ -125,6 +140,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: bootstrapProfile
+    uid: '@azure/arm-containerservice.ManagedCluster.bootstrapProfile'
+    package: '@azure/arm-containerservice'
+    summary: Profile of the cluster bootstrap configuration.
+    fullName: bootstrapProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bootstrapProfile?: ManagedClusterBootstrapProfile'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerservice.ManagedClusterBootstrapProfile"
+          />
   - name: creationData
     uid: '@azure/arm-containerservice.ManagedCluster.creationData'
     package: '@azure/arm-containerservice'
@@ -241,6 +270,25 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: eTag
+    uid: '@azure/arm-containerservice.ManagedCluster.eTag'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      Unique read-only string used to implement optimistic concurrency. The eTag
+      value will change when the resource is updated. Specify an if-match or
+      if-none-match header with the eTag value for a subsequent request to
+      enable optimistic concurrency per the normal etag convention.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: eTag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'eTag?: string'
+      return:
+        description: ''
+        type: string
   - name: extendedLocation
     uid: '@azure/arm-containerservice.ManagedCluster.extendedLocation'
     package: '@azure/arm-containerservice'
@@ -281,20 +329,6 @@ properties:
       return:
         description: ''
         type: string
-  - name: guardrailsProfile
-    uid: '@azure/arm-containerservice.ManagedCluster.guardrailsProfile'
-    package: '@azure/arm-containerservice'
-    summary: >-
-      The guardrails profile holds all the guardrails information for a given
-      cluster
-    fullName: guardrailsProfile
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'guardrailsProfile?: GuardrailsProfile'
-      return:
-        description: ''
-        type: <xref uid="@azure/arm-containerservice.GuardrailsProfile" />
   - name: httpProxyConfig
     uid: '@azure/arm-containerservice.ManagedCluster.httpProxyConfig'
     package: '@azure/arm-containerservice'
@@ -324,7 +358,11 @@ properties:
   - name: identityProfile
     uid: '@azure/arm-containerservice.ManagedCluster.identityProfile'
     package: '@azure/arm-containerservice'
-    summary: Identities associated with the cluster.
+    summary: >-
+      The user identity associated with the managed cluster. This identity will
+      be used by the kubelet. Only one user assigned identity is allowed. The
+      only accepted key is "kubeletidentity", with value of "resourceId":
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}".
     fullName: identityProfile
     remarks: ''
     isDeprecated: false
@@ -349,6 +387,20 @@ properties:
         type: >-
           <xref uid="@azure/arm-containerservice.ManagedClusterIngressProfile"
           />
+  - name: kind
+    uid: '@azure/arm-containerservice.ManagedCluster.kind'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      This is primarily used to expose different UI experiences in the portal
+      for different kinds
+    fullName: kind
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'kind?: string'
+      return:
+        description: ''
+        type: string
   - name: kubernetesVersion
     uid: '@azure/arm-containerservice.ManagedCluster.kubernetesVersion'
     package: '@azure/arm-containerservice'
@@ -397,6 +449,20 @@ properties:
       return:
         description: ''
         type: number
+  - name: metricsProfile
+    uid: '@azure/arm-containerservice.ManagedCluster.metricsProfile'
+    package: '@azure/arm-containerservice'
+    summary: Optional cluster metrics configuration.
+    fullName: metricsProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metricsProfile?: ManagedClusterMetricsProfile'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerservice.ManagedClusterMetricsProfile"
+          />
   - name: networkProfile
     uid: '@azure/arm-containerservice.ManagedCluster.networkProfile'
     package: '@azure/arm-containerservice'
@@ -410,6 +476,21 @@ properties:
         description: ''
         type: >-
           <xref uid="@azure/arm-containerservice.ContainerServiceNetworkProfile"
+          />
+  - name: nodeProvisioningProfile
+    uid: '@azure/arm-containerservice.ManagedCluster.nodeProvisioningProfile'
+    package: '@azure/arm-containerservice'
+    summary: Node provisioning settings that apply to the whole cluster.
+    fullName: nodeProvisioningProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nodeProvisioningProfile?: ManagedClusterNodeProvisioningProfile'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerservice.ManagedClusterNodeProvisioningProfile"
           />
   - name: nodeResourceGroup
     uid: '@azure/arm-containerservice.ManagedCluster.nodeResourceGroup'
@@ -541,6 +622,37 @@ properties:
       return:
         description: ''
         type: string
+  - name: resourceUID
+    uid: '@azure/arm-containerservice.ManagedCluster.resourceUID'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      The resourceUID uniquely identifies ManagedClusters that reuse ARM
+      ResourceIds (i.e: create, delete, create sequence)
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: resourceUID
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resourceUID?: string'
+      return:
+        description: ''
+        type: string
+  - name: safeguardsProfile
+    uid: '@azure/arm-containerservice.ManagedCluster.safeguardsProfile'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      The Safeguards profile holds all the safeguards information for a given
+      cluster
+    fullName: safeguardsProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'safeguardsProfile?: SafeguardsProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.SafeguardsProfile" />
   - name: securityProfile
     uid: '@azure/arm-containerservice.ManagedCluster.securityProfile'
     package: '@azure/arm-containerservice'
@@ -670,8 +782,8 @@ inheritedProperties:
     uid: '@azure/arm-containerservice.ManagedCluster.id'
     package: '@azure/arm-containerservice'
     summary: >-
-      Fully qualified resource ID for the resource. Ex -
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

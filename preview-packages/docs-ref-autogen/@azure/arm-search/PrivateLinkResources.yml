@@ -33,9 +33,10 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: options
           type: >-
             <xref
@@ -45,6 +46,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-search.PrivateLinkResource" />, <xref
-          uid="@azure/arm-search.PrivateLinkResource" />[], PageSettings&gt;
+          uid="@azure/arm-search.PrivateLinkResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

@@ -24,6 +24,24 @@ properties:
       return:
         description: ''
         type: string
+  - name: hibernateSupport
+    uid: '@azure/arm-devcenter.Image.hibernateSupport'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Indicates whether this image has hibernate enabled. Not all images are
+      capable of supporting hibernation. To find out more see
+      https://aka.ms/devbox/hibernate
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: hibernateSupport
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hibernateSupport?: string'
+      return:
+        description: ''
+        type: string
   - name: offer
     uid: '@azure/arm-devcenter.Image.offer'
     package: '@azure/arm-devcenter'

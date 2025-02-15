@@ -23,7 +23,9 @@ properties:
   - name: correlationId
     uid: '@azure/communication-call-automation.RestPlayFailed.correlationId'
     package: '@azure/communication-call-automation'
-    summary: Correlation ID for event to call correlation.
+    summary: >-
+      Correlation ID for event to call correlation. Also called ChainId for
+      skype chain ID.
     fullName: correlationId
     remarks: ''
     isDeprecated: false
@@ -32,6 +34,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: failedPlaySourceIndex
+    uid: '@azure/communication-call-automation.RestPlayFailed.failedPlaySourceIndex'
+    package: '@azure/communication-call-automation'
+    summary: Contains the index of the failed play source.
+    fullName: failedPlaySourceIndex
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'failedPlaySourceIndex?: number'
+      return:
+        description: ''
+        type: number
   - name: operationContext
     uid: '@azure/communication-call-automation.RestPlayFailed.operationContext'
     package: '@azure/communication-call-automation'

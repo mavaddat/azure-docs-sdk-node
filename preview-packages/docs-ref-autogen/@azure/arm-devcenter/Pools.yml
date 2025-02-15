@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, projectName:
         string, poolName: string, body: Pool, options?:
         PoolsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Pool>, Pool>>
+        Promise<SimplePollerLike<OperationState<Pool>, Pool>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -43,7 +43,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Pool" />&gt;, <xref
           uid="@azure/arm-devcenter.Pool" />&gt;&gt;
   - name: >-
@@ -90,7 +91,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, projectName: string,
         poolName: string, options?: PoolsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -106,7 +107,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, PoolsDeleteOptionalParams)
     uid: '@azure/arm-devcenter.Pools.beginDeleteAndWait'
     package: '@azure/arm-devcenter'
@@ -134,6 +137,70 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      beginRunHealthChecks(string, string, string,
+      PoolsRunHealthChecksOptionalParams)
+    uid: '@azure/arm-devcenter.Pools.beginRunHealthChecks'
+    package: '@azure/arm-devcenter'
+    summary: Triggers a refresh of the pool status.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRunHealthChecks(resourceGroupName: string, projectName:
+        string, poolName: string, options?: PoolsRunHealthChecksOptionalParams):
+        Promise<SimplePollerLike<OperationState<void>, void>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: projectName
+          type: string
+          description: The name of the project.
+        - id: poolName
+          type: string
+          description: Name of the pool.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-devcenter.PoolsRunHealthChecksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
+  - name: >-
+      beginRunHealthChecksAndWait(string, string, string,
+      PoolsRunHealthChecksOptionalParams)
+    uid: '@azure/arm-devcenter.Pools.beginRunHealthChecksAndWait'
+    package: '@azure/arm-devcenter'
+    summary: Triggers a refresh of the pool status.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRunHealthChecksAndWait(resourceGroupName: string,
+        projectName: string, poolName: string, options?:
+        PoolsRunHealthChecksOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: projectName
+          type: string
+          description: The name of the project.
+        - id: poolName
+          type: string
+          description: Name of the pool.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-devcenter.PoolsRunHealthChecksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: beginUpdate(string, string, string, PoolUpdate, PoolsUpdateOptionalParams)
     uid: '@azure/arm-devcenter.Pools.beginUpdate'
     package: '@azure/arm-devcenter'
@@ -144,8 +211,8 @@ methods:
       content: >-
         function beginUpdate(resourceGroupName: string, projectName: string,
         poolName: string, body: PoolUpdate, options?:
-        PoolsUpdateOptionalParams): Promise<PollerLike<PollOperationState<Pool>,
-        Pool>>
+        PoolsUpdateOptionalParams):
+        Promise<SimplePollerLike<OperationState<Pool>, Pool>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -165,7 +232,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Pool" />&gt;, <xref
           uid="@azure/arm-devcenter.Pool" />&gt;&gt;
   - name: >-
@@ -250,5 +318,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-devcenter.Pool"
-          />, <xref uid="@azure/arm-devcenter.Pool" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.Pool" />, <xref
+          uid="@azure/arm-devcenter.Pool" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

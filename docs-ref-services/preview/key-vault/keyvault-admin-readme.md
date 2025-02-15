@@ -1,11 +1,8 @@
 ---
 title: Azure Key Vault Administration client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/keyvault-admin, keyvault
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 08/10/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: key-vault
 ---

@@ -7,4 +7,4 @@ fullName: BareMetalMachinesCordonResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type BareMetalMachinesCordonResponse = BareMetalMachinesCordonHeaders
+  type BareMetalMachinesCordonResponse = OperationStatusResult

@@ -10,9 +10,9 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: enableIdempotentPartitions
+  - name: enableIdempotentRetries
     uid: >-
-      @azure/event-hubs.EventHubBufferedProducerClientOptions.enableIdempotentPartitions
+      @azure/event-hubs.EventHubBufferedProducerClientOptions.enableIdempotentRetries
     package: '@azure/event-hubs'
     summary: >-
       Indicates whether or not the EventHubProducerClient should enable
@@ -27,11 +27,11 @@ properties:
       nor will it be able to use a partition key.
 
       Default: false
-    fullName: enableIdempotentPartitions
+    fullName: enableIdempotentRetries
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'enableIdempotentPartitions?: boolean'
+      content: 'enableIdempotentRetries?: boolean'
       return:
         description: ''
         type: boolean
@@ -79,12 +79,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        onSendEventsErrorHandler: (ctx: OnSendEventsErrorContext) =>
-        Promise<void>
+      content: 'onSendEventsErrorHandler: (ctx: OnSendEventsErrorContext) => void'
       return:
         description: ''
-        type: '(ctx: OnSendEventsErrorContext) =&gt; Promise&lt;void&gt;'
+        type: '(ctx: OnSendEventsErrorContext) =&gt; void'
   - name: onSendEventsSuccessHandler
     uid: >-
       @azure/event-hubs.EventHubBufferedProducerClientOptions.onSendEventsSuccessHandler
@@ -94,12 +92,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        onSendEventsSuccessHandler?: (ctx: OnSendEventsSuccessContext) =>
-        Promise<void>
+      content: 'onSendEventsSuccessHandler?: (ctx: OnSendEventsSuccessContext) => void'
       return:
         description: ''
-        type: '(ctx: OnSendEventsSuccessContext) =&gt; Promise&lt;void&gt;'
+        type: '(ctx: OnSendEventsSuccessContext) =&gt; void'
 inheritedProperties:
   - name: customEndpointAddress
     uid: >-
@@ -123,6 +119,23 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [EventHubClientOptions.customEndpointAddress](xref:@azure/event-hubs.EventHubClientOptions.customEndpointAddress)
+  - name: identifier
+    uid: '@azure/event-hubs.EventHubBufferedProducerClientOptions.identifier'
+    package: '@azure/event-hubs'
+    summary: >-
+      A unique name used to identify the client.  If not provided, a GUID will
+      be used as the identifier
+    fullName: identifier
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'identifier?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [EventHubClientOptions.identifier](xref:@azure/event-hubs.EventHubClientOptions.identifier)
   - name: retryOptions
     uid: '@azure/event-hubs.EventHubBufferedProducerClientOptions.retryOptions'
     package: '@azure/event-hubs'

@@ -12,7 +12,7 @@ properties:
     uid: '@azure/arm-netapp.BackupPolicy.backupPolicyId'
     package: '@azure/arm-netapp'
     summary: >-
-      Backup Policy Resource ID
+      Backup Policy GUID ID
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -141,8 +141,8 @@ inheritedProperties:
     uid: '@azure/arm-netapp.BackupPolicy.id'
     package: '@azure/arm-netapp'
     summary: >-
-      Fully qualified resource ID for the resource. Ex -
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

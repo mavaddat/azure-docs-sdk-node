@@ -8,21 +8,24 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: dnsZoneResourceId
+  - name: dnsZoneResourceIds
     uid: >-
-      @azure/arm-containerservice.ManagedClusterIngressProfileWebAppRouting.dnsZoneResourceId
+      @azure/arm-containerservice.ManagedClusterIngressProfileWebAppRouting.dnsZoneResourceIds
     package: '@azure/arm-containerservice'
     summary: >-
-      Resource ID of the DNS Zone to be associated with the web app. Used only
-      when Web App Routing is enabled.
-    fullName: dnsZoneResourceId
+      Resource IDs of the DNS zones to be associated with the Web App Routing
+      add-on. Used only when Web App Routing is enabled. Public and private DNS
+      zones can be in different resource groups, but all public DNS zones must
+      be in the same resource group and all private DNS zones must be in the
+      same resource group.
+    fullName: dnsZoneResourceIds
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'dnsZoneResourceId?: string'
+      content: 'dnsZoneResourceIds?: string[]'
       return:
         description: ''
-        type: string
+        type: string[]
   - name: enabled
     uid: >-
       @azure/arm-containerservice.ManagedClusterIngressProfileWebAppRouting.enabled
@@ -58,3 +61,20 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-containerservice.UserAssignedIdentity" />
+  - name: nginx
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterIngressProfileWebAppRouting.nginx
+    package: '@azure/arm-containerservice'
+    summary: >-
+      Configuration for the default NginxIngressController. See more at
+      https://learn.microsoft.com/en-us/azure/aks/app-routing-nginx-configuration#the-default-nginx-ingress-controller.
+    fullName: nginx
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nginx?: ManagedClusterIngressProfileNginx'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerservice.ManagedClusterIngressProfileNginx" />

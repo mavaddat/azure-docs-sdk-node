@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
-      listQueryResultsForManagementGroup(string,
+      listQueryResultsForManagementGroup(string, string,
       PolicyEventsListQueryResultsForManagementGroupOptionalParams)
     uid: '@azure/arm-policyinsights.PolicyEvents.listQueryResultsForManagementGroup'
     package: '@azure/arm-policyinsights'
@@ -18,10 +18,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForManagementGroup(managementGroupName: string,
-        options?: PolicyEventsListQueryResultsForManagementGroupOptionalParams):
+        function listQueryResultsForManagementGroup(policyEventsResource:
+        string, managementGroupName: string, options?:
+        PolicyEventsListQueryResultsForManagementGroupOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: managementGroupName
           type: string
           description: Management group name.
@@ -34,11 +41,12 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
-      listQueryResultsForPolicyDefinition(string, string,
+      listQueryResultsForPolicyDefinition(string, string, string,
       PolicyEventsListQueryResultsForPolicyDefinitionOptionalParams)
     uid: '@azure/arm-policyinsights.PolicyEvents.listQueryResultsForPolicyDefinition'
     package: '@azure/arm-policyinsights'
@@ -47,11 +55,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForPolicyDefinition(subscriptionId: string,
-        policyDefinitionName: string, options?:
+        function listQueryResultsForPolicyDefinition(policyEventsResource:
+        string, subscriptionId: string, policyDefinitionName: string, options?:
         PolicyEventsListQueryResultsForPolicyDefinitionOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -67,11 +81,12 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
-      listQueryResultsForPolicySetDefinition(string, string,
+      listQueryResultsForPolicySetDefinition(string, string, string,
       PolicyEventsListQueryResultsForPolicySetDefinitionOptionalParams)
     uid: >-
       @azure/arm-policyinsights.PolicyEvents.listQueryResultsForPolicySetDefinition
@@ -81,11 +96,18 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForPolicySetDefinition(subscriptionId: string,
-        policySetDefinitionName: string, options?:
+        function listQueryResultsForPolicySetDefinition(policyEventsResource:
+        string, subscriptionId: string, policySetDefinitionName: string,
+        options?:
         PolicyEventsListQueryResultsForPolicySetDefinitionOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -101,11 +123,12 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
-      listQueryResultsForResource(string,
+      listQueryResultsForResource(string, string,
       PolicyEventsListQueryResultsForResourceOptionalParams)
     uid: '@azure/arm-policyinsights.PolicyEvents.listQueryResultsForResource'
     package: '@azure/arm-policyinsights'
@@ -114,10 +137,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForResource(resourceId: string, options?:
+        function listQueryResultsForResource(policyEventsResource: string,
+        resourceId: string, options?:
         PolicyEventsListQueryResultsForResourceOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: resourceId
           type: string
           description: Resource ID.
@@ -130,11 +160,12 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
-      listQueryResultsForResourceGroup(string, string,
+      listQueryResultsForResourceGroup(string, string, string,
       PolicyEventsListQueryResultsForResourceGroupOptionalParams)
     uid: '@azure/arm-policyinsights.PolicyEvents.listQueryResultsForResourceGroup'
     package: '@azure/arm-policyinsights'
@@ -143,11 +174,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForResourceGroup(subscriptionId: string,
-        resourceGroupName: string, options?:
+        function listQueryResultsForResourceGroup(policyEventsResource: string,
+        subscriptionId: string, resourceGroupName: string, options?:
         PolicyEventsListQueryResultsForResourceGroupOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -163,12 +200,13 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listQueryResultsForResourceGroupLevelPolicyAssignment(string, string,
-      string,
+      string, string,
       PolicyEventsListQueryResultsForResourceGroupLevelPolicyAssignmentOptionalParams)
     uid: >-
       @azure/arm-policyinsights.PolicyEvents.listQueryResultsForResourceGroupLevelPolicyAssignment
@@ -179,12 +217,18 @@ methods:
     syntax:
       content: >-
         function
-        listQueryResultsForResourceGroupLevelPolicyAssignment(subscriptionId:
-        string, resourceGroupName: string, policyAssignmentName: string,
-        options?:
+        listQueryResultsForResourceGroupLevelPolicyAssignment(policyEventsResource:
+        string, subscriptionId: string, resourceGroupName: string,
+        policyAssignmentName: string, options?:
         PolicyEventsListQueryResultsForResourceGroupLevelPolicyAssignmentOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -203,11 +247,12 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
-      listQueryResultsForSubscription(string,
+      listQueryResultsForSubscription(string, string,
       PolicyEventsListQueryResultsForSubscriptionOptionalParams)
     uid: '@azure/arm-policyinsights.PolicyEvents.listQueryResultsForSubscription'
     package: '@azure/arm-policyinsights'
@@ -216,10 +261,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function listQueryResultsForSubscription(subscriptionId: string,
-        options?: PolicyEventsListQueryResultsForSubscriptionOptionalParams):
+        function listQueryResultsForSubscription(policyEventsResource: string,
+        subscriptionId: string, options?:
+        PolicyEventsListQueryResultsForSubscriptionOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -232,11 +284,13 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listQueryResultsForSubscriptionLevelPolicyAssignment(string, string,
+      string,
       PolicyEventsListQueryResultsForSubscriptionLevelPolicyAssignmentOptionalParams)
     uid: >-
       @azure/arm-policyinsights.PolicyEvents.listQueryResultsForSubscriptionLevelPolicyAssignment
@@ -247,11 +301,17 @@ methods:
     syntax:
       content: >-
         function
-        listQueryResultsForSubscriptionLevelPolicyAssignment(subscriptionId:
-        string, policyAssignmentName: string, options?:
+        listQueryResultsForSubscriptionLevelPolicyAssignment(policyEventsResource:
+        string, subscriptionId: string, policyAssignmentName: string, options?:
         PolicyEventsListQueryResultsForSubscriptionLevelPolicyAssignmentOptionalParams):
         PagedAsyncIterableIterator<PolicyEvent, PolicyEvent[], PageSettings>
       parameters:
+        - id: policyEventsResource
+          type: string
+          description: >-
+            The name of the virtual resource under PolicyEvents resource type;
+            only
+                                        "default" is allowed.
         - id: subscriptionId
           type: string
           description: Microsoft Azure subscription ID.
@@ -267,6 +327,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-policyinsights.PolicyEvent" />, <xref
-          uid="@azure/arm-policyinsights.PolicyEvent" />[], PageSettings&gt;
+          uid="@azure/arm-policyinsights.PolicyEvent" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

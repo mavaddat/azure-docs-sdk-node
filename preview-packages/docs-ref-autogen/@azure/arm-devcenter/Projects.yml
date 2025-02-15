@@ -20,7 +20,7 @@ methods:
       content: >-
         function beginCreateOrUpdate(resourceGroupName: string, projectName:
         string, body: Project, options?: ProjectsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Project>, Project>>
+        Promise<SimplePollerLike<OperationState<Project>, Project>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -39,7 +39,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Project" />&gt;, <xref
           uid="@azure/arm-devcenter.Project" />&gt;&gt;
   - name: >-
@@ -83,7 +84,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, projectName: string,
         options?: ProjectsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -96,7 +97,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, ProjectsDeleteOptionalParams)
     uid: '@azure/arm-devcenter.Projects.beginDeleteAndWait'
     package: '@azure/arm-devcenter'
@@ -130,7 +133,7 @@ methods:
       content: >-
         function beginUpdate(resourceGroupName: string, projectName: string,
         body: ProjectUpdate, options?: ProjectsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Project>, Project>>
+        Promise<SimplePollerLike<OperationState<Project>, Project>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -147,7 +150,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Project" />&gt;, <xref
           uid="@azure/arm-devcenter.Project" />&gt;&gt;
   - name: >-
@@ -226,8 +230,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-devcenter.Project"
-          />, <xref uid="@azure/arm-devcenter.Project" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.Project" />, <xref
+          uid="@azure/arm-devcenter.Project" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(ProjectsListBySubscriptionOptionalParams)
     uid: '@azure/arm-devcenter.Projects.listBySubscription'
     package: '@azure/arm-devcenter'
@@ -249,5 +255,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-devcenter.Project"
-          />, <xref uid="@azure/arm-devcenter.Project" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.Project" />, <xref
+          uid="@azure/arm-devcenter.Project" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

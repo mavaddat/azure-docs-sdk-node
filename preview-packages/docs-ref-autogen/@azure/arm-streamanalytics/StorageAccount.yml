@@ -36,3 +36,15 @@ properties:
       return:
         description: ''
         type: string
+  - name: authenticationMode
+    uid: '@azure/arm-streamanalytics.StorageAccount.authenticationMode'
+    package: '@azure/arm-streamanalytics'
+    summary: Authentication Mode.
+    fullName: authenticationMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: string'
+      return:
+        description: ''
+        type: string

@@ -1,16 +1,16 @@
 ### YamlMime:TSType
-name: WebAppsDeletePremierAddOnSlotdefaultResponse
-uid: '@azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotdefaultResponse'
+name: WebAppsDeletePremierAddOnSlotDefaultResponse
+uid: '@azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotDefaultResponse'
 package: '@azure-rest/arm-appservice'
 summary: Delete a premier add-on from an app.
-fullName: WebAppsDeletePremierAddOnSlotdefaultResponse
+fullName: WebAppsDeletePremierAddOnSlotDefaultResponse
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
   - name: body
     uid: >-
-      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotdefaultResponse.body
+      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotDefaultResponse.body
     package: '@azure-rest/arm-appservice'
     summary: ''
     fullName: body
@@ -23,21 +23,21 @@ properties:
         type: <xref uid="@azure-rest/arm-appservice.DefaultErrorResponseOutput" />
   - name: status
     uid: >-
-      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotdefaultResponse.status
+      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotDefaultResponse.status
     package: '@azure-rest/arm-appservice'
     summary: ''
     fullName: status
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'status: "500"'
+      content: 'status: string'
       return:
         description: ''
-        type: '"500"'
+        type: string
 inheritedProperties:
   - name: headers
     uid: >-
-      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotdefaultResponse.headers
+      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotDefaultResponse.headers
     package: '@azure-rest/arm-appservice'
     summary: The HTTP response headers.
     fullName: headers
@@ -47,11 +47,11 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: >-
-      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotdefaultResponse.request
+      @azure-rest/arm-appservice.WebAppsDeletePremierAddOnSlotDefaultResponse.request
     package: '@azure-rest/arm-appservice'
     summary: The request that generated this response.
     fullName: request
@@ -61,6 +61,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

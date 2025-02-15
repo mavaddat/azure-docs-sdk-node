@@ -25,6 +25,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-streamanalytics.OperationDisplay" />
+  - name: isDataAction
+    uid: '@azure/arm-streamanalytics.Operation.isDataAction'
+    package: '@azure/arm-streamanalytics'
+    summary: Indicates whether the operation is a data action
+    fullName: isDataAction
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isDataAction?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: name
     uid: '@azure/arm-streamanalytics.Operation.name'
     package: '@azure/arm-streamanalytics'

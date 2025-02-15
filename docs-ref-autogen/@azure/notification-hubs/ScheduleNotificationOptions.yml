@@ -2,9 +2,7 @@
 name: ScheduleNotificationOptions
 uid: '@azure/notification-hubs.ScheduleNotificationOptions'
 package: '@azure/notification-hubs'
-summary: >-
-  Options for sending notifications for both tag based send and broadcast
-  scheduled send.
+summary: Options for sending notifications for both tag based scheduled send.
 fullName: ScheduleNotificationOptions
 remarks: ''
 isDeprecated: false
@@ -16,13 +14,11 @@ properties:
     summary: >-
       A tag expression used to target devices. Use the `createTagExpression`
       function to create a tag expression from an array of tags.
-
-      If not set, this results in a broadcast notification to be scheduled.
     fullName: tagExpression
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'tagExpression?: string'
+      content: 'tagExpression: string'
       return:
         description: ''
         type: string
@@ -38,7 +34,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/notification-hubs.ScheduleNotificationOptions.onResponse'
@@ -54,7 +50,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure-rest/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/notification-hubs.ScheduleNotificationOptions.requestOptions'
@@ -67,21 +63,8 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure-rest/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
-  - name: serializerOptions
-    uid: '@azure/notification-hubs.ScheduleNotificationOptions.serializerOptions'
-    package: '@azure/notification-hubs'
-    summary: Options to override serialization/de-serialization behavior.
-    fullName: serializerOptions
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'serializerOptions?: SerializerOptions'
-      return:
-        description: ''
-        type: SerializerOptions
-    inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/notification-hubs.ScheduleNotificationOptions.tracingOptions'
     package: '@azure/notification-hubs'
@@ -93,6 +76,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure-rest/core-client.OperationOptions" />

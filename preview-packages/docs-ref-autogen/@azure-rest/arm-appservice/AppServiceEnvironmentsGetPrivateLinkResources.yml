@@ -18,17 +18,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServiceEnvironmentsGetPrivateLinkResources200Response |
-        AppServiceEnvironmentsGetPrivateLinkResourcesdefaultResponse>
+        StreamableMethod<AppServiceEnvironmentsGetPrivateLinkResources200Response
+        | AppServiceEnvironmentsGetPrivateLinkResourcesDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetPrivateLinkResources200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetPrivateLinkResourcesdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetPrivateLinkResourcesDefaultResponse"
           />&gt;

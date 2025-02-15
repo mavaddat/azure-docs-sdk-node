@@ -18,9 +18,21 @@ syntax: |
     | CallTransferFailed
     | ParticipantsUpdated
     | RecordingStateChanged
+    | PlayStarted
     | PlayCompleted
     | PlayFailed
     | PlayCanceled
     | RecognizeCompleted
     | RecognizeCanceled
     | RecognizeFailed
+    | ContinuousDtmfRecognitionToneReceived
+    | ContinuousDtmfRecognitionToneFailed
+    | ContinuousDtmfRecognitionStopped
+    | SendDtmfTonesCompleted
+    | SendDtmfTonesFailed
+    | CancelAddParticipantSucceeded
+    | CancelAddParticipantFailed
+    | ConnectFailed
+    | HoldFailed
+    | AnswerFailed
+    | CreateCallFailed

@@ -20,7 +20,7 @@ methods:
       content: >-
         function beginSampleInput(location: string, sampleInput: SampleInput,
         options?: SubscriptionsSampleInputOptionalParams):
-        Promise<PollerLike<PollOperationState<SampleInputResult>,
+        Promise<SimplePollerLike<OperationState<SampleInputResult>,
         SampleInputResult>>
       parameters:
         - id: location
@@ -43,7 +43,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-streamanalytics.SampleInputResult" />&gt;, <xref
           uid="@azure/arm-streamanalytics.SampleInputResult" />&gt;&gt;
   - name: >-
@@ -92,7 +93,7 @@ methods:
       content: >-
         function beginTestInput(location: string, testInput: TestInput,
         options?: SubscriptionsTestInputOptionalParams):
-        Promise<PollerLike<PollOperationState<TestDatasourceResult>,
+        Promise<SimplePollerLike<OperationState<TestDatasourceResult>,
         TestDatasourceResult>>
       parameters:
         - id: location
@@ -115,7 +116,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-streamanalytics.TestDatasourceResult" />&gt;, <xref
           uid="@azure/arm-streamanalytics.TestDatasourceResult" />&gt;&gt;
   - name: >-
@@ -164,7 +166,7 @@ methods:
       content: >-
         function beginTestOutput(location: string, testOutput: TestOutput,
         options?: SubscriptionsTestOutputOptionalParams):
-        Promise<PollerLike<PollOperationState<TestDatasourceResult>,
+        Promise<SimplePollerLike<OperationState<TestDatasourceResult>,
         TestDatasourceResult>>
       parameters:
         - id: location
@@ -187,7 +189,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-streamanalytics.TestDatasourceResult" />&gt;, <xref
           uid="@azure/arm-streamanalytics.TestDatasourceResult" />&gt;&gt;
   - name: >-
@@ -236,7 +239,7 @@ methods:
       content: >-
         function beginTestQuery(location: string, testQuery: TestQuery,
         options?: SubscriptionsTestQueryOptionalParams):
-        Promise<PollerLike<PollOperationState<QueryTestingResult>,
+        Promise<SimplePollerLike<OperationState<QueryTestingResult>,
         QueryTestingResult>>
       parameters:
         - id: location
@@ -260,7 +263,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-streamanalytics.QueryTestingResult" />&gt;, <xref
           uid="@azure/arm-streamanalytics.QueryTestingResult" />&gt;&gt;
   - name: >-

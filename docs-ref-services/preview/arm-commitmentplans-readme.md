@@ -1,11 +1,8 @@
 ---
 title: Azure ML Commitment Plans Management client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-commitmentplans, machinelearning
-author: qiaozha
-ms.author: qiaozha
 ms.date: 04/28/2022
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: machine-learning
 ---

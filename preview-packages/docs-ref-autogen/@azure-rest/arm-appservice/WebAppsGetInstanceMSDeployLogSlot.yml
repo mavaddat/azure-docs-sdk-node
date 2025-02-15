@@ -17,20 +17,20 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetInstanceMSDeployLogSlot200Response |
+        StreamableMethod<WebAppsGetInstanceMSDeployLogSlot200Response |
         WebAppsGetInstanceMSDeployLogSlot404Response |
-        WebAppsGetInstanceMSDeployLogSlotdefaultResponse>
+        WebAppsGetInstanceMSDeployLogSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetInstanceMSDeployLogSlot200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsGetInstanceMSDeployLogSlot404Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetInstanceMSDeployLogSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetInstanceMSDeployLogSlotDefaultResponse"
           />&gt;

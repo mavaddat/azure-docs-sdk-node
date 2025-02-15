@@ -26,7 +26,7 @@ methods:
         searchServiceName: string, sharedPrivateLinkResourceName: string,
         sharedPrivateLinkResource: SharedPrivateLinkResource, options?:
         SharedPrivateLinkResourcesCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<SharedPrivateLinkResource>,
+        Promise<SimplePollerLike<OperationState<SharedPrivateLinkResource>,
         SharedPrivateLinkResource>>
       parameters:
         - id: resourceGroupName
@@ -37,14 +37,15 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: sharedPrivateLinkResourceName
           type: string
           description: |-
             The name of the shared private link resource managed by the
-                                                 Azure Cognitive Search service within the specified resource group.
+                                                 Azure AI Search service within the specified resource group.
         - id: sharedPrivateLinkResource
           type: <xref uid="@azure/arm-search.SharedPrivateLinkResource" />
           description: |-
@@ -59,7 +60,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-search.SharedPrivateLinkResource" />&gt;, <xref
           uid="@azure/arm-search.SharedPrivateLinkResource" />&gt;&gt;
   - name: >-
@@ -91,14 +93,15 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: sharedPrivateLinkResourceName
           type: string
           description: |-
             The name of the shared private link resource managed by the
-                                                 Azure Cognitive Search service within the specified resource group.
+                                                 Azure AI Search service within the specified resource group.
         - id: sharedPrivateLinkResource
           type: <xref uid="@azure/arm-search.SharedPrivateLinkResource" />
           description: |-
@@ -130,7 +133,7 @@ methods:
         function beginDelete(resourceGroupName: string, searchServiceName:
         string, sharedPrivateLinkResourceName: string, options?:
         SharedPrivateLinkResourcesDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -140,14 +143,15 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: sharedPrivateLinkResourceName
           type: string
           description: |-
             The name of the shared private link resource managed by the
-                                                 Azure Cognitive Search service within the specified resource group.
+                                                 Azure AI Search service within the specified resource group.
         - id: options
           type: >-
             <xref
@@ -156,7 +160,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       SharedPrivateLinkResourcesDeleteOptionalParams)
@@ -181,14 +187,15 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: sharedPrivateLinkResourceName
           type: string
           description: |-
             The name of the shared private link resource managed by the
-                                                 Azure Cognitive Search service within the specified resource group.
+                                                 Azure AI Search service within the specified resource group.
         - id: options
           type: >-
             <xref
@@ -223,14 +230,15 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: sharedPrivateLinkResourceName
           type: string
           description: |-
             The name of the shared private link resource managed by the
-                                                 Azure Cognitive Search service within the specified resource group.
+                                                 Azure AI Search service within the specified resource group.
         - id: options
           type: >-
             <xref
@@ -268,9 +276,10 @@ methods:
                                      obtain this value from the Azure Resource Manager API or the portal.
         - id: searchServiceName
           type: string
-          description: |-
-            The name of the Azure Cognitive Search service associated with the
-                                     specified resource group.
+          description: >-
+            The name of the Azure AI Search service associated with the
+            specified
+                                     resource group.
         - id: options
           type: >-
             <xref
@@ -280,7 +289,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-search.SharedPrivateLinkResource" />, <xref
-          uid="@azure/arm-search.SharedPrivateLinkResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-search.SharedPrivateLinkResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

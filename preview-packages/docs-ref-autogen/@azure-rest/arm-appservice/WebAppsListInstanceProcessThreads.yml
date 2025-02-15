@@ -19,20 +19,20 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListInstanceProcessThreads200Response |
+        StreamableMethod<WebAppsListInstanceProcessThreads200Response |
         WebAppsListInstanceProcessThreads404Response |
-        WebAppsListInstanceProcessThreadsdefaultResponse>
+        WebAppsListInstanceProcessThreadsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListInstanceProcessThreads200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsListInstanceProcessThreads404Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListInstanceProcessThreadsdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListInstanceProcessThreadsDefaultResponse"
           />&gt;

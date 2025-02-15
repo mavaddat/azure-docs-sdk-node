@@ -64,10 +64,7 @@ inheritedMethods:
   - name: at(number)
     uid: '@azure/ai-text-analytics.DetectLanguageResultArray.at'
     package: '@azure/ai-text-analytics'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1178,7 +1175,7 @@ inheritedMethods:
         type: >-
           IterableIterator&lt;<xref
           uid="@azure/ai-text-analytics.DetectLanguageResult" />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@75
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@80
   - name: '[unscopables]()'
     uid: '@azure/ai-text-analytics.DetectLanguageResultArray.[unscopables]'
     package: '@azure/ai-text-analytics'
@@ -1197,5 +1194,5 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@77
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@82
 extends: Array&lt;<xref uid="@azure/ai-text-analytics.DetectLanguageResult" />&gt;

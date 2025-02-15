@@ -9,6 +9,7 @@ isDeprecated: false
 syntax: |
   type ReferenceInputDataSourceUnion =
     | ReferenceInputDataSource
+    | FileReferenceInputDataSource
     | BlobReferenceInputDataSource
     | RawReferenceInputDataSource
     | AzureSqlReferenceInputDataSource

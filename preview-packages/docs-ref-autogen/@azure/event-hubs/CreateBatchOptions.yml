@@ -9,7 +9,7 @@ summary: |-
   - `abortSignal`   : A signal the request to cancel the send operation.
 
   Example usage:
-  ```js
+  ```ts snippet:ignore
   {
       partitionKey: 'foo',
       maxSizeInBytes: 1024 * 1024 // 1 MB
@@ -78,7 +78,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [OperationOptions.abortSignal](xref:@azure/event-hubs.OperationOptions.abortSignal)
@@ -93,7 +93,7 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [OperationOptions.tracingOptions](xref:@azure/event-hubs.OperationOptions.tracingOptions)

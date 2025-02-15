@@ -1,9 +1,7 @@
 ---
 title: Azure Defendereasm SDK for JavaScript
 description: Reference for Azure Defendereasm SDK for JavaScript
-author: xirzec
-ms.author: jeffish
-ms.data: 09/14/2023
+ms.date: 10/03/2023
 ms.topic: reference
 ms.devlang: javascript
 ms.service: defendereasm

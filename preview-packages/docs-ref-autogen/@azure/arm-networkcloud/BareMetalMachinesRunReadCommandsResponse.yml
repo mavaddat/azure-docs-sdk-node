@@ -7,5 +7,4 @@ fullName: BareMetalMachinesRunReadCommandsResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type BareMetalMachinesRunReadCommandsResponse =
-    BareMetalMachinesRunReadCommandsHeaders
+  type BareMetalMachinesRunReadCommandsResponse = OperationStatusResult

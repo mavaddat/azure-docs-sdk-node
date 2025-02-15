@@ -40,6 +40,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: authConfig
+    uid: '@azure/arm-cosmosdbforpostgresql.Cluster.authConfig'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: Authentication configuration of a cluster.
+    fullName: authConfig
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authConfig?: AuthConfig'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-cosmosdbforpostgresql.AuthConfig" />
   - name: citusVersion
     uid: '@azure/arm-cosmosdbforpostgresql.Cluster.citusVersion'
     package: '@azure/arm-cosmosdbforpostgresql'
@@ -108,6 +120,20 @@ properties:
       return:
         description: ''
         type: number
+  - name: databaseName
+    uid: '@azure/arm-cosmosdbforpostgresql.Cluster.databaseName'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: >-
+      The database name of the cluster. Only one database per cluster is
+      supported.
+    fullName: databaseName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'databaseName?: string'
+      return:
+        description: ''
+        type: string
   - name: earliestRestoreTime
     uid: '@azure/arm-cosmosdbforpostgresql.Cluster.earliestRestoreTime'
     package: '@azure/arm-cosmosdbforpostgresql'
@@ -124,6 +150,21 @@ properties:
       return:
         description: ''
         type: Date
+  - name: enableGeoBackup
+    uid: '@azure/arm-cosmosdbforpostgresql.Cluster.enableGeoBackup'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: >-
+      If cluster backup is stored in another Azure region in addition to the
+      copy of the backup stored in the cluster's region. Enabled only at the
+      time of cluster creation.
+    fullName: enableGeoBackup
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'enableGeoBackup?: boolean'
+      return:
+        description: ''
+        type: boolean
   - name: enableHa
     uid: '@azure/arm-cosmosdbforpostgresql.Cluster.enableHa'
     package: '@azure/arm-cosmosdbforpostgresql'
@@ -139,7 +180,10 @@ properties:
   - name: enableShardsOnCoordinator
     uid: '@azure/arm-cosmosdbforpostgresql.Cluster.enableShardsOnCoordinator'
     package: '@azure/arm-cosmosdbforpostgresql'
-    summary: If shards on coordinator is enabled or not for the cluster.
+    summary: >-
+      If distributed tables are placed on coordinator or not. Should be set to
+      'true' on single node clusters. Requires shard rebalancing after value is
+      changed.
     fullName: enableShardsOnCoordinator
     remarks: ''
     isDeprecated: false

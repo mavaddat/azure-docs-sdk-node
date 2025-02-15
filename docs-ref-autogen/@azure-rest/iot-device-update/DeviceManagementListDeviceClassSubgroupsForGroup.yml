@@ -23,7 +23,7 @@ methods:
         function get(options?:
         DeviceManagementListDeviceClassSubgroupsForGroupParameters):
         StreamableMethod<DeviceManagementListDeviceClassSubgroupsForGroup200Response
-        | DeviceManagementListDeviceClassSubgroupsForGroupdefaultResponse>
+        | DeviceManagementListDeviceClassSubgroupsForGroupDefaultResponse>
       parameters:
         - id: options
           type: >-
@@ -34,8 +34,8 @@ methods:
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/iot-device-update.DeviceManagementListDeviceClassSubgroupsForGroup200Response"
           /> | <xref
-          uid="@azure-rest/iot-device-update.DeviceManagementListDeviceClassSubgroupsForGroupdefaultResponse"
+          uid="@azure-rest/iot-device-update.DeviceManagementListDeviceClassSubgroupsForGroupDefaultResponse"
           />&gt;

@@ -9,6 +9,175 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginApproveRollingUpgrade(string, string, string,
+      VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams)
+    uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginApproveRollingUpgrade'
+    package: '@azure/arm-compute'
+    summary: >-
+      Approve upgrade on deferred rolling upgrade for OS disk on a VM scale set
+      instance.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginApproveRollingUpgrade(resourceGroupName: string,
+        vmScaleSetName: string, instanceId: string, options?:
+        VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams):
+        Promise<SimplePollerLike<OperationState<VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders>,
+        VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: instanceId
+          type: string
+          description: The instance ID of the virtual machine.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders"
+          />&gt;, <xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders"
+          />&gt;&gt;
+  - name: >-
+      beginApproveRollingUpgradeAndWait(string, string, string,
+      VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams)
+    uid: >-
+      @azure/arm-compute.VirtualMachineScaleSetVMs.beginApproveRollingUpgradeAndWait
+    package: '@azure/arm-compute'
+    summary: >-
+      Approve upgrade on deferred rolling upgrade for OS disk on a VM scale set
+      instance.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginApproveRollingUpgradeAndWait(resourceGroupName: string,
+        vmScaleSetName: string, instanceId: string, options?:
+        VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams):
+        Promise<VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: instanceId
+          type: string
+          description: The instance ID of the virtual machine.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetVMsApproveRollingUpgradeOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetVMsApproveRollingUpgradeHeaders"
+          />&gt;
+  - name: >-
+      beginAttachDetachDataDisks(string, string, string,
+      AttachDetachDataDisksRequest,
+      VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams)
+    uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginAttachDetachDataDisks'
+    package: '@azure/arm-compute'
+    summary: Attach and detach data disks to/from a virtual machine in a VM scale set.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginAttachDetachDataDisks(resourceGroupName: string,
+        vmScaleSetName: string, instanceId: string, parameters:
+        AttachDetachDataDisksRequest, options?:
+        VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams):
+        Promise<SimplePollerLike<OperationState<StorageProfile>,
+        StorageProfile>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: instanceId
+          type: string
+          description: The instance ID of the virtual machine.
+        - id: parameters
+          type: <xref uid="@azure/arm-compute.AttachDetachDataDisksRequest" />
+          description: >-
+            Parameters supplied to the attach and detach data disks operation on
+            a Virtual
+                              Machine Scale Sets VM.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-compute.StorageProfile" />&gt;, <xref
+          uid="@azure/arm-compute.StorageProfile" />&gt;&gt;
+  - name: >-
+      beginAttachDetachDataDisksAndWait(string, string, string,
+      AttachDetachDataDisksRequest,
+      VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams)
+    uid: >-
+      @azure/arm-compute.VirtualMachineScaleSetVMs.beginAttachDetachDataDisksAndWait
+    package: '@azure/arm-compute'
+    summary: Attach and detach data disks to/from a virtual machine in a VM scale set.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginAttachDetachDataDisksAndWait(resourceGroupName: string,
+        vmScaleSetName: string, instanceId: string, parameters:
+        AttachDetachDataDisksRequest, options?:
+        VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams):
+        Promise<StorageProfile>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: instanceId
+          type: string
+          description: The instance ID of the virtual machine.
+        - id: parameters
+          type: <xref uid="@azure/arm-compute.AttachDetachDataDisksRequest" />
+          description: >-
+            Parameters supplied to the attach and detach data disks operation on
+            a Virtual
+                              Machine Scale Sets VM.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetVMsAttachDetachDataDisksOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-compute.StorageProfile" />&gt;
+  - name: >-
       beginDeallocate(string, string, string,
       VirtualMachineScaleSetVMsDeallocateOptionalParams)
     uid: '@azure/arm-compute.VirtualMachineScaleSetVMs.beginDeallocate'
@@ -48,8 +217,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeallocateAndWait(string, string, string,
       VirtualMachineScaleSetVMsDeallocateOptionalParams)
@@ -122,8 +291,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       VirtualMachineScaleSetVMsDeleteOptionalParams)
@@ -189,8 +358,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPerformMaintenanceAndWait(string, string, string,
       VirtualMachineScaleSetVMsPerformMaintenanceOptionalParams)
@@ -237,7 +406,10 @@ methods:
       are getting charged for the resources. Instead, use deallocate to release
       resources and avoid
 
-      charges.
+      charges. Additionally, this operation is not allowed on a virtual machine
+      that is being deallocated
+
+      or already has been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -265,8 +437,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPowerOffAndWait(string, string, string,
       VirtualMachineScaleSetVMsPowerOffOptionalParams)
@@ -279,7 +451,10 @@ methods:
       are getting charged for the resources. Instead, use deallocate to release
       resources and avoid
 
-      charges.
+      charges. Additionally, this operation is not allowed on a virtual machine
+      that is being deallocated
+
+      or already has been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -343,8 +518,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRedeployAndWait(string, string, string,
       VirtualMachineScaleSetVMsRedeployOptionalParams)
@@ -416,8 +591,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginReimageAll(string, string, string,
       VirtualMachineScaleSetVMsReimageAllOptionalParams)
@@ -455,8 +630,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginReimageAllAndWait(string, string, string,
       VirtualMachineScaleSetVMsReimageAllOptionalParams)
@@ -560,8 +735,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestartAndWait(string, string, string,
       VirtualMachineScaleSetVMsRestartOptionalParams)
@@ -631,7 +806,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.RunCommandResult" />&gt;, <xref
           uid="@azure/arm-compute.RunCommandResult" />&gt;&gt;
   - name: >-
@@ -703,8 +879,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStartAndWait(string, string, string,
       VirtualMachineScaleSetVMsStartOptionalParams)
@@ -778,7 +954,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSetVM" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachineScaleSetVM" />&gt;&gt;
   - name: >-
@@ -919,10 +1096,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSetVM" />, <xref
-          uid="@azure/arm-compute.VirtualMachineScaleSetVM" />[],
-          PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineScaleSetVM" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       retrieveBootDiagnosticsData(string, string, string,
       VirtualMachineScaleSetVMsRetrieveBootDiagnosticsDataOptionalParams)

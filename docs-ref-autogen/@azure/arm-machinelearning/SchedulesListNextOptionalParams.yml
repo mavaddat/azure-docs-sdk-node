@@ -7,31 +7,6 @@ fullName: SchedulesListNextOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
-  - name: listViewType
-    uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.listViewType'
-    package: '@azure/arm-machinelearning'
-    summary: Status filter for schedule.
-    fullName: listViewType
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'listViewType?: string'
-      return:
-        description: ''
-        type: string
-  - name: skip
-    uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.skip'
-    package: '@azure/arm-machinelearning'
-    summary: Continuation token for pagination.
-    fullName: skip
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'skip?: string'
-      return:
-        description: ''
-        type: string
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.abortSignal'
@@ -44,7 +19,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.onResponse'
@@ -60,7 +35,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.requestOptions'
@@ -73,7 +48,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -87,7 +62,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-machinelearning.SchedulesListNextOptionalParams.tracingOptions'
@@ -100,6 +75,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

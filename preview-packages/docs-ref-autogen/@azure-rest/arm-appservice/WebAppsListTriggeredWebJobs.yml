@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListTriggeredWebJobs200Response |
-        WebAppsListTriggeredWebJobsdefaultResponse>
+        StreamableMethod<WebAppsListTriggeredWebJobs200Response |
+        WebAppsListTriggeredWebJobsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListTriggeredWebJobs200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListTriggeredWebJobsdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListTriggeredWebJobsDefaultResponse"
           />&gt;

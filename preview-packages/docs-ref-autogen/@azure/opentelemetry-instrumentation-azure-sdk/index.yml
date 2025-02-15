@@ -3,6 +3,8 @@ uid: '@azure/opentelemetry-instrumentation-azure-sdk'
 name: '@azure/opentelemetry-instrumentation-azure-sdk'
 summary: ''
 type: package
+classes:
+  - '@azure/opentelemetry-instrumentation-azure-sdk.AzureSdkInstrumentation'
 interfaces:
   - >-
     @azure/opentelemetry-instrumentation-azure-sdk.AzureSdkInstrumentationOptions
@@ -24,14 +26,17 @@ functions:
 
       Example usage:
 
-      ```ts
+      ```ts snippet:instrumentation_usage
 
-      const openTelemetryInstrumentation =
-      require("@opentelemetry/instrumentation");
+      import { registerInstrumentations } from "@opentelemetry/instrumentation";
 
-      openTelemetryInstrumentation.registerInstrumentations({
+      import { createAzureSdkInstrumentation } from
+      "@azure/opentelemetry-instrumentation-azure-sdk";
+
+
+      registerInstrumentations({
         instrumentations: [createAzureSdkInstrumentation()],
-      })
+      });
 
       ```
     remarks: >-

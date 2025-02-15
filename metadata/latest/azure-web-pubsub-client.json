@@ -1,0 +1,21 @@
+{
+  "Name": "@azure/web-pubsub-client",
+  "Version": "1.0.2",
+  "DevVersion": null,
+  "DirectoryPath": "sdk/web-pubsub/web-pubsub-client",
+  "ServiceDirectory": "web-pubsub",
+  "ReadMePath": "sdk/web-pubsub/web-pubsub-client/README.md",
+  "ChangeLogPath": "sdk/web-pubsub/web-pubsub-client/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-web-pubsub-client",
+  "ReleaseStatus": "2024-05-01",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
+  "ArtifactDetails": {
+    "name": "azure-web-pubsub-client",
+    "safeName": "webpubsubclient"
+  },
+  "CIMatrixConfigs": []
+}

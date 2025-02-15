@@ -115,9 +115,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-desktopvirtualization.HostPool" />, <xref
-          uid="@azure/arm-desktopvirtualization.HostPool" />[], PageSettings&gt;
+          uid="@azure/arm-desktopvirtualization.HostPool" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByResourceGroup(string, HostPoolsListByResourceGroupOptionalParams)
     uid: '@azure/arm-desktopvirtualization.HostPools.listByResourceGroup'
     package: '@azure/arm-desktopvirtualization'
@@ -142,9 +143,41 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-desktopvirtualization.HostPool" />, <xref
-          uid="@azure/arm-desktopvirtualization.HostPool" />[], PageSettings&gt;
+          uid="@azure/arm-desktopvirtualization.HostPool" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listRegistrationTokens(string, string,
+      HostPoolsListRegistrationTokensOptionalParams)
+    uid: '@azure/arm-desktopvirtualization.HostPools.listRegistrationTokens'
+    package: '@azure/arm-desktopvirtualization'
+    summary: Operation to list the RegistrationTokens associated with the HostPool
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listRegistrationTokens(resourceGroupName: string, hostPoolName:
+        string, options?: HostPoolsListRegistrationTokensOptionalParams):
+        Promise<RegistrationTokenList>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: hostPoolName
+          type: string
+          description: The name of the host pool within the specified resource group
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-desktopvirtualization.HostPoolsListRegistrationTokensOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-desktopvirtualization.RegistrationTokenList" />&gt;
   - name: >-
       retrieveRegistrationToken(string, string,
       HostPoolsRetrieveRegistrationTokenOptionalParams)

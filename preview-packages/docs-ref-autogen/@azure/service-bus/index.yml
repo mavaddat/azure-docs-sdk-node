@@ -19,6 +19,7 @@ interfaces:
   - '@azure/service-bus.CreateSubscriptionOptions'
   - '@azure/service-bus.CreateTopicOptions'
   - '@azure/service-bus.DeadLetterOptions'
+  - '@azure/service-bus.DeleteMessagesOptions'
   - '@azure/service-bus.Delivery'
   - '@azure/service-bus.GetMessageIteratorOptions'
   - '@azure/service-bus.HttpHeader'
@@ -29,6 +30,7 @@ interfaces:
   - '@azure/service-bus.OperationOptions'
   - '@azure/service-bus.PeekMessagesOptions'
   - '@azure/service-bus.ProcessErrorArgs'
+  - '@azure/service-bus.PurgeMessagesOptions'
   - '@azure/service-bus.QueueProperties'
   - '@azure/service-bus.QueueRuntimeProperties'
   - '@azure/service-bus.ReceiveMessagesOptions'
@@ -84,7 +86,7 @@ functions:
           type: number
           description: The number of milliseconds to be delayed.
         - id: abortSignal
-          type: AbortSignalLike
+          type: <xref uid="@azure/abort-controller.AbortSignalLike" />
           description: The abortSignal associated with containing operation.
         - id: abortErrorMsg
           type: string

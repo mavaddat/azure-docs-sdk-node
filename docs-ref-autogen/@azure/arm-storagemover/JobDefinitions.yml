@@ -43,8 +43,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       JobDefinitionsDeleteOptionalParams)
@@ -183,17 +183,20 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-storagemover.JobDefinition" />, <xref
-          uid="@azure/arm-storagemover.JobDefinition" />[], PageSettings&gt;
+          uid="@azure/arm-storagemover.JobDefinition" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       startJob(string, string, string, string,
       JobDefinitionsStartJobOptionalParams)
     uid: '@azure/arm-storagemover.JobDefinitions.startJob'
     package: '@azure/arm-storagemover'
     summary: >-
-      Requests an Agent to start a new instance of this Job Definition,
-      generating a new Job Run resource.
+      Creates a new Job Run resource for the specified Job Definition and passes
+      it to the Agent for
+
+      execution.
     remarks: ''
     isDeprecated: false
     syntax:

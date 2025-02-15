@@ -20,7 +20,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'type: "Parquet" | "CustomClr" | "Csv" | "Json" | "Avro"'
+      content: 'type: "Avro" | "Csv" | "CustomClr" | "Delta" | "Json" | "Parquet"'
       return:
         description: ''
-        type: '"Parquet" | "CustomClr" | "Csv" | "Json" | "Avro"'
+        type: '"Avro" | "Csv" | "CustomClr" | "Delta" | "Json" | "Parquet"'

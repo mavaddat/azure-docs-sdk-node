@@ -7,4 +7,4 @@ fullName: VirtualMachinesReimageResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type VirtualMachinesReimageResponse = VirtualMachinesReimageHeaders
+  type VirtualMachinesReimageResponse = OperationStatusResult

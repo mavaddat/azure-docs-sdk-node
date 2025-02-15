@@ -40,6 +40,14 @@
         href: ~/docs-ref-services/{moniker}/arm-agrifood-readme.md
         children:
         - '@azure/arm-agrifood'
+  - name: AI
+    href: ~/docs-ref-services/{moniker}/ai.md
+    landingPageType: Service
+    items:
+    - name: AI Model Inference
+      href: ~/docs-ref-services/{moniker}/ai-inference-rest-readme.md
+      children:
+      - '@azure-rest/ai-inference'
   - name: Analysis Services
     href: ~/docs-ref-services/{moniker}/analysis-services.md
     landingPageType: Service
@@ -50,6 +58,16 @@
         href: ~/docs-ref-services/{moniker}/arm-analysisservices-readme.md
         children:
         - '@azure/arm-analysisservices'
+  - name: API Center
+    href: ~/docs-ref-services/{moniker}/api-center.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - API Center
+        href: ~/docs-ref-services/{moniker}/arm-apicenter-readme.md
+        children:
+        - '@azure/arm-apicenter'
   - name: API Management
     href: ~/docs-ref-services/{moniker}/api-management.md
     landingPageType: Service
@@ -64,20 +82,10 @@
       - '@azure/api-management-custom-widgets-tools'
     - name: Management
       items:
-      - name: Resource Management - Api Management
+      - name: Resource Management - API Management
         href: ~/docs-ref-services/{moniker}/arm-apimanagement-readme.md
         children:
         - '@azure/arm-apimanagement'
-  - name: Apicenter
-    href: ~/docs-ref-services/{moniker}/apicenter.md
-    landingPageType: Service
-    items:
-    - name: Management
-      items:
-      - name: Resource Management - Apicenter
-        href: ~/docs-ref-services/{moniker}/arm-apicenter-readme.md
-        children:
-        - '@azure/arm-apicenter'
   - name: App Compliance Automation
     href: ~/docs-ref-services/{moniker}/app-compliance-automation.md
     landingPageType: Service
@@ -148,6 +156,16 @@
         href: ~/docs-ref-services/{moniker}/arm-appinsights-readme.md
         children:
         - azure-arm-appinsights
+  - name: Astro
+    href: ~/docs-ref-services/{moniker}/astro.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Astro
+        href: ~/docs-ref-services/{moniker}/arm-astro-readme.md
+        children:
+        - '@azure/arm-astro'
   - name: Attestation
     href: ~/docs-ref-services/{moniker}/attestation.md
     landingPageType: Service
@@ -249,6 +267,10 @@
     landingPageType: Service
     items:
     - name: Batch
+      href: ~/docs-ref-services/{moniker}/batch-rest-readme.md
+      children:
+      - '@azure-rest/batch'
+    - name: Batch
       href: ~/docs-ref-services/{moniker}/batch-readme.md
       children:
       - '@azure/batch'
@@ -322,42 +344,14 @@
     href: ~/docs-ref-services/{moniker}/cognitive-services.md
     landingPageType: Service
     items:
-    - name: Document Translation
-      href: ~/docs-ref-services/{moniker}/ai-document-translator-rest-readme.md
-      children:
-      - '@azure-rest/ai-document-translator'
-    - name: Personalizer
-      href: ~/docs-ref-services/{moniker}/ai-personalizer-rest-readme.md
-      children:
-      - '@azure-rest/ai-personalizer'
-    - name: Text Translation
-      href: ~/docs-ref-services/{moniker}/ai-translation-text-rest-readme.md
-      children:
-      - '@azure-rest/ai-translation-text'
-    - name: Anomaly Detector (deprecated)
-      href: ~/docs-ref-services/{moniker}/ai-anomaly-detector-readme.md
-      children:
-      - '@azure/ai-anomaly-detector'
-    - name: Form Recognizer
-      href: ~/docs-ref-services/{moniker}/ai-form-recognizer-readme.md
-      children:
-      - '@azure/ai-form-recognizer'
-    - name: Conversational Language Understanding
-      href: ~/docs-ref-services/{moniker}/ai-language-conversations-readme.md
-      children:
-      - '@azure/ai-language-conversations'
-    - name: Language Text
-      href: ~/docs-ref-services/{moniker}/ai-language-text-readme.md
-      children:
-      - '@azure/ai-language-text'
-    - name: Text Analytics
-      href: ~/docs-ref-services/{moniker}/ai-text-analytics-readme.md
-      children:
-      - '@azure/ai-text-analytics'
     - name: Anomaly Detector (deprecated)
       href: ~/docs-ref-services/{moniker}/cognitiveservices-anomalydetector-readme.md
       children:
       - '@azure/cognitiveservices-anomalydetector'
+    - name: Anomaly Detector (deprecated)
+      href: ~/docs-ref-services/{moniker}/ai-anomaly-detector-readme.md
+      children:
+      - '@azure/ai-anomaly-detector'
     - name: Computer Vision
       href: ~/docs-ref-services/{moniker}/cognitiveservices-computervision-readme.md
       children:
@@ -366,6 +360,14 @@
       href: ~/docs-ref-services/{moniker}/cognitiveservices-contentmoderator-readme.md
       children:
       - '@azure/cognitiveservices-contentmoderator'
+    - name: Content Safety
+      href: ~/docs-ref-services/{moniker}/ai-content-safety-rest-readme.md
+      children:
+      - '@azure-rest/ai-content-safety'
+    - name: Conversational Language Understanding
+      href: ~/docs-ref-services/{moniker}/ai-language-conversations-readme.md
+      children:
+      - '@azure/ai-language-conversations'
     - name: Custom Vision Prediction
       href: ~/docs-ref-services/{moniker}/cognitiveservices-customvision-prediction-readme.md
       children:
@@ -374,14 +376,42 @@
       href: ~/docs-ref-services/{moniker}/cognitiveservices-customvision-training-readme.md
       children:
       - '@azure/cognitiveservices-customvision-training'
+    - name: Document Intelligence
+      href: ~/docs-ref-services/{moniker}/ai-document-intelligence-rest-readme.md
+      children:
+      - '@azure-rest/ai-document-intelligence'
+    - name: Document Translation
+      href: ~/docs-ref-services/{moniker}/ai-document-translator-rest-readme.md
+      children:
+      - '@azure-rest/ai-document-translator'
+    - name: Document Translation
+      href: ~/docs-ref-services/{moniker}/ai-translation-document-rest-readme.md
+      children:
+      - '@azure-rest/ai-translation-document'
+    - name: Face
+      href: ~/docs-ref-services/{moniker}/ai-vision-face-rest-readme.md
+      children:
+      - '@azure-rest/ai-vision-face'
     - name: Face
       href: ~/docs-ref-services/{moniker}/cognitiveservices-face-readme.md
       children:
       - '@azure/cognitiveservices-face'
+    - name: Form Recognizer
+      href: ~/docs-ref-services/{moniker}/ai-form-recognizer-readme.md
+      children:
+      - '@azure/ai-form-recognizer'
     - name: Form Recognizer (deprecated)
       href: ~/docs-ref-services/{moniker}/cognitiveservices-formrecognizer-readme.md
       children:
       - '@azure/cognitiveservices-formrecognizer'
+    - name: Image Analysis
+      href: ~/docs-ref-services/{moniker}/ai-vision-image-analysis-rest-readme.md
+      children:
+      - '@azure-rest/ai-vision-image-analysis'
+    - name: Language Text
+      href: ~/docs-ref-services/{moniker}/ai-language-text-readme.md
+      children:
+      - '@azure/ai-language-text'
     - name: LUIS Authoring
       href: ~/docs-ref-services/{moniker}/cognitiveservices-luis-authoring-readme.md
       children:
@@ -390,6 +420,16 @@
       href: ~/docs-ref-services/{moniker}/cognitiveservices-luis-runtime-readme.md
       children:
       - '@azure/cognitiveservices-luis-runtime'
+    - name: OpenAI
+      href: ~/docs-ref-services/{moniker}/openai-readme.md
+    - name: OpenAI Assistants
+      href: ~/docs-ref-services/{moniker}/openai-assistants-readme.md
+      children:
+      - '@azure/openai-assistants'
+    - name: Personalizer
+      href: ~/docs-ref-services/{moniker}/ai-personalizer-rest-readme.md
+      children:
+      - '@azure-rest/ai-personalizer'
     - name: Personalizer
       href: ~/docs-ref-services/{moniker}/cognitiveservices-personalizer-readme.md
       children:
@@ -402,22 +442,26 @@
       href: ~/docs-ref-services/{moniker}/cognitiveservices-qnamaker-runtime-readme.md
       children:
       - '@azure/cognitiveservices-qnamaker-runtime'
-    - name: Spell Check
-      href: ~/docs-ref-services/{moniker}/cognitiveservices-spellcheck-readme.md
-      children:
-      - '@azure/cognitiveservices-spellcheck'
-    - name: Text Analytics (deprecated)
-      href: ~/docs-ref-services/{moniker}/cognitiveservices-textanalytics-readme.md
-      children:
-      - '@azure/cognitiveservices-textanalytics'
-    - name: OpenAI
-      href: ~/docs-ref-services/{moniker}/openai-readme.md
-      children:
-      - '@azure/openai'
     - name: Speech
       href: ~/docs-ref-services/{moniker}/microsoft-cognitiveservices-speech-sdk-readme.md
       children:
       - microsoft-cognitiveservices-speech-sdk
+    - name: Spell Check
+      href: ~/docs-ref-services/{moniker}/cognitiveservices-spellcheck-readme.md
+      children:
+      - '@azure/cognitiveservices-spellcheck'
+    - name: Text Analytics
+      href: ~/docs-ref-services/{moniker}/ai-text-analytics-readme.md
+      children:
+      - '@azure/ai-text-analytics'
+    - name: Text Analytics (deprecated)
+      href: ~/docs-ref-services/{moniker}/cognitiveservices-textanalytics-readme.md
+      children:
+      - '@azure/cognitiveservices-textanalytics'
+    - name: Text Translation
+      href: ~/docs-ref-services/{moniker}/ai-translation-text-rest-readme.md
+      children:
+      - '@azure-rest/ai-translation-text'
     - name: Management
       items:
       - name: Anomaly Detector - RLC
@@ -456,10 +500,26 @@
     href: ~/docs-ref-services/{moniker}/communication.md
     landingPageType: Service
     items:
+    - name: Communication Job Router
+      href: ~/docs-ref-services/{moniker}/communication-job-router-rest-readme.md
+      children:
+      - '@azure-rest/communication-job-router'
+    - name: Communication Messages
+      href: ~/docs-ref-services/{moniker}/communication-messages-rest-readme.md
+      children:
+      - '@azure-rest/communication-messages'
+    - name: '@azure/communication-administration'
+      href: ~/docs-ref-services/{moniker}/communication-administration-readme.md
+      children:
+      - '@azure/communication-administration'
     - name: Communication Call Automation
       href: ~/docs-ref-services/{moniker}/communication-call-automation-readme.md
       children:
       - '@azure/communication-call-automation'
+    - name: '@azure/communication-calling-effects'
+      href: ~/docs-ref-services/{moniker}/communication-calling-effects-readme.md
+      children:
+      - '@azure/communication-calling-effects'
     - name: Communication Chat
       href: ~/docs-ref-services/{moniker}/communication-chat-readme.md
       children:
@@ -480,7 +540,7 @@
       href: ~/docs-ref-services/{moniker}/communication-job-router-readme.md
       children:
       - '@azure/communication-job-router'
-    - name: Communication Network Traversal
+    - name: Communication Network Traversal (deprecated)
       href: ~/docs-ref-services/{moniker}/communication-network-traversal-readme.md
       children:
       - '@azure/communication-network-traversal'
@@ -524,6 +584,26 @@
         href: ~/docs-ref-services/{moniker}/arm-compute-profile-2020-09-01-hybrid-readme.md
         children:
         - '@azure/arm-compute-profile-2020-09-01-hybrid'
+  - name: Compute Fleet
+    href: ~/docs-ref-services/{moniker}/compute-fleet.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Compute Fleet
+        href: ~/docs-ref-services/{moniker}/arm-computefleet-readme.md
+        children:
+        - '@azure/arm-computefleet'
+  - name: Computeschedule
+    href: ~/docs-ref-services/{moniker}/computeschedule.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Computeschedule
+        href: ~/docs-ref-services/{moniker}/arm-computeschedule-readme.md
+        children:
+        - '@azure/arm-computeschedule'
   - name: Confidential Ledger
     href: ~/docs-ref-services/{moniker}/confidential-ledger.md
     landingPageType: Service
@@ -558,6 +638,16 @@
         href: ~/docs-ref-services/{moniker}/arm-connectedvmware-readme.md
         children:
         - '@azure/arm-connectedvmware'
+  - name: Connectedcache
+    href: ~/docs-ref-services/{moniker}/connectedcache.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Connectedcache
+        href: ~/docs-ref-services/{moniker}/arm-connectedcache-readme.md
+        children:
+        - '@azure/arm-connectedcache'
   - name: Consumption
     href: ~/docs-ref-services/{moniker}/consumption.md
     landingPageType: Service
@@ -626,6 +716,16 @@
         href: ~/docs-ref-services/{moniker}/arm-containerservicefleet-readme.md
         children:
         - '@azure/arm-containerservicefleet'
+  - name: Containerorchestratorruntime
+    href: ~/docs-ref-services/{moniker}/containerorchestratorruntime.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Containerorchestratorruntime
+        href: ~/docs-ref-services/{moniker}/arm-containerorchestratorruntime-readme.md
+        children:
+        - '@azure/arm-containerorchestratorruntime'
   - name: Content Delivery Network
     href: ~/docs-ref-services/{moniker}/content-delivery-network.md
     landingPageType: Service
@@ -750,6 +850,16 @@
         href: ~/docs-ref-services/{moniker}/arm-datamigration-readme.md
         children:
         - '@azure/arm-datamigration'
+  - name: Databoundaries
+    href: ~/docs-ref-services/{moniker}/databoundaries.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Databoundaries
+        href: ~/docs-ref-services/{moniker}/arm-databoundaries-readme.md
+        children:
+        - '@azure/arm-databoundaries'
   - name: Databoxedge
     href: ~/docs-ref-services/{moniker}/databoxedge.md
     landingPageType: Service
@@ -780,13 +890,17 @@
         href: ~/docs-ref-services/{moniker}/arm-datadog-readme.md
         children:
         - '@azure/arm-datadog'
-  - name: Defendereasm
-    href: ~/docs-ref-services/{moniker}/defendereasm.md
+  - name: Defender EASM
+    href: ~/docs-ref-services/{moniker}/defender-easm.md
     landingPageType: Service
     items:
+    - name: Defender EASM
+      href: ~/docs-ref-services/{moniker}/defender-easm-rest-readme.md
+      children:
+      - '@azure-rest/defender-easm'
     - name: Management
       items:
-      - name: Resource Management - Defendereasm
+      - name: Resource Management - Defender EASM
         href: ~/docs-ref-services/{moniker}/arm-defendereasm-readme.md
         children:
         - '@azure/arm-defendereasm'
@@ -844,6 +958,26 @@
         href: ~/docs-ref-services/{moniker}/arm-devhub-readme.md
         children:
         - '@azure/arm-devhub'
+  - name: Device Registry
+    href: ~/docs-ref-services/{moniker}/device-registry.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Device Registry
+        href: ~/docs-ref-services/{moniker}/arm-deviceregistry-readme.md
+        children:
+        - '@azure/arm-deviceregistry'
+  - name: DevOps Infrastructure
+    href: ~/docs-ref-services/{moniker}/devops-infrastructure.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - DevOps Infrastructure
+        href: ~/docs-ref-services/{moniker}/arm-devopsinfrastructure-readme.md
+        children:
+        - '@azure/arm-devopsinfrastructure'
   - name: DevTest Labs
     href: ~/docs-ref-services/{moniker}/devtest-labs.md
     landingPageType: Service
@@ -898,6 +1032,16 @@
         href: ~/docs-ref-services/{moniker}/arm-dynatrace-readme.md
         children:
         - '@azure/arm-dynatrace'
+  - name: Edge Zones
+    href: ~/docs-ref-services/{moniker}/edge-zones.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Edge Zones
+        href: ~/docs-ref-services/{moniker}/arm-edgezones-readme.md
+        children:
+        - '@azure/arm-edgezones'
   - name: Education
     href: ~/docs-ref-services/{moniker}/education.md
     landingPageType: Service
@@ -944,6 +1088,14 @@
       href: ~/docs-ref-services/{moniker}/eventgrid-readme.md
       children:
       - '@azure/eventgrid'
+    - name: Event Grid Namespaces
+      href: ~/docs-ref-services/{moniker}/eventgrid-namespaces-readme.md
+      children:
+      - '@azure/eventgrid-namespaces'
+    - name: Event Grid System Events
+      href: ~/docs-ref-services/{moniker}/eventgrid-system-events-readme.md
+      children:
+      - '@azure/eventgrid-system-events'
     - name: Management
       items:
       - name: Resource Management - Event Grid
@@ -976,10 +1128,6 @@
         href: ~/docs-ref-services/{moniker}/arm-eventhub-profile-2020-09-01-hybrid-readme.md
         children:
         - '@azure/arm-eventhub-profile-2020-09-01-hybrid'
-      - name: Resource Management - Event Hubs (deprecated)
-        href: ~/docs-ref-services/{moniker}/arm-eventhub-readme.md
-        children:
-        - azure-arm-eventhub
   - name: Extended Location
     href: ~/docs-ref-services/{moniker}/extended-location.md
     landingPageType: Service
@@ -990,6 +1138,16 @@
         href: ~/docs-ref-services/{moniker}/arm-extendedlocation-readme.md
         children:
         - '@azure/arm-extendedlocation'
+  - name: Fabric
+    href: ~/docs-ref-services/{moniker}/fabric.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Fabric
+        href: ~/docs-ref-services/{moniker}/arm-fabric-readme.md
+        children:
+        - '@azure/arm-fabric'
   - name: farmbeats
     href: ~/docs-ref-services/{moniker}/farmbeats.md
     landingPageType: Service
@@ -1036,6 +1194,10 @@
       href: ~/docs-ref-services/{moniker}/functions-readme.md
       children:
       - '@azure/functions'
+    - name: '@azure/functions-authentication-events'
+      href: ~/docs-ref-services/{moniker}/functions-authentication-events-readme.md
+      children:
+      - '@azure/functions-authentication-events'
     - name: Durable Functions
       href: ~/docs-ref-services/{moniker}/durable-functions-readme.md
       children:
@@ -1060,6 +1222,16 @@
         href: ~/docs-ref-services/{moniker}/arm-graphservices-readme.md
         children:
         - '@azure/arm-graphservices'
+  - name: Guest Configuration
+    href: ~/docs-ref-services/{moniker}/guest-configuration.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Guest Configuration
+        href: ~/docs-ref-services/{moniker}/arm-guestconfiguration-readme.md
+        children:
+        - '@azure/arm-guestconfiguration'
   - name: Hana on Azure
     href: ~/docs-ref-services/{moniker}/hana-on-azure.md
     landingPageType: Service
@@ -1070,13 +1242,13 @@
         href: ~/docs-ref-services/{moniker}/arm-hanaonazure-readme.md
         children:
         - '@azure/arm-hanaonazure'
-  - name: Hardware Security Module
-    href: ~/docs-ref-services/{moniker}/hardware-security-module.md
+  - name: Hardware Security Modules
+    href: ~/docs-ref-services/{moniker}/hardware-security-modules.md
     landingPageType: Service
     items:
     - name: Management
       items:
-      - name: Resource Management - Hardware Security Module
+      - name: Resource Management - Hardware Security Modules
         href: ~/docs-ref-services/{moniker}/arm-hardwaresecuritymodules-readme.md
         children:
         - '@azure/arm-hardwaresecuritymodules'
@@ -1090,13 +1262,13 @@
         href: ~/docs-ref-services/{moniker}/arm-hdinsight-readme.md
         children:
         - '@azure/arm-hdinsight'
-  - name: Hdinsightcontainers
-    href: ~/docs-ref-services/{moniker}/hdinsightcontainers.md
+  - name: HDInsight Containers
+    href: ~/docs-ref-services/{moniker}/hdinsight-containers.md
     landingPageType: Service
     items:
     - name: Management
       items:
-      - name: Resource Management - Hdinsightcontainers
+      - name: Resource Management - HDInsight Containers
         href: ~/docs-ref-services/{moniker}/arm-hdinsightcontainers-readme.md
         children:
         - '@azure/arm-hdinsightcontainers'
@@ -1110,6 +1282,24 @@
         href: ~/docs-ref-services/{moniker}/arm-healthbot-readme.md
         children:
         - '@azure/arm-healthbot'
+  - name: Health Data AI Services
+    href: ~/docs-ref-services/{moniker}/health-data-ai-services.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Health Data AI  Services
+        href: ~/docs-ref-services/{moniker}/arm-healthdataaiservices-readme.md
+        children:
+        - '@azure/arm-healthdataaiservices'
+  - name: Health Deidentification
+    href: ~/docs-ref-services/{moniker}/health-deidentification.md
+    landingPageType: Service
+    items:
+    - name: Health Deidentification
+      href: ~/docs-ref-services/{moniker}/azure-health-deidentification-readme.md
+      children:
+      - '@azure-rest/health-deidentification'
   - name: Healthcare APIs
     href: ~/docs-ref-services/{moniker}/healthcare-apis.md
     landingPageType: Service
@@ -1130,6 +1320,16 @@
         href: ~/docs-ref-services/{moniker}/arm-hybridcompute-readme.md
         children:
         - '@azure/arm-hybridcompute'
+  - name: Hybrid Connectivity
+    href: ~/docs-ref-services/{moniker}/hybrid-connectivity.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Hybrid Connectivity
+        href: ~/docs-ref-services/{moniker}/arm-hybridconnectivity-readme.md
+        children:
+        - '@azure/arm-hybridconnectivity'
   - name: Hybrid Container Service
     href: ~/docs-ref-services/{moniker}/hybrid-container-service.md
     landingPageType: Service
@@ -1150,16 +1350,16 @@
         href: ~/docs-ref-services/{moniker}/arm-hybridkubernetes-readme.md
         children:
         - '@azure/arm-hybridkubernetes'
-  - name: Hybridconnectivity
-    href: ~/docs-ref-services/{moniker}/hybridconnectivity.md
+  - name: Hybrid Network
+    href: ~/docs-ref-services/{moniker}/hybrid-network.md
     landingPageType: Service
     items:
     - name: Management
       items:
-      - name: Resource Management - Hybridconnectivity
-        href: ~/docs-ref-services/{moniker}/arm-hybridconnectivity-readme.md
+      - name: Resource Management - Hybrid Network
+        href: ~/docs-ref-services/{moniker}/arm-hybridnetwork-readme.md
         children:
-        - '@azure/arm-hybridconnectivity'
+        - '@azure/arm-hybridnetwork'
   - name: Identity
     href: ~/docs-ref-services/{moniker}/identity.md
     landingPageType: Service
@@ -1168,6 +1368,18 @@
       href: ~/docs-ref-services/{moniker}/identity-readme.md
       children:
       - '@azure/identity'
+    - name: Identity Broker
+      href: ~/docs-ref-services/{moniker}/identity-broker-readme.md
+      children:
+      - '@azure/identity-broker'
+    - name: Token Cache Persistence Plugin
+      href: ~/docs-ref-services/{moniker}/identity-cache-persistence-readme.md
+      children:
+      - '@azure/identity-cache-persistence'
+    - name: VS Code Authentication Plugin
+      href: ~/docs-ref-services/{moniker}/identity-vscode-readme.md
+      children:
+      - '@azure/identity-vscode'
     - name: Plugins
       items:
       - name: Token Cache Persistence
@@ -1194,6 +1406,16 @@
       href: ~/docs-ref-services/{moniker}/cognitiveservices-imagesearch-readme.md
       children:
       - '@azure/cognitiveservices-imagesearch'
+  - name: Informatica Data Management
+    href: ~/docs-ref-services/{moniker}/informatica-data-management.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Informatica Data Management
+        href: ~/docs-ref-services/{moniker}/arm-informaticadatamanagement-readme.md
+        children:
+        - '@azure/arm-informaticadatamanagement'
   - name: IoT
     href: ~/docs-ref-services/{moniker}/iot.md
     landingPageType: Service
@@ -1272,6 +1494,16 @@
         href: ~/docs-ref-services/{moniker}/arm-timeseriesinsights-readme.md
         children:
         - '@azure/arm-timeseriesinsights'
+  - name: Iotoperations
+    href: ~/docs-ref-services/{moniker}/iotoperations.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Iotoperations
+        href: ~/docs-ref-services/{moniker}/arm-iotoperations-readme.md
+        children:
+        - '@azure/arm-iotoperations'
   - name: Key Vault
     href: ~/docs-ref-services/{moniker}/key-vault.md
     landingPageType: Service
@@ -1344,6 +1576,16 @@
         href: ~/docs-ref-services/{moniker}/arm-labservices-readme.md
         children:
         - '@azure/arm-labservices'
+  - name: Large Instance
+    href: ~/docs-ref-services/{moniker}/large-instance.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Large Instance
+        href: ~/docs-ref-services/{moniker}/arm-largeinstance-readme.md
+        children:
+        - '@azure/arm-largeinstance'
   - name: Links
     href: ~/docs-ref-services/{moniker}/links.md
     landingPageType: Service
@@ -1582,6 +1824,14 @@
       href: ~/docs-ref-services/{moniker}/ai-metrics-advisor-readme.md
       children:
       - '@azure/ai-metrics-advisor'
+  - name: Microsoft Playwright Testing
+    href: ~/docs-ref-services/{moniker}/microsoft-playwright-testing.md
+    landingPageType: Service
+    items:
+    - name: Microsoft Playwright Testing
+      href: ~/docs-ref-services/{moniker}/microsoft-playwright-testing-readme.md
+      children:
+      - '@azure/microsoft-playwright-testing'
   - name: Migrate
     href: ~/docs-ref-services/{moniker}/migrate.md
     landingPageType: Service
@@ -1592,6 +1842,16 @@
         href: ~/docs-ref-services/{moniker}/arm-migrate-readme.md
         children:
         - '@azure/arm-migrate'
+  - name: Migration
+    href: ~/docs-ref-services/{moniker}/migration.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Migration Discovery SAP
+        href: ~/docs-ref-services/{moniker}/arm-migrationdiscoverysap-readme.md
+        children:
+        - '@azure/arm-migrationdiscoverysap'
   - name: Mixed Reality
     href: ~/docs-ref-services/{moniker}/mixed-reality.md
     landingPageType: Service
@@ -1620,6 +1880,16 @@
         href: ~/docs-ref-services/{moniker}/arm-mobilenetwork-readme.md
         children:
         - '@azure/arm-mobilenetwork'
+  - name: Mongo Cluster
+    href: ~/docs-ref-services/{moniker}/mongo-cluster.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Mongo Cluster
+        href: ~/docs-ref-services/{moniker}/arm-mongocluster-readme.md
+        children:
+        - '@azure/arm-mongocluster'
   - name: Monitor
     href: ~/docs-ref-services/{moniker}/monitor.md
     landingPageType: Service
@@ -1628,7 +1898,7 @@
       href: ~/docs-ref-services/{moniker}/monitor-ingestion-readme.md
       children:
       - '@azure/monitor-ingestion'
-    - name: Monitor OpenTelemetry
+    - name: Azure Monitor OpenTelemetry
       href: ~/docs-ref-services/{moniker}/monitor-opentelemetry-readme.md
       children:
       - '@azure/monitor-opentelemetry'
@@ -1670,6 +1940,16 @@
         href: ~/docs-ref-services/{moniker}/arm-mysql-flexible-readme.md
         children:
         - '@azure/arm-mysql-flexible'
+  - name: Neonpostgres
+    href: ~/docs-ref-services/{moniker}/neonpostgres.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Neonpostgres
+        href: ~/docs-ref-services/{moniker}/arm-neonpostgres-readme.md
+        children:
+        - '@azure/arm-neonpostgres'
   - name: NetApp Files
     href: ~/docs-ref-services/{moniker}/netapp-files.md
     landingPageType: Service
@@ -1698,6 +1978,16 @@
         href: ~/docs-ref-services/{moniker}/arm-network-profile-2020-09-01-hybrid-readme.md
         children:
         - '@azure/arm-network-profile-2020-09-01-hybrid'
+  - name: Network Analytics
+    href: ~/docs-ref-services/{moniker}/network-analytics.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Network Analytics (deprecated)
+        href: ~/docs-ref-services/{moniker}/arm-networkanalytics-readme.md
+        children:
+        - '@azure/arm-networkanalytics'
   - name: Network Function
     href: ~/docs-ref-services/{moniker}/network-function.md
     landingPageType: Service
@@ -1780,6 +2070,16 @@
         href: ~/docs-ref-services/{moniker}/arm-networkcloud-readme.md
         children:
         - '@azure/arm-networkcloud'
+  - name: Oracle Database
+    href: ~/docs-ref-services/{moniker}/oracle-database.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Oracle Database
+        href: ~/docs-ref-services/{moniker}/arm-oracledatabase-readme.md
+        children:
+        - '@azure/arm-oracledatabase'
   - name: Orbital
     href: ~/docs-ref-services/{moniker}/orbital.md
     landingPageType: Service
@@ -1810,6 +2110,26 @@
         href: ~/docs-ref-services/{moniker}/arm-peering-readme.md
         children:
         - '@azure/arm-peering'
+  - name: Pineconevectordb
+    href: ~/docs-ref-services/{moniker}/pineconevectordb.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Pineconevectordb
+        href: ~/docs-ref-services/{moniker}/arm-pineconevectordb-readme.md
+        children:
+        - '@azure/arm-pineconevectordb'
+  - name: Playwright Testing
+    href: ~/docs-ref-services/{moniker}/playwright-testing.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Playwright Testing
+        href: ~/docs-ref-services/{moniker}/arm-playwrighttesting-readme.md
+        children:
+        - '@azure/arm-playwrighttesting'
   - name: Policy
     href: ~/docs-ref-services/{moniker}/policy.md
     landingPageType: Service
@@ -1900,10 +2220,14 @@
       href: ~/docs-ref-services/{moniker}/purview-administration-rest-readme.md
       children:
       - '@azure-rest/purview-administration'
-    - name: Purview Catalog
+    - name: Purview Catalog (deprecated)
       href: ~/docs-ref-services/{moniker}/purview-catalog-rest-readme.md
       children:
       - '@azure-rest/purview-catalog'
+    - name: Purview Data Map
+      href: ~/docs-ref-services/{moniker}/purview-datamap-rest-readme.md
+      children:
+      - '@azure-rest/purview-datamap'
     - name: Purview Scanning
       href: ~/docs-ref-services/{moniker}/purview-scanning-rest-readme.md
       children:
@@ -1926,6 +2250,10 @@
     href: ~/docs-ref-services/{moniker}/quantum.md
     landingPageType: Service
     items:
+    - name: Quantum Jobs
+      href: ~/docs-ref-services/{moniker}/quantum-jobs-readme.md
+      children:
+      - '@azure/quantum-jobs'
     - name: Management
       items:
       - name: Resource Management - Quantum
@@ -1962,14 +2290,28 @@
         href: ~/docs-ref-services/{moniker}/arm-recoveryservices-readme.md
         children:
         - '@azure/arm-recoveryservices'
-      - name: Resource Management - Site Recovery
+      - name: Resource Management - Recovery Services Site Recovery
         href: ~/docs-ref-services/{moniker}/arm-recoveryservices-siterecovery-readme.md
         children:
         - '@azure/arm-recoveryservices-siterecovery'
-      - name: Resource Management - Backup
+      - name: Resource Management - Recovery Services Backup
         href: ~/docs-ref-services/{moniker}/arm-recoveryservicesbackup-readme.md
         children:
         - '@azure/arm-recoveryservicesbackup'
+      - name: Resource Management - Recovery Services Data Replication
+        href: ~/docs-ref-services/{moniker}/arm-recoveryservicesdatareplication-readme.md
+        children:
+        - '@azure/arm-recoveryservicesdatareplication'
+  - name: Red Hat OpenShift
+    href: ~/docs-ref-services/{moniker}/red-hat-openshift.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Red Hat OpenShift
+        href: ~/docs-ref-services/{moniker}/arm-redhatopenshift-readme.md
+        children:
+        - '@azure/arm-redhatopenshift'
   - name: Redis
     href: ~/docs-ref-services/{moniker}/redis.md
     landingPageType: Service
@@ -1980,7 +2322,7 @@
         href: ~/docs-ref-services/{moniker}/arm-rediscache-readme.md
         children:
         - '@azure/arm-rediscache'
-      - name: 'Resource Management - Redis Enterprise '
+      - name: Resource Management - Redis Enterprise Cache
         href: ~/docs-ref-services/{moniker}/arm-redisenterprisecache-readme.md
         children:
         - '@azure/arm-redisenterprisecache'
@@ -2054,6 +2396,10 @@
         href: ~/docs-ref-services/{moniker}/arm-resources-readme.md
         children:
         - '@azure/arm-resources'
+      - name: Resource Management - Deployment Stacks
+        href: ~/docs-ref-services/{moniker}/arm-resourcesdeploymentstacks-readme.md
+        children:
+        - '@azure/arm-resourcesdeploymentstacks'
   - name: Resources Subscriptions
     href: ~/docs-ref-services/{moniker}/resources-subscriptions.md
     landingPageType: Service
@@ -2074,16 +2420,6 @@
         href: ~/docs-ref-services/{moniker}/arm-resources-profile-2020-09-01-hybrid-readme.md
         children:
         - '@azure/arm-resources-profile-2020-09-01-hybrid'
-  - name: Resourcesdeploymentstacks
-    href: ~/docs-ref-services/{moniker}/resourcesdeploymentstacks.md
-    landingPageType: Service
-    items:
-    - name: Management
-      items:
-      - name: Resource Management - Resourcesdeploymentstacks
-        href: ~/docs-ref-services/{moniker}/arm-resourcesdeploymentstacks-readme.md
-        children:
-        - '@azure/arm-resourcesdeploymentstacks'
   - name: Schema Registry
     href: ~/docs-ref-services/{moniker}/schema-registry.md
     landingPageType: Service
@@ -2096,7 +2432,7 @@
       href: ~/docs-ref-services/{moniker}/schema-registry-avro-readme.md
       children:
       - '@azure/schema-registry-avro'
-    - name: Schema Registry Json Schema
+    - name: Schema Registry - JSON
       href: ~/docs-ref-services/{moniker}/schema-registry-json-readme.md
       children:
       - '@azure/schema-registry-json'
@@ -2114,13 +2450,17 @@
     href: ~/docs-ref-services/{moniker}/search.md
     landingPageType: Service
     items:
-    - name: Cognitive Search
+    - name: Cognitive Search (deprecated)
+      href: ~/docs-ref-services/{moniker}/search-readme.md
+      children:
+      - '@azure/search'
+    - name: Azure AI Search
       href: ~/docs-ref-services/{moniker}/search-documents-readme.md
       children:
       - '@azure/search-documents'
     - name: Management
       items:
-      - name: Resource Management - Cognitive Search
+      - name: Resource Management - Azure AI Search
         href: ~/docs-ref-services/{moniker}/arm-search-readme.md
         children:
         - '@azure/arm-search'
@@ -2203,6 +2543,10 @@
     - name: Management
       items:
       - name: Resource Management - Service Fabric
+        href: ~/docs-ref-services/{moniker}/arm-servicefabric-rest-readme.md
+        children:
+        - '@azure-rest/arm-servicefabric'
+      - name: Resource Management - Service Fabric
         href: ~/docs-ref-services/{moniker}/arm-servicefabric-readme.md
         children:
         - '@azure/arm-servicefabric'
@@ -2210,6 +2554,16 @@
         href: ~/docs-ref-services/{moniker}/arm-servicefabricmesh-readme.md
         children:
         - '@azure/arm-servicefabricmesh'
+  - name: Service Fabric Managed Clusters
+    href: ~/docs-ref-services/{moniker}/service-fabric-managed-clusters.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Service Fabric Managed Clusters
+        href: ~/docs-ref-services/{moniker}/arm-servicefabricmanagedclusters-readme.md
+        children:
+        - '@azure/arm-servicefabricmanagedclusters'
   - name: Service Linker
     href: ~/docs-ref-services/{moniker}/service-linker.md
     landingPageType: Service
@@ -2260,6 +2614,16 @@
         href: ~/docs-ref-services/{moniker}/arm-sphere-readme.md
         children:
         - '@azure/arm-sphere'
+  - name: Spring App Discovery
+    href: ~/docs-ref-services/{moniker}/spring-app-discovery.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Spring App Discovery
+        href: ~/docs-ref-services/{moniker}/arm-springappdiscovery-readme.md
+        children:
+        - '@azure/arm-springappdiscovery'
   - name: SQL
     href: ~/docs-ref-services/{moniker}/sql.md
     landingPageType: Service
@@ -2280,6 +2644,16 @@
         href: ~/docs-ref-services/{moniker}/arm-sqlvirtualmachine-readme.md
         children:
         - '@azure/arm-sqlvirtualmachine'
+  - name: Standby Pool
+    href: ~/docs-ref-services/{moniker}/standby-pool.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Standby Pool
+        href: ~/docs-ref-services/{moniker}/arm-standbypool-readme.md
+        children:
+        - '@azure/arm-standbypool'
   - name: Storage
     href: ~/docs-ref-services/{moniker}/storage.md
     landingPageType: Service
@@ -2326,6 +2700,10 @@
         href: ~/docs-ref-services/{moniker}/arm-storage-profile-2020-09-01-hybrid-readme.md
         children:
         - '@azure/arm-storage-profile-2020-09-01-hybrid'
+      - name: Resource Management - Storage Actions
+        href: ~/docs-ref-services/{moniker}/arm-storageactions-readme.md
+        children:
+        - '@azure/arm-storageactions'
       - name: Resource Management - Storage Cache
         href: ~/docs-ref-services/{moniker}/arm-storagecache-readme.md
         children:
@@ -2424,7 +2802,7 @@
       href: ~/docs-ref-services/{moniker}/synapse-managed-private-endpoints-readme.md
       children:
       - '@azure/synapse-managed-private-endpoints'
-    - name: Monitoring
+    - name: Synapse - Monitoring
       href: ~/docs-ref-services/{moniker}/synapse-monitoring-readme.md
       children:
       - '@azure/synapse-monitoring'
@@ -2450,6 +2828,24 @@
     href: ~/docs-ref-services/{moniker}/template-specs.md
     landingPageType: Service
     items: []
+  - name: Terraform
+    href: ~/docs-ref-services/{moniker}/terraform.md
+    landingPageType: Service
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Terraform
+        href: ~/docs-ref-services/{moniker}/arm-terraform-readme.md
+        children:
+        - '@azure/arm-terraform'
+  - name: Timezone Maps
+    href: ~/docs-ref-services/{moniker}/timezone-maps.md
+    landingPageType: Service
+    items:
+    - name: Timezone
+      href: ~/docs-ref-services/{moniker}/maps-timezone-rest-readme.md
+      children:
+      - '@azure-rest/maps-timezone'
   - name: Traffic Manager
     href: ~/docs-ref-services/{moniker}/traffic-manager.md
     landingPageType: Service
@@ -2460,21 +2856,35 @@
         href: ~/docs-ref-services/{moniker}/arm-trafficmanager-readme.md
         children:
         - '@azure/arm-trafficmanager'
-  - name: Unknown Service
-    href: ~/docs-ref-services/{moniker}/unknown-service.md
+  - name: Trustedsigning
+    href: ~/docs-ref-services/{moniker}/trustedsigning.md
     landingPageType: Service
-    items: []
+    items:
+    - name: Management
+      items:
+      - name: Resource Management - Trustedsigning
+        href: ~/docs-ref-services/{moniker}/arm-trustedsigning-readme.md
+        children:
+        - '@azure/arm-trustedsigning'
+  - name: unknown
+    href: ~/docs-ref-services/{moniker}/unknown.md
+    landingPageType: Service
+    items:
+    - name: unknown
+      href: ~/docs-ref-services/{moniker}/ai-projects-readme.md
+      children:
+      - '@azure/ai-projects'
   - name: Video Analyzer
     href: ~/docs-ref-services/{moniker}/video-analyzer.md
     landingPageType: Service
     items:
-    - name: Video Analyzer Edge
+    - name: Video Analyzer Edge (deprecated)
       href: ~/docs-ref-services/{moniker}/video-analyzer-edge-readme.md
       children:
       - '@azure/video-analyzer-edge'
     - name: Management
       items:
-      - name: Resource Management - Video Analyzer
+      - name: Resource Management - Video Analyzer (deprecated)
         href: ~/docs-ref-services/{moniker}/arm-videoanalyzer-readme.md
         children:
         - '@azure/arm-videoanalyzer'
@@ -2514,13 +2924,13 @@
         href: ~/docs-ref-services/{moniker}/arm-vmwarecloudsimple-readme.md
         children:
         - '@azure/arm-vmwarecloudsimple'
-  - name: Voiceservices
-    href: ~/docs-ref-services/{moniker}/voiceservices.md
+  - name: Voice Services
+    href: ~/docs-ref-services/{moniker}/voice-services.md
     landingPageType: Service
     items:
     - name: Management
       items:
-      - name: Resource Management - Voiceservices
+      - name: Resource Management - Voice Services
         href: ~/docs-ref-services/{moniker}/arm-voiceservices-readme.md
         children:
         - '@azure/arm-voiceservices'
@@ -2536,6 +2946,10 @@
       href: ~/docs-ref-services/{moniker}/web-pubsub-client-readme.md
       children:
       - '@azure/web-pubsub-client'
+    - name: WebPubSub Client SDK Protobuf
+      href: ~/docs-ref-services/{moniker}/web-pubsub-client-protobuf-readme.md
+      children:
+      - '@azure/web-pubsub-client-protobuf'
     - name: Management
       items:
       - name: Resource Management - Web PubSub
@@ -2560,9 +2974,27 @@
         href: ~/docs-ref-services/{moniker}/arm-workloads-readme.md
         children:
         - '@azure/arm-workloads'
+      - name: Resource Management - Workloads SAP Virtual Instance
+        href: ~/docs-ref-services/{moniker}/arm-workloadssapvirtualinstance-readme.md
+        children:
+        - '@azure/arm-workloadssapvirtualinstance'
   - name: Other
     landingPageType: Service
     items:
+    - name: '@azure/core'
+      landingPageType: Service
+      items:
+      - name: sse
+        href: ~/docs-ref-services/{moniker}/core-sse-readme.md
+        children:
+        - '@azure/core-sse'
+    - name: '@azure/template'
+      landingPageType: Service
+      items:
+      - name: dpg
+        href: ~/docs-ref-services/{moniker}/template-dpg-readme.md
+        children:
+        - '@azure/template-dpg'
     - name: Core
       landingPageType: Service
       items:

@@ -28,15 +28,15 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: parameters
           type: >-
             <xref uid="@azure/arm-notificationhubs.CheckAvailabilityParameters"
             />
-          description: The notificationHub name.
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -49,8 +49,7 @@ methods:
           Promise&lt;<xref
           uid="@azure/arm-notificationhubs.CheckAvailabilityResult" />&gt;
   - name: >-
-      createOrUpdate(string, string, string,
-      NotificationHubCreateOrUpdateParameters,
+      createOrUpdate(string, string, string, NotificationHubResource,
       NotificationHubsCreateOrUpdateOptionalParams)
     uid: '@azure/arm-notificationhubs.NotificationHubs.createOrUpdate'
     package: '@azure/arm-notificationhubs'
@@ -61,25 +60,22 @@ methods:
       content: >-
         function createOrUpdate(resourceGroupName: string, namespaceName:
         string, notificationHubName: string, parameters:
-        NotificationHubCreateOrUpdateParameters, options?:
+        NotificationHubResource, options?:
         NotificationHubsCreateOrUpdateOptionalParams):
         Promise<NotificationHubResource>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: parameters
-          type: >-
-            <xref
-            uid="@azure/arm-notificationhubs.NotificationHubCreateOrUpdateParameters"
-            />
-          description: Parameters supplied to the create/update a NotificationHub Resource.
+          type: <xref uid="@azure/arm-notificationhubs.NotificationHubResource" />
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -93,7 +89,7 @@ methods:
           uid="@azure/arm-notificationhubs.NotificationHubResource" />&gt;
   - name: >-
       createOrUpdateAuthorizationRule(string, string, string, string,
-      SharedAccessAuthorizationRuleCreateOrUpdateParameters,
+      SharedAccessAuthorizationRuleResource,
       NotificationHubsCreateOrUpdateAuthorizationRuleOptionalParams)
     uid: >-
       @azure/arm-notificationhubs.NotificationHubs.createOrUpdateAuthorizationRule
@@ -106,28 +102,28 @@ methods:
         function createOrUpdateAuthorizationRule(resourceGroupName: string,
         namespaceName: string, notificationHubName: string,
         authorizationRuleName: string, parameters:
-        SharedAccessAuthorizationRuleCreateOrUpdateParameters, options?:
+        SharedAccessAuthorizationRuleResource, options?:
         NotificationHubsCreateOrUpdateAuthorizationRuleOptionalParams):
         Promise<SharedAccessAuthorizationRuleResource>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: authorizationRuleName
           type: string
-          description: Authorization Rule Name.
+          description: Authorization Rule Name
         - id: parameters
           type: >-
             <xref
-            uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleCreateOrUpdateParameters"
+            uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
             />
-          description: The shared access authorization rule.
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -143,7 +139,7 @@ methods:
   - name: debugSend(string, string, string, NotificationHubsDebugSendOptionalParams)
     uid: '@azure/arm-notificationhubs.NotificationHubs.debugSend'
     package: '@azure/arm-notificationhubs'
-    summary: test send a push notification
+    summary: Test send a push notification.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -154,13 +150,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: options
           type: >-
             <xref
@@ -186,13 +182,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: options
           type: >-
             <xref
@@ -219,16 +215,16 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: authorizationRuleName
           type: string
-          description: Authorization Rule Name.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -241,7 +237,7 @@ methods:
   - name: get(string, string, string, NotificationHubsGetOptionalParams)
     uid: '@azure/arm-notificationhubs.NotificationHubs.get'
     package: '@azure/arm-notificationhubs'
-    summary: Lists the notification hubs associated with a namespace.
+    summary: Gets the notification hub.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -252,13 +248,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: options
           type: >-
             <xref
@@ -287,16 +283,16 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: authorizationRuleName
           type: string
-          description: authorization rule name.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -314,7 +310,7 @@ methods:
       NotificationHubsGetPnsCredentialsOptionalParams)
     uid: '@azure/arm-notificationhubs.NotificationHubs.getPnsCredentials'
     package: '@azure/arm-notificationhubs'
-    summary: Lists the PNS Credentials associated with a notification hub .
+    summary: Lists the PNS Credentials associated with a notification hub.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -326,13 +322,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: options
           type: >-
             <xref
@@ -359,10 +355,10 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: options
           type: >-
             <xref
@@ -372,10 +368,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-notificationhubs.NotificationHubResource" />, <xref
-          uid="@azure/arm-notificationhubs.NotificationHubResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-notificationhubs.NotificationHubResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAuthorizationRules(string, string, string,
       NotificationHubsListAuthorizationRulesOptionalParams)
@@ -394,13 +390,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: options
           type: >-
             <xref
@@ -410,11 +406,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
           />, <xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listKeys(string, string, string, string,
       NotificationHubsListKeysOptionalParams)
@@ -431,18 +427,16 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: authorizationRuleName
           type: string
-          description: |-
-            The connection string of the NotificationHub for the specified
-                                         authorizationRule.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -454,40 +448,8 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/arm-notificationhubs.ResourceListKeys"
           />&gt;
-  - name: patch(string, string, string, NotificationHubsPatchOptionalParams)
-    uid: '@azure/arm-notificationhubs.NotificationHubs.patch'
-    package: '@azure/arm-notificationhubs'
-    summary: Patch a NotificationHub in a namespace.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function patch(resourceGroupName: string, namespaceName: string,
-        notificationHubName: string, options?:
-        NotificationHubsPatchOptionalParams): Promise<NotificationHubResource>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group.
-        - id: namespaceName
-          type: string
-          description: The namespace name.
-        - id: notificationHubName
-          type: string
-          description: The notification hub name.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-notificationhubs.NotificationHubsPatchOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-notificationhubs.NotificationHubResource" />&gt;
   - name: >-
-      regenerateKeys(string, string, string, string, PolicykeyResource,
+      regenerateKeys(string, string, string, string, PolicyKeyResource,
       NotificationHubsRegenerateKeysOptionalParams)
     uid: '@azure/arm-notificationhubs.NotificationHubs.regenerateKeys'
     package: '@azure/arm-notificationhubs'
@@ -500,28 +462,24 @@ methods:
       content: >-
         function regenerateKeys(resourceGroupName: string, namespaceName:
         string, notificationHubName: string, authorizationRuleName: string,
-        parameters: PolicykeyResource, options?:
+        parameters: PolicyKeyResource, options?:
         NotificationHubsRegenerateKeysOptionalParams): Promise<ResourceListKeys>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: notificationHubName
           type: string
-          description: The notification hub name.
+          description: Notification Hub name
         - id: authorizationRuleName
           type: string
-          description: |-
-            The connection string of the NotificationHub for the specified
-                                         authorizationRule.
+          description: Authorization Rule Name
         - id: parameters
-          type: <xref uid="@azure/arm-notificationhubs.PolicykeyResource" />
-          description: >-
-            Parameters supplied to regenerate the NotificationHub Authorization
-            Rule Key.
+          type: <xref uid="@azure/arm-notificationhubs.PolicyKeyResource" />
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -533,3 +491,43 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/arm-notificationhubs.ResourceListKeys"
           />&gt;
+  - name: >-
+      update(string, string, string, NotificationHubPatchParameters,
+      NotificationHubsUpdateOptionalParams)
+    uid: '@azure/arm-notificationhubs.NotificationHubs.update'
+    package: '@azure/arm-notificationhubs'
+    summary: Patch a NotificationHub in a namespace.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, namespaceName: string,
+        notificationHubName: string, parameters: NotificationHubPatchParameters,
+        options?: NotificationHubsUpdateOptionalParams):
+        Promise<NotificationHubResource>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: namespaceName
+          type: string
+          description: Namespace name
+        - id: notificationHubName
+          type: string
+          description: Notification Hub name
+        - id: parameters
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.NotificationHubPatchParameters" />
+          description: Request content.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.NotificationHubsUpdateOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-notificationhubs.NotificationHubResource" />&gt;

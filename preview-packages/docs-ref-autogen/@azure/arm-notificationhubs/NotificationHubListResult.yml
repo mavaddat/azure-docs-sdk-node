@@ -12,8 +12,10 @@ properties:
     uid: '@azure/arm-notificationhubs.NotificationHubListResult.nextLink'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Link to the next set of results. Not empty if Value contains incomplete
-      list of NotificationHub
+      Gets or sets link to the next set of results.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: nextLink
     remarks: ''
     isDeprecated: false
@@ -25,7 +27,11 @@ properties:
   - name: value
     uid: '@azure/arm-notificationhubs.NotificationHubListResult.value'
     package: '@azure/arm-notificationhubs'
-    summary: Result of the List NotificationHub operation.
+    summary: >-
+      Gets or sets result of the List AuthorizationRules operation.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: value
     remarks: ''
     isDeprecated: false

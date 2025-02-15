@@ -43,7 +43,7 @@ constructors:
             validate that this URL references a valid Key Vault or Managed HSM
             resource. See https://aka.ms/azsdk/blog/vault-uri for details.
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An object that implements the `TokenCredential` interface used to
             authenticate requests to the service. Use the @azure/identity
@@ -104,7 +104,7 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/keyvault-admin.ListSettingsResponse"
           />&gt;
-  - name: updateSetting(string, boolean, UpdateSettingOptions)
+  - name: updateSetting(KeyVaultSetting, UpdateSettingOptions)
     uid: '@azure/keyvault-admin.KeyVaultSettingsClient.updateSetting'
     package: '@azure/keyvault-admin'
     summary: Updates the named account setting.
@@ -112,15 +112,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function updateSetting(settingName: string, value: boolean, options?:
+        function updateSetting(setting: KeyVaultSetting, options?:
         UpdateSettingOptions): Promise<KeyVaultSetting>
       parameters:
-        - id: settingName
-          type: string
-          description: the name of the account setting. Must be a valid settings option.
-        - id: value
-          type: boolean
-          description: the value of the pool setting.
+        - id: setting
+          type: <xref uid="@azure/keyvault-admin.KeyVaultSetting" />
+          description: >-
+            the setting to update. The name of the setting must be a valid
+            settings option.
         - id: options
           type: <xref uid="@azure/keyvault-admin.UpdateSettingOptions" />
           description: the optional parameters.

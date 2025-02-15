@@ -8,38 +8,24 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: errorCode
-    uid: '@azure/eventgrid.FailedLockToken.errorCode'
+  - name: error
+    uid: '@azure/eventgrid.FailedLockToken.error'
     package: '@azure/eventgrid'
     summary: >-
-      Error code related to the token. Example of such error codes are BadToken:
-      which indicates the Token is not formatted correctly, TokenLost: which
-      indicates that token is not found, and InternalServerError: For any
-      internal server errors.
-    fullName: errorCode
+      Error information of the failed operation result for the lock token in the
+      request.
+    fullName: error
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'errorCode: string'
+      content: 'error: ErrorModel'
       return:
         description: ''
-        type: string
-  - name: errorDescription
-    uid: '@azure/eventgrid.FailedLockToken.errorDescription'
-    package: '@azure/eventgrid'
-    summary: Description of the token error.
-    fullName: errorDescription
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'errorDescription: string'
-      return:
-        description: ''
-        type: string
+        type: <xref uid="@azure-rest/core-client.ErrorModel" />
   - name: lockToken
     uid: '@azure/eventgrid.FailedLockToken.lockToken'
     package: '@azure/eventgrid'
-    summary: LockToken value
+    summary: The lock token of an entry in the request.
     fullName: lockToken
     remarks: ''
     isDeprecated: false
