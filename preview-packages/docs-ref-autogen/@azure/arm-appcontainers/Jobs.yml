@@ -25,7 +25,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobEnvelope
           type: <xref uid="@azure/arm-appcontainers.Job" />
           description: Properties used to create a container apps job
@@ -37,7 +37,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.Job" />&gt;, <xref
           uid="@azure/arm-appcontainers.Job" />&gt;&gt;
   - name: >-
@@ -59,7 +60,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobEnvelope
           type: <xref uid="@azure/arm-appcontainers.Job" />
           description: Properties used to create a container apps job
@@ -88,15 +89,15 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: options
           type: <xref uid="@azure/arm-appcontainers.JobsDeleteOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, JobsDeleteOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginDeleteAndWait'
     package: '@azure/arm-appcontainers'
@@ -113,14 +114,65 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: options
           type: <xref uid="@azure/arm-appcontainers.JobsDeleteOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: beginStart(string, string, JobExecutionTemplate, JobsStartOptionalParams)
+  - name: beginResume(string, string, JobsResumeOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.beginResume'
+    package: '@azure/arm-appcontainers'
+    summary: Resumes a suspended job
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginResume(resourceGroupName: string, jobName: string,
+        options?: JobsResumeOptionalParams):
+        Promise<SimplePollerLike<OperationState<Job>, Job>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Name of the Job.
+        - id: options
+          type: <xref uid="@azure/arm-appcontainers.JobsResumeOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appcontainers.Job" />&gt;, <xref
+          uid="@azure/arm-appcontainers.Job" />&gt;&gt;
+  - name: beginResumeAndWait(string, string, JobsResumeOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.beginResumeAndWait'
+    package: '@azure/arm-appcontainers'
+    summary: Resumes a suspended job
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginResumeAndWait(resourceGroupName: string, jobName: string,
+        options?: JobsResumeOptionalParams): Promise<Job>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Name of the Job.
+        - id: options
+          type: <xref uid="@azure/arm-appcontainers.JobsResumeOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.Job" />&gt;
+  - name: beginStart(string, string, JobsStartOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginStart'
     package: '@azure/arm-appcontainers'
     summary: Start a Container Apps Job
@@ -129,7 +181,7 @@ methods:
     syntax:
       content: >-
         function beginStart(resourceGroupName: string, jobName: string,
-        template: JobExecutionTemplate, options?: JobsStartOptionalParams):
+        options?: JobsStartOptionalParams):
         Promise<SimplePollerLike<OperationState<JobExecutionBase>,
         JobExecutionBase>>
       parameters:
@@ -138,22 +190,18 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
-        - id: template
-          type: <xref uid="@azure/arm-appcontainers.JobExecutionTemplate" />
-          description: Properties used to start a job instance.
+          description: Job Name
         - id: options
           type: <xref uid="@azure/arm-appcontainers.JobsStartOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.JobExecutionBase" />&gt;, <xref
           uid="@azure/arm-appcontainers.JobExecutionBase" />&gt;&gt;
-  - name: >-
-      beginStartAndWait(string, string, JobExecutionTemplate,
-      JobsStartOptionalParams)
+  - name: beginStartAndWait(string, string, JobsStartOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginStartAndWait'
     package: '@azure/arm-appcontainers'
     summary: Start a Container Apps Job
@@ -162,18 +210,14 @@ methods:
     syntax:
       content: >-
         function beginStartAndWait(resourceGroupName: string, jobName: string,
-        template: JobExecutionTemplate, options?: JobsStartOptionalParams):
-        Promise<JobExecutionBase>
+        options?: JobsStartOptionalParams): Promise<JobExecutionBase>
       parameters:
         - id: resourceGroupName
           type: string
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
-        - id: template
-          type: <xref uid="@azure/arm-appcontainers.JobExecutionTemplate" />
-          description: Properties used to start a job instance.
+          description: Job Name
         - id: options
           type: <xref uid="@azure/arm-appcontainers.JobsStartOptionalParams" />
           description: The options parameters.
@@ -201,7 +245,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobExecutionName
           type: string
           description: Job execution name.
@@ -213,8 +257,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStopExecutionAndWait(string, string, string,
       JobsStopExecutionOptionalParams)
@@ -234,7 +278,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobExecutionName
           type: string
           description: Job execution name.
@@ -247,7 +291,7 @@ methods:
         description: ''
         type: Promise&lt;void&gt;
   - name: >-
-      beginStopMultipleExecutions(string, string, JobExecutionNamesCollection,
+      beginStopMultipleExecutions(string, string,
       JobsStopMultipleExecutionsOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginStopMultipleExecutions'
     package: '@azure/arm-appcontainers'
@@ -257,8 +301,7 @@ methods:
     syntax:
       content: >-
         function beginStopMultipleExecutions(resourceGroupName: string, jobName:
-        string, jobExecutionName: JobExecutionNamesCollection, options?:
-        JobsStopMultipleExecutionsOptionalParams):
+        string, options?: JobsStopMultipleExecutionsOptionalParams):
         Promise<SimplePollerLike<OperationState<ContainerAppJobExecutions>,
         ContainerAppJobExecutions>>
       parameters:
@@ -267,10 +310,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
-        - id: jobExecutionName
-          type: <xref uid="@azure/arm-appcontainers.JobExecutionNamesCollection" />
-          description: List of all job executions that should be stopped.
+          description: Job Name
         - id: options
           type: >-
             <xref
@@ -280,12 +320,13 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.ContainerAppJobExecutions" />&gt;, <xref
           uid="@azure/arm-appcontainers.ContainerAppJobExecutions" />&gt;&gt;
   - name: >-
       beginStopMultipleExecutionsAndWait(string, string,
-      JobExecutionNamesCollection, JobsStopMultipleExecutionsOptionalParams)
+      JobsStopMultipleExecutionsOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginStopMultipleExecutionsAndWait'
     package: '@azure/arm-appcontainers'
     summary: Terminates execution of a running container apps job
@@ -294,8 +335,7 @@ methods:
     syntax:
       content: >-
         function beginStopMultipleExecutionsAndWait(resourceGroupName: string,
-        jobName: string, jobExecutionName: JobExecutionNamesCollection,
-        options?: JobsStopMultipleExecutionsOptionalParams):
+        jobName: string, options?: JobsStopMultipleExecutionsOptionalParams):
         Promise<ContainerAppJobExecutions>
       parameters:
         - id: resourceGroupName
@@ -303,10 +343,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
-        - id: jobExecutionName
-          type: <xref uid="@azure/arm-appcontainers.JobExecutionNamesCollection" />
-          description: List of all job executions that should be stopped.
+          description: Job Name
         - id: options
           type: >-
             <xref
@@ -318,6 +355,57 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/arm-appcontainers.ContainerAppJobExecutions" />&gt;
+  - name: beginSuspend(string, string, JobsSuspendOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.beginSuspend'
+    package: '@azure/arm-appcontainers'
+    summary: Suspends a job
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginSuspend(resourceGroupName: string, jobName: string,
+        options?: JobsSuspendOptionalParams):
+        Promise<SimplePollerLike<OperationState<Job>, Job>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Name of the Job.
+        - id: options
+          type: <xref uid="@azure/arm-appcontainers.JobsSuspendOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-appcontainers.Job" />&gt;, <xref
+          uid="@azure/arm-appcontainers.Job" />&gt;&gt;
+  - name: beginSuspendAndWait(string, string, JobsSuspendOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.beginSuspendAndWait'
+    package: '@azure/arm-appcontainers'
+    summary: Suspends a job
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginSuspendAndWait(resourceGroupName: string, jobName: string,
+        options?: JobsSuspendOptionalParams): Promise<Job>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Name of the Job.
+        - id: options
+          type: <xref uid="@azure/arm-appcontainers.JobsSuspendOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.Job" />&gt;
   - name: beginUpdate(string, string, JobPatchProperties, JobsUpdateOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.beginUpdate'
     package: '@azure/arm-appcontainers'
@@ -335,7 +423,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobEnvelope
           type: <xref uid="@azure/arm-appcontainers.JobPatchProperties" />
           description: Properties used to create a container apps job
@@ -345,7 +433,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-appcontainers.Job" />&gt;, <xref
           uid="@azure/arm-appcontainers.Job" />&gt;&gt;
   - name: >-
@@ -367,7 +456,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: jobEnvelope
           type: <xref uid="@azure/arm-appcontainers.JobPatchProperties" />
           description: Properties used to create a container apps job
@@ -393,13 +482,42 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: options
           type: <xref uid="@azure/arm-appcontainers.JobsGetOptionalParams" />
           description: The options parameters.
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-appcontainers.Job" />&gt;
+  - name: getDetector(string, string, string, JobsGetDetectorOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.getDetector'
+    package: '@azure/arm-appcontainers'
+    summary: Get the diagnostics data for a Container App Job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDetector(resourceGroupName: string, jobName: string,
+        detectorName: string, options?: JobsGetDetectorOptionalParams):
+        Promise<Diagnostics>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Job Name
+        - id: detectorName
+          type: string
+          description: Name of the Container App Job detector.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-appcontainers.JobsGetDetectorOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.Diagnostics" />&gt;
   - name: listByResourceGroup(string, JobsListByResourceGroupOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.listByResourceGroup'
     package: '@azure/arm-appcontainers'
@@ -424,8 +542,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appcontainers.Job"
-          />, <xref uid="@azure/arm-appcontainers.Job" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appcontainers.Job" />, <xref
+          uid="@azure/arm-appcontainers.Job" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(JobsListBySubscriptionOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.listBySubscription'
     package: '@azure/arm-appcontainers'
@@ -447,8 +567,40 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-appcontainers.Job"
-          />, <xref uid="@azure/arm-appcontainers.Job" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appcontainers.Job" />, <xref
+          uid="@azure/arm-appcontainers.Job" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: listDetectors(string, string, JobsListDetectorsOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.listDetectors'
+    package: '@azure/arm-appcontainers'
+    summary: Get the list of diagnostics for a Container App Job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listDetectors(resourceGroupName: string, jobName: string,
+        options?: JobsListDetectorsOptionalParams):
+        PagedAsyncIterableIterator<Diagnostics, Diagnostics[], PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Job Name
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-appcontainers.JobsListDetectorsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-appcontainers.Diagnostics" />, <xref
+          uid="@azure/arm-appcontainers.Diagnostics" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listSecrets(string, string, JobsListSecretsOptionalParams)
     uid: '@azure/arm-appcontainers.Jobs.listSecrets'
     package: '@azure/arm-appcontainers'
@@ -465,7 +617,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: options
           type: >-
             <xref uid="@azure/arm-appcontainers.JobsListSecretsOptionalParams"
@@ -476,3 +628,29 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/arm-appcontainers.JobSecretsCollection"
           />&gt;
+  - name: proxyGet(string, string, string, JobsProxyGetOptionalParams)
+    uid: '@azure/arm-appcontainers.Jobs.proxyGet'
+    package: '@azure/arm-appcontainers'
+    summary: Get the properties of a Container App Job.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function proxyGet(resourceGroupName: string, jobName: string, apiName:
+        string, options?: JobsProxyGetOptionalParams): Promise<Job>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: jobName
+          type: string
+          description: Job Name
+        - id: apiName
+          type: string
+          description: Proxy API Name for Container App Job.
+        - id: options
+          type: <xref uid="@azure/arm-appcontainers.JobsProxyGetOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-appcontainers.Job" />&gt;

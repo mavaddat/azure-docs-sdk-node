@@ -85,14 +85,16 @@ inheritedProperties:
 
       using the `emitter.setMaxListeners(n)` method. To change the default
 
-      for _all_`EventEmitter` instances, the
-      `events.defaultMaxListeners`property can be used. If this value is not a
-      positive number, a `RangeError`is thrown.
+      for _all_`EventEmitter` instances, the `events.defaultMaxListeners`
+      property
+
+      can be used. If this value is not a positive number, a `RangeError` is
+      thrown.
 
 
       Take caution when setting the `events.defaultMaxListeners` because the
 
-      change affects _all_`EventEmitter` instances, including those created
+      change affects _all_ `EventEmitter` instances, including those created
       before
 
       the change is made. However, calling `emitter.setMaxListeners(n)` still
@@ -107,8 +109,10 @@ inheritedProperties:
       indicating
 
       that a "possible EventEmitter memory leak" has been detected. For any
-      single`EventEmitter`, the `emitter.getMaxListeners()` and
-      `emitter.setMaxListeners()`methods can be used to
+      single
+
+      `EventEmitter`, the `emitter.getMaxListeners()` and
+      `emitter.setMaxListeners()` methods can be used to
 
       temporarily avoid this warning:
 
@@ -158,12 +162,12 @@ inheritedProperties:
     package: azure-iot-device
     summary: >-
       This symbol shall be used to install a listener for only monitoring
-      `'error'`events. Listeners installed using this symbol are called before
-      the regular`'error'` listeners are called.
+      `'error'` events. Listeners installed using this symbol are called before
+      the regular `'error'` listeners are called.
 
 
       Installing a listener using this symbol does not change the behavior once
-      an`'error'` event is emitted. Therefore, the process will still crash if
+      an `'error'` event is emitted. Therefore, the process will still crash if
       no
 
       regular `'error'` listener is installed.
@@ -240,10 +244,10 @@ inheritedMethods:
           type: '(event: Event) =&gt; void'
           description: ''
       return:
-        description: that removes the `abort` listener.
+        description: Disposable that removes the `abort` listener.
         type: Disposable
     inheritanceDescription: <b>Inherited From</b> EventEmitter.addAbortListener
-  - name: 'addListener(string | symbol, (args: any[]) => void)'
+  - name: 'addListener<K>(string | symbol, (args: any[]) => void)'
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.addListener
     package: azure-iot-device
     summary: Alias for `emitter.on(eventName, listener)`.
@@ -251,8 +255,8 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function addListener(eventName: string | symbol, listener: (args: any[])
-        => void): SharedAccessSignatureAuthenticationProvider
+        function addListener<K>(eventName: string | symbol, listener: (args:
+        any[]) => void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
           type: string | symbol
@@ -266,12 +270,12 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.addListener
-  - name: emit(string | symbol, any[])
+  - name: emit<K>(string | symbol, AnyRest)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.emit
     package: azure-iot-device
     summary: >-
-      Synchronously calls each of the listeners registered for the event
-      named`eventName`, in the order they were registered, passing the supplied
+      Synchronously calls each of the listeners registered for the event named
+      `eventName`, in the order they were registered, passing the supplied
       arguments
 
       to each.
@@ -335,13 +339,13 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function emit(eventName: string | symbol, args: any[]): boolean'
+      content: 'function emit<K>(eventName: string | symbol, args: AnyRest): boolean'
       parameters:
         - id: eventName
           type: string | symbol
           description: ''
         - id: args
-          type: any[]
+          type: AnyRest
           description: ''
       return:
         description: ''
@@ -375,7 +379,9 @@ inheritedMethods:
         description: ''
         type: (string | symbol)[]
     inheritanceDescription: <b>Inherited From</b> EventEmitter.eventNames
-  - name: getEventListeners(_DOMEventTarget | EventEmitter, string | symbol)
+  - name: >-
+      getEventListeners(EventEmitter<DefaultEventMap> | EventTarget, string |
+      symbol)
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.getEventListeners
     package: azure-iot-device
@@ -418,11 +424,11 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        static function getEventListeners(emitter: _DOMEventTarget |
-        EventEmitter, name: string | symbol): Function[]
+        static function getEventListeners(emitter: EventEmitter<DefaultEventMap>
+        | EventTarget, name: string | symbol): Function[]
       parameters:
         - id: emitter
-          type: _DOMEventTarget | EventEmitter
+          type: EventEmitter&lt;DefaultEventMap&gt; | EventTarget
           description: ''
         - id: name
           type: string | symbol
@@ -440,7 +446,7 @@ inheritedMethods:
       either
 
       set by `emitter.setMaxListeners(n)` or defaults to
-      [defaultMaxListeners](xref:azure-iot-device.SharedAccessSignatureAuthenticationProvider.defaultMaxListeners).
+      <xref:EventEmitter.defaultMaxListeners>.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -449,7 +455,7 @@ inheritedMethods:
         description: ''
         type: number
     inheritanceDescription: <b>Inherited From</b> EventEmitter.getMaxListeners
-  - name: getMaxListeners(_DOMEventTarget | EventEmitter)
+  - name: getMaxListeners(EventEmitter<DefaultEventMap> | EventTarget)
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.getMaxListeners
     package: azure-iot-device
@@ -497,22 +503,22 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        static function getMaxListeners(emitter: _DOMEventTarget |
-        EventEmitter): number
+        static function getMaxListeners(emitter: EventEmitter<DefaultEventMap> |
+        EventTarget): number
       parameters:
         - id: emitter
-          type: _DOMEventTarget | EventEmitter
+          type: EventEmitter&lt;DefaultEventMap&gt; | EventTarget
           description: ''
       return:
         description: ''
         type: number
     inheritanceDescription: <b>Inherited From</b> EventEmitter.getMaxListeners
-  - name: listenerCount(EventEmitter, string | symbol)
+  - name: listenerCount(EventEmitter<DefaultEventMap>, string | symbol)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.listenerCount
     package: azure-iot-device
     summary: >-
       A class method that returns the number of listeners for the given
-      `eventName`registered on the given `emitter`.
+      `eventName` registered on the given `emitter`.
 
 
       ```js
@@ -536,11 +542,11 @@ inheritedMethods:
     customDeprecatedMessage: Since v3.2.0 - Use `listenerCount` instead.
     syntax:
       content: >-
-        static function listenerCount(emitter: EventEmitter, eventName: string |
-        symbol): number
+        static function listenerCount(emitter: EventEmitter<DefaultEventMap>,
+        eventName: string | symbol): number
       parameters:
         - id: emitter
-          type: EventEmitter
+          type: EventEmitter&lt;DefaultEventMap&gt;
           description: The emitter to query
         - id: eventName
           type: string | symbol
@@ -549,7 +555,7 @@ inheritedMethods:
         description: ''
         type: number
     inheritanceDescription: <b>Inherited From</b> EventEmitter.listenerCount
-  - name: listenerCount(string | symbol, Function)
+  - name: listenerCount<K>(string | symbol, Function)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.listenerCount
     package: azure-iot-device
     summary: >-
@@ -563,8 +569,8 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function listenerCount(eventName: string | symbol, listener?: Function):
-        number
+        function listenerCount<K>(eventName: string | symbol, listener?:
+        Function): number
       parameters:
         - id: eventName
           type: string | symbol
@@ -576,7 +582,7 @@ inheritedMethods:
         description: ''
         type: number
     inheritanceDescription: <b>Inherited From</b> EventEmitter.listenerCount
-  - name: listeners(string | symbol)
+  - name: listeners<K>(string | symbol)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.listeners
     package: azure-iot-device
     summary: |-
@@ -592,7 +598,7 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function listeners(eventName: string | symbol): Function[]'
+      content: 'function listeners<K>(eventName: string | symbol): Function[]'
       parameters:
         - id: eventName
           type: string | symbol
@@ -601,7 +607,7 @@ inheritedMethods:
         description: ''
         type: Function[]
     inheritanceDescription: <b>Inherited From</b> EventEmitter.listeners
-  - name: 'off(string | symbol, (args: any[]) => void)'
+  - name: 'off<K>(string | symbol, (args: any[]) => void)'
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.off
     package: azure-iot-device
     summary: Alias for `emitter.removeListener()`.
@@ -609,7 +615,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function off(eventName: string | symbol, listener: (args: any[]) =>
+        function off<K>(eventName: string | symbol, listener: (args: any[]) =>
         void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
@@ -624,21 +630,29 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.off
-  - name: on(EventEmitter, string, StaticEventEmitterOptions)
+  - name: >-
+      on(EventEmitter<DefaultEventMap>, string | symbol,
+      StaticEventEmitterIteratorOptions)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.on
     package: azure-iot-device
-    summary: |-
+    summary: >-
       ```js
+
       import { on, EventEmitter } from 'node:events';
+
       import process from 'node:process';
+
 
       const ee = new EventEmitter();
 
+
       // Emit later on
+
       process.nextTick(() => {
         ee.emit('foo', 'bar');
         ee.emit('foo', 42);
       });
+
 
       for await (const event of on(ee, 'foo')) {
         // The execution of this inner block is synchronous and it
@@ -646,21 +660,33 @@ inheritedMethods:
         // if concurrent execution is required.
         console.log(event); // prints ['bar'] [42]
       }
+
       // Unreachable here
+
       ```
 
+
       Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+
       if the `EventEmitter` emits `'error'`. It removes all listeners when
+
       exiting the loop. The `value` returned by each iteration is an array
+
       composed of the emitted event arguments.
+
 
       An `AbortSignal` can be used to cancel waiting on events:
 
+
       ```js
+
       import { on, EventEmitter } from 'node:events';
+
       import process from 'node:process';
 
+
       const ac = new AbortController();
+
 
       (async () => {
         const ee = new EventEmitter();
@@ -680,40 +706,103 @@ inheritedMethods:
         // Unreachable here
       })();
 
+
       process.nextTick(() => ac.abort());
+
+      ```
+
+
+      Use the `close` option to specify an array of event names that will end
+      the iteration:
+
+
+      ```js
+
+      import { on, EventEmitter } from 'node:events';
+
+      import process from 'node:process';
+
+
+      const ee = new EventEmitter();
+
+
+      // Emit later on
+
+      process.nextTick(() => {
+        ee.emit('foo', 'bar');
+        ee.emit('foo', 42);
+        ee.emit('close');
+      });
+
+
+      for await (const event of on(ee, 'foo', { close: ['close'] })) {
+        console.log(event); // prints ['bar'] [42]
+      }
+
+      // the loop will exit after 'close' is emitted
+
+      console.log('done'); // prints 'done'
+
       ```
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        static function on(emitter: EventEmitter, eventName: string, options?:
-        StaticEventEmitterOptions): AsyncIterableIterator<any>
+        static function on(emitter: EventEmitter<DefaultEventMap>, eventName:
+        string | symbol, options?: StaticEventEmitterIteratorOptions):
+        AsyncIterator<any[], any, any>
       parameters:
         - id: emitter
-          type: EventEmitter
+          type: EventEmitter&lt;DefaultEventMap&gt;
+          description: ''
+        - id: eventName
+          type: string | symbol
+          description: ''
+        - id: options
+          type: StaticEventEmitterIteratorOptions
+          description: ''
+      return:
+        description: >-
+          An `AsyncIterator` that iterates `eventName` events emitted by the
+          `emitter`
+        type: AsyncIterator&lt;any[], any, any&gt;
+    inheritanceDescription: <b>Inherited From</b> EventEmitter.on
+  - name: on(EventTarget, string, StaticEventEmitterIteratorOptions)
+    uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.on_1
+    package: azure-iot-device
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function on(emitter: EventTarget, eventName: string, options?:
+        StaticEventEmitterIteratorOptions): AsyncIterator<any[], any, any>
+      parameters:
+        - id: emitter
+          type: EventTarget
           description: ''
         - id: eventName
           type: string
-          description: The name of the event being listened for
+          description: ''
         - id: options
-          type: StaticEventEmitterOptions
+          type: StaticEventEmitterIteratorOptions
           description: ''
       return:
-        description: that iterates `eventName` events emitted by the `emitter`
-        type: AsyncIterableIterator&lt;any&gt;
+        description: ''
+        type: AsyncIterator&lt;any[], any, any&gt;
     inheritanceDescription: <b>Inherited From</b> EventEmitter.on
-  - name: 'on(string | symbol, (args: any[]) => void)'
+  - name: 'on<K>(string | symbol, (args: any[]) => void)'
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.on
     package: azure-iot-device
     summary: >-
       Adds the `listener` function to the end of the listeners array for the
+      event
 
-      event named `eventName`. No checks are made to see if the `listener` has
+      named `eventName`. No checks are made to see if the `listener` has already
 
-      already been added. Multiple calls passing the same combination of
-      `eventName`and `listener` will result in the `listener` being added, and
-      called, multiple
+      been added. Multiple calls passing the same combination of `eventName` and
 
+      `listener` will result in the `listener` being added, and called, multiple
       times.
 
 
@@ -729,8 +818,8 @@ inheritedMethods:
       Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 
-      By default, event listeners are invoked in the order they are added.
-      The`emitter.prependListener()` method can be used as an alternative to add
+      By default, event listeners are invoked in the order they are added. The
+      `emitter.prependListener()` method can be used as an alternative to add
       the
 
       event listener to the beginning of the listeners array.
@@ -759,7 +848,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function on(eventName: string | symbol, listener: (args: any[]) =>
+        function on<K>(eventName: string | symbol, listener: (args: any[]) =>
         void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
@@ -774,99 +863,9 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.on
-  - name: 'once(string | symbol, (args: any[]) => void)'
-    uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.once
-    package: azure-iot-device
-    summary: >-
-      Adds a **one-time**`listener` function for the event named `eventName`.
-      The
-
-      next time `eventName` is triggered, this listener is removed and then
-      invoked.
-
-
-      ```js
-
-      server.once('connection', (stream) => {
-        console.log('Ah, we have our first user!');
-      });
-
-      ```
-
-
-      Returns a reference to the `EventEmitter`, so that calls can be chained.
-
-
-      By default, event listeners are invoked in the order they are added.
-      The`emitter.prependOnceListener()` method can be used as an alternative to
-      add the
-
-      event listener to the beginning of the listeners array.
-
-
-      ```js
-
-      import { EventEmitter } from 'node:events';
-
-      const myEE = new EventEmitter();
-
-      myEE.once('foo', () => console.log('a'));
-
-      myEE.prependOnceListener('foo', () => console.log('b'));
-
-      myEE.emit('foo');
-
-      // Prints:
-
-      //   b
-
-      //   a
-
-      ```
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function once(eventName: string | symbol, listener: (args: any[]) =>
-        void): SharedAccessSignatureAuthenticationProvider
-      parameters:
-        - id: eventName
-          type: string | symbol
-          description: The name of the event.
-        - id: listener
-          type: '(args: any[]) =&gt; void'
-          description: The callback function
-      return:
-        description: ''
-        type: >-
-          <xref
-          uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
-    inheritanceDescription: <b>Inherited From</b> EventEmitter.once
-  - name: once(_DOMEventTarget, string, StaticEventEmitterOptions)
-    uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.once_1
-    package: azure-iot-device
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function once(emitter: _DOMEventTarget, eventName: string,
-        options?: StaticEventEmitterOptions): Promise<any[]>
-      parameters:
-        - id: emitter
-          type: _DOMEventTarget
-          description: ''
-        - id: eventName
-          type: string
-          description: ''
-        - id: options
-          type: StaticEventEmitterOptions
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;any[]&gt;
-    inheritanceDescription: <b>Inherited From</b> EventEmitter.once
-  - name: once(_NodeEventTarget, string | symbol, StaticEventEmitterOptions)
+  - name: >-
+      once(EventEmitter<DefaultEventMap>, string | symbol,
+      StaticEventEmitterOptions)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.once
     package: azure-iot-device
     summary: >-
@@ -926,7 +925,7 @@ inheritedMethods:
 
 
       The special handling of the `'error'` event is only used when
-      `events.once()`is used to wait for another event. If `events.once()` is
+      `events.once()` is used to wait for another event. If `events.once()` is
       used to wait for the
 
       '`error'` event itself, then it is treated as any other kind of event
@@ -993,11 +992,11 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        static function once(emitter: _NodeEventTarget, eventName: string |
-        symbol, options?: StaticEventEmitterOptions): Promise<any[]>
+        static function once(emitter: EventEmitter<DefaultEventMap>, eventName:
+        string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>
       parameters:
         - id: emitter
-          type: _NodeEventTarget
+          type: EventEmitter&lt;DefaultEventMap&gt;
           description: ''
         - id: eventName
           type: string | symbol
@@ -1009,7 +1008,99 @@ inheritedMethods:
         description: ''
         type: Promise&lt;any[]&gt;
     inheritanceDescription: <b>Inherited From</b> EventEmitter.once
-  - name: 'prependListener(string | symbol, (args: any[]) => void)'
+  - name: once(EventTarget, string, StaticEventEmitterOptions)
+    uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.once_1
+    package: azure-iot-device
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function once(emitter: EventTarget, eventName: string, options?:
+        StaticEventEmitterOptions): Promise<any[]>
+      parameters:
+        - id: emitter
+          type: EventTarget
+          description: ''
+        - id: eventName
+          type: string
+          description: ''
+        - id: options
+          type: StaticEventEmitterOptions
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;any[]&gt;
+    inheritanceDescription: <b>Inherited From</b> EventEmitter.once
+  - name: 'once<K>(string | symbol, (args: any[]) => void)'
+    uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.once
+    package: azure-iot-device
+    summary: >-
+      Adds a **one-time** `listener` function for the event named `eventName`.
+      The
+
+      next time `eventName` is triggered, this listener is removed and then
+      invoked.
+
+
+      ```js
+
+      server.once('connection', (stream) => {
+        console.log('Ah, we have our first user!');
+      });
+
+      ```
+
+
+      Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+
+      By default, event listeners are invoked in the order they are added. The
+      `emitter.prependOnceListener()` method can be used as an alternative to
+      add the
+
+      event listener to the beginning of the listeners array.
+
+
+      ```js
+
+      import { EventEmitter } from 'node:events';
+
+      const myEE = new EventEmitter();
+
+      myEE.once('foo', () => console.log('a'));
+
+      myEE.prependOnceListener('foo', () => console.log('b'));
+
+      myEE.emit('foo');
+
+      // Prints:
+
+      //   b
+
+      //   a
+
+      ```
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function once<K>(eventName: string | symbol, listener: (args: any[]) =>
+        void): SharedAccessSignatureAuthenticationProvider
+      parameters:
+        - id: eventName
+          type: string | symbol
+          description: The name of the event.
+        - id: listener
+          type: '(args: any[]) =&gt; void'
+          description: The callback function
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
+    inheritanceDescription: <b>Inherited From</b> EventEmitter.once
+  - name: 'prependListener<K>(string | symbol, (args: any[]) => void)'
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.prependListener
     package: azure-iot-device
@@ -1020,10 +1111,10 @@ inheritedMethods:
       event named `eventName`. No checks are made to see if the `listener` has
 
       already been added. Multiple calls passing the same combination of
-      `eventName`and `listener` will result in the `listener` being added, and
-      called, multiple
+      `eventName`
 
-      times.
+      and `listener` will result in the `listener` being added, and called,
+      multiple times.
 
 
       ```js
@@ -1040,7 +1131,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function prependListener(eventName: string | symbol, listener: (args:
+        function prependListener<K>(eventName: string | symbol, listener: (args:
         any[]) => void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
@@ -1055,7 +1146,7 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.prependListener
-  - name: 'prependOnceListener(string | symbol, (args: any[]) => void)'
+  - name: 'prependOnceListener<K>(string | symbol, (args: any[]) => void)'
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.prependOnceListener
     package: azure-iot-device
@@ -1081,7 +1172,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function prependOnceListener(eventName: string | symbol, listener:
+        function prependOnceListener<K>(eventName: string | symbol, listener:
         (args: any[]) => void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
@@ -1096,7 +1187,7 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.prependOnceListener
-  - name: rawListeners(string | symbol)
+  - name: rawListeners<K>(string | symbol)
     uid: azure-iot-device.SharedAccessSignatureAuthenticationProvider.rawListeners
     package: azure-iot-device
     summary: |-
@@ -1130,7 +1221,7 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function rawListeners(eventName: string | symbol): Function[]'
+      content: 'function rawListeners<K>(eventName: string | symbol): Function[]'
       parameters:
         - id: eventName
           type: string | symbol
@@ -1155,10 +1246,10 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function removeAllListeners(event?: string | symbol):
+        function removeAllListeners(eventName?: string | symbol):
         SharedAccessSignatureAuthenticationProvider
       parameters:
-        - id: event
+        - id: eventName
           type: string | symbol
           description: ''
       return:
@@ -1167,13 +1258,13 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.removeAllListeners
-  - name: 'removeListener(string | symbol, (args: any[]) => void)'
+  - name: 'removeListener<K>(string | symbol, (args: any[]) => void)'
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.removeListener
     package: azure-iot-device
     summary: >-
       Removes the specified `listener` from the listener array for the event
-      named`eventName`.
+      named `eventName`.
 
 
       ```js
@@ -1205,8 +1296,8 @@ inheritedMethods:
 
       Once an event is emitted, all listeners attached to it at the
 
-      time of emitting are called in order. This implies that
-      any`removeListener()` or `removeAllListeners()` calls _after_ emitting and
+      time of emitting are called in order. This implies that any
+      `removeListener()` or `removeAllListeners()` calls _after_ emitting and
       _before_ the last listener finishes execution
 
       will not remove them from`emit()` in progress. Subsequent events behave as
@@ -1283,7 +1374,7 @@ inheritedMethods:
 
       event (as in the example below), `removeListener()` will remove the most
 
-      recently added instance. In the example the `once('ping')`listener is
+      recently added instance. In the example the `once('ping')` listener is
       removed:
 
 
@@ -1318,7 +1409,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function removeListener(eventName: string | symbol, listener: (args:
+        function removeListener<K>(eventName: string | symbol, listener: (args:
         any[]) => void): SharedAccessSignatureAuthenticationProvider
       parameters:
         - id: eventName
@@ -1347,7 +1438,7 @@ inheritedMethods:
       be
 
       modified for this specific `EventEmitter` instance. The value can be set
-      to`Infinity` (or `0`) to indicate an unlimited number of listeners.
+      to `Infinity` (or `0`) to indicate an unlimited number of listeners.
 
 
       Returns a reference to the `EventEmitter`, so that calls can be chained.
@@ -1367,7 +1458,7 @@ inheritedMethods:
           <xref
           uid="azure-iot-device.SharedAccessSignatureAuthenticationProvider" />
     inheritanceDescription: <b>Inherited From</b> EventEmitter.setMaxListeners
-  - name: setMaxListeners(number, (_DOMEventTarget | EventEmitter)[])
+  - name: setMaxListeners(number, (EventEmitter<DefaultEventMap> | EventTarget)[])
     uid: >-
       azure-iot-device.SharedAccessSignatureAuthenticationProvider.setMaxListeners
     package: azure-iot-device
@@ -1385,7 +1476,7 @@ inheritedMethods:
     syntax:
       content: >-
         static function setMaxListeners(n?: number, eventTargets:
-        (_DOMEventTarget | EventEmitter)[])
+        (EventEmitter<DefaultEventMap> | EventTarget)[])
       parameters:
         - id: 'n'
           type: number
@@ -1393,9 +1484,36 @@ inheritedMethods:
             A non-negative number. The maximum number of listeners per
             `EventTarget` event.
         - id: eventTargets
-          type: (_DOMEventTarget | EventEmitter)[]
-          description: ''
+          type: (EventEmitter&lt;DefaultEventMap&gt; | EventTarget)[]
+          description: >-
+            Zero or more {EventTarget} or {EventEmitter} instances. If none are
+            specified, `n` is set as the default max for all newly created
+            {EventTarget} and {EventEmitter}
+
+            objects.
     inheritanceDescription: <b>Inherited From</b> EventEmitter.setMaxListeners
+  - name: '[captureRejectionSymbol]<K>(Error, string | symbol, AnyRest)'
+    uid: >-
+      azure-iot-device.SharedAccessSignatureAuthenticationProvider.[captureRejectionSymbol]
+    package: azure-iot-device
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function [captureRejectionSymbol]<K>(error: Error, event: string |
+        symbol, args: AnyRest)
+      parameters:
+        - id: error
+          type: Error
+          description: ''
+        - id: event
+          type: string | symbol
+          description: ''
+        - id: args
+          type: AnyRest
+          description: ''
+    inheritanceDescription: <b>Inherited From</b> EventEmitter.__@captureRejectionSymbol@141
 methods:
   - name: fromSharedAccessSignature(string)
     uid: >-

@@ -34,11 +34,10 @@ constructors:
                                 Such as a file named "myfile%", the URL should be "https://myaccount.file.core.windows.net/myshare/mydirectory/myfile%25".
         - id: credential
           type: >-
-            <xref uid="@azure/storage-file-share.Credential" /> |
-            TokenCredential
-          description: >-
-            Such as AnonymousCredential, StorageSharedKeyCredential or
-            TokenCredential,
+            <xref uid="@azure/storage-file-share.Credential" /> | <xref
+            uid="@azure/core-auth.TokenCredential" />
+          description: |-
+            Such as , StorageSharedKeyCredential or TokenCredential,
                                              If not specified, AnonymousCredential is used.
         - id: options
           type: <xref uid="@azure/storage-file-share.ShareClientOptions" />
@@ -625,6 +624,37 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/storage-file-share.FileForceCloseHandlesResponse" />&gt;
+  - name: generateSasStringToSign(FileGenerateSasUrlOptions)
+    uid: '@azure/storage-file-share.ShareFileClient.generateSasStringToSign'
+    package: '@azure/storage-file-share'
+    summary: >-
+      Only available for clients constructed with a shared key credential.
+
+
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in. The SAS is signed by the shared key credential
+      of the client.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateSasStringToSign(options: FileGenerateSasUrlOptions):
+        string
+      parameters:
+        - id: options
+          type: <xref uid="@azure/storage-file-share.FileGenerateSasUrlOptions" />
+          description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
   - name: generateSasUrl(FileGenerateSasUrlOptions)
     uid: '@azure/storage-file-share.ShareFileClient.generateSasUrl'
     package: '@azure/storage-file-share'
@@ -768,10 +798,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/storage-file-share.HandleItem" />, <xref
-          uid="@azure/storage-file-share.FileListHandlesResponse" />,
-          PageSettings&gt;
+          uid="@azure/storage-file-share.FileListHandlesResponse" />, <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: rename(string, FileRenameOptions)
     uid: '@azure/storage-file-share.ShareFileClient.rename'
     package: '@azure/storage-file-share'
@@ -1023,7 +1053,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: uploadRange(HttpRequestBody, number, number, FileUploadRangeOptions)
+  - name: uploadRange(RequestBodyType, number, number, FileUploadRangeOptions)
     uid: '@azure/storage-file-share.ShareFileClient.uploadRange'
     package: '@azure/storage-file-share'
     summary: >-
@@ -1038,7 +1068,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function uploadRange(body: HttpRequestBody, offset: number,
+        function uploadRange(body: RequestBodyType, offset: number,
         contentLength: number, options?: FileUploadRangeOptions):
         Promise<FileUploadRangeResponse>
       parameters:

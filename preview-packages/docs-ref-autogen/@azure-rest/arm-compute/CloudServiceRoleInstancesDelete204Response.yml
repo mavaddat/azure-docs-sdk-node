@@ -8,18 +8,6 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: body
-    uid: '@azure-rest/arm-compute.CloudServiceRoleInstancesDelete204Response.body'
-    package: '@azure-rest/arm-compute'
-    summary: ''
-    fullName: body
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'body: Record<string, unknown>'
-      return:
-        description: ''
-        type: Record&lt;string, unknown&gt;
   - name: status
     uid: '@azure-rest/arm-compute.CloudServiceRoleInstancesDelete204Response.status'
     package: '@azure-rest/arm-compute'
@@ -33,6 +21,19 @@ properties:
         description: ''
         type: '"204"'
 inheritedProperties:
+  - name: body
+    uid: '@azure-rest/arm-compute.CloudServiceRoleInstancesDelete204Response.body'
+    package: '@azure-rest/arm-compute'
+    summary: Parsed body
+    fullName: body
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'body: unknown'
+      return:
+        description: ''
+        type: unknown
+    inheritanceDescription: <b>Inherited From</b> HttpResponse.body
   - name: headers
     uid: '@azure-rest/arm-compute.CloudServiceRoleInstancesDelete204Response.headers'
     package: '@azure-rest/arm-compute'
@@ -44,7 +45,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/arm-compute.CloudServiceRoleInstancesDelete204Response.request'
@@ -57,6 +58,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

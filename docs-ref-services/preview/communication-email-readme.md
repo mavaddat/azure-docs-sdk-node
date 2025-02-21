@@ -1,14 +1,12 @@
 ---
 title: Azure Communication Email client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/communication-email, communication
-author: xirzec
-ms.author: jeffish
-ms.date: 03/07/2023
+ms.date: 09/25/2024
 ms.topic: reference
 ms.devlang: javascript
 ms.service: communication
 ---
-# Azure Communication Email client library for JavaScript - version 1.0.0-beta.2 
+# Azure Communication Email client library for JavaScript - version 1.0.1-beta.1 
 
 
 This package contains a JavaScript/TypeScript SDK for Azure Communication Services for Email.
@@ -56,7 +54,7 @@ import { DefaultAzureCredential } from "@azure/identity";
 import { EmailClient } from "@azure/communication-email";
 
 const endpoint = "https://<resource-name>.communication.azure.com";
-let credential = new DefaultAzureCredential();
+const credential = new DefaultAzureCredential();
 const client = new EmailClient(endpoint, credential);
 ```
 
@@ -164,7 +162,8 @@ const message = {
   ],
 };
 
-const response = await emailClient.send(message);
+const poller = await emailClient.beginSend(message);
+const response = await poller.pollUntilDone();
 ```
 
 ## Next steps
@@ -185,8 +184,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-email_1.0.0-beta.2/sdk/identity/identity#defaultazurecredential
-[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-email_1.0.0-beta.2/sdk/identity/identity
+[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-email_1.0.1-beta.1/sdk/identity/identity#defaultazurecredential
+[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-email_1.0.1-beta.1/sdk/identity/identity
 [communication_resource_docs]: /azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp
 [email_resource_docs]: https://aka.ms/acsemail/createemailresource
 [communication_resource_create_portal]: /azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp

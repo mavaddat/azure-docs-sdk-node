@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string,
         networkConnectionName: string, body: NetworkConnection, options?:
         NetworkConnectionsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<NetworkConnection>,
+        Promise<SimplePollerLike<OperationState<NetworkConnection>,
         NetworkConnection>>
       parameters:
         - id: resourceGroupName
@@ -42,7 +42,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.NetworkConnection" />&gt;, <xref
           uid="@azure/arm-devcenter.NetworkConnection" />&gt;&gt;
   - name: >-
@@ -88,7 +89,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, networkConnectionName:
         string, options?: NetworkConnectionsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -103,7 +104,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, NetworkConnectionsDeleteOptionalParams)
     uid: '@azure/arm-devcenter.NetworkConnections.beginDeleteAndWait'
     package: '@azure/arm-devcenter'
@@ -147,7 +150,7 @@ methods:
         function beginRunHealthChecks(resourceGroupName: string,
         networkConnectionName: string, options?:
         NetworkConnectionsRunHealthChecksOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -163,7 +166,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRunHealthChecksAndWait(string, string,
       NetworkConnectionsRunHealthChecksOptionalParams)
@@ -210,7 +215,7 @@ methods:
         function beginUpdate(resourceGroupName: string, networkConnectionName:
         string, body: NetworkConnectionUpdate, options?:
         NetworkConnectionsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<NetworkConnection>,
+        Promise<SimplePollerLike<OperationState<NetworkConnection>,
         NetworkConnection>>
       parameters:
         - id: resourceGroupName
@@ -230,7 +235,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.NetworkConnection" />&gt;, <xref
           uid="@azure/arm-devcenter.NetworkConnection" />&gt;&gt;
   - name: >-
@@ -349,9 +355,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.NetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.NetworkConnection" />[], PageSettings&gt;
+          uid="@azure/arm-devcenter.NetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(NetworkConnectionsListBySubscriptionOptionalParams)
     uid: '@azure/arm-devcenter.NetworkConnections.listBySubscription'
     package: '@azure/arm-devcenter'
@@ -374,9 +381,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.NetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.NetworkConnection" />[], PageSettings&gt;
+          uid="@azure/arm-devcenter.NetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listHealthDetails(string, string,
       NetworkConnectionsListHealthDetailsOptionalParams)
@@ -408,7 +416,48 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.HealthCheckStatusDetails" />, <xref
-          uid="@azure/arm-devcenter.HealthCheckStatusDetails" />[],
-          PageSettings&gt;
+          uid="@azure/arm-devcenter.HealthCheckStatusDetails" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listOutboundNetworkDependenciesEndpoints(string, string,
+      NetworkConnectionsListOutboundNetworkDependenciesEndpointsOptionalParams)
+    uid: >-
+      @azure/arm-devcenter.NetworkConnections.listOutboundNetworkDependenciesEndpoints
+    package: '@azure/arm-devcenter'
+    summary: >-
+      Lists the endpoints that agents may call as part of Dev Box service
+      administration. These FQDNs
+
+      should be allowed for outbound access in order for the Dev Box service to
+      function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listOutboundNetworkDependenciesEndpoints(resourceGroupName:
+        string, networkConnectionName: string, options?:
+        NetworkConnectionsListOutboundNetworkDependenciesEndpointsOptionalParams):
+        PagedAsyncIterableIterator<OutboundEnvironmentEndpoint,
+        OutboundEnvironmentEndpoint[], PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: networkConnectionName
+          type: string
+          description: Name of the Network Connection that can be applied to a Pool.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-devcenter.NetworkConnectionsListOutboundNetworkDependenciesEndpointsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.OutboundEnvironmentEndpoint" />, <xref
+          uid="@azure/arm-devcenter.OutboundEnvironmentEndpoint" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

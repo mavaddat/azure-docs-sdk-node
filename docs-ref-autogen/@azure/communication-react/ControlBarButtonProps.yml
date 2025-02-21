@@ -258,10 +258,10 @@ inheritedProperties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'aria-autocomplete?: "list" | "none" | "inline" | "both"'
+      content: 'aria-autocomplete?: "none" | "list" | "inline" | "both"'
       return:
         description: ''
-        type: '"list" | "none" | "inline" | "both"'
+        type: '"none" | "list" | "inline" | "both"'
     inheritanceDescription: <b>Inherited From</b> IButtonProps.aria-autocomplete
   - name: aria-busy
     uid: '@azure/communication-react.ControlBarButtonProps.aria-busy'
@@ -458,11 +458,11 @@ inheritedProperties:
     customDeprecatedMessage: in ARIA 1.1
     syntax:
       content: >-
-        aria-dropeffect?: "link" | "none" | "copy" | "execute" | "move" |
+        aria-dropeffect?: "none" | "link" | "copy" | "execute" | "move" |
         "popup"
       return:
         description: ''
-        type: '"link" | "none" | "copy" | "execute" | "move" | "popup"'
+        type: '"none" | "link" | "copy" | "execute" | "move" | "popup"'
     inheritanceDescription: <b>Inherited From</b> IButtonProps.aria-dropeffect
   - name: aria-errormessage
     uid: '@azure/communication-react.ControlBarButtonProps.aria-errormessage'
@@ -1102,10 +1102,14 @@ inheritedProperties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'autoCapitalize?: string'
+      content: >-
+        autoCapitalize?: "off" | "none" | "on" | "sentences" | "words" |
+        "characters" | (string & {})
       return:
         description: ''
-        type: string
+        type: >-
+          "off" | "none" | "on" | "sentences" | "words" | "characters" | (string
+          & {})
     inheritanceDescription: <b>Inherited From</b> IButtonProps.autoCapitalize
   - name: autoComplete
     uid: '@azure/communication-react.ControlBarButtonProps.autoComplete'
@@ -1664,6 +1668,21 @@ inheritedProperties:
         description: ''
         type: string
     inheritanceDescription: <b>Inherited From</b> IButtonProps.encType
+  - name: enterKeyHint
+    uid: '@azure/communication-react.ControlBarButtonProps.enterKeyHint'
+    package: '@azure/communication-react'
+    summary: ''
+    fullName: enterKeyHint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        enterKeyHint?: "enter" | "done" | "go" | "next" | "previous" | "search"
+        | "send"
+      return:
+        description: ''
+        type: '"enter" | "done" | "go" | "next" | "previous" | "search" | "send"'
+    inheritanceDescription: <b>Inherited From</b> IButtonProps.enterKeyHint
   - name: form
     uid: '@azure/communication-react.ControlBarButtonProps.form'
     package: '@azure/communication-react'
@@ -4426,7 +4445,10 @@ inheritedProperties:
     summary: ''
     fullName: onPointerEnterCapture
     remarks: ''
-    isDeprecated: false
+    isDeprecated: true
+    customDeprecatedMessage: >-
+      This event handler was always ignored by React. It was added by mistake to
+      the types.
     syntax:
       content: >-
         onPointerEnterCapture?: PointerEventHandler<HTMLAnchorElement |
@@ -4462,7 +4484,10 @@ inheritedProperties:
     summary: ''
     fullName: onPointerLeaveCapture
     remarks: ''
-    isDeprecated: false
+    isDeprecated: true
+    customDeprecatedMessage: >-
+      This event handler was always ignored by React. It was added by mistake to
+      the types.
     syntax:
       content: >-
         onPointerLeaveCapture?: PointerEventHandler<HTMLAnchorElement |
@@ -6279,10 +6304,10 @@ inheritedProperties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'unselectable?: "on" | "off"'
+      content: 'unselectable?: "off" | "on"'
       return:
         description: ''
-        type: '"on" | "off"'
+        type: '"off" | "on"'
     inheritanceDescription: <b>Inherited From</b> IButtonProps.unselectable
   - name: useMap
     uid: '@azure/communication-react.ControlBarButtonProps.useMap'

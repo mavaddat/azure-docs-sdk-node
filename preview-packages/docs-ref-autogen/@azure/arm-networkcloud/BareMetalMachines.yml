@@ -18,8 +18,8 @@ methods:
       content: >-
         function beginCordon(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesCordonOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesCordonHeaders>,
-        BareMetalMachinesCordonHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -36,10 +36,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesCordonHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesCordonHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginCordonAndWait(string, string, BareMetalMachinesCordonOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginCordonAndWait'
     package: '@azure/arm-networkcloud'
@@ -50,8 +50,7 @@ methods:
       content: >-
         function beginCordonAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesCordonOptionalParams):
-        Promise<BareMetalMachinesCordonHeaders>
+        BareMetalMachinesCordonOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -68,8 +67,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesCordonHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: >-
       beginCreateOrUpdate(string, string, BareMetalMachine,
       BareMetalMachinesCreateOrUpdateOptionalParams)
@@ -112,7 +111,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />&gt;, <xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />&gt;&gt;
   - name: >-
@@ -172,7 +172,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -189,8 +190,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, BareMetalMachinesDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -207,7 +210,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesDeleteOptionalParams): Promise<void>
+        BareMetalMachinesDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -223,7 +226,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginPowerOff(string, string, BareMetalMachinesPowerOffOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginPowerOff'
     package: '@azure/arm-networkcloud'
@@ -234,8 +239,8 @@ methods:
       content: >-
         function beginPowerOff(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesPowerOffOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesPowerOffHeaders>,
-        BareMetalMachinesPowerOffHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -252,10 +257,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesPowerOffHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesPowerOffHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginPowerOffAndWait(string, string,
       BareMetalMachinesPowerOffOptionalParams)
@@ -268,8 +273,7 @@ methods:
       content: >-
         function beginPowerOffAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesPowerOffOptionalParams):
-        Promise<BareMetalMachinesPowerOffHeaders>
+        BareMetalMachinesPowerOffOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -286,8 +290,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesPowerOffHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginReimage(string, string, BareMetalMachinesReimageOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginReimage'
     package: '@azure/arm-networkcloud'
@@ -298,8 +302,8 @@ methods:
       content: >-
         function beginReimage(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesReimageOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesReimageHeaders>,
-        BareMetalMachinesReimageHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -316,10 +320,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesReimageHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesReimageHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginReimageAndWait(string, string,
       BareMetalMachinesReimageOptionalParams)
@@ -332,8 +336,7 @@ methods:
       content: >-
         function beginReimageAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesReimageOptionalParams):
-        Promise<BareMetalMachinesReimageHeaders>
+        BareMetalMachinesReimageOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -350,8 +353,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesReimageHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginReplace(string, string, BareMetalMachinesReplaceOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginReplace'
     package: '@azure/arm-networkcloud'
@@ -362,8 +365,8 @@ methods:
       content: >-
         function beginReplace(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesReplaceOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesReplaceHeaders>,
-        BareMetalMachinesReplaceHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -380,10 +383,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesReplaceHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesReplaceHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginReplaceAndWait(string, string,
       BareMetalMachinesReplaceOptionalParams)
@@ -396,8 +399,7 @@ methods:
       content: >-
         function beginReplaceAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesReplaceOptionalParams):
-        Promise<BareMetalMachinesReplaceHeaders>
+        BareMetalMachinesReplaceOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -414,8 +416,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesReplaceHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginRestart(string, string, BareMetalMachinesRestartOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginRestart'
     package: '@azure/arm-networkcloud'
@@ -426,8 +428,8 @@ methods:
       content: >-
         function beginRestart(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesRestartOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesRestartHeaders>,
-        BareMetalMachinesRestartHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -444,10 +446,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRestartHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesRestartHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginRestartAndWait(string, string,
       BareMetalMachinesRestartOptionalParams)
@@ -460,8 +462,7 @@ methods:
       content: >-
         function beginRestartAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesRestartOptionalParams):
-        Promise<BareMetalMachinesRestartHeaders>
+        BareMetalMachinesRestartOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -478,8 +479,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRestartHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: >-
       beginRunCommand(string, string, BareMetalMachineRunCommandParameters,
       BareMetalMachinesRunCommandOptionalParams)
@@ -501,8 +502,8 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunCommandParameters:
         BareMetalMachineRunCommandParameters, options?:
         BareMetalMachinesRunCommandOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesRunCommandHeaders>,
-        BareMetalMachinesRunCommandHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -525,11 +526,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunCommandHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunCommandHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginRunCommandAndWait(string, string,
       BareMetalMachineRunCommandParameters,
@@ -552,7 +552,7 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunCommandParameters:
         BareMetalMachineRunCommandParameters, options?:
         BareMetalMachinesRunCommandOptionalParams):
-        Promise<BareMetalMachinesRunCommandHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -575,8 +575,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunCommandHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: >-
       beginRunDataExtracts(string, string,
@@ -600,8 +599,8 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunDataExtractsParameters:
         BareMetalMachineRunDataExtractsParameters, options?:
         BareMetalMachinesRunDataExtractsOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesRunDataExtractsHeaders>,
-        BareMetalMachinesRunDataExtractsHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -624,11 +623,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunDataExtractsHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunDataExtractsHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginRunDataExtractsAndWait(string, string,
       BareMetalMachineRunDataExtractsParameters,
@@ -651,7 +649,7 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunDataExtractsParameters:
         BareMetalMachineRunDataExtractsParameters, options?:
         BareMetalMachinesRunDataExtractsOptionalParams):
-        Promise<BareMetalMachinesRunDataExtractsHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -674,8 +672,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunDataExtractsHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: >-
       beginRunReadCommands(string, string,
@@ -699,8 +696,8 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunReadCommandsParameters:
         BareMetalMachineRunReadCommandsParameters, options?:
         BareMetalMachinesRunReadCommandsOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesRunReadCommandsHeaders>,
-        BareMetalMachinesRunReadCommandsHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -723,11 +720,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunReadCommandsHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunReadCommandsHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginRunReadCommandsAndWait(string, string,
       BareMetalMachineRunReadCommandsParameters,
@@ -750,7 +746,7 @@ methods:
         bareMetalMachineName: string, bareMetalMachineRunReadCommandsParameters:
         BareMetalMachineRunReadCommandsParameters, options?:
         BareMetalMachinesRunReadCommandsOptionalParams):
-        Promise<BareMetalMachinesRunReadCommandsHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -773,8 +769,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesRunReadCommandsHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: beginStart(string, string, BareMetalMachinesStartOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginStart'
@@ -786,8 +781,8 @@ methods:
       content: >-
         function beginStart(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesStartOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesStartHeaders>,
-        BareMetalMachinesStartHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -804,10 +799,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesStartHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesStartHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginStartAndWait(string, string, BareMetalMachinesStartOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginStartAndWait'
     package: '@azure/arm-networkcloud'
@@ -818,8 +813,7 @@ methods:
       content: >-
         function beginStartAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesStartOptionalParams):
-        Promise<BareMetalMachinesStartHeaders>
+        BareMetalMachinesStartOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -836,8 +830,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesStartHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginUncordon(string, string, BareMetalMachinesUncordonOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginUncordon'
     package: '@azure/arm-networkcloud'
@@ -848,8 +842,8 @@ methods:
       content: >-
         function beginUncordon(resourceGroupName: string, bareMetalMachineName:
         string, options?: BareMetalMachinesUncordonOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesUncordonHeaders>,
-        BareMetalMachinesUncordonHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -866,10 +860,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesUncordonHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.BareMetalMachinesUncordonHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginUncordonAndWait(string, string,
       BareMetalMachinesUncordonOptionalParams)
@@ -882,8 +876,7 @@ methods:
       content: >-
         function beginUncordonAndWait(resourceGroupName: string,
         bareMetalMachineName: string, options?:
-        BareMetalMachinesUncordonOptionalParams):
-        Promise<BareMetalMachinesUncordonHeaders>
+        BareMetalMachinesUncordonOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -900,8 +893,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesUncordonHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginUpdate(string, string, BareMetalMachinesUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.beginUpdate'
     package: '@azure/arm-networkcloud'
@@ -934,7 +927,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />&gt;, <xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, BareMetalMachinesUpdateOptionalParams)
@@ -968,93 +962,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-networkcloud.BareMetalMachine" />&gt;
-  - name: >-
-      beginValidateHardware(string, string,
-      BareMetalMachineValidateHardwareParameters,
-      BareMetalMachinesValidateHardwareOptionalParams)
-    uid: '@azure/arm-networkcloud.BareMetalMachines.beginValidateHardware'
-    package: '@azure/arm-networkcloud'
-    summary: Validate the hardware of the provided bare metal machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginValidateHardware(resourceGroupName: string,
-        bareMetalMachineName: string,
-        bareMetalMachineValidateHardwareParameters:
-        BareMetalMachineValidateHardwareParameters, options?:
-        BareMetalMachinesValidateHardwareOptionalParams):
-        Promise<SimplePollerLike<OperationState<BareMetalMachinesValidateHardwareHeaders>,
-        BareMetalMachinesValidateHardwareHeaders>>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: bareMetalMachineName
-          type: string
-          description: The name of the bare metal machine.
-        - id: bareMetalMachineValidateHardwareParameters
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.BareMetalMachineValidateHardwareParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.BareMetalMachinesValidateHardwareOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesValidateHardwareHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesValidateHardwareHeaders"
-          />&gt;&gt;
-  - name: >-
-      beginValidateHardwareAndWait(string, string,
-      BareMetalMachineValidateHardwareParameters,
-      BareMetalMachinesValidateHardwareOptionalParams)
-    uid: '@azure/arm-networkcloud.BareMetalMachines.beginValidateHardwareAndWait'
-    package: '@azure/arm-networkcloud'
-    summary: Validate the hardware of the provided bare metal machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginValidateHardwareAndWait(resourceGroupName: string,
-        bareMetalMachineName: string,
-        bareMetalMachineValidateHardwareParameters:
-        BareMetalMachineValidateHardwareParameters, options?:
-        BareMetalMachinesValidateHardwareOptionalParams):
-        Promise<BareMetalMachinesValidateHardwareHeaders>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: bareMetalMachineName
-          type: string
-          description: The name of the bare metal machine.
-        - id: bareMetalMachineValidateHardwareParameters
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.BareMetalMachineValidateHardwareParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.BareMetalMachinesValidateHardwareOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.BareMetalMachinesValidateHardwareHeaders"
-          />&gt;
   - name: get(string, string, BareMetalMachinesGetOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.get'
     package: '@azure/arm-networkcloud'
@@ -1107,9 +1014,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachine" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.BareMetalMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(BareMetalMachinesListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.BareMetalMachines.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -1132,6 +1040,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.BareMetalMachine" />, <xref
-          uid="@azure/arm-networkcloud.BareMetalMachine" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.BareMetalMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

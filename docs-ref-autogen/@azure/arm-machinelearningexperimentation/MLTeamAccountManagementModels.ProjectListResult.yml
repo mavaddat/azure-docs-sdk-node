@@ -44,10 +44,7 @@ inheritedMethods:
     uid: >-
       @azure/arm-machinelearningexperimentation.MLTeamAccountManagementModels.ProjectListResult.at
     package: '@azure/arm-machinelearningexperimentation'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1212,7 +1209,7 @@ inheritedMethods:
           IterableIterator&lt;<xref
           uid="@azure/arm-machinelearningexperimentation.MLTeamAccountManagementModels.Project"
           />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@455
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@457
   - name: '[unscopables]()'
     uid: >-
       @azure/arm-machinelearningexperimentation.MLTeamAccountManagementModels.ProjectListResult.[unscopables]
@@ -1232,7 +1229,7 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@457
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@459
 extends: >-
   Array&lt;<xref
   uid="@azure/arm-machinelearningexperimentation.MLTeamAccountManagementModels.Project"

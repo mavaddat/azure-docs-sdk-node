@@ -51,7 +51,7 @@ constructors:
             validate that this URL references a valid Key Vault or Managed HSM
             resource. See https://aka.ms/azsdk/blog/vault-uri for details.
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An object that implements the `TokenCredential` interface used to
             authenticate requests to the service. Use the @azure/identity
@@ -333,7 +333,7 @@ methods:
           type: string
           description: >-
             The type of the key. One of the following: 'EC', 'EC-HSM', 'RSA',
-            'RSA-HSM', 'oct', 'OKP', 'OKP-HSM'.
+            'RSA-HSM', 'oct'.
         - id: options
           type: <xref uid="@azure/keyvault-keys.CreateKeyOptions" />
           description: The optional parameters.
@@ -377,47 +377,6 @@ methods:
           description: The name of the key.
         - id: options
           type: <xref uid="@azure/keyvault-keys.CreateOctKeyOptions" />
-          description: The optional parameters.
-      return:
-        description: ''
-        type: Promise&lt;<xref uid="@azure/keyvault-keys.KeyVaultKey" />&gt;
-  - name: createOkpKey(string, CreateOkpKeyOptions)
-    uid: '@azure/keyvault-keys.KeyClient.createOkpKey'
-    package: '@azure/keyvault-keys'
-    summary: >-
-      The createOKPKey method creates a new OKP key in Azure Key Vault. If the
-      named key
-
-      already exists, Azure Key Vault creates a new version of the key. It
-      requires the keys/create
-
-      permission.
-
-
-      Example usage:
-
-      ```ts
-
-      const client = new KeyClient(url, credentials);
-
-      let result = await client.createOkpKey("MyKey");
-
-      ```
-
-      Creates a new key, stores it, then returns key parameters and properties
-      to the client.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function createOkpKey(name: string, options?: CreateOkpKeyOptions):
-        Promise<KeyVaultKey>
-      parameters:
-        - id: name
-          type: string
-          description: The name of the key.
-        - id: options
-          type: <xref uid="@azure/keyvault-keys.CreateOkpKeyOptions" />
           description: The optional parameters.
       return:
         description: ''

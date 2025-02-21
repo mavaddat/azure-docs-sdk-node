@@ -6,13 +6,13 @@ type: package
 enums:
   - '@azure/arm-containerinstance.KnownContainerGroupIpAddressType'
   - '@azure/arm-containerinstance.KnownContainerGroupNetworkProtocol'
+  - '@azure/arm-containerinstance.KnownContainerGroupPriority'
   - '@azure/arm-containerinstance.KnownContainerGroupRestartPolicy'
   - '@azure/arm-containerinstance.KnownContainerGroupSku'
   - '@azure/arm-containerinstance.KnownContainerInstanceOperationsOrigin'
   - '@azure/arm-containerinstance.KnownContainerNetworkProtocol'
   - '@azure/arm-containerinstance.KnownDnsNameLabelReusePolicy'
   - '@azure/arm-containerinstance.KnownGpuSku'
-  - '@azure/arm-containerinstance.KnownIsCustomProvisioningTimeout'
   - '@azure/arm-containerinstance.KnownLogAnalyticsLogType'
   - '@azure/arm-containerinstance.KnownOperatingSystemTypes'
   - '@azure/arm-containerinstance.KnownScheme'
@@ -27,6 +27,8 @@ interfaces:
   - '@azure/arm-containerinstance.CapabilitiesListResult'
   - '@azure/arm-containerinstance.CloudError'
   - '@azure/arm-containerinstance.CloudErrorBody'
+  - '@azure/arm-containerinstance.ConfidentialComputeProperties'
+  - '@azure/arm-containerinstance.ConfigMap'
   - '@azure/arm-containerinstance.Container'
   - '@azure/arm-containerinstance.ContainerAttachResponse'
   - '@azure/arm-containerinstance.ContainerExec'
@@ -37,6 +39,30 @@ interfaces:
   - '@azure/arm-containerinstance.ContainerGroupDiagnostics'
   - '@azure/arm-containerinstance.ContainerGroupIdentity'
   - '@azure/arm-containerinstance.ContainerGroupListResult'
+  - '@azure/arm-containerinstance.ContainerGroupProfile'
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfileGetByRevisionNumberOptionalParams
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfileListAllRevisionsNextOptionalParams
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfileListAllRevisionsOptionalParams
+  - '@azure/arm-containerinstance.ContainerGroupProfileListResult'
+  - '@azure/arm-containerinstance.ContainerGroupProfileOperations'
+  - '@azure/arm-containerinstance.ContainerGroupProfilePatch'
+  - '@azure/arm-containerinstance.ContainerGroupProfileProperties'
+  - '@azure/arm-containerinstance.ContainerGroupProfileReferenceDefinition'
+  - '@azure/arm-containerinstance.ContainerGroupProfiles'
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfilesCreateOrUpdateOptionalParams
+  - '@azure/arm-containerinstance.ContainerGroupProfilesDeleteOptionalParams'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesGetOptionalParams'
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfilesListByResourceGroupNextOptionalParams
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfilesListByResourceGroupOptionalParams
+  - '@azure/arm-containerinstance.ContainerGroupProfilesListNextOptionalParams'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesListOptionalParams'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesPatchOptionalParams'
   - '@azure/arm-containerinstance.ContainerGroupProperties'
   - '@azure/arm-containerinstance.ContainerGroupPropertiesInstanceView'
   - '@azure/arm-containerinstance.ContainerGroupSubnetId'
@@ -97,6 +123,9 @@ interfaces:
   - '@azure/arm-containerinstance.ResourceLimits'
   - '@azure/arm-containerinstance.ResourceRequests'
   - '@azure/arm-containerinstance.ResourceRequirements'
+  - '@azure/arm-containerinstance.SecurityContextCapabilitiesDefinition'
+  - '@azure/arm-containerinstance.SecurityContextDefinition'
+  - '@azure/arm-containerinstance.StandbyPoolProfileDefinition'
   - '@azure/arm-containerinstance.SubnetServiceAssociationLink'
   - >-
     @azure/arm-containerinstance.SubnetServiceAssociationLinkDeleteOptionalParams
@@ -109,6 +138,21 @@ interfaces:
 typeAliases:
   - '@azure/arm-containerinstance.ContainerGroupIpAddressType'
   - '@azure/arm-containerinstance.ContainerGroupNetworkProtocol'
+  - '@azure/arm-containerinstance.ContainerGroupPriority'
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfileGetByRevisionNumberResponse
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfileListAllRevisionsNextResponse
+  - '@azure/arm-containerinstance.ContainerGroupProfileListAllRevisionsResponse'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesCreateOrUpdateResponse'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesGetResponse'
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfilesListByResourceGroupNextResponse
+  - >-
+    @azure/arm-containerinstance.ContainerGroupProfilesListByResourceGroupResponse
+  - '@azure/arm-containerinstance.ContainerGroupProfilesListNextResponse'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesListResponse'
+  - '@azure/arm-containerinstance.ContainerGroupProfilesPatchResponse'
   - '@azure/arm-containerinstance.ContainerGroupRestartPolicy'
   - '@azure/arm-containerinstance.ContainerGroupSku'
   - '@azure/arm-containerinstance.ContainerGroupsCreateOrUpdateResponse'
@@ -128,7 +172,6 @@ typeAliases:
   - '@azure/arm-containerinstance.ContainersListLogsResponse'
   - '@azure/arm-containerinstance.DnsNameLabelReusePolicy'
   - '@azure/arm-containerinstance.GpuSku'
-  - '@azure/arm-containerinstance.IsCustomProvisioningTimeout'
   - '@azure/arm-containerinstance.LocationListCachedImagesNextResponse'
   - '@azure/arm-containerinstance.LocationListCachedImagesResponse'
   - '@azure/arm-containerinstance.LocationListCapabilitiesNextResponse'

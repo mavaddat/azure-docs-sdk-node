@@ -40,10 +40,7 @@ inheritedMethods:
   - name: at(number)
     uid: '@azure/arm-automation.AutomationModels.CertificateListResult.at'
     package: '@azure/arm-automation'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1138,7 +1135,7 @@ inheritedMethods:
         type: >-
           IterableIterator&lt;<xref
           uid="@azure/arm-automation.AutomationModels.Certificate" />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@1501
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@1503
   - name: '[unscopables]()'
     uid: '@azure/arm-automation.AutomationModels.CertificateListResult.[unscopables]'
     package: '@azure/arm-automation'
@@ -1157,5 +1154,5 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@1503
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@1505
 extends: Array&lt;<xref uid="@azure/arm-automation.AutomationModels.Certificate" />&gt;

@@ -19,17 +19,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<ResourceHealthMetadataListBySite200Response |
-        ResourceHealthMetadataListBySitedefaultResponse>
+        StreamableMethod<ResourceHealthMetadataListBySite200Response |
+        ResourceHealthMetadataListBySiteDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.ResourceHealthMetadataListBySite200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.ResourceHealthMetadataListBySitedefaultResponse"
+          uid="@azure-rest/arm-appservice.ResourceHealthMetadataListBySiteDefaultResponse"
           />&gt;

@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsListFunctionKeysSlot200Response |
-        WebAppsListFunctionKeysSlotdefaultResponse>
+        StreamableMethod<WebAppsListFunctionKeysSlot200Response |
+        WebAppsListFunctionKeysSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListFunctionKeysSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListFunctionKeysSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListFunctionKeysSlotDefaultResponse"
           />&gt;

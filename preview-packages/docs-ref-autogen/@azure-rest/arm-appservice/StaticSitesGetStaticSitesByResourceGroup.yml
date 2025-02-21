@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<StaticSitesGetStaticSitesByResourceGroup200Response |
-        StaticSitesGetStaticSitesByResourceGroupdefaultResponse>
+        StreamableMethod<StaticSitesGetStaticSitesByResourceGroup200Response |
+        StaticSitesGetStaticSitesByResourceGroupDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.StaticSitesGetStaticSitesByResourceGroup200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.StaticSitesGetStaticSitesByResourceGroupdefaultResponse"
+          uid="@azure-rest/arm-appservice.StaticSitesGetStaticSitesByResourceGroupDefaultResponse"
           />&gt;

@@ -12,9 +12,9 @@ properties:
     uid: '@azure/eventgrid.RejectResult.failedLockTokens'
     package: '@azure/eventgrid'
     summary: >-
-      Array of LockToken values for failed cloud events. Each LockToken includes
-      the lock token value along with the related error information (namely, the
-      error code and description).
+      Array of FailedLockToken for failed cloud events. Each FailedLockToken
+      includes the lock token along with the related error information (namely,
+      the error code and description).
     fullName: failedLockTokens
     remarks: ''
     isDeprecated: false
@@ -26,7 +26,7 @@ properties:
   - name: succeededLockTokens
     uid: '@azure/eventgrid.RejectResult.succeededLockTokens'
     package: '@azure/eventgrid'
-    summary: Array of lock tokens values for the successfully rejected cloud events.
+    summary: Array of lock tokens for the successfully rejected cloud events.
     fullName: succeededLockTokens
     remarks: ''
     isDeprecated: false

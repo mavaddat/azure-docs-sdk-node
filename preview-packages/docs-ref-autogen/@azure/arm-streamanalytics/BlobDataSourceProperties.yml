@@ -8,6 +8,18 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: authenticationMode
+    uid: '@azure/arm-streamanalytics.BlobDataSourceProperties.authenticationMode'
+    package: '@azure/arm-streamanalytics'
+    summary: Authentication Mode.
+    fullName: authenticationMode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authenticationMode?: string'
+      return:
+        description: ''
+        type: string
   - name: container
     uid: '@azure/arm-streamanalytics.BlobDataSourceProperties.container'
     package: '@azure/arm-streamanalytics'

@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<DiagnosticsListSiteDetectors200Response |
-        DiagnosticsListSiteDetectorsdefaultResponse>
+        StreamableMethod<DiagnosticsListSiteDetectors200Response |
+        DiagnosticsListSiteDetectorsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.DiagnosticsListSiteDetectors200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.DiagnosticsListSiteDetectorsdefaultResponse"
+          uid="@azure-rest/arm-appservice.DiagnosticsListSiteDetectorsDefaultResponse"
           />&gt;

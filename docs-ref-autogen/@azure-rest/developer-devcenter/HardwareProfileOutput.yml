@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: HardwareProfileOutput
+uid: '@azure-rest/developer-devcenter.HardwareProfileOutput'
+package: '@azure-rest/developer-devcenter'
+summary: Hardware specifications for the Dev Box.
+fullName: HardwareProfileOutput
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: memoryGB
+    uid: '@azure-rest/developer-devcenter.HardwareProfileOutput.memoryGB'
+    package: '@azure-rest/developer-devcenter'
+    summary: The amount of memory available for the Dev Box.
+    fullName: memoryGB
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'memoryGB?: number'
+      return:
+        description: ''
+        type: number
+  - name: skuName
+    uid: '@azure-rest/developer-devcenter.HardwareProfileOutput.skuName'
+    package: '@azure-rest/developer-devcenter'
+    summary: >-
+      The name of the SKU.
+
+
+      Possible values: "general_i_8c32gb256ssd_v2", "general_i_8c32gb512ssd_v2",
+      "general_i_8c32gb1024ssd_v2", "general_i_8c32gb2048ssd_v2",
+      "general_i_16c64gb256ssd_v2", "general_i_16c64gb512ssd_v2",
+      "general_i_16c64gb1024ssd_v2", "general_i_16c64gb2048ssd_v2",
+      "general_i_32c128gb512ssd_v2", "general_i_32c128gb1024ssd_v2",
+      "general_i_32c128gb2048ssd_v2", "general_a_8c32gb256ssd_v2",
+      "general_a_8c32gb512ssd_v2", "general_a_8c32gb1024ssd_v2",
+      "general_a_8c32gb2048ssd_v2", "general_a_16c64gb256ssd_v2",
+      "general_a_16c64gb512ssd_v2", "general_a_16c64gb1024ssd_v2",
+      "general_a_16c64gb2048ssd_v2", "general_a_32c128gb512ssd_v2",
+      "general_a_32c128gb1024ssd_v2", "general_a_32c128gb2048ssd_v2"
+    fullName: skuName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skuName?: string'
+      return:
+        description: ''
+        type: string
+  - name: vCPUs
+    uid: '@azure-rest/developer-devcenter.HardwareProfileOutput.vCPUs'
+    package: '@azure-rest/developer-devcenter'
+    summary: The number of vCPUs available for the Dev Box.
+    fullName: vCPUs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'vCPUs?: number'
+      return:
+        description: ''
+        type: number

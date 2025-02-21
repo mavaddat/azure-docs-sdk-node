@@ -7,5 +7,4 @@ fullName: KubernetesClustersRestartNodeResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type KubernetesClustersRestartNodeResponse =
-    KubernetesClustersRestartNodeHeaders
+  type KubernetesClustersRestartNodeResponse = OperationStatusResult

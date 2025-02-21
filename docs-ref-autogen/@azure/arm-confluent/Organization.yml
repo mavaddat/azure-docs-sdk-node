@@ -2,36 +2,24 @@
 name: Organization
 uid: '@azure/arm-confluent.Organization'
 package: '@azure/arm-confluent'
-summary: Class representing a Organization.
+summary: Interface representing a Organization.
 fullName: Organization
 remarks: ''
 isDeprecated: false
-type: class
-constructors:
-  - name: Organization(ConfluentManagementClientContext)
-    uid: '@azure/arm-confluent.Organization.constructor'
-    package: '@azure/arm-confluent'
-    summary: Create a Organization.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'new Organization(client: ConfluentManagementClientContext)'
-      parameters:
-        - id: client
-          type: <xref uid="@azure/arm-confluent.ConfluentManagementClientContext" />
-          description: Reference to the service client.
+type: interface
 methods:
-  - name: beginCreate(string, string, OrganizationBeginCreateOptionalParams)
+  - name: beginCreate(string, string, OrganizationCreateOptionalParams)
     uid: '@azure/arm-confluent.Organization.beginCreate'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Create Organization resource
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function beginCreate(resourceGroupName: string, organizationName:
-        string, options?: OrganizationBeginCreateOptionalParams):
-        Promise<LROPoller>
+        string, options?: OrganizationCreateOptionalParams):
+        Promise<SimplePollerLike<OperationState<OrganizationResource>,
+        OrganizationResource>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -40,77 +28,26 @@ methods:
           type: string
           description: Organization resource name
         - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationBeginCreateOptionalParams"
-            />
-          description: The optional parameters
+          type: <xref uid="@azure/arm-confluent.OrganizationCreateOptionalParams" />
+          description: The options parameters.
       return:
-        description: Promise<msRestAzure.LROPoller>
-        type: Promise&lt;LROPoller&gt;
-  - name: beginDeleteMethod(string, string, RequestOptionsBase)
-    uid: '@azure/arm-confluent.Organization.beginDeleteMethod'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginDeleteMethod(resourceGroupName: string, organizationName:
-        string, options?: RequestOptionsBase): Promise<LROPoller>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: organizationName
-          type: string
-          description: Organization resource name
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-      return:
-        description: Promise<msRestAzure.LROPoller>
-        type: Promise&lt;LROPoller&gt;
-  - name: create(string, string, OrganizationCreateOptionalParams)
-    uid: '@azure/arm-confluent.Organization.create'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function create(resourceGroupName: string, organizationName: string,
-        options?: OrganizationCreateOptionalParams):
-        Promise<OrganizationCreateResponse>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: organizationName
-          type: string
-          description: Organization resource name
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationCreateOptionalParams"
-            />
-          description: The optional parameters
-      return:
-        description: Promise<Models.OrganizationCreateResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationCreateResponse"
-          />&gt;
-  - name: deleteMethod(string, string, RequestOptionsBase)
-    uid: '@azure/arm-confluent.Organization.deleteMethod'
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-confluent.OrganizationResource" />&gt;, <xref
+          uid="@azure/arm-confluent.OrganizationResource" />&gt;&gt;
+  - name: beginCreateAndWait(string, string, OrganizationCreateOptionalParams)
+    uid: '@azure/arm-confluent.Organization.beginCreateAndWait'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Create Organization resource
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function deleteMethod(resourceGroupName: string, organizationName:
-        string, options?: RequestOptionsBase): Promise<RestResponse>
+        function beginCreateAndWait(resourceGroupName: string, organizationName:
+        string, options?: OrganizationCreateOptionalParams):
+        Promise<OrganizationResource>
       parameters:
         - id: resourceGroupName
           type: string
@@ -119,21 +56,147 @@ methods:
           type: string
           description: Organization resource name
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
+          type: <xref uid="@azure/arm-confluent.OrganizationCreateOptionalParams" />
+          description: The options parameters.
       return:
-        description: Promise<msRest.RestResponse>
-        type: Promise&lt;RestResponse&gt;
-  - name: get(string, string, RequestOptionsBase)
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-confluent.OrganizationResource"
+          />&gt;
+  - name: beginDelete(string, string, OrganizationDeleteOptionalParams)
+    uid: '@azure/arm-confluent.Organization.beginDelete'
+    package: '@azure/arm-confluent'
+    summary: Delete Organization resource
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDelete(resourceGroupName: string, organizationName:
+        string, options?: OrganizationDeleteOptionalParams):
+        Promise<SimplePollerLike<OperationState<void>, void>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: options
+          type: <xref uid="@azure/arm-confluent.OrganizationDeleteOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
+  - name: beginDeleteAndWait(string, string, OrganizationDeleteOptionalParams)
+    uid: '@azure/arm-confluent.Organization.beginDeleteAndWait'
+    package: '@azure/arm-confluent'
+    summary: Delete Organization resource
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginDeleteAndWait(resourceGroupName: string, organizationName:
+        string, options?: OrganizationDeleteOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Resource group name
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: options
+          type: <xref uid="@azure/arm-confluent.OrganizationDeleteOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: >-
+      createAPIKey(string, string, string, string, CreateAPIKeyModel,
+      OrganizationCreateAPIKeyOptionalParams)
+    uid: '@azure/arm-confluent.Organization.createAPIKey'
+    package: '@azure/arm-confluent'
+    summary: >-
+      Creates API key for a schema registry Cluster ID or Kafka Cluster ID under
+      a environment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAPIKey(resourceGroupName: string, organizationName:
+        string, environmentId: string, clusterId: string, body:
+        CreateAPIKeyModel, options?: OrganizationCreateAPIKeyOptionalParams):
+        Promise<APIKeyRecord>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: environmentId
+          type: string
+          description: Confluent environment id
+        - id: clusterId
+          type: string
+          description: Confluent kafka or schema registry cluster id
+        - id: body
+          type: <xref uid="@azure/arm-confluent.CreateAPIKeyModel" />
+          description: >-
+            Request payload for get creating API Key for schema registry Cluster
+            ID or Kafka Cluster
+                        ID under a environment
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationCreateAPIKeyOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-confluent.APIKeyRecord" />&gt;
+  - name: >-
+      deleteClusterAPIKey(string, string, string,
+      OrganizationDeleteClusterAPIKeyOptionalParams)
+    uid: '@azure/arm-confluent.Organization.deleteClusterAPIKey'
+    package: '@azure/arm-confluent'
+    summary: Deletes API key of a kafka or schema registry cluster
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function deleteClusterAPIKey(resourceGroupName: string,
+        organizationName: string, apiKeyId: string, options?:
+        OrganizationDeleteClusterAPIKeyOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: apiKeyId
+          type: string
+          description: Confluent API Key id
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationDeleteClusterAPIKeyOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: get(string, string, OrganizationGetOptionalParams)
     uid: '@azure/arm-confluent.Organization.get'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Get the properties of a specific Organization resource.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function get(resourceGroupName: string, organizationName: string,
-        options?: RequestOptionsBase): Promise<OrganizationGetResponse>
+        options?: OrganizationGetOptionalParams): Promise<OrganizationResource>
       parameters:
         - id: resourceGroupName
           type: string
@@ -142,350 +205,360 @@ methods:
           type: string
           description: Organization resource name
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
+          type: <xref uid="@azure/arm-confluent.OrganizationGetOptionalParams" />
+          description: The options parameters.
       return:
-        description: Promise<Models.OrganizationGetResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationGetResponse"
+          Promise&lt;<xref uid="@azure/arm-confluent.OrganizationResource"
           />&gt;
   - name: >-
-      get(string, string, RequestOptionsBase,
-      ServiceCallback<OrganizationResource>)
-    uid: '@azure/arm-confluent.Organization.get_2'
+      getClusterAPIKey(string, string, string,
+      OrganizationGetClusterAPIKeyOptionalParams)
+    uid: '@azure/arm-confluent.Organization.getClusterAPIKey'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Get API key details of a kafka or schema registry cluster
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function get(resourceGroupName: string, organizationName: string,
-        options: RequestOptionsBase, callback:
-        ServiceCallback<OrganizationResource>)
+        function getClusterAPIKey(resourceGroupName: string, organizationName:
+        string, apiKeyId: string, options?:
+        OrganizationGetClusterAPIKeyOptionalParams): Promise<APIKeyRecord>
       parameters:
         - id: resourceGroupName
           type: string
-          description: Resource group name
+          description: The name of the resource group. The name is case insensitive.
         - id: organizationName
           type: string
           description: Organization resource name
+        - id: apiKeyId
+          type: string
+          description: Confluent API Key id
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-        - id: callback
           type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResource"
-            />&gt;
-          description: The callback
-  - name: get(string, string, ServiceCallback<OrganizationResource>)
-    uid: '@azure/arm-confluent.Organization.get_1'
+            <xref
+            uid="@azure/arm-confluent.OrganizationGetClusterAPIKeyOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-confluent.APIKeyRecord" />&gt;
+  - name: >-
+      getClusterById(string, string, string, string,
+      OrganizationGetClusterByIdOptionalParams)
+    uid: '@azure/arm-confluent.Organization.getClusterById'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Get cluster by Id
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function get(resourceGroupName: string, organizationName: string,
-        callback: ServiceCallback<OrganizationResource>)
+        function getClusterById(resourceGroupName: string, organizationName:
+        string, environmentId: string, clusterId: string, options?:
+        OrganizationGetClusterByIdOptionalParams): Promise<SCClusterRecord>
       parameters:
         - id: resourceGroupName
           type: string
-          description: Resource group name
+          description: The name of the resource group. The name is case insensitive.
         - id: organizationName
           type: string
           description: Organization resource name
-        - id: callback
+        - id: environmentId
+          type: string
+          description: Confluent environment id
+        - id: clusterId
+          type: string
+          description: Confluent kafka or schema registry cluster id
+        - id: options
           type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResource"
-            />&gt;
-          description: The callback
-  - name: listByResourceGroup(string, RequestOptionsBase)
+            <xref
+            uid="@azure/arm-confluent.OrganizationGetClusterByIdOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-confluent.SCClusterRecord" />&gt;
+  - name: >-
+      getEnvironmentById(string, string, string,
+      OrganizationGetEnvironmentByIdOptionalParams)
+    uid: '@azure/arm-confluent.Organization.getEnvironmentById'
+    package: '@azure/arm-confluent'
+    summary: Get Environment details by environment Id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getEnvironmentById(resourceGroupName: string, organizationName:
+        string, environmentId: string, options?:
+        OrganizationGetEnvironmentByIdOptionalParams):
+        Promise<SCEnvironmentRecord>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: environmentId
+          type: string
+          description: Confluent environment id
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationGetEnvironmentByIdOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-confluent.SCEnvironmentRecord" />&gt;
+  - name: >-
+      getSchemaRegistryClusterById(string, string, string, string,
+      OrganizationGetSchemaRegistryClusterByIdOptionalParams)
+    uid: '@azure/arm-confluent.Organization.getSchemaRegistryClusterById'
+    package: '@azure/arm-confluent'
+    summary: Get schema registry cluster by Id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSchemaRegistryClusterById(resourceGroupName: string,
+        organizationName: string, environmentId: string, clusterId: string,
+        options?: OrganizationGetSchemaRegistryClusterByIdOptionalParams):
+        Promise<SchemaRegistryClusterRecord>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: environmentId
+          type: string
+          description: Confluent environment id
+        - id: clusterId
+          type: string
+          description: Confluent kafka or schema registry cluster id
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationGetSchemaRegistryClusterByIdOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-confluent.SchemaRegistryClusterRecord" />&gt;
+  - name: listByResourceGroup(string, OrganizationListByResourceGroupOptionalParams)
     uid: '@azure/arm-confluent.Organization.listByResourceGroup'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: List all Organizations under the specified resource group.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function listByResourceGroup(resourceGroupName: string, options?:
-        RequestOptionsBase): Promise<OrganizationListByResourceGroupResponse>
+        OrganizationListByResourceGroupOptionalParams):
+        PagedAsyncIterableIterator<OrganizationResource, OrganizationResource[],
+        PageSettings>
       parameters:
         - id: resourceGroupName
           type: string
           description: Resource group name
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListByResourceGroupOptionalParams"
+            />
+          description: The options parameters.
       return:
-        description: Promise<Models.OrganizationListByResourceGroupResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationListByResourceGroupResponse"
-          />&gt;
-  - name: >-
-      listByResourceGroup(string, RequestOptionsBase,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listByResourceGroup_2'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listByResourceGroup(resourceGroupName: string, options:
-        RequestOptionsBase, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: >-
-      listByResourceGroup(string,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listByResourceGroup_1'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listByResourceGroup(resourceGroupName: string, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: listByResourceGroupNext(string, RequestOptionsBase)
-    uid: '@azure/arm-confluent.Organization.listByResourceGroupNext'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listByResourceGroupNext(nextPageLink: string, options?:
-        RequestOptionsBase):
-        Promise<OrganizationListByResourceGroupNextResponse>
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-      return:
-        description: Promise<Models.OrganizationListByResourceGroupNextResponse>
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationListByResourceGroupNextResponse"
-          />&gt;
-  - name: >-
-      listByResourceGroupNext(string, RequestOptionsBase,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listByResourceGroupNext_2'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listByResourceGroupNext(nextPageLink: string, options:
-        RequestOptionsBase, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: >-
-      listByResourceGroupNext(string,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listByResourceGroupNext_1'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listByResourceGroupNext(nextPageLink: string, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: listBySubscription(RequestOptionsBase)
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-confluent.OrganizationResource" />, <xref
+          uid="@azure/arm-confluent.OrganizationResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: listBySubscription(OrganizationListBySubscriptionOptionalParams)
     uid: '@azure/arm-confluent.Organization.listBySubscription'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: List all organizations under the specified subscription.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function listBySubscription(options?: RequestOptionsBase):
-        Promise<OrganizationListBySubscriptionResponse>
+        function listBySubscription(options?:
+        OrganizationListBySubscriptionOptionalParams):
+        PagedAsyncIterableIterator<OrganizationResource, OrganizationResource[],
+        PageSettings>
       parameters:
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListBySubscriptionOptionalParams"
+            />
+          description: The options parameters.
       return:
-        description: Promise<Models.OrganizationListBySubscriptionResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationListBySubscriptionResponse"
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-confluent.OrganizationResource" />, <xref
+          uid="@azure/arm-confluent.OrganizationResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listClusters(string, string, string,
+      OrganizationListClustersOptionalParams)
+    uid: '@azure/arm-confluent.Organization.listClusters'
+    package: '@azure/arm-confluent'
+    summary: Lists of all the clusters in a environment
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listClusters(resourceGroupName: string, organizationName:
+        string, environmentId: string, options?:
+        OrganizationListClustersOptionalParams):
+        PagedAsyncIterableIterator<SCClusterRecord, SCClusterRecord[],
+        PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: environmentId
+          type: string
+          description: Confluent environment id
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListClustersOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-confluent.SCClusterRecord" />, <xref
+          uid="@azure/arm-confluent.SCClusterRecord" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listEnvironments(string, string,
+      OrganizationListEnvironmentsOptionalParams)
+    uid: '@azure/arm-confluent.Organization.listEnvironments'
+    package: '@azure/arm-confluent'
+    summary: Lists of all the environments in a organization
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listEnvironments(resourceGroupName: string, organizationName:
+        string, options?: OrganizationListEnvironmentsOptionalParams):
+        PagedAsyncIterableIterator<SCEnvironmentRecord, SCEnvironmentRecord[],
+        PageSettings>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListEnvironmentsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-confluent.SCEnvironmentRecord" />, <xref
+          uid="@azure/arm-confluent.SCEnvironmentRecord" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
+  - name: >-
+      listRegions(string, string, ListAccessRequestModel,
+      OrganizationListRegionsOptionalParams)
+    uid: '@azure/arm-confluent.Organization.listRegions'
+    package: '@azure/arm-confluent'
+    summary: cloud provider regions available for creating Schema Registry clusters.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listRegions(resourceGroupName: string, organizationName:
+        string, body: ListAccessRequestModel, options?:
+        OrganizationListRegionsOptionalParams):
+        Promise<ListRegionsSuccessResponse>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: body
+          type: <xref uid="@azure/arm-confluent.ListAccessRequestModel" />
+          description: List Access Request Model
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListRegionsOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-confluent.ListRegionsSuccessResponse"
           />&gt;
   - name: >-
-      listBySubscription(RequestOptionsBase,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listBySubscription_2'
+      listSchemaRegistryClusters(string, string, string,
+      OrganizationListSchemaRegistryClustersOptionalParams)
+    uid: '@azure/arm-confluent.Organization.listSchemaRegistryClusters'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Get schema registry clusters
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function listBySubscription(options: RequestOptionsBase, callback:
-        ServiceCallback<OrganizationResourceListResult>)
+        function listSchemaRegistryClusters(resourceGroupName: string,
+        organizationName: string, environmentId: string, options?:
+        OrganizationListSchemaRegistryClustersOptionalParams):
+        PagedAsyncIterableIterator<SchemaRegistryClusterRecord,
+        SchemaRegistryClusterRecord[], PageSettings>
       parameters:
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: listBySubscription(ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listBySubscription_1'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listBySubscription(callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: listBySubscriptionNext(string, RequestOptionsBase)
-    uid: '@azure/arm-confluent.Organization.listBySubscriptionNext'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listBySubscriptionNext(nextPageLink: string, options?:
-        RequestOptionsBase): Promise<OrganizationListBySubscriptionNextResponse>
-      parameters:
-        - id: nextPageLink
+        - id: resourceGroupName
           type: string
-          description: The NextLink from the previous successful call to List operation.
+          description: The name of the resource group. The name is case insensitive.
+        - id: organizationName
+          type: string
+          description: Organization resource name
+        - id: environmentId
+          type: string
+          description: Confluent environment id
         - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
+          type: >-
+            <xref
+            uid="@azure/arm-confluent.OrganizationListSchemaRegistryClustersOptionalParams"
+            />
+          description: The options parameters.
       return:
-        description: Promise<Models.OrganizationListBySubscriptionNextResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationListBySubscriptionNextResponse"
-          />&gt;
-  - name: >-
-      listBySubscriptionNext(string, RequestOptionsBase,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listBySubscriptionNext_2'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listBySubscriptionNext(nextPageLink: string, options:
-        RequestOptionsBase, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: options
-          type: RequestOptionsBase
-          description: The optional parameters
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
-  - name: >-
-      listBySubscriptionNext(string,
-      ServiceCallback<OrganizationResourceListResult>)
-    uid: '@azure/arm-confluent.Organization.listBySubscriptionNext_1'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function listBySubscriptionNext(nextPageLink: string, callback:
-        ServiceCallback<OrganizationResourceListResult>)
-      parameters:
-        - id: nextPageLink
-          type: string
-          description: The NextLink from the previous successful call to List operation.
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResourceListResult"
-            />&gt;
-          description: The callback
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-confluent.SchemaRegistryClusterRecord" />, <xref
+          uid="@azure/arm-confluent.SchemaRegistryClusterRecord" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: update(string, string, OrganizationUpdateOptionalParams)
     uid: '@azure/arm-confluent.Organization.update'
     package: '@azure/arm-confluent'
-    summary: ''
+    summary: Update Organization resource
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function update(resourceGroupName: string, organizationName: string,
         options?: OrganizationUpdateOptionalParams):
-        Promise<OrganizationUpdateResponse>
+        Promise<OrganizationResource>
       parameters:
         - id: resourceGroupName
           type: string
@@ -494,69 +567,10 @@ methods:
           type: string
           description: Organization resource name
         - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationUpdateOptionalParams"
-            />
-          description: The optional parameters
+          type: <xref uid="@azure/arm-confluent.OrganizationUpdateOptionalParams" />
+          description: The options parameters.
       return:
-        description: Promise<Models.OrganizationUpdateResponse>
+        description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationUpdateResponse"
+          Promise&lt;<xref uid="@azure/arm-confluent.OrganizationResource"
           />&gt;
-  - name: >-
-      update(string, string, OrganizationUpdateOptionalParams,
-      ServiceCallback<OrganizationResource>)
-    uid: '@azure/arm-confluent.Organization.update_2'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function update(resourceGroupName: string, organizationName: string,
-        options: OrganizationUpdateOptionalParams, callback:
-        ServiceCallback<OrganizationResource>)
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: organizationName
-          type: string
-          description: Organization resource name
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationUpdateOptionalParams"
-            />
-          description: The optional parameters
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResource"
-            />&gt;
-          description: The callback
-  - name: update(string, string, ServiceCallback<OrganizationResource>)
-    uid: '@azure/arm-confluent.Organization.update_1'
-    package: '@azure/arm-confluent'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function update(resourceGroupName: string, organizationName: string,
-        callback: ServiceCallback<OrganizationResource>)
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: Resource group name
-        - id: organizationName
-          type: string
-          description: Organization resource name
-        - id: callback
-          type: >-
-            ServiceCallback&lt;<xref
-            uid="@azure/arm-confluent.ConfluentManagementModels.OrganizationResource"
-            />&gt;
-          description: The callback

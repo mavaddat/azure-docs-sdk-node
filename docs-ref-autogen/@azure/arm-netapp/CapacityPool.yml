@@ -112,7 +112,7 @@ properties:
     package: '@azure/arm-netapp'
     summary: >-
       Provisioned size of the pool (in bytes). Allowed values are in 1TiB chunks
-      (value must be multiply of 4398046511104).
+      (value must be multiple of 1099511627776).
     fullName: size
     remarks: ''
     isDeprecated: false
@@ -158,8 +158,8 @@ inheritedProperties:
     uid: '@azure/arm-netapp.CapacityPool.id'
     package: '@azure/arm-netapp'
     summary: >-
-      Fully qualified resource ID for the resource. Ex -
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

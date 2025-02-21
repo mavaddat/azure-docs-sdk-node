@@ -8,11 +8,24 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: objectId
+    uid: '@azure/arm-cosmosdbforpostgresql.Role.objectId'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: ''
+    fullName: objectId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'objectId?: string'
+      return:
+        description: ''
+        type: string
   - name: password
     uid: '@azure/arm-cosmosdbforpostgresql.Role.password'
     package: '@azure/arm-cosmosdbforpostgresql'
     summary: >-
-      The password of the cluster role.
+      The password of the cluster role. If an identity is used, password will
+      not be required.
 
       This value contains a credential. Consider obscuring before showing to
       users
@@ -20,7 +33,19 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'password: string'
+      content: 'password?: string'
+      return:
+        description: ''
+        type: string
+  - name: principalType
+    uid: '@azure/arm-cosmosdbforpostgresql.Role.principalType'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: ''
+    fullName: principalType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'principalType?: string'
       return:
         description: ''
         type: string
@@ -37,6 +62,30 @@ properties:
     isDeprecated: false
     syntax:
       content: 'provisioningState?: string'
+      return:
+        description: ''
+        type: string
+  - name: roleType
+    uid: '@azure/arm-cosmosdbforpostgresql.Role.roleType'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: ''
+    fullName: roleType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'roleType?: string'
+      return:
+        description: ''
+        type: string
+  - name: tenantId
+    uid: '@azure/arm-cosmosdbforpostgresql.Role.tenantId'
+    package: '@azure/arm-cosmosdbforpostgresql'
+    summary: ''
+    fullName: tenantId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tenantId?: string'
       return:
         description: ''
         type: string

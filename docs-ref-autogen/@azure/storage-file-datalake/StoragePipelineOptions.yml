@@ -10,6 +10,20 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: audience
+    uid: '@azure/storage-file-datalake.StoragePipelineOptions.audience'
+    package: '@azure/storage-file-datalake'
+    summary: |-
+      The audience used to retrieve an AAD token.
+      By default, audience 'https://storage.azure.com/.default' will be used.
+    fullName: audience
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'audience?: string'
+      return:
+        description: ''
+        type: string
   - name: httpClient
     uid: '@azure/storage-file-datalake.StoragePipelineOptions.httpClient'
     package: '@azure/storage-file-datalake'
@@ -18,7 +32,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'httpClient?: HttpClient'
+      content: 'httpClient?: RequestPolicy'
       return:
         description: ''
         type: <xref uid="@azure/storage-file-datalake.IHttpClient" />
@@ -33,7 +47,7 @@ properties:
       content: 'keepAliveOptions?: KeepAliveOptions'
       return:
         description: ''
-        type: KeepAliveOptions
+        type: <xref uid="@azure/core-http-compat.KeepAliveOptions" />
   - name: proxyOptions
     uid: '@azure/storage-file-datalake.StoragePipelineOptions.proxyOptions'
     package: '@azure/storage-file-datalake'
@@ -45,7 +59,7 @@ properties:
       content: 'proxyOptions?: ProxySettings'
       return:
         description: ''
-        type: ProxySettings
+        type: <xref uid="@azure/core-rest-pipeline.ProxySettings" />
   - name: retryOptions
     uid: '@azure/storage-file-datalake.StoragePipelineOptions.retryOptions'
     package: '@azure/storage-file-datalake'
@@ -66,7 +80,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'userAgentOptions?: UserAgentOptions'
+      content: 'userAgentOptions?: UserAgentPolicyOptions'
       return:
         description: ''
-        type: UserAgentOptions
+        type: <xref uid="@azure/core-rest-pipeline.UserAgentPolicyOptions" />

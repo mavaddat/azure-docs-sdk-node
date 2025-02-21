@@ -8,17 +8,22 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type SearchIndexerSkill =
+    | AzureOpenAIEmbeddingSkill
     | ConditionalSkill
-    | KeyPhraseExtractionSkill
-    | OcrSkill
-    | ImageAnalysisSkill
-    | LanguageDetectionSkill
-    | ShaperSkill
-    | MergeSkill
-    | EntityRecognitionSkill
-    | SentimentSkill
-    | SplitSkill
     | CustomEntityLookupSkill
-    | TextTranslationSkill
     | DocumentExtractionSkill
+    | EntityLinkingSkill
+    | EntityRecognitionSkill
+    | EntityRecognitionSkillV3
+    | ImageAnalysisSkill
+    | KeyPhraseExtractionSkill
+    | LanguageDetectionSkill
+    | MergeSkill
+    | OcrSkill
+    | PIIDetectionSkill
+    | SentimentSkill
+    | SentimentSkillV3
+    | ShaperSkill
+    | SplitSkill
+    | TextTranslationSkill
     | WebApiSkill

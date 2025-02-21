@@ -26,7 +26,7 @@ methods:
         storageClassificationMappingName: string, pairingInput:
         StorageClassificationMappingInput, options?:
         ReplicationStorageClassificationMappingsCreateOptionalParams):
-        Promise<PollerLike<PollOperationState<StorageClassificationMapping>,
+        Promise<SimplePollerLike<OperationState<StorageClassificationMapping>,
         StorageClassificationMapping>>
       parameters:
         - id: resourceName
@@ -61,7 +61,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
           />&gt;, <xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
@@ -135,7 +136,7 @@ methods:
         fabricName: string, storageClassificationName: string,
         storageClassificationMappingName: string, options?:
         ReplicationStorageClassificationMappingsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceName
           type: string
@@ -162,7 +163,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string, string,
       ReplicationStorageClassificationMappingsDeleteOptionalParams)
@@ -285,11 +288,11 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
           />, <xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByReplicationStorageClassifications(string, string, string, string,
       ReplicationStorageClassificationMappingsListByReplicationStorageClassificationsOptionalParams)
@@ -331,8 +334,8 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
           />, <xref
           uid="@azure/arm-recoveryservices-siterecovery.StorageClassificationMapping"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;

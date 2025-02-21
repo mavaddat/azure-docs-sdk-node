@@ -2,10 +2,7 @@
 name: RenderGetMapTilesetDefaultResponse
 uid: '@azure-rest/maps-render.RenderGetMapTilesetDefaultResponse'
 package: '@azure-rest/maps-render'
-summary: |-
-  **Applies to:** see pricing [tiers](https://aka.ms/AzureMapsPricingTier).
-
-  The Get Map Tileset API allows users to request metadata for a tileset.
+summary: The Get Map Tileset API allows users to request metadata for a tileset.
 fullName: RenderGetMapTilesetDefaultResponse
 remarks: ''
 isDeprecated: false
@@ -47,7 +44,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/maps-render.RenderGetMapTilesetDefaultResponse.request'
@@ -60,6 +57,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

@@ -13,7 +13,9 @@ properties:
   - name: audience
     uid: '@azure/storage-blob.StoragePipelineOptions.audience'
     package: '@azure/storage-blob'
-    summary: The audience used to retrieve an AAD token.
+    summary: |-
+      The audience used to retrieve an AAD token.
+      By default, audience 'https://storage.azure.com/.default' will be used.
     fullName: audience
     remarks: ''
     isDeprecated: false
@@ -30,7 +32,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'httpClient?: HttpClient'
+      content: 'httpClient?: RequestPolicy'
       return:
         description: ''
         type: <xref uid="@azure/storage-blob.IHttpClient" />
@@ -45,7 +47,7 @@ properties:
       content: 'keepAliveOptions?: KeepAliveOptions'
       return:
         description: ''
-        type: KeepAliveOptions
+        type: <xref uid="@azure/core-http-compat.KeepAliveOptions" />
   - name: proxyOptions
     uid: '@azure/storage-blob.StoragePipelineOptions.proxyOptions'
     package: '@azure/storage-blob'
@@ -57,7 +59,7 @@ properties:
       content: 'proxyOptions?: ProxySettings'
       return:
         description: ''
-        type: ProxySettings
+        type: <xref uid="@azure/core-rest-pipeline.ProxySettings" />
   - name: retryOptions
     uid: '@azure/storage-blob.StoragePipelineOptions.retryOptions'
     package: '@azure/storage-blob'
@@ -78,7 +80,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'userAgentOptions?: UserAgentOptions'
+      content: 'userAgentOptions?: UserAgentPolicyOptions'
       return:
         description: ''
-        type: UserAgentOptions
+        type: <xref uid="@azure/core-rest-pipeline.UserAgentPolicyOptions" />

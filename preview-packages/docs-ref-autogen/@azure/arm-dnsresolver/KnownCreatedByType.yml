@@ -12,16 +12,16 @@ fields:
   - name: Application
     uid: '@azure/arm-dnsresolver.KnownCreatedByType.Application'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Application
   - name: Key
     uid: '@azure/arm-dnsresolver.KnownCreatedByType.Key'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Key
   - name: ManagedIdentity
     uid: '@azure/arm-dnsresolver.KnownCreatedByType.ManagedIdentity'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: ManagedIdentity
   - name: User
     uid: '@azure/arm-dnsresolver.KnownCreatedByType.User'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: User

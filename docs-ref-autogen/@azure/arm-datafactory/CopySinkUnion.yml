@@ -16,12 +16,14 @@ syntax: |
     | AzurePostgreSqlSink
     | AzureMySqlSink
     | AzureDatabricksDeltaLakeSink
+    | WarehouseSink
     | SapCloudForCustomerSink
     | AzureQueueSink
     | AzureTableSink
     | AvroSink
     | ParquetSink
     | BinarySink
+    | IcebergSink
     | BlobSink
     | FileSystemSink
     | DocumentDbCollectionSink
@@ -32,6 +34,7 @@ syntax: |
     | SqlMISink
     | SqlDWSink
     | SnowflakeSink
+    | SnowflakeV2Sink
     | OracleSink
     | AzureDataLakeStoreSink
     | AzureBlobFSSink
@@ -48,3 +51,6 @@ syntax: |
     | MongoDbAtlasSink
     | MongoDbV2Sink
     | CosmosDbMongoDbApiSink
+    | LakeHouseTableSink
+    | SalesforceV2Sink
+    | SalesforceServiceCloudV2Sink

@@ -44,8 +44,8 @@ methods:
 
       ```typescript
 
-      // partitionKey is required as a second argument to batch, but defaults to
-      the default partition key
+      // The partitionKey is a required second argument. If it’s undefined, it
+      defaults to the expected partition key format.
 
       const operations: OperationInput[] = [
          {
@@ -54,13 +54,12 @@ methods:
          },
          {
             operationType: "Upsert",
-            partitionKey: 'A',
             resourceBody: { id: "doc2", name: "other", key: "A" }
          }
       ]
 
 
-      await database.container.items.batch(operations)
+      await database.container.items.batch(operations, "A")
 
       ```
     remarks: ''
@@ -135,9 +134,8 @@ methods:
           type: <xref uid="@azure/cosmos.BulkOptions" />
           description: >-
             Optional options object to modify bulk behavior. Pass {
-            continueOnError: true } to continue executing operations when one
-            fails. (Defaults to false) ** NOTE: THIS WILL DEFAULT TO TRUE IN THE
-            4.0 RELEASE
+            continueOnError: false } to stop executing operations when one
+            fails. (Defaults to true)
         - id: options
           type: <xref uid="@azure/cosmos.RequestOptions" />
           description: Used for modifying the request.

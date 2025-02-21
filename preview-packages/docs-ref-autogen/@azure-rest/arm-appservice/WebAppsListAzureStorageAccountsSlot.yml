@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsListAzureStorageAccountsSlot200Response |
-        WebAppsListAzureStorageAccountsSlotdefaultResponse>
+        StreamableMethod<WebAppsListAzureStorageAccountsSlot200Response |
+        WebAppsListAzureStorageAccountsSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListAzureStorageAccountsSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListAzureStorageAccountsSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListAzureStorageAccountsSlotDefaultResponse"
           />&gt;

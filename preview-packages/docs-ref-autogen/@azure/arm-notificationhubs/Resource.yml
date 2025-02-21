@@ -2,7 +2,9 @@
 name: Resource
 uid: '@azure/arm-notificationhubs.Resource'
 package: '@azure/arm-notificationhubs'
-summary: ''
+summary: >-
+  Common fields that are returned in the response for all Azure Resource Manager
+  resources
 fullName: Resource
 remarks: ''
 isDeprecated: false
@@ -12,7 +14,8 @@ properties:
     uid: '@azure/arm-notificationhubs.Resource.id'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource Id
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -24,23 +27,11 @@ properties:
       return:
         description: ''
         type: string
-  - name: location
-    uid: '@azure/arm-notificationhubs.Resource.location'
-    package: '@azure/arm-notificationhubs'
-    summary: Resource location
-    fullName: location
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'location?: string'
-      return:
-        description: ''
-        type: string
   - name: name
     uid: '@azure/arm-notificationhubs.Resource.name'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource name
+      The name of the resource
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -52,35 +43,29 @@ properties:
       return:
         description: ''
         type: string
-  - name: sku
-    uid: '@azure/arm-notificationhubs.Resource.sku'
+  - name: systemData
+    uid: '@azure/arm-notificationhubs.Resource.systemData'
     package: '@azure/arm-notificationhubs'
-    summary: The sku of the created namespace
-    fullName: sku
+    summary: >-
+      Azure Resource Manager metadata containing createdBy and modifiedBy
+      information.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: systemData
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'sku?: Sku'
+      content: 'systemData?: SystemData'
       return:
         description: ''
-        type: <xref uid="@azure/arm-notificationhubs.Sku" />
-  - name: tags
-    uid: '@azure/arm-notificationhubs.Resource.tags'
-    package: '@azure/arm-notificationhubs'
-    summary: Resource tags
-    fullName: tags
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'tags?: {[propertyName: string]: string}'
-      return:
-        description: ''
-        type: '{[propertyName: string]: string}'
+        type: <xref uid="@azure/arm-notificationhubs.SystemData" />
   - name: type
     uid: '@azure/arm-notificationhubs.Resource.type'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource type
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
+      "Microsoft.Storage/storageAccounts"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

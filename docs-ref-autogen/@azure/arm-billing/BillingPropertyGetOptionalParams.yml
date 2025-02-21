@@ -7,6 +7,34 @@ fullName: BillingPropertyGetOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
+properties:
+  - name: includeBillingCountry
+    uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.includeBillingCountry'
+    package: '@azure/arm-billing'
+    summary: A flag that specifies whether or not to include billing country.
+    fullName: includeBillingCountry
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeBillingCountry?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: includeTransitionStatus
+    uid: >-
+      @azure/arm-billing.BillingPropertyGetOptionalParams.includeTransitionStatus
+    package: '@azure/arm-billing'
+    summary: >-
+      A flag that specifies whether or not to include transition status for
+      billing accounts with agreement type Microsoft Customer Agreement.
+    fullName: includeTransitionStatus
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'includeTransitionStatus?: boolean'
+      return:
+        description: ''
+        type: boolean
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.abortSignal'
@@ -19,7 +47,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.onResponse'
@@ -35,7 +63,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.requestOptions'
@@ -48,7 +76,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.serializerOptions'
@@ -61,7 +89,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-billing.BillingPropertyGetOptionalParams.tracingOptions'
@@ -74,6 +102,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

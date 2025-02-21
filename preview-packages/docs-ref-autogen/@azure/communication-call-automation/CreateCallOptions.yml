@@ -8,19 +8,36 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: cognitiveServicesEndpoint
+  - name: callIntelligenceOptions
     uid: >-
-      @azure/communication-call-automation.CreateCallOptions.cognitiveServicesEndpoint
+      @azure/communication-call-automation.CreateCallOptions.callIntelligenceOptions
     package: '@azure/communication-call-automation'
-    summary: The Azure cognitive services end point url.
-    fullName: cognitiveServicesEndpoint
+    summary: AI options for the call.
+    fullName: callIntelligenceOptions
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'cognitiveServicesEndpoint?: string'
+      content: 'callIntelligenceOptions?: CallIntelligenceOptions'
       return:
         description: ''
-        type: string
+        type: >-
+          <xref
+          uid="@azure/communication-call-automation.CallIntelligenceOptions" />
+  - name: mediaStreamingOptions
+    uid: >-
+      @azure/communication-call-automation.CreateCallOptions.mediaStreamingOptions
+    package: '@azure/communication-call-automation'
+    summary: Configuration of Media streaming.
+    fullName: mediaStreamingOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'mediaStreamingOptions?: MediaStreamingOptions'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/communication-call-automation.MediaStreamingOptions"
+          />
   - name: operationContext
     uid: '@azure/communication-call-automation.CreateCallOptions.operationContext'
     package: '@azure/communication-call-automation'
@@ -48,7 +65,7 @@ properties:
       content: 'sourceCallIdNumber?: PhoneNumberIdentifier'
       return:
         description: ''
-        type: PhoneNumberIdentifier
+        type: <xref uid="@azure/communication-common.PhoneNumberIdentifier" />
   - name: sourceDisplayName
     uid: '@azure/communication-call-automation.CreateCallOptions.sourceDisplayName'
     package: '@azure/communication-call-automation'
@@ -61,6 +78,21 @@ properties:
       return:
         description: ''
         type: string
+  - name: transcriptionOptions
+    uid: >-
+      @azure/communication-call-automation.CreateCallOptions.transcriptionOptions
+    package: '@azure/communication-call-automation'
+    summary: Configuration of live transcription.
+    fullName: transcriptionOptions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'transcriptionOptions?: TranscriptionOptions'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/communication-call-automation.TranscriptionOptions"
+          />
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/communication-call-automation.CreateCallOptions.abortSignal'
@@ -73,7 +105,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/communication-call-automation.CreateCallOptions.onResponse'
@@ -89,7 +121,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/communication-call-automation.CreateCallOptions.requestOptions'
@@ -102,7 +134,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.requestOptions
   - name: serializerOptions
     uid: '@azure/communication-call-automation.CreateCallOptions.serializerOptions'
@@ -115,7 +147,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/communication-call-automation.CreateCallOptions.tracingOptions'
@@ -128,6 +160,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

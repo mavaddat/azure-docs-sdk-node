@@ -46,10 +46,7 @@ inheritedMethods:
   - name: at(number)
     uid: '@azure/arm-datamigration.DataMigrationServiceModels.ResourceSkusResult.at'
     package: '@azure/arm-datamigration'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1254,7 +1251,7 @@ inheritedMethods:
           IterableIterator&lt;<xref
           uid="@azure/arm-datamigration.DataMigrationServiceModels.ResourceSku"
           />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@2157
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@2159
   - name: '[unscopables]()'
     uid: >-
       @azure/arm-datamigration.DataMigrationServiceModels.ResourceSkusResult.[unscopables]
@@ -1274,7 +1271,7 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@2159
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@2161
 extends: >-
   Array&lt;<xref
   uid="@azure/arm-datamigration.DataMigrationServiceModels.ResourceSku" />&gt;

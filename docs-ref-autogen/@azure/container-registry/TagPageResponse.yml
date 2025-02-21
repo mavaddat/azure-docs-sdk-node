@@ -42,10 +42,7 @@ inheritedMethods:
   - name: at(number)
     uid: '@azure/container-registry.TagPageResponse.at'
     package: '@azure/container-registry'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1158,7 +1155,7 @@ inheritedMethods:
         type: >-
           IterableIterator&lt;<xref
           uid="@azure/container-registry.ArtifactTagProperties" />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@234
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@256
   - name: '[unscopables]()'
     uid: '@azure/container-registry.TagPageResponse.[unscopables]'
     package: '@azure/container-registry'
@@ -1177,5 +1174,5 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@236
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@258
 extends: Array&lt;<xref uid="@azure/container-registry.ArtifactTagProperties" />&gt;

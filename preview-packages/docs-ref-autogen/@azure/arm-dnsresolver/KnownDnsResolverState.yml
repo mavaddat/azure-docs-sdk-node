@@ -13,8 +13,8 @@ fields:
   - name: Connected
     uid: '@azure/arm-dnsresolver.KnownDnsResolverState.Connected'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Connected
   - name: Disconnected
     uid: '@azure/arm-dnsresolver.KnownDnsResolverState.Disconnected'
     package: '@azure/arm-dnsresolver'
-    summary: ''
+    summary: Disconnected

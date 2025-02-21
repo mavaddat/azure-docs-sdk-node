@@ -1,0 +1,21 @@
+{
+  "Name": "@azure/eventhubs-checkpointstore-blob",
+  "Version": "2.0.0-beta.1",
+  "DevVersion": null,
+  "DirectoryPath": "sdk/eventhub/eventhubs-checkpointstore-blob",
+  "ServiceDirectory": "eventhub",
+  "ReadMePath": "sdk/eventhub/eventhubs-checkpointstore-blob/README.md",
+  "ChangeLogPath": "sdk/eventhub/eventhubs-checkpointstore-blob/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "client",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-eventhubs-checkpointstore-blob",
+  "ReleaseStatus": "2025-02-11",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
+  "ArtifactDetails": {
+    "name": "azure-eventhubs-checkpointstore-blob",
+    "safeName": "azureeventhubscheckpointstoreblob"
+  },
+  "CIMatrixConfigs": []
+}

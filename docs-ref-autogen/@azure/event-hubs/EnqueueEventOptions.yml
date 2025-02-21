@@ -4,7 +4,7 @@ uid: '@azure/event-hubs.EnqueueEventOptions'
 package: '@azure/event-hubs'
 summary: >-
   Options to configure the `enqueueEvents` method on the
-  `EventHubBufferedProcuerClient`.
+  `EventHubBufferedProducerClient`.
 fullName: EnqueueEventOptions
 remarks: ''
 isDeprecated: false
@@ -21,7 +21,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [SendBatchOptions.abortSignal](xref:@azure/event-hubs.SendBatchOptions.abortSignal)
@@ -52,7 +52,7 @@ inheritedProperties:
       partition.
 
       Specifying this will throw an error if the producer was created using a
-      `paritionId`.
+      `partitionId`.
     fullName: partitionKey
     remarks: ''
     isDeprecated: false
@@ -75,7 +75,7 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [SendBatchOptions.tracingOptions](xref:@azure/event-hubs.SendBatchOptions.tracingOptions)

@@ -17,20 +17,20 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsStopWebSiteNetworkTrace200Response |
+        StreamableMethod<WebAppsStopWebSiteNetworkTrace200Response |
         WebAppsStopWebSiteNetworkTrace204Response |
-        WebAppsStopWebSiteNetworkTracedefaultResponse>
+        WebAppsStopWebSiteNetworkTraceDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsStopWebSiteNetworkTrace200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsStopWebSiteNetworkTrace204Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsStopWebSiteNetworkTracedefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsStopWebSiteNetworkTraceDefaultResponse"
           />&gt;

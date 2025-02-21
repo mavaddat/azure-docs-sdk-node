@@ -41,10 +41,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'dataToExtract?: string'
+      content: 'dataToExtract?: "storageMetadata" | "allMetadata" | "contentAndMetadata"'
       return:
         description: ''
-        type: string
+        type: '"storageMetadata" | "allMetadata" | "contentAndMetadata"'
   - name: delimitedTextDelimiter
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.delimitedTextDelimiter
@@ -114,10 +114,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'executionEnvironment?: string'
+      content: 'executionEnvironment?: "standard" | "private"'
       return:
         description: ''
-        type: string
+        type: '"standard" | "private"'
   - name: failOnUnprocessableDocument
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.failOnUnprocessableDocument
@@ -175,10 +175,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'imageAction?: string'
+      content: >-
+        imageAction?: "none" | "generateNormalizedImages" |
+        "generateNormalizedImagePerPage"
       return:
         description: ''
-        type: string
+        type: '"none" | "generateNormalizedImages" | "generateNormalizedImagePerPage"'
   - name: indexedFileNameExtensions
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.indexedFileNameExtensions
@@ -204,7 +206,7 @@ properties:
       For Azure blobs, set this property to true to still index storage metadata
       for blob content that is too large to process. Oversized blobs are treated
       as errors by default. For limits on blob size, see
-      https://docs.microsoft.com/azure/search/search-limits-quotas-capacity.
+      https://learn.microsoft.com/azure/search/search-limits-quotas-capacity.
     fullName: indexStorageMetadataOnlyForOversizedDocuments
     remarks: ''
     isDeprecated: false
@@ -213,6 +215,37 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: markdownHeaderDepth
+    uid: >-
+      @azure/search-documents.IndexingParametersConfiguration.markdownHeaderDepth
+    package: '@azure/search-documents'
+    summary: >-
+      Specifies the max header depth that will be considered while grouping
+      markdown content. Default is `h6`.
+    fullName: markdownHeaderDepth
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'markdownHeaderDepth?: string'
+      return:
+        description: ''
+        type: string
+  - name: markdownParsingSubmode
+    uid: >-
+      @azure/search-documents.IndexingParametersConfiguration.markdownParsingSubmode
+    package: '@azure/search-documents'
+    summary: >-
+      Specifies the submode that will determine whether a markdown file will be
+      parsed into exactly one search document or multiple search documents.
+      Default is `oneToMany`.
+    fullName: markdownParsingSubmode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'markdownParsingSubmode?: string'
+      return:
+        description: ''
+        type: string
   - name: parsingMode
     uid: '@azure/search-documents.IndexingParametersConfiguration.parsingMode'
     package: '@azure/search-documents'
@@ -221,10 +254,14 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'parsingMode?: string'
+      content: >-
+        parsingMode?: "text" | "default" | "delimitedText" | "json" |
+        "jsonArray" | "jsonLines" | "markdown"
       return:
         description: ''
-        type: string
+        type: >-
+          "text" | "default" | "delimitedText" | "json" | "jsonArray" |
+          "jsonLines" | "markdown"
   - name: pdfTextRotationAlgorithm
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.pdfTextRotationAlgorithm
@@ -236,10 +273,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'pdfTextRotationAlgorithm?: string'
+      content: 'pdfTextRotationAlgorithm?: "none" | "detectAngles"'
       return:
         description: ''
-        type: string
+        type: '"none" | "detectAngles"'
   - name: queryTimeout
     uid: '@azure/search-documents.IndexingParametersConfiguration.queryTimeout'
     package: '@azure/search-documents'

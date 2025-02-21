@@ -7,5 +7,4 @@ fullName: BareMetalMachinesRunDataExtractsResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type BareMetalMachinesRunDataExtractsResponse =
-    BareMetalMachinesRunDataExtractsHeaders
+  type BareMetalMachinesRunDataExtractsResponse = OperationStatusResult

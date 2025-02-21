@@ -44,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-servicenetworking.Frontend" />&gt;, <xref
           uid="@azure/arm-servicenetworking.Frontend" />&gt;&gt;
   - name: >-
@@ -96,7 +97,8 @@ methods:
         function beginDelete(resourceGroupName: string, trafficControllerName:
         string, frontendName: string, options?:
         FrontendsInterfaceDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<FrontendsInterfaceDeleteHeaders>,
+        FrontendsInterfaceDeleteHeaders>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -116,8 +118,12 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-servicenetworking.FrontendsInterfaceDeleteHeaders"
+          />&gt;, <xref
+          uid="@azure/arm-servicenetworking.FrontendsInterfaceDeleteHeaders"
+          />&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       FrontendsInterfaceDeleteOptionalParams)
@@ -130,7 +136,8 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         trafficControllerName: string, frontendName: string, options?:
-        FrontendsInterfaceDeleteOptionalParams): Promise<void>
+        FrontendsInterfaceDeleteOptionalParams):
+        Promise<FrontendsInterfaceDeleteHeaders>
       parameters:
         - id: resourceGroupName
           type: string
@@ -149,7 +156,10 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-servicenetworking.FrontendsInterfaceDeleteHeaders"
+          />&gt;
   - name: get(string, string, string, FrontendsInterfaceGetOptionalParams)
     uid: '@azure/arm-servicenetworking.FrontendsInterface.get'
     package: '@azure/arm-servicenetworking'
@@ -210,9 +220,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-servicenetworking.Frontend" />, <xref
-          uid="@azure/arm-servicenetworking.Frontend" />[], PageSettings&gt;
+          uid="@azure/arm-servicenetworking.Frontend" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       update(string, string, string, FrontendUpdate,
       FrontendsInterfaceUpdateOptionalParams)

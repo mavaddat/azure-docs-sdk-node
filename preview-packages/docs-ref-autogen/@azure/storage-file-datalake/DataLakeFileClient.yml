@@ -52,7 +52,7 @@ constructors:
           type: >-
             <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential"
             /> | <xref uid="@azure/storage-file-datalake.AnonymousCredential" />
-            | TokenCredential
+            | <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
             credential from the `@azure/identity` package to authenticate
@@ -123,7 +123,7 @@ inheritedProperties:
         type: >-
           <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential" />
           | <xref uid="@azure/storage-file-datalake.AnonymousCredential" /> |
-          TokenCredential
+          <xref uid="@azure/core-auth.TokenCredential" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [DataLakePathClient.credential](xref:@azure/storage-file-datalake.DataLakePathClient.credential)
@@ -600,7 +600,7 @@ inheritedMethods:
     syntax:
       content: >-
         function setPermissions(permissions: PathPermissions, options?:
-        PathSetPermissionsOptions): Promise<PathSetAccessControlResponse>
+        PathSetPermissionsOptions): Promise<PathSetPermissionsResponse>
       parameters:
         - id: permissions
           type: <xref uid="@azure/storage-file-datalake.PathPermissions" />
@@ -616,7 +616,7 @@ inheritedMethods:
         description: ''
         type: >-
           Promise&lt;<xref
-          uid="@azure/storage-file-datalake.PathSetAccessControlResponse" />&gt;
+          uid="@azure/storage-file-datalake.PathSetPermissionsResponse" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [DataLakePathClient.setPermissions](xref:@azure/storage-file-datalake.DataLakePathClient.setPermissions)
@@ -691,7 +691,7 @@ inheritedMethods:
       <b>Inherited From</b>
       [DataLakePathClient.updateAccessControlRecursive](xref:@azure/storage-file-datalake.DataLakePathClient.updateAccessControlRecursive)
 methods:
-  - name: append(HttpRequestBody, number, number, FileAppendOptions)
+  - name: append(RequestBodyType, number, number, FileAppendOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileClient.append'
     package: '@azure/storage-file-datalake'
     summary: >-
@@ -707,7 +707,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function append(body: HttpRequestBody, offset: number, length: number,
+        function append(body: RequestBodyType, offset: number, length: number,
         options?: FileAppendOptions): Promise<FileAppendResponse>
       parameters:
         - id: body
@@ -845,7 +845,7 @@ methods:
     syntax:
       content: >-
         function flush(position: number, options?: FileFlushOptions):
-        Promise<PathFlushDataResponse>
+        Promise<FileFlushResponse>
       parameters:
         - id: position
           type: number
@@ -865,6 +865,39 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/storage-file-datalake.FileFlushResponse"
           />&gt;
+  - name: generateSasStringToSign(FileGenerateSasUrlOptions)
+    uid: '@azure/storage-file-datalake.DataLakeFileClient.generateSasStringToSign'
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Only available for clients constructed with a shared key credential.
+
+
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in. The SAS is signed by the shared key credential
+      of the client.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateSasStringToSign(options: FileGenerateSasUrlOptions):
+        string
+      parameters:
+        - id: options
+          type: >-
+            <xref uid="@azure/storage-file-datalake.FileGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
   - name: generateSasUrl(FileGenerateSasUrlOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileClient.generateSasUrl'
     package: '@azure/storage-file-datalake'
@@ -893,6 +926,77 @@ methods:
             <xref uid="@azure/storage-file-datalake.FileGenerateSasUrlOptions"
             />
           description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: Promise&lt;string&gt;
+  - name: >-
+      generateUserDelegationSasStringToSign(FileGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeFileClient.generateUserDelegationSasStringToSign
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasStringToSign(options:
+        FileGenerateSasUrlOptions, userDelegationKey: UserDelegationKey): string
+      parameters:
+        - id: options
+          type: >-
+            <xref uid="@azure/storage-file-datalake.FileGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
+  - name: generateUserDelegationSasUrl(FileGenerateSasUrlOptions, UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeFileClient.generateUserDelegationSasUrl
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates a Service Shared Access Signature (SAS) URI based on the client
+      properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasUrl(options:
+        FileGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        Promise<string>
+      parameters:
+        - id: options
+          type: >-
+            <xref uid="@azure/storage-file-datalake.FileGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
       return:
         description: >-
           The SAS URI consisting of the URI to the resource represented by this
@@ -1209,7 +1313,7 @@ methods:
     syntax:
       content: >-
         function upload(data: Blob | ArrayBuffer | ArrayBufferView | Buffer,
-        options?: FileParallelUploadOptions): Promise<PathFlushDataResponse>
+        options?: FileParallelUploadOptions): Promise<FileUploadResponse>
       parameters:
         - id: data
           type: Blob | ArrayBuffer | ArrayBufferView | Buffer
@@ -1222,7 +1326,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="@azure/storage-file-datalake.FileFlushResponse"
+          Promise&lt;<xref uid="@azure/storage-file-datalake.FileUploadResponse"
           />&gt;
   - name: uploadFile(string, FileParallelUploadOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileClient.uploadFile'
@@ -1236,7 +1340,7 @@ methods:
     syntax:
       content: >-
         function uploadFile(filePath: string, options?:
-        FileParallelUploadOptions): Promise<PathFlushDataResponse>
+        FileParallelUploadOptions): Promise<FileUploadResponse>
       parameters:
         - id: filePath
           type: string
@@ -1249,7 +1353,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="@azure/storage-file-datalake.FileFlushResponse"
+          Promise&lt;<xref uid="@azure/storage-file-datalake.FileUploadResponse"
           />&gt;
   - name: uploadStream(Readable, FileParallelUploadOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileClient.uploadStream'
@@ -1279,7 +1383,7 @@ methods:
     syntax:
       content: >-
         function uploadStream(stream: Readable, options?:
-        FileParallelUploadOptions): Promise<PathFlushDataResponse>
+        FileParallelUploadOptions): Promise<FileUploadResponse>
       parameters:
         - id: stream
           type: Readable
@@ -1292,6 +1396,6 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref uid="@azure/storage-file-datalake.FileFlushResponse"
+          Promise&lt;<xref uid="@azure/storage-file-datalake.FileUploadResponse"
           />&gt;
 extends: <xref uid="@azure/storage-file-datalake.DataLakePathClient" />

@@ -10,9 +10,9 @@ summary: >-
    this enum contains the known values that the service supports.
   ### Known values supported by the service
 
-  **SystemAssigned** \
+  **None** \
 
-  **None**
+  **SystemAssigned**
 fullName: ResourceIdentityType
 remarks: ''
 isDeprecated: false

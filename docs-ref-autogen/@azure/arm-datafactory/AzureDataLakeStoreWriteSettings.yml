@@ -14,7 +14,7 @@ properties:
     summary: >-
       Specifies the expiry time of the written files. The time is applied to the
       UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is
-      NULL. Type: integer (or Expression with resultType integer).
+      NULL. Type: string (or Expression with resultType string).
     fullName: expiryDateTime
     remarks: ''
     isDeprecated: false
@@ -89,4 +89,21 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [StoreWriteSettings.maxConcurrentConnections](xref:@azure/arm-datafactory.StoreWriteSettings.maxConcurrentConnections)
+  - name: metadata
+    uid: '@azure/arm-datafactory.AzureDataLakeStoreWriteSettings.metadata'
+    package: '@azure/arm-datafactory'
+    summary: >-
+      Specify the custom metadata to be added to sink data. Type: array of
+      objects (or Expression with resultType array of objects).
+    fullName: metadata
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-datafactory.MetadataItem" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [StoreWriteSettings.metadata](xref:@azure/arm-datafactory.StoreWriteSettings.metadata)
 extends: <xref uid="@azure/arm-datafactory.StoreWriteSettings" />

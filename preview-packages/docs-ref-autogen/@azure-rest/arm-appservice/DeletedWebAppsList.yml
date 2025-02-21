@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<DeletedWebAppsList200Response |
-        DeletedWebAppsListdefaultResponse>
+        StreamableMethod<DeletedWebAppsList200Response |
+        DeletedWebAppsListDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.DeletedWebAppsList200Response" /> |
           <xref
-          uid="@azure-rest/arm-appservice.DeletedWebAppsListdefaultResponse"
+          uid="@azure-rest/arm-appservice.DeletedWebAppsListDefaultResponse"
           />&gt;

@@ -14,7 +14,7 @@ methods:
       LongTermRetentionPoliciesCreateOrUpdateOptionalParams)
     uid: '@azure/arm-sql.LongTermRetentionPolicies.beginCreateOrUpdate'
     package: '@azure/arm-sql'
-    summary: Sets a database's long term retention policy.
+    summary: Set or update a database's long term retention policy.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -53,7 +53,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionPolicy" />&gt;, <xref
           uid="@azure/arm-sql.LongTermRetentionPolicy" />&gt;&gt;
   - name: >-
@@ -62,7 +63,7 @@ methods:
       LongTermRetentionPoliciesCreateOrUpdateOptionalParams)
     uid: '@azure/arm-sql.LongTermRetentionPolicies.beginCreateOrUpdateAndWait'
     package: '@azure/arm-sql'
-    summary: Sets a database's long term retention policy.
+    summary: Set or update a database's long term retention policy.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -175,6 +176,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionPolicy" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionPolicy" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionPolicy" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

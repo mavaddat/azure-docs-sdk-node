@@ -10,7 +10,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: CryptographyClient(JsonWebKey_2)
+  - name: CryptographyClient(JsonWebKey)
     uid: '@azure/keyvault-keys.CryptographyClient.constructor_1'
     package: '@azure/keyvault-keys'
     summary: >-
@@ -35,7 +35,7 @@ constructors:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new CryptographyClient(key: JsonWebKey_2)'
+      content: 'new CryptographyClient(key: JsonWebKey)'
       parameters:
         - id: key
           type: <xref uid="@azure/keyvault-keys.JsonWebKey" />
@@ -76,7 +76,7 @@ constructors:
             The key to use during cryptography tasks. You can also pass the
             identifier of the key i.e its url here.
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An object that implements the `TokenCredential` interface used to
             authenticate requests to the service. Use the @azure/identity

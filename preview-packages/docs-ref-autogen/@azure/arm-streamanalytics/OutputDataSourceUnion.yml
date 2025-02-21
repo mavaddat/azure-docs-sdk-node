@@ -16,9 +16,12 @@ syntax: |
     | EventHubV2OutputDataSource
     | AzureSqlDatabaseOutputDataSource
     | AzureSynapseOutputDataSource
+    | PostgreSQLOutputDataSource
     | DocumentDbOutputDataSource
     | AzureFunctionOutputDataSource
     | ServiceBusQueueOutputDataSource
     | ServiceBusTopicOutputDataSource
     | PowerBIOutputDataSource
     | AzureDataLakeStoreOutputDataSource
+    | GatewayMessageBusOutputDataSource
+    | AzureDataExplorerOutputDataSource

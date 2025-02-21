@@ -8,6 +8,32 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: hash
+    uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.hash'
+    package: '@azure/arm-machinelearning'
+    summary: >-
+      If specified, return CodeVersion assets with specified content hash value,
+      regardless of name
+    fullName: hash
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hash?: string'
+      return:
+        description: ''
+        type: string
+  - name: hashVersion
+    uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.hashVersion'
+    package: '@azure/arm-machinelearning'
+    summary: Hash algorithm version when listing by hash
+    fullName: hashVersion
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hashVersion?: string'
+      return:
+        description: ''
+        type: string
   - name: orderBy
     uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.orderBy'
     package: '@azure/arm-machinelearning'
@@ -56,7 +82,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.onResponse'
@@ -72,7 +98,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.requestOptions'
@@ -85,7 +111,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -99,7 +125,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: '@azure/arm-machinelearning.CodeVersionsListOptionalParams.tracingOptions'
@@ -112,6 +138,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

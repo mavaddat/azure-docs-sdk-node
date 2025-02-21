@@ -9,7 +9,6 @@ isDeprecated: false
 syntax: |
   type DataTransferDataSourceSinkUnion =
     | DataTransferDataSourceSink
-    | CosmosCassandraDataTransferDataSourceSink
-    | CosmosMongoDataTransferDataSourceSink
-    | CosmosSqlDataTransferDataSourceSink
+    | BaseCosmosDataTransferDataSourceSinkUnion
+    | CosmosMongoVCoreDataTransferDataSourceSink
     | AzureBlobDataTransferDataSourceSink

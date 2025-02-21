@@ -34,6 +34,33 @@ properties:
       return:
         description: ''
         type: string
+  - name: displayName
+    uid: '@azure/arm-devcenter.ProjectUpdate.displayName'
+    package: '@azure/arm-devcenter'
+    summary: The display name of the project.
+    fullName: displayName
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'displayName?: string'
+      return:
+        description: ''
+        type: string
+  - name: maxDevBoxesPerUser
+    uid: '@azure/arm-devcenter.ProjectUpdate.maxDevBoxesPerUser'
+    package: '@azure/arm-devcenter'
+    summary: >-
+      When specified, limits the maximum number of Dev Boxes a single user can
+      create across all pools in the project. This will have no effect on
+      existing Dev Boxes when reduced.
+    fullName: maxDevBoxesPerUser
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxDevBoxesPerUser?: number'
+      return:
+        description: ''
+        type: number
 inheritedProperties:
   - name: location
     uid: '@azure/arm-devcenter.ProjectUpdate.location'

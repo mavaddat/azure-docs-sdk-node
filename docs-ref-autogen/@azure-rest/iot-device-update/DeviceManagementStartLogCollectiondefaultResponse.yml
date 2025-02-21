@@ -1,17 +1,17 @@
 ### YamlMime:TSType
-name: DeviceManagementStartLogCollectiondefaultResponse
+name: DeviceManagementStartLogCollectionDefaultResponse
 uid: >-
-  @azure-rest/iot-device-update.DeviceManagementStartLogCollectiondefaultResponse
+  @azure-rest/iot-device-update.DeviceManagementStartLogCollectionDefaultResponse
 package: '@azure-rest/iot-device-update'
 summary: Start the device diagnostics log collection on specified devices.
-fullName: DeviceManagementStartLogCollectiondefaultResponse
+fullName: DeviceManagementStartLogCollectionDefaultResponse
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
   - name: body
     uid: >-
-      @azure-rest/iot-device-update.DeviceManagementStartLogCollectiondefaultResponse.body
+      @azure-rest/iot-device-update.DeviceManagementStartLogCollectionDefaultResponse.body
     package: '@azure-rest/iot-device-update'
     summary: ''
     fullName: body
@@ -24,7 +24,7 @@ properties:
         type: <xref uid="@azure-rest/iot-device-update.ErrorResponseOutput" />
   - name: status
     uid: >-
-      @azure-rest/iot-device-update.DeviceManagementStartLogCollectiondefaultResponse.status
+      @azure-rest/iot-device-update.DeviceManagementStartLogCollectionDefaultResponse.status
     package: '@azure-rest/iot-device-update'
     summary: ''
     fullName: status
@@ -38,7 +38,7 @@ properties:
 inheritedProperties:
   - name: headers
     uid: >-
-      @azure-rest/iot-device-update.DeviceManagementStartLogCollectiondefaultResponse.headers
+      @azure-rest/iot-device-update.DeviceManagementStartLogCollectionDefaultResponse.headers
     package: '@azure-rest/iot-device-update'
     summary: The HTTP response headers.
     fullName: headers
@@ -48,11 +48,11 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: >-
-      @azure-rest/iot-device-update.DeviceManagementStartLogCollectiondefaultResponse.request
+      @azure-rest/iot-device-update.DeviceManagementStartLogCollectionDefaultResponse.request
     package: '@azure-rest/iot-device-update'
     summary: The request that generated this response.
     fullName: request
@@ -62,6 +62,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

@@ -7,4 +7,4 @@ fullName: VirtualMachinesRestartResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type VirtualMachinesRestartResponse = VirtualMachinesRestartHeaders
+  type VirtualMachinesRestartResponse = OperationStatusResult

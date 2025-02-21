@@ -1,0 +1,21 @@
+{
+  "Name": "@azure/arm-servicenetworking",
+  "Version": "2.0.0",
+  "DevVersion": null,
+  "DirectoryPath": "sdk/servicenetworking/arm-servicenetworking",
+  "ServiceDirectory": "servicenetworking",
+  "ReadMePath": "sdk/servicenetworking/arm-servicenetworking/README.md",
+  "ChangeLogPath": "sdk/servicenetworking/arm-servicenetworking/CHANGELOG.md",
+  "Group": null,
+  "SdkType": "mgmt",
+  "IsNewSdk": true,
+  "ArtifactName": "azure-arm-servicenetworking",
+  "ReleaseStatus": "2025-02-07",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
+  "ArtifactDetails": {
+    "name": "azure-arm-servicenetworking",
+    "safeName": "azurearmservicenetworking"
+  },
+  "CIMatrixConfigs": []
+}

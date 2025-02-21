@@ -20,18 +20,18 @@ methods:
       content: >-
         function delete(options?: RequestParameters):
         StreamableMethod<DeviceUpdateDeleteUpdate202Response |
-        DeviceUpdateDeleteUpdatedefaultResponse>
+        DeviceUpdateDeleteUpdateDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/iot-device-update.DeviceUpdateDeleteUpdate202Response"
           /> | <xref
-          uid="@azure-rest/iot-device-update.DeviceUpdateDeleteUpdatedefaultResponse"
+          uid="@azure-rest/iot-device-update.DeviceUpdateDeleteUpdateDefaultResponse"
           />&gt;
   - name: get(DeviceUpdateGetUpdateParameters)
     uid: '@azure-rest/iot-device-update.DeviceUpdateGetUpdate.get'
@@ -43,7 +43,7 @@ methods:
       content: >-
         function get(options?: DeviceUpdateGetUpdateParameters):
         StreamableMethod<DeviceUpdateGetUpdate200Response |
-        DeviceUpdateGetUpdate304Response | DeviceUpdateGetUpdatedefaultResponse>
+        DeviceUpdateGetUpdate304Response | DeviceUpdateGetUpdateDefaultResponse>
       parameters:
         - id: options
           type: >-
@@ -54,10 +54,10 @@ methods:
       return:
         description: ''
         type: >-
-          StreamableMethod&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/iot-device-update.DeviceUpdateGetUpdate200Response"
           /> | <xref
           uid="@azure-rest/iot-device-update.DeviceUpdateGetUpdate304Response"
           /> | <xref
-          uid="@azure-rest/iot-device-update.DeviceUpdateGetUpdatedefaultResponse"
+          uid="@azure-rest/iot-device-update.DeviceUpdateGetUpdateDefaultResponse"
           />&gt;

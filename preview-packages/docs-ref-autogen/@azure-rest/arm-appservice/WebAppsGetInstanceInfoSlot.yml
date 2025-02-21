@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetInstanceInfoSlot200Response |
-        WebAppsGetInstanceInfoSlotdefaultResponse>
+        StreamableMethod<WebAppsGetInstanceInfoSlot200Response |
+        WebAppsGetInstanceInfoSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetInstanceInfoSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetInstanceInfoSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetInstanceInfoSlotDefaultResponse"
           />&gt;

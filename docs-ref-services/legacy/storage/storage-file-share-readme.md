@@ -1,16 +1,12 @@
 ---
 title: Azure Storage File Share client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/storage-file-share, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/storage-file-share,
 ms.date: 11/11/2020
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: storage
 ms.subservice: files
 ---
-
 # Azure Storage File Share client library for JavaScript - version 12.3.0 
 
 

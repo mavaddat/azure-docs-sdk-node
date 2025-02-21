@@ -26,7 +26,7 @@ properties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
   - name: contentType
     uid: '@azure/storage-file-share.FileRenameOptions.contentType'
     package: '@azure/storage-file-share'
@@ -89,6 +89,28 @@ properties:
       return:
         description: ''
         type: string
+  - name: filePermissionFormat
+    uid: '@azure/storage-file-share.FileRenameOptions.filePermissionFormat'
+    package: '@azure/storage-file-share'
+    summary: >-
+      Optional. Available for version 2023-06-01 and later. Specifies the format
+      in which the permission is returned.
+
+      Acceptable values are SDDL or binary. If x-ms-file-permission-format is
+      unspecified or explicitly set to SDDL, the permission is returned in SDDL
+      format.
+
+      If x-ms-file-permission-format is explicitly set to binary, the permission
+      is returned as a base64 string representing the binary encoding of the
+      permission
+    fullName: filePermissionFormat
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'filePermissionFormat?: FilePermissionFormat'
+      return:
+        description: ''
+        type: <xref uid="@azure/storage-file-share.FilePermissionFormat" />
   - name: filePermissionKey
     uid: '@azure/storage-file-share.FileRenameOptions.filePermissionKey'
     package: '@azure/storage-file-share'
@@ -178,7 +200,7 @@ properties:
 
       The timeout parameter is expressed in seconds. For more information, see
       <a
-      href="https://docs.microsoft.com/en-us/rest/api/storageservices/Setting-Timeouts-for-File-Service-Operations?redirectedfrom=MSDN">Setting
+      href="https://learn.microsoft.com/en-us/rest/api/storageservices/Setting-Timeouts-for-File-Service-Operations?redirectedfrom=MSDN">Setting
       Timeouts for File Service Operations.</a>
     fullName: timeoutInSeconds
     remarks: ''
@@ -200,7 +222,7 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [CommonOptions.tracingOptions](xref:@azure/storage-file-share.CommonOptions.tracingOptions)

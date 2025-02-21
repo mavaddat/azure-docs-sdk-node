@@ -21,7 +21,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string,
         emailServiceName: string, parameters: EmailServiceResource, options?:
         EmailServicesCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<EmailServiceResource>,
+        Promise<SimplePollerLike<OperationState<EmailServiceResource>,
         EmailServiceResource>>
       parameters:
         - id: resourceGroupName
@@ -42,7 +42,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-communication.EmailServiceResource" />&gt;, <xref
           uid="@azure/arm-communication.EmailServiceResource" />&gt;&gt;
   - name: >-
@@ -90,7 +91,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, emailServiceName:
         string, options?: EmailServicesDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -105,7 +106,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, EmailServicesDeleteOptionalParams)
     uid: '@azure/arm-communication.EmailServices.beginDeleteAndWait'
     package: '@azure/arm-communication'
@@ -144,7 +147,7 @@ methods:
         function beginUpdate(resourceGroupName: string, emailServiceName:
         string, parameters: EmailServiceResourceUpdate, options?:
         EmailServicesUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<EmailServiceResource>,
+        Promise<SimplePollerLike<OperationState<EmailServiceResource>,
         EmailServiceResource>>
       parameters:
         - id: resourceGroupName
@@ -164,7 +167,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-communication.EmailServiceResource" />&gt;, <xref
           uid="@azure/arm-communication.EmailServiceResource" />&gt;&gt;
   - name: >-
@@ -254,10 +258,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-communication.EmailServiceResource" />, <xref
-          uid="@azure/arm-communication.EmailServiceResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-communication.EmailServiceResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(EmailServicesListBySubscriptionOptionalParams)
     uid: '@azure/arm-communication.EmailServices.listBySubscription'
     package: '@azure/arm-communication'
@@ -280,10 +284,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-communication.EmailServiceResource" />, <xref
-          uid="@azure/arm-communication.EmailServiceResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-communication.EmailServiceResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listVerifiedExchangeOnlineDomains(EmailServicesListVerifiedExchangeOnlineDomainsOptionalParams)
     uid: '@azure/arm-communication.EmailServices.listVerifiedExchangeOnlineDomains'

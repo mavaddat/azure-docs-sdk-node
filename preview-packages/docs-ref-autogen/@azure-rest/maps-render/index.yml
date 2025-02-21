@@ -22,6 +22,7 @@ interfaces:
   - '@azure-rest/maps-render.GetMapTileset'
   - '@azure-rest/maps-render.MapAttributionOutput'
   - '@azure-rest/maps-render.MapTilesetOutput'
+  - '@azure-rest/maps-render.MapsRenderClientOptions'
   - '@azure-rest/maps-render.Pin'
   - '@azure-rest/maps-render.PinOptions'
   - '@azure-rest/maps-render.PinSet'
@@ -226,12 +227,12 @@ functions:
         ClientOptions): MapsRenderClient
       parameters:
         - id: credential
-          type: AzureKeyCredential
+          type: <xref uid="@azure/core-auth.AzureKeyCredential" />
           description: >-
             An AzureKeyCredential instance used to authenticate requests to the
             service
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Render Client
       return:
         description: ''
@@ -268,7 +269,7 @@ functions:
         string, options?: ClientOptions): MapsRenderClient
       parameters:
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An TokenCredential instance used to authenticate requests to the
             service
@@ -276,7 +277,49 @@ functions:
           type: string
           description: The Azure Maps client id of a specific map resource
         - id: options
-          type: ClientOptions
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
+          description: Options used to configure the Render Client
+      return:
+        description: ''
+        type: <xref uid="@azure-rest/maps-render.MapsRenderClient" />
+  - name: default(AzureSASCredential, ClientOptions)
+    uid: '@azure-rest/maps-render.default_2'
+    package: '@azure-rest/maps-render'
+    summary: >+
+      Creates an instance of MapsRender from an Azure Identity
+      `AzureSASCredential`.
+
+
+      **Example**
+
+
+      ```ts
+
+      import MapsRender from "@azure-rest/maps-render";
+
+      import { AzureSASCredential } from "@azure/core-auth";
+
+
+      const credential = new AzureSASCredential("<SAS Token>");
+
+      const client = MapsRender(credential);
+
+      ```
+
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function default(credential: AzureSASCredential, options?:
+        ClientOptions): MapsRenderClient
+      parameters:
+        - id: credential
+          type: <xref uid="@azure/core-auth.AzureSASCredential" />
+          description: >-
+            An AzureSASCredential instance used to authenticate requests to the
+            service
+        - id: options
+          type: <xref uid="@azure-rest/core-client.ClientOptions" />
           description: Options used to configure the Render Client
       return:
         description: ''
@@ -528,7 +571,7 @@ functions:
         "512" | "256"): { x: number, y: number }
       parameters:
         - id: position
-          type: LatLon
+          type: <xref uid="@azure/maps-common.LatLon" />
           description: Position coordinate in the format [latitude, longitude].
         - id: zoom
           type: number

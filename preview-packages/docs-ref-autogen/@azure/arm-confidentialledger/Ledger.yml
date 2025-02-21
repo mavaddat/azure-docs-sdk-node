@@ -9,6 +9,83 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginBackup(string, string, ConfidentialLedgerBackup,
+      LedgerBackupOptionalParams)
+    uid: '@azure/arm-confidentialledger.Ledger.beginBackup'
+    package: '@azure/arm-confidentialledger'
+    summary: Backs up a Confidential Ledger Resource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginBackup(resourceGroupName: string, ledgerName: string,
+        confidentialLedger: ConfidentialLedgerBackup, options?:
+        LedgerBackupOptionalParams):
+        Promise<SimplePollerLike<OperationState<ConfidentialLedgerBackupResponse>,
+        ConfidentialLedgerBackupResponse>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: ledgerName
+          type: string
+          description: Name of the Confidential Ledger
+        - id: confidentialLedger
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.ConfidentialLedgerBackup"
+            />
+          description: Confidential Ledger Backup Request Body
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.LedgerBackupOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerBackupResponse"
+          />&gt;, <xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerBackupResponse"
+          />&gt;&gt;
+  - name: >-
+      beginBackupAndWait(string, string, ConfidentialLedgerBackup,
+      LedgerBackupOptionalParams)
+    uid: '@azure/arm-confidentialledger.Ledger.beginBackupAndWait'
+    package: '@azure/arm-confidentialledger'
+    summary: Backs up a Confidential Ledger Resource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginBackupAndWait(resourceGroupName: string, ledgerName:
+        string, confidentialLedger: ConfidentialLedgerBackup, options?:
+        LedgerBackupOptionalParams): Promise<ConfidentialLedgerBackupResponse>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: ledgerName
+          type: string
+          description: Name of the Confidential Ledger
+        - id: confidentialLedger
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.ConfidentialLedgerBackup"
+            />
+          description: Confidential Ledger Backup Request Body
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.LedgerBackupOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerBackupResponse"
+          />&gt;
+  - name: >-
       beginCreate(string, string, ConfidentialLedger,
       LedgerCreateOptionalParams)
     uid: '@azure/arm-confidentialledger.Ledger.beginCreate'
@@ -41,7 +118,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />&gt;, <xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />&gt;&gt;
   - name: >-
@@ -103,8 +181,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, LedgerDeleteOptionalParams)
     uid: '@azure/arm-confidentialledger.Ledger.beginDeleteAndWait'
     package: '@azure/arm-confidentialledger'
@@ -130,6 +208,83 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      beginRestore(string, string, ConfidentialLedgerRestore,
+      LedgerRestoreOptionalParams)
+    uid: '@azure/arm-confidentialledger.Ledger.beginRestore'
+    package: '@azure/arm-confidentialledger'
+    summary: Restores a Confidential Ledger Resource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRestore(resourceGroupName: string, ledgerName: string,
+        confidentialLedger: ConfidentialLedgerRestore, options?:
+        LedgerRestoreOptionalParams):
+        Promise<SimplePollerLike<OperationState<ConfidentialLedgerRestoreResponse>,
+        ConfidentialLedgerRestoreResponse>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: ledgerName
+          type: string
+          description: Name of the Confidential Ledger
+        - id: confidentialLedger
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.ConfidentialLedgerRestore"
+            />
+          description: Confidential Ledger Restore Request Body
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confidentialledger.LedgerRestoreOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerRestoreResponse"
+          />&gt;, <xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerRestoreResponse"
+          />&gt;&gt;
+  - name: >-
+      beginRestoreAndWait(string, string, ConfidentialLedgerRestore,
+      LedgerRestoreOptionalParams)
+    uid: '@azure/arm-confidentialledger.Ledger.beginRestoreAndWait'
+    package: '@azure/arm-confidentialledger'
+    summary: Restores a Confidential Ledger Resource.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRestoreAndWait(resourceGroupName: string, ledgerName:
+        string, confidentialLedger: ConfidentialLedgerRestore, options?:
+        LedgerRestoreOptionalParams): Promise<ConfidentialLedgerRestoreResponse>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: ledgerName
+          type: string
+          description: Name of the Confidential Ledger
+        - id: confidentialLedger
+          type: >-
+            <xref uid="@azure/arm-confidentialledger.ConfidentialLedgerRestore"
+            />
+          description: Confidential Ledger Restore Request Body
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-confidentialledger.LedgerRestoreOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-confidentialledger.ConfidentialLedgerRestoreResponse"
+          />&gt;
   - name: >-
       beginUpdate(string, string, ConfidentialLedger,
       LedgerUpdateOptionalParams)
@@ -163,7 +318,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />&gt;, <xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />&gt;&gt;
   - name: >-
@@ -249,10 +405,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />, <xref
-          uid="@azure/arm-confidentialledger.ConfidentialLedger" />[],
-          PageSettings&gt;
+          uid="@azure/arm-confidentialledger.ConfidentialLedger" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(LedgerListBySubscriptionOptionalParams)
     uid: '@azure/arm-confidentialledger.Ledger.listBySubscription'
     package: '@azure/arm-confidentialledger'
@@ -275,7 +431,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-confidentialledger.ConfidentialLedger" />, <xref
-          uid="@azure/arm-confidentialledger.ConfidentialLedger" />[],
-          PageSettings&gt;
+          uid="@azure/arm-confidentialledger.ConfidentialLedger" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

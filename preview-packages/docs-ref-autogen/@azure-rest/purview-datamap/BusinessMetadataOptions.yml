@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: BusinessMetadataOptions
+uid: '@azure-rest/purview-datamap.BusinessMetadataOptions'
+package: '@azure-rest/purview-datamap'
+summary: Business metadata to send to the service
+fullName: BusinessMetadataOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BusinessMetadataOptions =
+    | FormData
+    | BusinessMetadataOptionsFilePartDescriptor[]

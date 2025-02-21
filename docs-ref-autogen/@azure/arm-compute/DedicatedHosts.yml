@@ -44,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.DedicatedHost" />&gt;, <xref
           uid="@azure/arm-compute.DedicatedHost" />&gt;&gt;
   - name: >-
@@ -110,8 +111,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       DedicatedHostsDeleteOptionalParams)
@@ -141,6 +142,98 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      beginRedeploy(string, string, string,
+      DedicatedHostsRedeployOptionalParams)
+    uid: '@azure/arm-compute.DedicatedHosts.beginRedeploy'
+    package: '@azure/arm-compute'
+    summary: >-
+      Redeploy the dedicated host. The operation will complete successfully once
+      the dedicated host has
+
+      migrated to a new node and is running. To determine the health of VMs
+      deployed on the dedicated host
+
+      after the redeploy check the Resource Health Center in the Azure Portal.
+      Please refer to
+
+      https://learn.microsoft.com/azure/service-health/resource-health-overview
+      for more details.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRedeploy(resourceGroupName: string, hostGroupName: string,
+        hostName: string, options?: DedicatedHostsRedeployOptionalParams):
+        Promise<SimplePollerLike<OperationState<DedicatedHostsRedeployHeaders>,
+        DedicatedHostsRedeployHeaders>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: hostGroupName
+          type: string
+          description: The name of the dedicated host group.
+        - id: hostName
+          type: string
+          description: The name of the dedicated host.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-compute.DedicatedHostsRedeployOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-compute.DedicatedHostsRedeployHeaders" />&gt;, <xref
+          uid="@azure/arm-compute.DedicatedHostsRedeployHeaders" />&gt;&gt;
+  - name: >-
+      beginRedeployAndWait(string, string, string,
+      DedicatedHostsRedeployOptionalParams)
+    uid: '@azure/arm-compute.DedicatedHosts.beginRedeployAndWait'
+    package: '@azure/arm-compute'
+    summary: >-
+      Redeploy the dedicated host. The operation will complete successfully once
+      the dedicated host has
+
+      migrated to a new node and is running. To determine the health of VMs
+      deployed on the dedicated host
+
+      after the redeploy check the Resource Health Center in the Azure Portal.
+      Please refer to
+
+      https://learn.microsoft.com/azure/service-health/resource-health-overview
+      for more details.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRedeployAndWait(resourceGroupName: string, hostGroupName:
+        string, hostName: string, options?:
+        DedicatedHostsRedeployOptionalParams):
+        Promise<DedicatedHostsRedeployHeaders>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: hostGroupName
+          type: string
+          description: The name of the dedicated host group.
+        - id: hostName
+          type: string
+          description: The name of the dedicated host.
+        - id: options
+          type: >-
+            <xref uid="@azure/arm-compute.DedicatedHostsRedeployOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-compute.DedicatedHostsRedeployHeaders" />&gt;
   - name: beginRestart(string, string, string, DedicatedHostsRestartOptionalParams)
     uid: '@azure/arm-compute.DedicatedHosts.beginRestart'
     package: '@azure/arm-compute'
@@ -154,7 +247,7 @@ methods:
       restart check the Resource Health Center in the Azure Portal. Please refer
       to
 
-      https://docs.microsoft.com/azure/service-health/resource-health-overview
+      https://learn.microsoft.com/azure/service-health/resource-health-overview
       for more details.
     remarks: ''
     isDeprecated: false
@@ -181,8 +274,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestartAndWait(string, string, string,
       DedicatedHostsRestartOptionalParams)
@@ -198,7 +291,7 @@ methods:
       restart check the Resource Health Center in the Azure Portal. Please refer
       to
 
-      https://docs.microsoft.com/azure/service-health/resource-health-overview
+      https://learn.microsoft.com/azure/service-health/resource-health-overview
       for more details.
     remarks: ''
     isDeprecated: false
@@ -258,7 +351,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.DedicatedHost" />&gt;, <xref
           uid="@azure/arm-compute.DedicatedHost" />&gt;&gt;
   - name: >-
@@ -357,7 +451,10 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: PagedAsyncIterableIterator&lt;string, string[], PageSettings&gt;
+        type: >-
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator"
+          />&lt;string, string[], <xref uid="@azure/core-paging.PageSettings"
+          />&gt;
   - name: >-
       listByHostGroup(string, string,
       DedicatedHostsListByHostGroupOptionalParams)
@@ -391,6 +488,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.DedicatedHost" />, <xref
-          uid="@azure/arm-compute.DedicatedHost" />[], PageSettings&gt;
+          uid="@azure/arm-compute.DedicatedHost" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

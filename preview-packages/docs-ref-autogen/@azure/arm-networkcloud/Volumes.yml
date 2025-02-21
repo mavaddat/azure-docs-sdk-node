@@ -40,7 +40,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.Volume" />&gt;, <xref
           uid="@azure/arm-networkcloud.Volume" />&gt;&gt;
   - name: >-
@@ -84,7 +85,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, volumeName: string,
         options?: VolumesDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -98,8 +100,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, VolumesDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.Volumes.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -109,7 +113,8 @@ methods:
     syntax:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string, volumeName:
-        string, options?: VolumesDeleteOptionalParams): Promise<void>
+        string, options?: VolumesDeleteOptionalParams):
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -122,7 +127,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: get(string, string, VolumesGetOptionalParams)
     uid: '@azure/arm-networkcloud.Volumes.get'
     package: '@azure/arm-networkcloud'
@@ -170,9 +177,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.Volume" />, <xref
-          uid="@azure/arm-networkcloud.Volume" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.Volume" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(VolumesListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.Volumes.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -194,9 +202,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.Volume" />, <xref
-          uid="@azure/arm-networkcloud.Volume" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.Volume" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: update(string, string, VolumesUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.Volumes.update'
     package: '@azure/arm-networkcloud'
