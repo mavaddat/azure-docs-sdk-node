@@ -21,18 +21,18 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpoints200Response
+        StreamableMethod<AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpoints200Response
         |
-        AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpointsdefaultResponse>
+        AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpointsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpoints200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpointsdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsGetOutboundNetworkDependenciesEndpointsDefaultResponse"
           />&gt;

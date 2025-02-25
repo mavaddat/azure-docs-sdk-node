@@ -23,7 +23,7 @@ properties:
       content: 'createdBy?: CommunicationIdentifierKind'
       return:
         description: ''
-        type: CommunicationIdentifierKind
+        type: <xref uid="@azure/communication-common.CommunicationIdentifierKind" />
   - name: createdOn
     uid: '@azure/communication-chat.ChatThreadProperties.createdOn'
     package: '@azure/communication-chat'
@@ -64,6 +64,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: messagingPolicy
+    uid: '@azure/communication-chat.ChatThreadProperties.messagingPolicy'
+    package: '@azure/communication-chat'
+    summary: Messaging policy for a chat thread.
+    fullName: messagingPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'messagingPolicy?: MessagingPolicy'
+      return:
+        description: ''
+        type: <xref uid="@azure/communication-chat.MessagingPolicy" />
   - name: metadata
     uid: '@azure/communication-chat.ChatThreadProperties.metadata'
     package: '@azure/communication-chat'
@@ -76,6 +88,18 @@ properties:
       return:
         description: ''
         type: Record&lt;string, string&gt;
+  - name: retentionPolicy
+    uid: '@azure/communication-chat.ChatThreadProperties.retentionPolicy'
+    package: '@azure/communication-chat'
+    summary: Data retention policy for auto deletion.
+    fullName: retentionPolicy
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'retentionPolicy?: ChatRetentionPolicy'
+      return:
+        description: ''
+        type: <xref uid="@azure/communication-chat.ChatRetentionPolicy" />
   - name: topic
     uid: '@azure/communication-chat.ChatThreadProperties.topic'
     package: '@azure/communication-chat'

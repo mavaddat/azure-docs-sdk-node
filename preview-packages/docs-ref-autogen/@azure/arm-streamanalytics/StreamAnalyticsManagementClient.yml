@@ -23,7 +23,7 @@ constructors:
         StreamAnalyticsManagementClientOptionalParams)
       parameters:
         - id: credentials
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Subscription credentials which uniquely identify client
             subscription.
@@ -37,6 +37,18 @@ constructors:
             />
           description: The parameter options
 properties:
+  - name: $host
+    uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.$host'
+    package: '@azure/arm-streamanalytics'
+    summary: ''
+    fullName: $host
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: '$host: string'
+      return:
+        description: ''
+        type: string
   - name: clusters
     uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.clusters'
     package: '@azure/arm-streamanalytics'
@@ -110,6 +122,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-streamanalytics.PrivateEndpoints" />
+  - name: skuOperations
+    uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.skuOperations'
+    package: '@azure/arm-streamanalytics'
+    summary: ''
+    fullName: skuOperations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'skuOperations: SkuOperations'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-streamanalytics.SkuOperations" />
   - name: streamingJobs
     uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.streamingJobs'
     package: '@azure/arm-streamanalytics'
@@ -122,6 +146,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-streamanalytics.StreamingJobs" />
+  - name: subscriptionId
+    uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.subscriptionId'
+    package: '@azure/arm-streamanalytics'
+    summary: ''
+    fullName: subscriptionId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subscriptionId: string'
+      return:
+        description: ''
+        type: string
   - name: subscriptions
     uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.subscriptions'
     package: '@azure/arm-streamanalytics'
@@ -147,21 +183,6 @@ properties:
         description: ''
         type: <xref uid="@azure/arm-streamanalytics.Transformations" />
 inheritedProperties:
-  - name: $host
-    uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.$host'
-    package: '@azure/arm-streamanalytics'
-    summary: ''
-    fullName: $host
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: '$host: string'
-      return:
-        description: ''
-        type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [StreamAnalyticsManagementClientContext.$host](xref:@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext.$host)
   - name: pipeline
     uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.pipeline'
     package: '@azure/arm-streamanalytics'
@@ -173,25 +194,8 @@ inheritedProperties:
       content: 'pipeline: Pipeline'
       return:
         description: ''
-        type: Pipeline
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [StreamAnalyticsManagementClientContext.pipeline](xref:@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext.pipeline)
-  - name: subscriptionId
-    uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.subscriptionId'
-    package: '@azure/arm-streamanalytics'
-    summary: ''
-    fullName: subscriptionId
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'subscriptionId: string'
-      return:
-        description: ''
-        type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [StreamAnalyticsManagementClientContext.subscriptionId](xref:@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext.subscriptionId)
+        type: <xref uid="@azure/core-rest-pipeline.Pipeline" />
+    inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.pipeline
 inheritedMethods:
   - name: sendOperationRequest<T>(OperationArguments, OperationSpec)
     uid: >-
@@ -206,19 +210,17 @@ inheritedMethods:
         operationSpec: OperationSpec): Promise<T>
       parameters:
         - id: operationArguments
-          type: OperationArguments
+          type: <xref uid="@azure/core-client.OperationArguments" />
           description: >-
             The arguments that the HTTP request's templated values will be
             populated from.
         - id: operationSpec
-          type: OperationSpec
+          type: <xref uid="@azure/core-client.OperationSpec" />
           description: The OperationSpec to use to populate the httpRequest.
       return:
         description: ''
         type: Promise&lt;T&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [StreamAnalyticsManagementClientContext.sendOperationRequest](xref:@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext.sendOperationRequest)
+    inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.sendOperationRequest
   - name: sendRequest(PipelineRequest)
     uid: '@azure/arm-streamanalytics.StreamAnalyticsManagementClient.sendRequest'
     package: '@azure/arm-streamanalytics'
@@ -231,14 +233,12 @@ inheritedMethods:
         Promise<PipelineResponse>
       parameters:
         - id: request
-          type: PipelineRequest
+          type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;PipelineResponse&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [StreamAnalyticsManagementClientContext.sendRequest](xref:@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext.sendRequest)
-extends: >-
-  <xref uid="@azure/arm-streamanalytics.StreamAnalyticsManagementClientContext"
-  />
+        type: >-
+          Promise&lt;<xref uid="@azure/core-rest-pipeline.PipelineResponse"
+          />&gt;
+    inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.sendRequest
+extends: <xref uid="@azure/core-client.ServiceClient" />

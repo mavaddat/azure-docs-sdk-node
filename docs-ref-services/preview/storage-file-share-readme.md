@@ -1,14 +1,12 @@
 ---
 title: Azure Storage File Share client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/storage-file-share, storage
-author: EmmaZhu
-ms.author: emmazhu
-ms.date: 05/31/2023
+ms.date: 02/18/2025
 ms.topic: reference
 ms.devlang: javascript
 ms.service: storage
 ---
-# Azure Storage File Share client library for JavaScript - version 12.15.0-beta.1 
+# Azure Storage File Share client library for JavaScript - version 12.27.0-beta.1 
 
 
 Azure Files offers fully managed file shares in the cloud that are accessible via the industry standard Server Message Block (SMB) protocol. Azure file shares can be mounted concurrently by cloud or on-premises deployments of Windows, Linux, and macOS. Additionally, Azure file shares can be cached on Windows Servers with Azure File Sync for fast access near where the data is being used.
@@ -28,12 +26,12 @@ Use the client libraries in this package to:
 
 Key links:
 
-- [Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share)
+- [Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share)
 - [Package (npm)](https://www.npmjs.com/package/@azure/storage-file-share/)
-- [API Reference Documentation](/javascript/api/@azure/storage-file-share)
-- [Product documentation](/azure/storage/files/storage-files-introduction)
-- [Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/samples)
-- [Azure Storage File REST APIs](/rest/api/storageservices/file-service-rest-api)
+- [API Reference Documentation](https://learn.microsoft.com/javascript/api/@azure/storage-file-share)
+- [Product documentation](https://learn.microsoft.com/azure/storage/files/storage-files-introduction)
+- [Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/samples)
+- [Azure Storage File REST APIs](https://learn.microsoft.com/rest/api/storageservices/file-service-rest-api)
 
 ## Getting started
 
@@ -42,12 +40,12 @@ Key links:
 - [LTS versions of Node.js](https://github.com/nodejs/release#release-schedule)
 - Latest versions of Safari, Chrome, Edge, and Firefox.
 
-See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.15.0-beta.1/SUPPORT.md) for more details.
+See our [support policy](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.27.0-beta.1/SUPPORT.md) for more details.
 
 ### Prerequisites
 
 - An [Azure subscription](https://azure.microsoft.com/free/)
-- A [Storage Account](/azure/storage/common/storage-account-create)
+- A [Storage Account](https://learn.microsoft.com/azure/storage/common/storage-account-create)
 
 ### Install the package
 
@@ -110,7 +108,7 @@ To use this client library in the browser, first you need to use a bundler. For 
 
 ### CORS
 
-You need to set up [Cross-Origin Resource Sharing (CORS)](/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services) rules for your storage account if you need to develop for browsers. Go to Azure portal and Azure Storage Explorer, find your storage account, create new CORS rules for blob/queue/file/table service(s).
+You need to set up [Cross-Origin Resource Sharing (CORS)](https://learn.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services) rules for your storage account if you need to develop for browsers. Go to Azure portal and Azure Storage Explorer, find your storage account, create new CORS rules for blob/queue/file/table service(s).
 
 For example, you can create following CORS settings for debugging. But please customize the settings carefully according to your requirements in production environment.
 
@@ -187,7 +185,7 @@ const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   // When using AnonymousCredential, following url should include a valid SAS
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 ```
 
@@ -202,7 +200,7 @@ const account = "<account name>";
 const sas = "<service Shared Access Signature Token>";
 
 const serviceClientWithSAS = new ShareServiceClient(
-  `https://${account}.file.core.windows.net${sas}`
+  `https://${account}.file.core.windows.net${sas}`,
 );
 ```
 
@@ -220,11 +218,11 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 async function main() {
-  let shareIter = serviceClient.listShares();
+  const shareIter = serviceClient.listShares();
   let i = 1;
   for await (const share of shareIter) {
     console.log(`Share${i}: ${share.name}`);
@@ -246,11 +244,11 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 async function main() {
-  let shareIter = serviceClient.listShares();
+  const shareIter = serviceClient.listShares();
   let i = 1;
   let shareItem = await shareIter.next();
   while (!shareItem.done) {
@@ -273,7 +271,7 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 async function main() {
@@ -302,7 +300,7 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 const shareName = "<share name>";
@@ -340,7 +338,7 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 const shareName = "<share name>";
@@ -349,7 +347,7 @@ const directoryName = "<directory name>";
 async function main() {
   const directoryClient = serviceClient.getShareClient(shareName).getDirectoryClient(directoryName);
 
-  let dirIter = directoryClient.listFilesAndDirectories();
+  const dirIter = directoryClient.listFilesAndDirectories();
   let i = 1;
   for await (const item of dirIter) {
     if (item.kind === "directory") {
@@ -375,7 +373,7 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 const shareName = "<share name>";
@@ -384,7 +382,7 @@ const directoryName = "<directory name>";
 async function main() {
   const directoryClient = serviceClient.getShareClient(shareName).getDirectoryClient(directoryName);
 
-  let dirIter = directoryClient.listFilesAndDirectories();
+  const dirIter = directoryClient.listFilesAndDirectories();
   let i = 1;
   let item = await dirIter.next();
   while (!item.done) {
@@ -393,6 +391,7 @@ async function main() {
     } else {
       console.log(`${i} - file\t: ${item.value.name}`);
     }
+    i++;
     item = await dirIter.next();
   }
 }
@@ -400,7 +399,7 @@ async function main() {
 main();
 ```
 
-For a complete sample on iterating please see [samples/v12/typescript/src/listFilesAndDirectories.ts](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript/src/listFilesAndDirectories.ts).
+For a complete sample on iterating please see [samples/v12/typescript/src/listFilesAndDirectories.ts](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript/src/listFilesAndDirectories.ts).
 
 ### Download a file and convert it to a string (Node.js)
 
@@ -413,7 +412,7 @@ const accountKey = "<accountkey>";
 const credential = new StorageSharedKeyCredential(account, accountKey);
 const serviceClient = new ShareServiceClient(
   `https://${account}.file.core.windows.net`,
-  credential
+  credential,
 );
 
 const shareName = "<share name>";
@@ -444,7 +443,7 @@ async function main() {
   console.log(
     `Downloaded file content: ${(
       await streamToBuffer(downloadFileResponse.readableStreamBody)
-    ).toString()}`
+    ).toString()}`,
   );
 }
 
@@ -474,7 +473,7 @@ async function main() {
   // In browsers, get downloaded data by accessing downloadFileResponse.blobBody
   const downloadFileResponse = await fileClient.download(0);
   console.log(
-    `Downloaded file content: ${await blobToString(await downloadFileResponse.blobBody)}`
+    `Downloaded file content: ${await blobToString(await downloadFileResponse.blobBody)}`,
   );
 }
 
@@ -493,7 +492,7 @@ async function blobToString(blob) {
 main();
 ```
 
-A complete example of simple `ShareServiceClient` scenarios is at [samples/v12/typescript/src/shareSerivceClient.ts](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript/src/shareServiceClient.ts).
+A complete example of simple `ShareServiceClient` scenarios is at [samples/v12/typescript/src/shareSerivceClient.ts](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript/src/shareServiceClient.ts).
 
 ## Troubleshooting
 
@@ -509,15 +508,13 @@ setLogLevel("info");
 
 More code samples
 
-- [File Share Storage Samples (JavaScript)](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/samples/v12/javascript)
-- [File Share Storage Samples (TypeScript)](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript)
-- [File Share Storage Test Cases](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/storage-file-share/test)
+- [File Share Storage Samples (JavaScript)](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/samples/v12/javascript)
+- [File Share Storage Samples (TypeScript)](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/samples/v12/typescript)
+- [File Share Storage Test Cases](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/storage-file-share/test)
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.15.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.27.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
 
-Also refer to [Storage specific guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.15.0-beta.1/sdk/storage/CONTRIBUTING.md) for additional information on setting up the test environment for storage libraries.
-
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fstorage%2Fstorage-file-share%2FREADME.png)
+Also refer to [Storage specific guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.27.0-beta.1/sdk/storage/CONTRIBUTING.md) for additional information on setting up the test environment for storage libraries.
 

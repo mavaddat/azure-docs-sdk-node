@@ -19,20 +19,20 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsListNetworkFeatures200Response |
+        StreamableMethod<WebAppsListNetworkFeatures200Response |
         WebAppsListNetworkFeatures404Response |
-        WebAppsListNetworkFeaturesdefaultResponse>
+        WebAppsListNetworkFeaturesDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListNetworkFeatures200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsListNetworkFeatures404Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsListNetworkFeaturesdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListNetworkFeaturesDefaultResponse"
           />&gt;

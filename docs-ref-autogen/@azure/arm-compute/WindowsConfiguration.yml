@@ -41,8 +41,11 @@ properties:
     uid: '@azure/arm-compute.WindowsConfiguration.enableVMAgentPlatformUpdates'
     package: '@azure/arm-compute'
     summary: >-
-      Indicates whether VMAgent Platform Updates is enabled for the Windows
-      virtual machine. Default value is false.
+      Indicates whether VMAgent Platform Updates are enabled for the Windows
+      Virtual Machine.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: enableVMAgentPlatformUpdates
     remarks: ''
     isDeprecated: false
@@ -87,9 +90,9 @@ properties:
     summary: >-
       Specifies the time zone of the virtual machine. e.g. "Pacific Standard
       Time". Possible values can be
-      [TimeZoneInfo.Id](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id)
+      [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id)
       value from time zones returned by
-      [TimeZoneInfo.GetSystemTimeZones](https://docs.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+      [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
     fullName: timeZone
     remarks: ''
     isDeprecated: false

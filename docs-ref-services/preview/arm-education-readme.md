@@ -1,8 +1,6 @@
 ---
 title: Azure EducationManagement client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-education, education
-author: xirzec
-ms.author: jeffish
 ms.date: 02/02/2023
 ms.topic: reference
 ms.devlang: javascript
@@ -110,7 +108,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Feducation%2Farm-education%2FREADME.png)
+
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

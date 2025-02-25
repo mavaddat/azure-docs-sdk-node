@@ -123,9 +123,9 @@ properties:
       values for Linux Server operating system are: <br><br> RHEL_BYOS (for
       RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see
       [Azure Hybrid Use Benefit for Windows
-      Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
+      Server](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
       <br><br> [Azure Hybrid Use Benefit for Linux
-      Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
+      Server](https://learn.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
       <br><br> Minimum api-version: 2015-06-15
     fullName: licenseType
     remarks: ''
@@ -194,8 +194,8 @@ properties:
       @azure/arm-compute.VirtualMachineScaleSetVMProfile.securityPostureReference
     package: '@azure/arm-compute'
     summary: >-
-      Specifies the security posture to be used for all virtual machines in the
-      scale set. Minimum api-version: 2023-03-01
+      Specifies the security posture to be used in the scale set. Minimum
+      api-version: 2023-03-01
     fullName: securityPostureReference
     remarks: ''
     isDeprecated: false
@@ -246,6 +246,25 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-compute.VirtualMachineScaleSetStorageProfile" />
+  - name: timeCreated
+    uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.timeCreated'
+    package: '@azure/arm-compute'
+    summary: >-
+      Specifies the time in which this VM profile for the Virtual Machine Scale
+      Set was created. This value will be added to VMSS Flex VM tags when
+      creating/updating the VMSS VM Profile. Minimum API version for this
+      property is 2023-09-01.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: timeCreated
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        description: ''
+        type: Date
   - name: userData
     uid: '@azure/arm-compute.VirtualMachineScaleSetVMProfile.userData'
     package: '@azure/arm-compute'

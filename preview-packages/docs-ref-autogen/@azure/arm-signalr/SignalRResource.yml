@@ -138,7 +138,7 @@ properties:
   - name: kind
     uid: '@azure/arm-signalr.SignalRResource.kind'
     package: '@azure/arm-signalr'
-    summary: The kind of the service, it can be SignalR or RawWebSockets
+    summary: The kind of the service
     fullName: kind
     remarks: ''
     isDeprecated: false
@@ -238,6 +238,25 @@ properties:
       return:
         description: ''
         type: number
+  - name: regionEndpointEnabled
+    uid: '@azure/arm-signalr.SignalRResource.regionEndpointEnabled'
+    package: '@azure/arm-signalr'
+    summary: >-
+      Enable or disable the regional endpoint. Default to "Enabled".
+
+      When it's Disabled, new connections will not be routed to this endpoint,
+      however existing connections will not be affected.
+
+      This property is replica specific. Disable the regional endpoint without
+      replica is not allowed.
+    fullName: regionEndpointEnabled
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'regionEndpointEnabled?: string'
+      return:
+        description: ''
+        type: string
   - name: resourceLogConfiguration
     uid: '@azure/arm-signalr.SignalRResource.resourceLogConfiguration'
     package: '@azure/arm-signalr'
@@ -250,6 +269,21 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-signalr.ResourceLogConfiguration" />
+  - name: resourceStopped
+    uid: '@azure/arm-signalr.SignalRResource.resourceStopped'
+    package: '@azure/arm-signalr'
+    summary: |-
+      Stop or start the resource.  Default to "False".
+      When it's true, the data plane of the resource is shutdown.
+      When it's false, the data plane of the resource is started.
+    fullName: resourceStopped
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resourceStopped?: string'
+      return:
+        description: ''
+        type: string
   - name: serverless
     uid: '@azure/arm-signalr.SignalRResource.serverless'
     package: '@azure/arm-signalr'
@@ -307,22 +341,6 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-signalr.ResourceSku" />
-  - name: systemData
-    uid: '@azure/arm-signalr.SignalRResource.systemData'
-    package: '@azure/arm-signalr'
-    summary: >-
-      Metadata pertaining to creation and last modification of the resource.
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
-    fullName: systemData
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'systemData?: SystemData'
-      return:
-        description: ''
-        type: <xref uid="@azure/arm-signalr.SystemData" />
   - name: tls
     uid: '@azure/arm-signalr.SignalRResource.tls'
     package: '@azure/arm-signalr'
@@ -369,7 +387,8 @@ inheritedProperties:
     uid: '@azure/arm-signalr.SignalRResource.id'
     package: '@azure/arm-signalr'
     summary: >-
-      Fully qualified resource Id for the resource.
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -387,14 +406,12 @@ inheritedProperties:
   - name: location
     uid: '@azure/arm-signalr.SignalRResource.location'
     package: '@azure/arm-signalr'
-    summary: >-
-      The GEO location of the resource. e.g. West US | East US | North Central
-      US | South Central US.
+    summary: The geo-location where the resource lives
     fullName: location
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'location?: string'
+      content: 'location: string'
       return:
         description: ''
         type: string
@@ -405,7 +422,7 @@ inheritedProperties:
     uid: '@azure/arm-signalr.SignalRResource.name'
     package: '@azure/arm-signalr'
     summary: >-
-      The name of the resource.
+      The name of the resource
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -420,12 +437,30 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [TrackedResource.name](xref:@azure/arm-signalr.TrackedResource.name)
+  - name: systemData
+    uid: '@azure/arm-signalr.SignalRResource.systemData'
+    package: '@azure/arm-signalr'
+    summary: >-
+      Azure Resource Manager metadata containing createdBy and modifiedBy
+      information.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: systemData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'systemData?: SystemData'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-signalr.SystemData" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TrackedResource.systemData](xref:@azure/arm-signalr.TrackedResource.systemData)
   - name: tags
     uid: '@azure/arm-signalr.SignalRResource.tags'
     package: '@azure/arm-signalr'
-    summary: >-
-      Tags of the service which is a list of key value pairs that describe the
-      resource.
+    summary: Resource tags.
     fullName: tags
     remarks: ''
     isDeprecated: false
@@ -441,7 +476,8 @@ inheritedProperties:
     uid: '@azure/arm-signalr.SignalRResource.type'
     package: '@azure/arm-signalr'
     summary: >-
-      The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
+      The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or
+      "Microsoft.Storage/storageAccounts"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

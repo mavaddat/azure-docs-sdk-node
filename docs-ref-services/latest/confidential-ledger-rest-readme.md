@@ -1,8 +1,6 @@
 ---
 title: Azure Confidential Ledger REST client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure-rest/confidential-ledger, confidentialledger
-author: joheredi
-ms.author: joheredi
 ms.date: 07/19/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -248,7 +246,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fconfidentialledger%2Fconfidential-ledger-rest%2FREADME.png)
+
 
 <!-- LINKS -->
 

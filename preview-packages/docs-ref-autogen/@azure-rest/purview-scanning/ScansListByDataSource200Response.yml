@@ -2,7 +2,7 @@
 name: ScansListByDataSource200Response
 uid: '@azure-rest/purview-scanning.ScansListByDataSource200Response'
 package: '@azure-rest/purview-scanning'
-summary: List scans in data source
+summary: Lists scans in data source.
 fullName: ScansListByDataSource200Response
 remarks: ''
 isDeprecated: false
@@ -16,10 +16,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'body: ScanList'
+      content: 'body: ScanListOutput'
       return:
         description: ''
-        type: <xref uid="@azure-rest/purview-scanning.ScanList" />
+        type: <xref uid="@azure-rest/purview-scanning.ScanListOutput" />
   - name: status
     uid: '@azure-rest/purview-scanning.ScansListByDataSource200Response.status'
     package: '@azure-rest/purview-scanning'
@@ -44,7 +44,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/purview-scanning.ScansListByDataSource200Response.request'
@@ -57,6 +57,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

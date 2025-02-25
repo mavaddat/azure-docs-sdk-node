@@ -27,10 +27,10 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: parameters
           type: <xref uid="@azure/arm-redisenterprisecache.Cluster" />
-          description: Parameters supplied to the Create RedisEnterprise operation.
+          description: Parameters supplied to the Create Redis Enterprise operation.
         - id: options
           type: >-
             <xref
@@ -40,7 +40,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.Cluster" />&gt;, <xref
           uid="@azure/arm-redisenterprisecache.Cluster" />&gt;&gt;
   - name: >-
@@ -64,10 +65,10 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: parameters
           type: <xref uid="@azure/arm-redisenterprisecache.Cluster" />
-          description: Parameters supplied to the Create RedisEnterprise operation.
+          description: Parameters supplied to the Create Redis Enterprise operation.
         - id: options
           type: >-
             <xref
@@ -80,7 +81,7 @@ methods:
   - name: beginDelete(string, string, RedisEnterpriseDeleteOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.beginDelete'
     package: '@azure/arm-redisenterprisecache'
-    summary: Deletes a RedisEnterprise cache cluster.
+    summary: Deletes a Redis Enterprise cache cluster.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -94,7 +95,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: options
           type: >-
             <xref
@@ -104,12 +105,12 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, RedisEnterpriseDeleteOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.beginDeleteAndWait'
     package: '@azure/arm-redisenterprisecache'
-    summary: Deletes a RedisEnterprise cache cluster.
+    summary: Deletes a Redis Enterprise cache cluster.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -122,7 +123,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: options
           type: >-
             <xref
@@ -137,7 +138,7 @@ methods:
       RedisEnterpriseUpdateOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.beginUpdate'
     package: '@azure/arm-redisenterprisecache'
-    summary: Updates an existing RedisEnterprise cluster
+    summary: Updates an existing Redis Enterprise cluster
     remarks: ''
     isDeprecated: false
     syntax:
@@ -152,10 +153,10 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: parameters
           type: <xref uid="@azure/arm-redisenterprisecache.ClusterUpdate" />
-          description: Parameters supplied to the Update RedisEnterprise operation.
+          description: Parameters supplied to the Update Redis Enterprise operation.
         - id: options
           type: >-
             <xref
@@ -165,7 +166,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.Cluster" />&gt;, <xref
           uid="@azure/arm-redisenterprisecache.Cluster" />&gt;&gt;
   - name: >-
@@ -173,7 +175,7 @@ methods:
       RedisEnterpriseUpdateOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.beginUpdateAndWait'
     package: '@azure/arm-redisenterprisecache'
-    summary: Updates an existing RedisEnterprise cluster
+    summary: Updates an existing Redis Enterprise cluster
     remarks: ''
     isDeprecated: false
     syntax:
@@ -187,10 +189,10 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: parameters
           type: <xref uid="@azure/arm-redisenterprisecache.ClusterUpdate" />
-          description: Parameters supplied to the Update RedisEnterprise operation.
+          description: Parameters supplied to the Update Redis Enterprise operation.
         - id: options
           type: >-
             <xref
@@ -203,7 +205,7 @@ methods:
   - name: get(string, string, RedisEnterpriseGetOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.get'
     package: '@azure/arm-redisenterprisecache'
-    summary: Gets information about a RedisEnterprise cluster
+    summary: Gets information about a Redis Enterprise cluster
     remarks: ''
     isDeprecated: false
     syntax:
@@ -216,7 +218,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: options
           type: >-
             <xref
@@ -229,7 +231,7 @@ methods:
   - name: list(RedisEnterpriseListOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.list'
     package: '@azure/arm-redisenterprisecache'
-    summary: Gets all RedisEnterprise clusters in the specified subscription.
+    summary: Lists all Redis Enterprise clusters in the specified subscription.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -246,15 +248,16 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.Cluster" />, <xref
-          uid="@azure/arm-redisenterprisecache.Cluster" />[], PageSettings&gt;
+          uid="@azure/arm-redisenterprisecache.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroup(string,
       RedisEnterpriseListByResourceGroupOptionalParams)
     uid: '@azure/arm-redisenterprisecache.RedisEnterprise.listByResourceGroup'
     package: '@azure/arm-redisenterprisecache'
-    summary: Lists all RedisEnterprise clusters in a resource group.
+    summary: Lists all Redis Enterprise clusters in a resource group.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -275,6 +278,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.Cluster" />, <xref
-          uid="@azure/arm-redisenterprisecache.Cluster" />[], PageSettings&gt;
+          uid="@azure/arm-redisenterprisecache.Cluster" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

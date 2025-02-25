@@ -1,6 +1,6 @@
 {
   "Name": "@azure/arm-netapp",
-  "Version": "18.1.0",
+  "Version": "21.3.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/netapp/arm-netapp",
   "ServiceDirectory": "netapp",
@@ -10,5 +10,12 @@
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-arm-netapp",
-  "ReleaseStatus": "2023-07-03"
+  "ReleaseStatus": "2024-10-24",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
+  "ArtifactDetails": {
+    "name": "azure-arm-netapp",
+    "safeName": "azurearmnetapp"
+  },
+  "DependentPackages": null
 }

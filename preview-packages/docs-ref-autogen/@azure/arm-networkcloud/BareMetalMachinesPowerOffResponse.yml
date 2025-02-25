@@ -7,4 +7,4 @@ fullName: BareMetalMachinesPowerOffResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type BareMetalMachinesPowerOffResponse = BareMetalMachinesPowerOffHeaders
+  type BareMetalMachinesPowerOffResponse = OperationStatusResult

@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsGetBackupConfiguration200Response |
-        WebAppsGetBackupConfigurationdefaultResponse>
+        StreamableMethod<WebAppsGetBackupConfiguration200Response |
+        WebAppsGetBackupConfigurationDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetBackupConfiguration200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetBackupConfigurationdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetBackupConfigurationDefaultResponse"
           />&gt;

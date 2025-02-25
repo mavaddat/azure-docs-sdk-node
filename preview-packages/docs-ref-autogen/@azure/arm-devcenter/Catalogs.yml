@@ -8,6 +8,62 @@ remarks: ''
 isDeprecated: false
 type: interface
 methods:
+  - name: beginConnect(string, string, string, CatalogsConnectOptionalParams)
+    uid: '@azure/arm-devcenter.Catalogs.beginConnect'
+    package: '@azure/arm-devcenter'
+    summary: Connects a catalog to enable syncing.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginConnect(resourceGroupName: string, devCenterName: string,
+        catalogName: string, options?: CatalogsConnectOptionalParams):
+        Promise<SimplePollerLike<OperationState<void>, void>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: devCenterName
+          type: string
+          description: The name of the devcenter.
+        - id: catalogName
+          type: string
+          description: The name of the Catalog.
+        - id: options
+          type: <xref uid="@azure/arm-devcenter.CatalogsConnectOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
+  - name: beginConnectAndWait(string, string, string, CatalogsConnectOptionalParams)
+    uid: '@azure/arm-devcenter.Catalogs.beginConnectAndWait'
+    package: '@azure/arm-devcenter'
+    summary: Connects a catalog to enable syncing.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginConnectAndWait(resourceGroupName: string, devCenterName:
+        string, catalogName: string, options?: CatalogsConnectOptionalParams):
+        Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: devCenterName
+          type: string
+          description: The name of the devcenter.
+        - id: catalogName
+          type: string
+          description: The name of the Catalog.
+        - id: options
+          type: <xref uid="@azure/arm-devcenter.CatalogsConnectOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: >-
       beginCreateOrUpdate(string, string, string, Catalog,
       CatalogsCreateOrUpdateOptionalParams)
@@ -21,7 +77,7 @@ methods:
         function beginCreateOrUpdate(resourceGroupName: string, devCenterName:
         string, catalogName: string, body: Catalog, options?:
         CatalogsCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Catalog>, Catalog>>
+        Promise<SimplePollerLike<OperationState<Catalog>, Catalog>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -43,7 +99,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Catalog" />&gt;, <xref
           uid="@azure/arm-devcenter.Catalog" />&gt;&gt;
   - name: >-
@@ -90,7 +147,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, devCenterName: string,
         catalogName: string, options?: CatalogsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -106,7 +163,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, CatalogsDeleteOptionalParams)
     uid: '@azure/arm-devcenter.Catalogs.beginDeleteAndWait'
     package: '@azure/arm-devcenter'
@@ -144,7 +203,7 @@ methods:
       content: >-
         function beginSync(resourceGroupName: string, devCenterName: string,
         catalogName: string, options?: CatalogsSyncOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -160,7 +219,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginSyncAndWait(string, string, string, CatalogsSyncOptionalParams)
     uid: '@azure/arm-devcenter.Catalogs.beginSyncAndWait'
     package: '@azure/arm-devcenter'
@@ -201,7 +262,7 @@ methods:
         function beginUpdate(resourceGroupName: string, devCenterName: string,
         catalogName: string, body: CatalogUpdate, options?:
         CatalogsUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<Catalog>, Catalog>>
+        Promise<SimplePollerLike<OperationState<Catalog>, Catalog>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -221,7 +282,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.Catalog" />&gt;, <xref
           uid="@azure/arm-devcenter.Catalog" />&gt;&gt;
   - name: >-
@@ -283,6 +345,38 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/arm-devcenter.Catalog" />&gt;
+  - name: >-
+      getSyncErrorDetails(string, string, string,
+      CatalogsGetSyncErrorDetailsOptionalParams)
+    uid: '@azure/arm-devcenter.Catalogs.getSyncErrorDetails'
+    package: '@azure/arm-devcenter'
+    summary: Gets catalog synchronization error details
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getSyncErrorDetails(resourceGroupName: string, devCenterName:
+        string, catalogName: string, options?:
+        CatalogsGetSyncErrorDetailsOptionalParams): Promise<SyncErrorDetails>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: devCenterName
+          type: string
+          description: The name of the devcenter.
+        - id: catalogName
+          type: string
+          description: The name of the Catalog.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-devcenter.CatalogsGetSyncErrorDetailsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-devcenter.SyncErrorDetails" />&gt;
   - name: listByDevCenter(string, string, CatalogsListByDevCenterOptionalParams)
     uid: '@azure/arm-devcenter.Catalogs.listByDevCenter'
     package: '@azure/arm-devcenter'
@@ -309,5 +403,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-devcenter.Catalog"
-          />, <xref uid="@azure/arm-devcenter.Catalog" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-devcenter.Catalog" />, <xref
+          uid="@azure/arm-devcenter.Catalog" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

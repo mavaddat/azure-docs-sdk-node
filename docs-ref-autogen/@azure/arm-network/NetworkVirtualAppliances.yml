@@ -45,7 +45,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-network.NetworkVirtualAppliance" />&gt;, <xref
           uid="@azure/arm-network.NetworkVirtualAppliance" />&gt;&gt;
   - name: >-
@@ -114,8 +115,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string,
       NetworkVirtualAppliancesDeleteOptionalParams)
@@ -145,6 +146,78 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      beginRestart(string, string,
+      NetworkVirtualAppliancesRestartOptionalParams)
+    uid: '@azure/arm-network.NetworkVirtualAppliances.beginRestart'
+    package: '@azure/arm-network'
+    summary: >-
+      Restarts one or more VMs belonging to the specified Network Virtual
+      Appliance.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRestart(resourceGroupName: string,
+        networkVirtualApplianceName: string, options?:
+        NetworkVirtualAppliancesRestartOptionalParams):
+        Promise<SimplePollerLike<OperationState<NetworkVirtualApplianceInstanceIds>,
+        NetworkVirtualApplianceInstanceIds>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkVirtualApplianceName
+          type: string
+          description: The name of Network Virtual Appliance.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-network.NetworkVirtualAppliancesRestartOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-network.NetworkVirtualApplianceInstanceIds" />&gt;,
+          <xref uid="@azure/arm-network.NetworkVirtualApplianceInstanceIds"
+          />&gt;&gt;
+  - name: >-
+      beginRestartAndWait(string, string,
+      NetworkVirtualAppliancesRestartOptionalParams)
+    uid: '@azure/arm-network.NetworkVirtualAppliances.beginRestartAndWait'
+    package: '@azure/arm-network'
+    summary: >-
+      Restarts one or more VMs belonging to the specified Network Virtual
+      Appliance.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginRestartAndWait(resourceGroupName: string,
+        networkVirtualApplianceName: string, options?:
+        NetworkVirtualAppliancesRestartOptionalParams):
+        Promise<NetworkVirtualApplianceInstanceIds>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: networkVirtualApplianceName
+          type: string
+          description: The name of Network Virtual Appliance.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-network.NetworkVirtualAppliancesRestartOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-network.NetworkVirtualApplianceInstanceIds" />&gt;
   - name: get(string, string, NetworkVirtualAppliancesGetOptionalParams)
     uid: '@azure/arm-network.NetworkVirtualAppliances.get'
     package: '@azure/arm-network'
@@ -195,10 +268,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-network.NetworkVirtualAppliance" />, <xref
-          uid="@azure/arm-network.NetworkVirtualAppliance" />[],
-          PageSettings&gt;
+          uid="@azure/arm-network.NetworkVirtualAppliance" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroup(string,
       NetworkVirtualAppliancesListByResourceGroupOptionalParams)
@@ -226,10 +299,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-network.NetworkVirtualAppliance" />, <xref
-          uid="@azure/arm-network.NetworkVirtualAppliance" />[],
-          PageSettings&gt;
+          uid="@azure/arm-network.NetworkVirtualAppliance" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       updateTags(string, string, TagsObject,
       NetworkVirtualAppliancesUpdateTagsOptionalParams)

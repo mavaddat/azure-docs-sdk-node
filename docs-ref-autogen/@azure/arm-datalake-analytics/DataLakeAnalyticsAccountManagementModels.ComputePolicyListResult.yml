@@ -48,10 +48,7 @@ inheritedMethods:
     uid: >-
       @azure/arm-datalake-analytics.DataLakeAnalyticsAccountManagementModels.ComputePolicyListResult.at
     package: '@azure/arm-datalake-analytics'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1267,7 +1264,7 @@ inheritedMethods:
           IterableIterator&lt;<xref
           uid="@azure/arm-datalake-analytics.DataLakeAnalyticsAccountManagementModels.ComputePolicy"
           />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@745
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@747
   - name: '[unscopables]()'
     uid: >-
       @azure/arm-datalake-analytics.DataLakeAnalyticsAccountManagementModels.ComputePolicyListResult.[unscopables]
@@ -1287,7 +1284,7 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@747
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@749
 extends: >-
   Array&lt;<xref
   uid="@azure/arm-datalake-analytics.DataLakeAnalyticsAccountManagementModels.ComputePolicy"

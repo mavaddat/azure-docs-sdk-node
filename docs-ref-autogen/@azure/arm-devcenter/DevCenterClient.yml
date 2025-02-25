@@ -20,7 +20,7 @@ constructors:
         string, options?: DevCenterClientOptionalParams)
       parameters:
         - id: credentials
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Subscription credentials which uniquely identify client
             subscription.
@@ -91,6 +91,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-devcenter.CheckNameAvailability" />
+  - name: checkScopedNameAvailability
+    uid: '@azure/arm-devcenter.DevCenterClient.checkScopedNameAvailability'
+    package: '@azure/arm-devcenter'
+    summary: ''
+    fullName: checkScopedNameAvailability
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'checkScopedNameAvailability: CheckScopedNameAvailability'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.CheckScopedNameAvailability" />
   - name: devBoxDefinitions
     uid: '@azure/arm-devcenter.DevCenterClient.devBoxDefinitions'
     package: '@azure/arm-devcenter'
@@ -115,6 +127,18 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-devcenter.DevCenters" />
+  - name: environmentDefinitions
+    uid: '@azure/arm-devcenter.DevCenterClient.environmentDefinitions'
+    package: '@azure/arm-devcenter'
+    summary: ''
+    fullName: environmentDefinitions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'environmentDefinitions: EnvironmentDefinitions'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.EnvironmentDefinitions" />
   - name: environmentTypes
     uid: '@azure/arm-devcenter.DevCenterClient.environmentTypes'
     package: '@azure/arm-devcenter'
@@ -223,6 +247,34 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-devcenter.ProjectAllowedEnvironmentTypes" />
+  - name: projectCatalogEnvironmentDefinitions
+    uid: '@azure/arm-devcenter.DevCenterClient.projectCatalogEnvironmentDefinitions'
+    package: '@azure/arm-devcenter'
+    summary: ''
+    fullName: projectCatalogEnvironmentDefinitions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        projectCatalogEnvironmentDefinitions:
+        ProjectCatalogEnvironmentDefinitions
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-devcenter.ProjectCatalogEnvironmentDefinitions"
+          />
+  - name: projectCatalogs
+    uid: '@azure/arm-devcenter.DevCenterClient.projectCatalogs'
+    package: '@azure/arm-devcenter'
+    summary: ''
+    fullName: projectCatalogs
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'projectCatalogs: ProjectCatalogs'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-devcenter.ProjectCatalogs" />
   - name: projectEnvironmentTypes
     uid: '@azure/arm-devcenter.DevCenterClient.projectEnvironmentTypes'
     package: '@azure/arm-devcenter'
@@ -307,7 +359,7 @@ inheritedProperties:
       content: 'pipeline: Pipeline'
       return:
         description: ''
-        type: Pipeline
+        type: <xref uid="@azure/core-rest-pipeline.Pipeline" />
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.pipeline
 inheritedMethods:
   - name: sendOperationRequest<T>(OperationArguments, OperationSpec)
@@ -322,12 +374,12 @@ inheritedMethods:
         operationSpec: OperationSpec): Promise<T>
       parameters:
         - id: operationArguments
-          type: OperationArguments
+          type: <xref uid="@azure/core-client.OperationArguments" />
           description: >-
             The arguments that the HTTP request's templated values will be
             populated from.
         - id: operationSpec
-          type: OperationSpec
+          type: <xref uid="@azure/core-client.OperationSpec" />
           description: The OperationSpec to use to populate the httpRequest.
       return:
         description: ''
@@ -345,10 +397,12 @@ inheritedMethods:
         Promise<PipelineResponse>
       parameters:
         - id: request
-          type: PipelineRequest
+          type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;PipelineResponse&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-rest-pipeline.PipelineResponse"
+          />&gt;
     inheritanceDescription: <b>Inherited From</b> coreClient.ServiceClient.sendRequest
-extends: ServiceClient
+extends: <xref uid="@azure/core-client.ServiceClient" />

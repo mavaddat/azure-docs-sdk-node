@@ -1,16 +1,12 @@
 ---
 title: Azure Text Analytics client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/ai-text-analytics, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/ai-text-analytics,
 ms.date: 08/18/2020
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: cognitive-services
 ms.subservice: text-analytics
 ---
-
 # Azure Text Analytics client library for JavaScript - version 5.0.1 
 
 
@@ -392,7 +388,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Ftextanalytics%2Fai-text-analytics%2FREADME.png)
+
 
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
@@ -403,5 +399,4 @@ If you'd like to contribute to this library, please read the [contributing guide
 [register_aad_app]: https://docs.microsoft.com/azure/cognitive-services/authentication#assign-a-role-to-a-service-principal
 [defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/identity/identity#defaultazurecredential
 [data_limits]: https://docs.microsoft.com/azure/cognitive-services/text-analytics/overview#data-limits
-
 

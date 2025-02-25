@@ -19,17 +19,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServiceEnvironmentsListCapacities200Response |
-        AppServiceEnvironmentsListCapacitiesdefaultResponse>
+        StreamableMethod<AppServiceEnvironmentsListCapacities200Response |
+        AppServiceEnvironmentsListCapacitiesDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListCapacities200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListCapacitiesdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListCapacitiesDefaultResponse"
           />&gt;

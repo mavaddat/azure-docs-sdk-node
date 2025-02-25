@@ -56,7 +56,7 @@ constructors:
           type: >-
             <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential"
             /> | <xref uid="@azure/storage-file-datalake.AnonymousCredential" />
-            | TokenCredential
+            | <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             Such as AnonymousCredential, StorageSharedKeyCredential or any
             credential from the `@azure/identity` package to authenticate
@@ -113,7 +113,7 @@ inheritedProperties:
         type: >-
           <xref uid="@azure/storage-file-datalake.StorageSharedKeyCredential" />
           | <xref uid="@azure/storage-file-datalake.AnonymousCredential" /> |
-          TokenCredential
+          <xref uid="@azure/core-auth.TokenCredential" />
     inheritanceDescription: <b>Inherited From</b> StorageClient.credential
   - name: url
     uid: '@azure/storage-file-datalake.DataLakeFileSystemClient.url'
@@ -259,6 +259,42 @@ methods:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
+  - name: generateSasStringToSign(FileSystemGenerateSasUrlOptions)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeFileSystemClient.generateSasStringToSign
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Only available for DataLakeFileSystemClient constructed with a shared key
+      credential.
+
+
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in. The SAS is signed by the shared key credential
+      of the client.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateSasStringToSign(options:
+        FileSystemGenerateSasUrlOptions): string
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.FileSystemGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
   - name: generateSasUrl(FileSystemGenerateSasUrlOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileSystemClient.generateSasUrl'
     package: '@azure/storage-file-datalake'
@@ -289,6 +325,82 @@ methods:
             uid="@azure/storage-file-datalake.FileSystemGenerateSasUrlOptions"
             />
           description: Optional parameters.
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: Promise&lt;string&gt;
+  - name: >-
+      generateUserDelegationSasStringToSign(FileSystemGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeFileSystemClient.generateUserDelegationSasStringToSign
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates string to sign for a Service Shared Access Signature (SAS) URI
+      based on the client properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasStringToSign(options:
+        FileSystemGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        string
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.FileSystemGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
+      return:
+        description: >-
+          The SAS URI consisting of the URI to the resource represented by this
+          client, followed by the generated SAS token.
+        type: string
+  - name: >-
+      generateUserDelegationSasUrl(FileSystemGenerateSasUrlOptions,
+      UserDelegationKey)
+    uid: >-
+      @azure/storage-file-datalake.DataLakeFileSystemClient.generateUserDelegationSasUrl
+    package: '@azure/storage-file-datalake'
+    summary: >-
+      Generates a Service Shared Access Signature (SAS) URI based on the client
+      properties
+
+      and parameters passed in. The SAS is signed by the input user delegation
+      key.
+
+
+      See
+      https://docs.microsoft.com/en-us/rest/api/storageservices/constructing-a-service-sas
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateUserDelegationSasUrl(options:
+        FileSystemGenerateSasUrlOptions, userDelegationKey: UserDelegationKey):
+        Promise<string>
+      parameters:
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/storage-file-datalake.FileSystemGenerateSasUrlOptions"
+            />
+          description: Optional parameters.
+        - id: userDelegationKey
+          type: <xref uid="@azure/storage-file-datalake.UserDelegationKey" />
+          description: Return value of `blobServiceClient.getUserDelegationKey()`
       return:
         description: >-
           The SAS URI consisting of the URI to the resource represented by this
@@ -561,10 +673,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/storage-file-datalake.DeletedPath" />, <xref
           uid="@azure/storage-file-datalake.FileSystemListDeletedPathsResponse"
-          />, PageSettings&gt;
+          />, <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listPaths(ListPathsOptions)
     uid: '@azure/storage-file-datalake.DataLakeFileSystemClient.listPaths'
     package: '@azure/storage-file-datalake'
@@ -692,10 +804,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/storage-file-datalake.Path" />, <xref
           uid="@azure/storage-file-datalake.FileSystemListPathsResponse" />,
-          PageSettings&gt;
+          <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       setAccessPolicy(PublicAccessType, SignedIdentifier<AccessPolicy>[],
       FileSystemSetAccessPolicyOptions)

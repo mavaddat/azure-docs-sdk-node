@@ -1,8 +1,6 @@
 ---
 title: Azure Storage Blob Change Feed client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/storage-blob-changefeed, storage
-author: EmmaZhu
-ms.author: emmazhu
 ms.date: 06/17/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -188,5 +186,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 Also refer to [Storage specific guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-blob-changefeed_12.0.0-preview.4/sdk/storage/CONTRIBUTING.md) for additional information on setting up the test environment for storage libraries.
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fstorage%2Fstorage-blob-changefeed%2FREADME.png)
+
 

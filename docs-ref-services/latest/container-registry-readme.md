@@ -1,8 +1,6 @@
 ---
 title: Azure Container Registry client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/container-registry, containerregistry
-author: jeremymeng
-ms.author: yumeng
 ms.date: 05/12/2023
 ms.topic: reference
 ms.devlang: javascript
@@ -444,7 +442,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for Javascript][az_sdk_js]
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcontainerregistry%2Fcontainer-registry%2FREADME.png)
+
 
 [azure_sub]: https://azure.microsoft.com/free/
 [acr_resource]: https://ms.portal.azure.com/#create/Microsoft.ContainerRegistry

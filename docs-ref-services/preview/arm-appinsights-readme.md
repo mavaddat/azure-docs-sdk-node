@@ -1,8 +1,6 @@
 ---
 title: Azure ApplicationInsightsManagement client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-appinsights, applicationinsights
-author: qiaozha
-ms.author: qiaozha
 ms.date: 11/16/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -110,7 +108,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fapplicationinsights%2Farm-appinsights%2FREADME.png)
+
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

@@ -2,67 +2,31 @@
 name: SolutionMetadataResource
 uid: '@azure/arm-selfhelp.SolutionMetadataResource'
 package: '@azure/arm-selfhelp'
-summary: Solution Metadata resource
+summary: Metadata resource
 fullName: SolutionMetadataResource
 remarks: ''
 isDeprecated: false
 type: interface
 properties:
-  - name: description
-    uid: '@azure/arm-selfhelp.SolutionMetadataResource.description'
+  - name: solutions
+    uid: '@azure/arm-selfhelp.SolutionMetadataResource.solutions'
     package: '@azure/arm-selfhelp'
-    summary: A detailed description of solution.
-    fullName: description
+    summary: List of metadata.
+    fullName: solutions
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'description?: string'
+      content: 'solutions?: SolutionMetadataProperties[]'
       return:
         description: ''
-        type: string
-  - name: requiredParameterSets
-    uid: '@azure/arm-selfhelp.SolutionMetadataResource.requiredParameterSets'
-    package: '@azure/arm-selfhelp'
-    summary: Required parameters for invoking this particular solution.
-    fullName: requiredParameterSets
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'requiredParameterSets?: string[][]'
-      return:
-        description: ''
-        type: string[][]
-  - name: solutionId
-    uid: '@azure/arm-selfhelp.SolutionMetadataResource.solutionId'
-    package: '@azure/arm-selfhelp'
-    summary: Solution Id.
-    fullName: solutionId
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'solutionId?: string'
-      return:
-        description: ''
-        type: string
-  - name: solutionType
-    uid: '@azure/arm-selfhelp.SolutionMetadataResource.solutionType'
-    package: '@azure/arm-selfhelp'
-    summary: Solution Type.
-    fullName: solutionType
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'solutionType?: string'
-      return:
-        description: ''
-        type: string
+        type: <xref uid="@azure/arm-selfhelp.SolutionMetadataProperties" />[]
 inheritedProperties:
   - name: id
     uid: '@azure/arm-selfhelp.SolutionMetadataResource.id'
     package: '@azure/arm-selfhelp'
     summary: >-
-      Fully qualified resource ID for the resource. Ex -
-      /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+      Fully qualified resource ID for the resource. E.g.
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

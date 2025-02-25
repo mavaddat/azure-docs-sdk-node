@@ -16,9 +16,9 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'headers: RawHttpHeadersInput & DeviceUpdateGetUpdateHeaders'
+      content: 'headers?: RawHttpHeadersInput & DeviceUpdateGetUpdateHeaders'
       return:
         description: ''
         type: >-
-          RawHttpHeadersInput & <xref
+          <xref uid="@azure/core-rest-pipeline.RawHttpHeadersInput" /> & <xref
           uid="@azure-rest/iot-device-update.DeviceUpdateGetUpdateHeaders" />

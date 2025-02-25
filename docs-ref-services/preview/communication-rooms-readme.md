@@ -1,23 +1,21 @@
 ---
 title: Azure RoomsApi client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/communication-rooms, communication
-author: xirzec
-ms.author: jeffish
-ms.date: 05/17/2023
+ms.date: 10/12/2023
 ms.topic: reference
 ms.devlang: javascript
 ms.service: communication
 ---
-# Azure RoomsApi client library for JavaScript - version 1.0.0-beta.2 
+# Azure RoomsApi client library for JavaScript - version 1.1.0-beta.1 
 
 
 This package contains an isomorphic SDK (runs both in Node.js and in browsers) for Azure RoomsApi client.
 
 Communication Rooms Client
 
-[Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/communication/communication-rooms) |
+[Source code](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/communication/communication-rooms) |
 [Package (NPM)](https://www.npmjs.com/package/@azure/communication-rooms) |
-[Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/communication/communication-rooms/samples)
+[Samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/communication/communication-rooms/samples)
 
 ## Getting started
 
@@ -94,6 +92,8 @@ If `validFrom` is not provided, it is defaulted to the current datetime. If `val
 
 When defining `participants`, if `role` is not specified, then it will be `attendee` by default.
 
+Starting in 1.1.0-beta.1 release, `PstnDialOutEnabled` property is added to enable or disable PSTN Dial-Out feature in a room. The `PstnDialOutEnabled` is an optional property. If `PstnDialOutEnabled` is not provided, then the default for `PstnDialOutEnabled` is false.
+
 ```js
 // create users with CommunicationIdentityClient
 const identityClient = new CommunicationIdentityClient(connectionString);
@@ -106,11 +106,13 @@ const validFrom = new Date(Date.now());
 let validForDays = 10;
 let validUntil = new Date(validFrom.getTime());
 validUntil.setDate(validFrom.getDate() + validForDays);
+const pstnDialOutEnabled = true;
 
 // options payload to create a room
 const createRoomOptions: CreateRoomOptions = {
   validFrom,
   validUntil,
+  pstnDialOutEnabled,
   participants: [
     {
       id: user1.user,
@@ -129,12 +131,17 @@ const room = await roomsClient.createRoom(createRoomOptions);
 
 To update the `validFrom` and `validUntil` settings of a room use the `updateRoom` method.
 
+Starting in 1.1.0-beta.1 release, `PstnDialOutEnabled` property is added to enable or disable PSTN Dial-Out feature in a room.
+
 ```js
 validForDays = 60;
 validUntil.setDate(validFrom.getDate() + validForDays);
+pstnDialOutEnabled = false;
+
 const updateRoomOptions: UpdateRoomOptions = {
   validFrom,
   validUntil,
+  pstnDialOutEnabled,
 };
 
 // update the room using the room id from the creation operation
@@ -222,27 +229,27 @@ const { setLogLevel } = require("@azure/logger");
 setLogLevel("info");
 ```
 
-For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/core/logger).
+For more detailed instructions on how to enable logs, you can look at the [@azure/logger package docs](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/core/logger).
 
 ## Next steps
 
-Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/communication/communication-rooms/samples) directory for detailed examples on how to use this library.
+Please take a look at the [samples](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/communication/communication-rooms/samples) directory for detailed examples on how to use this library.
 
 ## Contributing
 
-If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/communication-rooms_1.0.0-beta.2/CONTRIBUTING.md) to learn more about how to build and test the code.
+If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/communication-rooms_1.1.0-beta.1/CONTRIBUTING.md) to learn more about how to build and test the code.
 
 ## Related projects
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcommunication%2Fcommunication-rooms%2FREADME.png)
+
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_sub]: https://azure.microsoft.com/free/
 [azure_portal]: https://portal.azure.com
-[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/identity/identity
-[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.0.0-beta.2/sdk/identity/identity#defaultazurecredential
+[azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/identity/identity
+[defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-rooms_1.1.0-beta.1/sdk/identity/identity#defaultazurecredential
 [communication_identity]: https://github.com/Azure/azure-sdk-for-js/edit/main/sdk/communication/communication-identity
 

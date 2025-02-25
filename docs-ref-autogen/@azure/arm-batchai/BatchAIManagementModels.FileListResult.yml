@@ -40,10 +40,7 @@ inheritedMethods:
   - name: at(number)
     uid: '@azure/arm-batchai.BatchAIManagementModels.FileListResult.at'
     package: '@azure/arm-batchai'
-    summary: |-
-      Takes an integer value and returns the item at that index,
-      allowing for positive and negative integers.
-      Negative integers count back from the last item in the array.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -1087,7 +1084,7 @@ inheritedMethods:
         type: >-
           IterableIterator&lt;<xref
           uid="@azure/arm-batchai.BatchAIManagementModels.File" />&gt;
-    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@780
+    inheritanceDescription: <b>Inherited From</b> Array.__@iterator@782
   - name: '[unscopables]()'
     uid: '@azure/arm-batchai.BatchAIManagementModels.FileListResult.[unscopables]'
     package: '@azure/arm-batchai'
@@ -1106,5 +1103,5 @@ inheritedMethods:
         type: >-
           { copyWithin: boolean, entries: boolean, fill: boolean, find: boolean,
           findIndex: boolean, keys: boolean, values: boolean }
-    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@782
+    inheritanceDescription: <b>Inherited From</b> Array.__@unscopables@784
 extends: Array&lt;<xref uid="@azure/arm-batchai.BatchAIManagementModels.File" />&gt;

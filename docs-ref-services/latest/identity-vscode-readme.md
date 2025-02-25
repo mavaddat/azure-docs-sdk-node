@@ -1,15 +1,11 @@
 ---
 title: 
 keywords: Azure, javascript, SDK, API, @azure/identity-vscode, identity
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 10/16/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: identity
 ---
-
 ## Azure Identity Plugin for Visual Studio Code Authentication
 
 This package provides a plugin to the Azure Identity library for JavaScript ([`@azure/identity`](https://npmjs.com/package/@azure/identity)) that enables authentication through the "Azure Account" extension for Visual Studio Code. This plugin provides the dependencies of the `VisualStudioCodeCredential` in `@azure/identity` and enables it for use on its own or as part of `DefaultAzureCredential`.
@@ -141,5 +137,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 [azaccountext]: https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fidentity%2Fidentity%2FREADME.png)
+
 

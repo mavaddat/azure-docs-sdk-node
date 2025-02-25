@@ -8,6 +8,37 @@ remarks: ''
 isDeprecated: false
 type: interface
 properties:
+  - name: confidentialComputeProperties
+    uid: >-
+      @azure/arm-containerinstance.ContainerGroupProperties.confidentialComputeProperties
+    package: '@azure/arm-containerinstance'
+    summary: The properties for confidential container group
+    fullName: confidentialComputeProperties
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'confidentialComputeProperties?: ConfidentialComputeProperties'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerinstance.ConfidentialComputeProperties"
+          />
+  - name: containerGroupProfile
+    uid: >-
+      @azure/arm-containerinstance.ContainerGroupProperties.containerGroupProfile
+    package: '@azure/arm-containerinstance'
+    summary: The reference container group profile properties.
+    fullName: containerGroupProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'containerGroupProfile?: ContainerGroupProfileReferenceDefinition'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-containerinstance.ContainerGroupProfileReferenceDefinition"
+          />
   - name: containers
     uid: '@azure/arm-containerinstance.ContainerGroupProperties.containers'
     package: '@azure/arm-containerinstance'
@@ -138,24 +169,24 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-containerinstance.IpAddress" />
-  - name: isCustomProvisioningTimeout
+  - name: isCreatedFromStandbyPool
     uid: >-
-      @azure/arm-containerinstance.ContainerGroupProperties.isCustomProvisioningTimeout
+      @azure/arm-containerinstance.ContainerGroupProperties.isCreatedFromStandbyPool
     package: '@azure/arm-containerinstance'
     summary: >-
-      Flag indicating whether a custom value was provided for the
-      provisioningTimeoutInSeconds property
+      The flag indicating whether the container group is created by standby
+      pool.
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
-    fullName: isCustomProvisioningTimeout
+    fullName: isCreatedFromStandbyPool
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'isCustomProvisioningTimeout?: string'
+      content: 'isCreatedFromStandbyPool?: boolean'
       return:
         description: ''
-        type: string
+        type: boolean
   - name: osType
     uid: '@azure/arm-containerinstance.ContainerGroupProperties.osType'
     package: '@azure/arm-containerinstance'
@@ -166,7 +197,19 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'osType: string'
+      content: 'osType?: string'
+      return:
+        description: ''
+        type: string
+  - name: priority
+    uid: '@azure/arm-containerinstance.ContainerGroupProperties.priority'
+    package: '@azure/arm-containerinstance'
+    summary: The priority of the container group.
+    fullName: priority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'priority?: string'
       return:
         description: ''
         type: string
@@ -187,22 +230,6 @@ properties:
       return:
         description: ''
         type: string
-  - name: provisioningTimeoutInSeconds
-    uid: >-
-      @azure/arm-containerinstance.ContainerGroupProperties.provisioningTimeoutInSeconds
-    package: '@azure/arm-containerinstance'
-    summary: >-
-      Time in seconds in which a container group deployment would timeout and
-      fail. The allowed maximum value is 1800 seconds. If value is not provided,
-      property is given maximum value by default.
-    fullName: provisioningTimeoutInSeconds
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'provisioningTimeoutInSeconds?: number'
-      return:
-        description: ''
-        type: number
   - name: restartPolicy
     uid: '@azure/arm-containerinstance.ContainerGroupProperties.restartPolicy'
     package: '@azure/arm-containerinstance'
@@ -231,6 +258,20 @@ properties:
       return:
         description: ''
         type: string
+  - name: standbyPoolProfile
+    uid: '@azure/arm-containerinstance.ContainerGroupProperties.standbyPoolProfile'
+    package: '@azure/arm-containerinstance'
+    summary: The reference standby pool profile properties.
+    fullName: standbyPoolProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'standbyPoolProfile?: StandbyPoolProfileDefinition'
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/arm-containerinstance.StandbyPoolProfileDefinition"
+          />
   - name: subnetIds
     uid: '@azure/arm-containerinstance.ContainerGroupProperties.subnetIds'
     package: '@azure/arm-containerinstance'

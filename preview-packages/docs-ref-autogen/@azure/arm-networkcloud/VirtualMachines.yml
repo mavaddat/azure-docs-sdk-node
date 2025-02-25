@@ -9,87 +9,6 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
-      beginAttachVolume(string, string, VirtualMachineVolumeParameters,
-      VirtualMachinesAttachVolumeOptionalParams)
-    uid: '@azure/arm-networkcloud.VirtualMachines.beginAttachVolume'
-    package: '@azure/arm-networkcloud'
-    summary: Attach volume to the provided virtual machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginAttachVolume(resourceGroupName: string,
-        virtualMachineName: string, virtualMachineAttachVolumeParameters:
-        VirtualMachineVolumeParameters, options?:
-        VirtualMachinesAttachVolumeOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesAttachVolumeHeaders>,
-        VirtualMachinesAttachVolumeHeaders>>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: virtualMachineName
-          type: string
-          description: The name of the virtual machine.
-        - id: virtualMachineAttachVolumeParameters
-          type: >-
-            <xref uid="@azure/arm-networkcloud.VirtualMachineVolumeParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.VirtualMachinesAttachVolumeOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesAttachVolumeHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.VirtualMachinesAttachVolumeHeaders"
-          />&gt;&gt;
-  - name: >-
-      beginAttachVolumeAndWait(string, string, VirtualMachineVolumeParameters,
-      VirtualMachinesAttachVolumeOptionalParams)
-    uid: '@azure/arm-networkcloud.VirtualMachines.beginAttachVolumeAndWait'
-    package: '@azure/arm-networkcloud'
-    summary: Attach volume to the provided virtual machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginAttachVolumeAndWait(resourceGroupName: string,
-        virtualMachineName: string, virtualMachineAttachVolumeParameters:
-        VirtualMachineVolumeParameters, options?:
-        VirtualMachinesAttachVolumeOptionalParams):
-        Promise<VirtualMachinesAttachVolumeHeaders>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: virtualMachineName
-          type: string
-          description: The name of the virtual machine.
-        - id: virtualMachineAttachVolumeParameters
-          type: >-
-            <xref uid="@azure/arm-networkcloud.VirtualMachineVolumeParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.VirtualMachinesAttachVolumeOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesAttachVolumeHeaders"
-          />&gt;
-  - name: >-
       beginCreateOrUpdate(string, string, VirtualMachine,
       VirtualMachinesCreateOrUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginCreateOrUpdate'
@@ -125,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.VirtualMachine" />&gt;, <xref
           uid="@azure/arm-networkcloud.VirtualMachine" />&gt;&gt;
   - name: >-
@@ -173,7 +93,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, virtualMachineName:
         string, options?: VirtualMachinesDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -189,8 +110,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, VirtualMachinesDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -201,7 +124,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         virtualMachineName: string, options?:
-        VirtualMachinesDeleteOptionalParams): Promise<void>
+        VirtualMachinesDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -216,87 +139,8 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
-  - name: >-
-      beginDetachVolume(string, string, VirtualMachineVolumeParameters,
-      VirtualMachinesDetachVolumeOptionalParams)
-    uid: '@azure/arm-networkcloud.VirtualMachines.beginDetachVolume'
-    package: '@azure/arm-networkcloud'
-    summary: Detach volume from the provided virtual machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginDetachVolume(resourceGroupName: string,
-        virtualMachineName: string, virtualMachineDetachVolumeParameters:
-        VirtualMachineVolumeParameters, options?:
-        VirtualMachinesDetachVolumeOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesDetachVolumeHeaders>,
-        VirtualMachinesDetachVolumeHeaders>>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: virtualMachineName
-          type: string
-          description: The name of the virtual machine.
-        - id: virtualMachineDetachVolumeParameters
-          type: >-
-            <xref uid="@azure/arm-networkcloud.VirtualMachineVolumeParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.VirtualMachinesDetachVolumeOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesDetachVolumeHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.VirtualMachinesDetachVolumeHeaders"
-          />&gt;&gt;
-  - name: >-
-      beginDetachVolumeAndWait(string, string, VirtualMachineVolumeParameters,
-      VirtualMachinesDetachVolumeOptionalParams)
-    uid: '@azure/arm-networkcloud.VirtualMachines.beginDetachVolumeAndWait'
-    package: '@azure/arm-networkcloud'
-    summary: Detach volume from the provided virtual machine.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginDetachVolumeAndWait(resourceGroupName: string,
-        virtualMachineName: string, virtualMachineDetachVolumeParameters:
-        VirtualMachineVolumeParameters, options?:
-        VirtualMachinesDetachVolumeOptionalParams):
-        Promise<VirtualMachinesDetachVolumeHeaders>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: virtualMachineName
-          type: string
-          description: The name of the virtual machine.
-        - id: virtualMachineDetachVolumeParameters
-          type: >-
-            <xref uid="@azure/arm-networkcloud.VirtualMachineVolumeParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.VirtualMachinesDetachVolumeOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesDetachVolumeHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: beginPowerOff(string, string, VirtualMachinesPowerOffOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginPowerOff'
@@ -308,8 +152,8 @@ methods:
       content: >-
         function beginPowerOff(resourceGroupName: string, virtualMachineName:
         string, options?: VirtualMachinesPowerOffOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesPowerOffHeaders>,
-        VirtualMachinesPowerOffHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -326,10 +170,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesPowerOffHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.VirtualMachinesPowerOffHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginPowerOffAndWait(string, string,
       VirtualMachinesPowerOffOptionalParams)
@@ -342,8 +186,7 @@ methods:
       content: >-
         function beginPowerOffAndWait(resourceGroupName: string,
         virtualMachineName: string, options?:
-        VirtualMachinesPowerOffOptionalParams):
-        Promise<VirtualMachinesPowerOffHeaders>
+        VirtualMachinesPowerOffOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -360,8 +203,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesPowerOffHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginReimage(string, string, VirtualMachinesReimageOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginReimage'
     package: '@azure/arm-networkcloud'
@@ -372,8 +215,8 @@ methods:
       content: >-
         function beginReimage(resourceGroupName: string, virtualMachineName:
         string, options?: VirtualMachinesReimageOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesReimageHeaders>,
-        VirtualMachinesReimageHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -390,10 +233,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesReimageHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.VirtualMachinesReimageHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginReimageAndWait(string, string, VirtualMachinesReimageOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginReimageAndWait'
     package: '@azure/arm-networkcloud'
@@ -404,8 +247,7 @@ methods:
       content: >-
         function beginReimageAndWait(resourceGroupName: string,
         virtualMachineName: string, options?:
-        VirtualMachinesReimageOptionalParams):
-        Promise<VirtualMachinesReimageHeaders>
+        VirtualMachinesReimageOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -422,8 +264,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesReimageHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginRestart(string, string, VirtualMachinesRestartOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginRestart'
     package: '@azure/arm-networkcloud'
@@ -434,8 +276,8 @@ methods:
       content: >-
         function beginRestart(resourceGroupName: string, virtualMachineName:
         string, options?: VirtualMachinesRestartOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesRestartHeaders>,
-        VirtualMachinesRestartHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -452,10 +294,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesRestartHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.VirtualMachinesRestartHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginRestartAndWait(string, string, VirtualMachinesRestartOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginRestartAndWait'
     package: '@azure/arm-networkcloud'
@@ -466,8 +308,7 @@ methods:
       content: >-
         function beginRestartAndWait(resourceGroupName: string,
         virtualMachineName: string, options?:
-        VirtualMachinesRestartOptionalParams):
-        Promise<VirtualMachinesRestartHeaders>
+        VirtualMachinesRestartOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -484,8 +325,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesRestartHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginStart(string, string, VirtualMachinesStartOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginStart'
     package: '@azure/arm-networkcloud'
@@ -496,8 +337,8 @@ methods:
       content: >-
         function beginStart(resourceGroupName: string, virtualMachineName:
         string, options?: VirtualMachinesStartOptionalParams):
-        Promise<SimplePollerLike<OperationState<VirtualMachinesStartHeaders>,
-        VirtualMachinesStartHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -513,10 +354,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesStartHeaders" />&gt;,
-          <xref uid="@azure/arm-networkcloud.VirtualMachinesStartHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginStartAndWait(string, string, VirtualMachinesStartOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginStartAndWait'
     package: '@azure/arm-networkcloud'
@@ -527,8 +368,7 @@ methods:
       content: >-
         function beginStartAndWait(resourceGroupName: string,
         virtualMachineName: string, options?:
-        VirtualMachinesStartOptionalParams):
-        Promise<VirtualMachinesStartHeaders>
+        VirtualMachinesStartOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -544,8 +384,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.VirtualMachinesStartHeaders" />&gt;
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: beginUpdate(string, string, VirtualMachinesUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.beginUpdate'
     package: '@azure/arm-networkcloud'
@@ -577,7 +417,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.VirtualMachine" />&gt;, <xref
           uid="@azure/arm-networkcloud.VirtualMachine" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, VirtualMachinesUpdateOptionalParams)
@@ -662,9 +503,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.VirtualMachine" />, <xref
-          uid="@azure/arm-networkcloud.VirtualMachine" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.VirtualMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(VirtualMachinesListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.VirtualMachines.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -687,6 +529,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.VirtualMachine" />, <xref
-          uid="@azure/arm-networkcloud.VirtualMachine" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.VirtualMachine" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

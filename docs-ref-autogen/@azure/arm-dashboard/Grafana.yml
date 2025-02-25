@@ -23,7 +23,8 @@ methods:
         function beginCreate(resourceGroupName: string, workspaceName: string,
         requestBodyParameters: ManagedGrafana, options?:
         GrafanaCreateOptionalParams):
-        Promise<PollerLike<PollOperationState<ManagedGrafana>, ManagedGrafana>>
+        Promise<SimplePollerLike<OperationState<ManagedGrafana>,
+        ManagedGrafana>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -40,7 +41,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-dashboard.ManagedGrafana" />&gt;, <xref
           uid="@azure/arm-dashboard.ManagedGrafana" />&gt;&gt;
   - name: >-
@@ -86,7 +88,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, workspaceName: string,
         options?: GrafanaDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -99,7 +101,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, GrafanaDeleteOptionalParams)
     uid: '@azure/arm-dashboard.Grafana.beginDeleteAndWait'
     package: '@azure/arm-dashboard'
@@ -123,6 +127,66 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: >-
+      checkEnterpriseDetails(string, string,
+      GrafanaCheckEnterpriseDetailsOptionalParams)
+    uid: '@azure/arm-dashboard.Grafana.checkEnterpriseDetails'
+    package: '@azure/arm-dashboard'
+    summary: Retrieve enterprise add-on details information
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function checkEnterpriseDetails(resourceGroupName: string,
+        workspaceName: string, options?:
+        GrafanaCheckEnterpriseDetailsOptionalParams): Promise<EnterpriseDetails>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: workspaceName
+          type: string
+          description: The workspace name of Azure Managed Grafana.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-dashboard.GrafanaCheckEnterpriseDetailsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-dashboard.EnterpriseDetails" />&gt;
+  - name: >-
+      fetchAvailablePlugins(string, string,
+      GrafanaFetchAvailablePluginsOptionalParams)
+    uid: '@azure/arm-dashboard.Grafana.fetchAvailablePlugins'
+    package: '@azure/arm-dashboard'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function fetchAvailablePlugins(resourceGroupName: string, workspaceName:
+        string, options?: GrafanaFetchAvailablePluginsOptionalParams):
+        Promise<GrafanaAvailablePluginListResponse>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: workspaceName
+          type: string
+          description: The workspace name of Azure Managed Grafana.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-dashboard.GrafanaFetchAvailablePluginsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-dashboard.GrafanaAvailablePluginListResponse" />&gt;
   - name: get(string, string, GrafanaGetOptionalParams)
     uid: '@azure/arm-dashboard.Grafana.get'
     package: '@azure/arm-dashboard'
@@ -166,9 +230,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dashboard.ManagedGrafana" />, <xref
-          uid="@azure/arm-dashboard.ManagedGrafana" />[], PageSettings&gt;
+          uid="@azure/arm-dashboard.ManagedGrafana" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByResourceGroup(string, GrafanaListByResourceGroupOptionalParams)
     uid: '@azure/arm-dashboard.Grafana.listByResourceGroup'
     package: '@azure/arm-dashboard'
@@ -196,9 +261,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-dashboard.ManagedGrafana" />, <xref
-          uid="@azure/arm-dashboard.ManagedGrafana" />[], PageSettings&gt;
+          uid="@azure/arm-dashboard.ManagedGrafana" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       update(string, string, ManagedGrafanaUpdateParameters,
       GrafanaUpdateOptionalParams)

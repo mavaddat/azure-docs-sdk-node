@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<AppServiceEnvironmentsListWorkerPools200Response |
-        AppServiceEnvironmentsListWorkerPoolsdefaultResponse>
+        StreamableMethod<AppServiceEnvironmentsListWorkerPools200Response |
+        AppServiceEnvironmentsListWorkerPoolsDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListWorkerPools200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListWorkerPoolsdefaultResponse"
+          uid="@azure-rest/arm-appservice.AppServiceEnvironmentsListWorkerPoolsDefaultResponse"
           />&gt;

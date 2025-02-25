@@ -1,15 +1,11 @@
 ---
 title: Azure Remote Rendering client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/mixed-reality-remote-rendering, remoterendering
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 09/21/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: azure-remote-rendering
 ---
-
 # Azure Remote Rendering client library for JavaScript - version 1.0.0-beta.1 
 
 
@@ -69,8 +65,7 @@ There are several different forms of authentication:
     user-based Azure AD authentication in your app. You then grant access to your Azure Remote Rendering accounts by using
     your existing Azure AD security groups. You can also grant access directly to users in your organization.
   - Otherwise, we recommend that you obtain Azure AD tokens from a web service that supports your app. We recommend this
-    method for production applications because it allows you to avoid embedding the credentials for access to Azure Spatial
-    Anchors in your client application.
+    method for production applications because it allows you to avoid embedding the credentials in your client application.
 
 See [here](https://docs.microsoft.com/azure/remote-rendering/how-tos/authentication) for detailed instructions and information.
 
@@ -397,7 +392,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Ftemplate%2Ftemplate%2FREADME.png)
+
 
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

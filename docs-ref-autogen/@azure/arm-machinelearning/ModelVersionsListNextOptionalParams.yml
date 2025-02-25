@@ -7,132 +7,6 @@ fullName: ModelVersionsListNextOptionalParams
 remarks: ''
 isDeprecated: false
 type: interface
-properties:
-  - name: description
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.description'
-    package: '@azure/arm-machinelearning'
-    summary: Model description.
-    fullName: description
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'description?: string'
-      return:
-        description: ''
-        type: string
-  - name: feed
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.feed'
-    package: '@azure/arm-machinelearning'
-    summary: Name of the feed.
-    fullName: feed
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'feed?: string'
-      return:
-        description: ''
-        type: string
-  - name: listViewType
-    uid: >-
-      @azure/arm-machinelearning.ModelVersionsListNextOptionalParams.listViewType
-    package: '@azure/arm-machinelearning'
-    summary: View type for including/excluding (for example) archived entities.
-    fullName: listViewType
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'listViewType?: string'
-      return:
-        description: ''
-        type: string
-  - name: offset
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.offset'
-    package: '@azure/arm-machinelearning'
-    summary: Number of initial results to skip.
-    fullName: offset
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'offset?: number'
-      return:
-        description: ''
-        type: number
-  - name: orderBy
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.orderBy'
-    package: '@azure/arm-machinelearning'
-    summary: Ordering of list.
-    fullName: orderBy
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'orderBy?: string'
-      return:
-        description: ''
-        type: string
-  - name: properties
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.properties'
-    package: '@azure/arm-machinelearning'
-    summary: >-
-      Comma-separated list of property names (and optionally values). Example:
-      prop1,prop2=value2
-    fullName: properties
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'properties?: string'
-      return:
-        description: ''
-        type: string
-  - name: skip
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.skip'
-    package: '@azure/arm-machinelearning'
-    summary: Continuation token for pagination.
-    fullName: skip
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'skip?: string'
-      return:
-        description: ''
-        type: string
-  - name: tags
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.tags'
-    package: '@azure/arm-machinelearning'
-    summary: >-
-      Comma-separated list of tag names (and optionally values). Example:
-      tag1,tag2=value2
-    fullName: tags
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'tags?: string'
-      return:
-        description: ''
-        type: string
-  - name: top
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.top'
-    package: '@azure/arm-machinelearning'
-    summary: Maximum number of records to return.
-    fullName: top
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'top?: number'
-      return:
-        description: ''
-        type: number
-  - name: version
-    uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.version'
-    package: '@azure/arm-machinelearning'
-    summary: Model version.
-    fullName: version
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'version?: string'
-      return:
-        description: ''
-        type: string
 inheritedProperties:
   - name: abortSignal
     uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.abortSignal'
@@ -145,7 +19,7 @@ inheritedProperties:
       content: 'abortSignal?: AbortSignalLike'
       return:
         description: ''
-        type: AbortSignalLike
+        type: <xref uid="@azure/abort-controller.AbortSignalLike" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.abortSignal
   - name: onResponse
     uid: '@azure/arm-machinelearning.ModelVersionsListNextOptionalParams.onResponse'
@@ -161,7 +35,7 @@ inheritedProperties:
       content: 'onResponse?: RawResponseCallback'
       return:
         description: ''
-        type: RawResponseCallback
+        type: <xref uid="@azure/core-client.RawResponseCallback" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.onResponse
   - name: requestOptions
     uid: >-
@@ -175,7 +49,7 @@ inheritedProperties:
       content: 'requestOptions?: OperationRequestOptions'
       return:
         description: ''
-        type: OperationRequestOptions
+        type: <xref uid="@azure/core-client.OperationRequestOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.requestOptions
   - name: serializerOptions
     uid: >-
@@ -189,7 +63,7 @@ inheritedProperties:
       content: 'serializerOptions?: SerializerOptions'
       return:
         description: ''
-        type: SerializerOptions
+        type: <xref uid="@azure/core-client.SerializerOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.serializerOptions
   - name: tracingOptions
     uid: >-
@@ -203,6 +77,6 @@ inheritedProperties:
       content: 'tracingOptions?: OperationTracingOptions'
       return:
         description: ''
-        type: OperationTracingOptions
+        type: <xref uid="@azure/core-tracing.OperationTracingOptions" />
     inheritanceDescription: <b>Inherited From</b> coreClient.OperationOptions.tracingOptions
-extends: OperationOptions
+extends: <xref uid="@azure/core-client.OperationOptions" />

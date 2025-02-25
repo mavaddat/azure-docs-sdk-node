@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />&gt;, <xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />&gt;&gt;
   - name: >-
@@ -99,7 +100,8 @@ methods:
         function beginDelete(resourceGroupName: string, devCenterName: string,
         attachedNetworkConnectionName: string, options?:
         AttachedNetworksDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<AttachedNetworksDeleteHeaders>,
+        AttachedNetworksDeleteHeaders>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -118,8 +120,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-devcenter.AttachedNetworksDeleteHeaders" />&gt;, <xref
+          uid="@azure/arm-devcenter.AttachedNetworksDeleteHeaders" />&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       AttachedNetworksDeleteOptionalParams)
@@ -132,7 +136,8 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string, devCenterName:
         string, attachedNetworkConnectionName: string, options?:
-        AttachedNetworksDeleteOptionalParams): Promise<void>
+        AttachedNetworksDeleteOptionalParams):
+        Promise<AttachedNetworksDeleteHeaders>
       parameters:
         - id: resourceGroupName
           type: string
@@ -150,7 +155,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-devcenter.AttachedNetworksDeleteHeaders" />&gt;
   - name: >-
       getByDevCenter(string, string, string,
       AttachedNetworksGetByDevCenterOptionalParams)
@@ -251,10 +258,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[],
-          PageSettings&gt;
+          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByProject(string, string, AttachedNetworksListByProjectOptionalParams)
     uid: '@azure/arm-devcenter.AttachedNetworks.listByProject'
     package: '@azure/arm-devcenter'
@@ -283,7 +290,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[],
-          PageSettings&gt;
+          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

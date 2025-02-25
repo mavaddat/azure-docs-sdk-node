@@ -25,7 +25,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: jobName
           type: string
-          description: Name of the Container Apps Job.
+          description: Job Name
         - id: options
           type: >-
             <xref
@@ -34,6 +34,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-appcontainers.JobExecution" />, <xref
-          uid="@azure/arm-appcontainers.JobExecution" />[], PageSettings&gt;
+          uid="@azure/arm-appcontainers.JobExecution" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

@@ -11,23 +11,23 @@ methods:
   - name: get(RequestParameters)
     uid: '@azure-rest/purview-scanning.ScansListByDataSource.get'
     package: '@azure-rest/purview-scanning'
-    summary: List scans in data source
+    summary: Lists scans in data source.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<ScansListByDataSource200Response |
-        ScansListByDataSourcedefaultResponse>
+        StreamableMethod<ScansListByDataSource200Response |
+        ScansListByDataSourceDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/purview-scanning.ScansListByDataSource200Response" />
           | <xref
-          uid="@azure-rest/purview-scanning.ScansListByDataSourcedefaultResponse"
+          uid="@azure-rest/purview-scanning.ScansListByDataSourceDefaultResponse"
           />&gt;

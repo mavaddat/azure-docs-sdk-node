@@ -23,7 +23,7 @@ properties:
   - name: lockToken
     uid: '@azure/eventgrid.BrokerProperties.lockToken'
     package: '@azure/eventgrid'
-    summary: The token used to lock the event.
+    summary: The token of the lock on the event.
     fullName: lockToken
     remarks: ''
     isDeprecated: false

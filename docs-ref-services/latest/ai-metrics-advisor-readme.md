@@ -1,16 +1,12 @@
 ---
 title: Azure Metrics Advisor client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/ai-metrics-advisor, metricsadvisor
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 07/06/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: cognitive-services
 ms.subservice: metrics-advisor
 ---
-
 # Azure Metrics Advisor client library for JavaScript - version 1.0.0 
 
 
@@ -516,7 +512,7 @@ the code.
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fmetricsadvisor%2Fai-metrics-advisor%2FREADME.png)
+
 
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

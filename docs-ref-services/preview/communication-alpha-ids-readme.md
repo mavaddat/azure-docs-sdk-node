@@ -1,8 +1,6 @@
 ---
 title: Azure Communication Alpha IDs client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure-tools/communication-alpha-ids, communication
-author: petrsvihlik
-ms.author: petrsvihlik
 ms.date: 09/22/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -125,5 +123,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 [defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/@azure-tools/communication-alpha-ids_1.0.0-beta.1/sdk/identity/identity#defaultazurecredential
 [azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure-tools/communication-alpha-ids_1.0.0-beta.1/sdk/identity/identity
 [azure_identity_readme]: https://github.com/Azure/azure-sdk-for-js/blob/@azure-tools/communication-alpha-ids_1.0.0-beta.1/sdk/identity/identity/README.md
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcommunication%2Fcommunication-alpha-ids%2FREADME.png)
+
 

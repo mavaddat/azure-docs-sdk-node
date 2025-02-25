@@ -1,15 +1,11 @@
 ---
 title: Azure Storage File Data Lake client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/storage-file-datalake, datalakestorage(gen2)
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 09/10/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: data-lake-storage-gen2
 ---
-
 # Azure Storage File Data Lake client library for JavaScript - version 12.7.0 
 
 
@@ -594,5 +590,5 @@ More code samples:
 
 If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-datalake_12.7.0/CONTRIBUTING.md) to learn more about how to build and test the code.
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fstorage%2Fstorage-blob%2FREADME.png)
+
 

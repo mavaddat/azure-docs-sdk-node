@@ -1,11 +1,8 @@
 ---
 title: Azure SynapseManagement client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-synapse, synapse
-author: qiaozha
-ms.author: qiaozha
 ms.date: 01/14/2022
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: synapse-analytics
 ---
@@ -100,7 +97,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fsynapse%2Farm-synapse%2FREADME.png)
+
 
 [azure_cli]: https://docs.microsoft.com/cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

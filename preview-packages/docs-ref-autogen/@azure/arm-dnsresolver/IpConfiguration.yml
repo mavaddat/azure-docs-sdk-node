@@ -40,7 +40,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'subnet?: SubResource'
+      content: 'subnet: SubResource'
       return:
         description: ''
         type: <xref uid="@azure/arm-dnsresolver.SubResource" />

@@ -32,10 +32,10 @@ properties:
       should be assigned to. Virtual machines specified in the same availability
       set are allocated to different nodes to maximize availability. For more
       information about availability sets, see [Availability sets
-      overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview).
+      overview](https://learn.microsoft.com/azure/virtual-machines/availability-set-overview).
       For more information on Azure planned maintenance, see [Maintenance and
       updates for Virtual Machines in
-      Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates).
+      Azure](https://learn.microsoft.com/azure/virtual-machines/maintenance-and-updates).
       Currently, a VM can only be added to availability set at creation time. An
       existing VM cannot be added to an availability set.
     fullName: availabilitySet
@@ -60,6 +60,23 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-compute.DiagnosticsProfile" />
+  - name: etag
+    uid: '@azure/arm-compute.VirtualMachineScaleSetVM.etag'
+    package: '@azure/arm-compute'
+    summary: >-
+      Etag is property returned in Update/Get response of the VMSS VM, so that
+      customer can supply it in the header to ensure optimistic updates.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: etag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'etag?: string'
+      return:
+        description: ''
+        type: string
   - name: hardwareProfile
     uid: '@azure/arm-compute.VirtualMachineScaleSetVM.hardwareProfile'
     package: '@azure/arm-compute'
@@ -143,9 +160,9 @@ properties:
       values for Linux Server operating system are: <br><br> RHEL_BYOS (for
       RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see
       [Azure Hybrid Use Benefit for Windows
-      Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
+      Server](https://learn.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing)
       <br><br> [Azure Hybrid Use Benefit for Linux
-      Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
+      Server](https://learn.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux)
       <br><br> Minimum api-version: 2015-06-15
     fullName: licenseType
     remarks: ''
@@ -318,12 +335,29 @@ properties:
       return:
         description: ''
         type: <xref uid="@azure/arm-compute.StorageProfile" />
+  - name: timeCreated
+    uid: '@azure/arm-compute.VirtualMachineScaleSetVM.timeCreated'
+    package: '@azure/arm-compute'
+    summary: >-
+      Specifies the time at which the Virtual Machine resource was created.
+      Minimum api-version: 2021-11-01.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: timeCreated
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        description: ''
+        type: Date
   - name: userData
     uid: '@azure/arm-compute.VirtualMachineScaleSetVM.userData'
     package: '@azure/arm-compute'
     summary: >-
       UserData for the VM, which must be base-64 encoded. Customer should not
-      pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
+      pass any secrets in here. Minimum api-version: 2021-03-01
     fullName: userData
     remarks: ''
     isDeprecated: false

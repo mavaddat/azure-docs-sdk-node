@@ -2,7 +2,9 @@
 name: ResourceListKeys
 uid: '@azure/arm-notificationhubs.ResourceListKeys'
 package: '@azure/arm-notificationhubs'
-summary: Namespace/NotificationHub Connection String
+summary: >-
+  Response for the POST request that returns Namespace or NotificationHub access
+  keys (connection strings).
 fullName: ResourceListKeys
 remarks: ''
 isDeprecated: false
@@ -11,7 +13,11 @@ properties:
   - name: keyName
     uid: '@azure/arm-notificationhubs.ResourceListKeys.keyName'
     package: '@azure/arm-notificationhubs'
-    summary: KeyName of the created AuthorizationRule
+    summary: >-
+      Gets or sets keyName of the created AuthorizationRule
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: keyName
     remarks: ''
     isDeprecated: false
@@ -23,7 +29,11 @@ properties:
   - name: primaryConnectionString
     uid: '@azure/arm-notificationhubs.ResourceListKeys.primaryConnectionString'
     package: '@azure/arm-notificationhubs'
-    summary: PrimaryConnectionString of the AuthorizationRule.
+    summary: >-
+      Gets or sets primaryConnectionString of the AuthorizationRule.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: primaryConnectionString
     remarks: ''
     isDeprecated: false
@@ -35,7 +45,11 @@ properties:
   - name: primaryKey
     uid: '@azure/arm-notificationhubs.ResourceListKeys.primaryKey'
     package: '@azure/arm-notificationhubs'
-    summary: PrimaryKey of the created AuthorizationRule.
+    summary: >-
+      Gets or sets primaryKey of the created AuthorizationRule.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: primaryKey
     remarks: ''
     isDeprecated: false
@@ -47,7 +61,13 @@ properties:
   - name: secondaryConnectionString
     uid: '@azure/arm-notificationhubs.ResourceListKeys.secondaryConnectionString'
     package: '@azure/arm-notificationhubs'
-    summary: SecondaryConnectionString of the created AuthorizationRule
+    summary: >-
+      Gets or sets secondaryConnectionString of the created
+
+      AuthorizationRule
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: secondaryConnectionString
     remarks: ''
     isDeprecated: false
@@ -59,7 +79,11 @@ properties:
   - name: secondaryKey
     uid: '@azure/arm-notificationhubs.ResourceListKeys.secondaryKey'
     package: '@azure/arm-notificationhubs'
-    summary: SecondaryKey of the created AuthorizationRule
+    summary: >-
+      Gets or sets secondaryKey of the created AuthorizationRule
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: secondaryKey
     remarks: ''
     isDeprecated: false

@@ -17,7 +17,7 @@ fields:
     uid: '@azure/arm-appcontainers.KnownTriggerType.Manual'
     package: '@azure/arm-appcontainers'
     summary: Manual
-  - name: Scheduled
-    uid: '@azure/arm-appcontainers.KnownTriggerType.Scheduled'
+  - name: Schedule
+    uid: '@azure/arm-appcontainers.KnownTriggerType.Schedule'
     package: '@azure/arm-appcontainers'
-    summary: Scheduled
+    summary: Schedule

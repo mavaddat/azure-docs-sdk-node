@@ -59,6 +59,9 @@ properties:
     summary: >-
       A message passed to the owner of the remote resource with this connection
       request. Restricted to 140 chars.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
     fullName: requestMessage
     remarks: ''
     isDeprecated: false

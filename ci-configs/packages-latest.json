@@ -1,19 +1,40 @@
 {
   "npm_package_sources": [
     {
+      "name": "@azure-rest/ai-content-safety@1.0.1"
+    },
+    {
+      "name": "@azure-rest/ai-document-intelligence@1.0.0"
+    },
+    {
+      "name": "@azure-rest/ai-translation-document@1.0.0"
+    },
+    {
+      "name": "@azure-rest/ai-translation-text@1.0.1"
+    },
+    {
+      "name": "@azure-rest/communication-job-router@1.0.0"
+    },
+    {
+      "name": "@azure-rest/communication-messages@2.0.0"
+    },
+    {
       "name": "@azure-rest/confidential-ledger@1.0.0"
     },
     {
-      "name": "@azure-rest/core-client@1.1.4"
+      "name": "@azure-rest/core-client@2.3.3"
     },
     {
-      "name": "@azure-rest/iot-device-update@1.0.0"
+      "name": "@azure-rest/developer-devcenter@1.0.1"
     },
     {
-      "name": "@azure-rest/load-testing@1.0.0"
+      "name": "@azure-rest/iot-device-update@1.1.0"
     },
     {
-      "name": "@azure/abort-controller@1.1.0"
+      "name": "@azure-rest/load-testing@1.0.1"
+    },
+    {
+      "name": "@azure/abort-controller@2.1.2"
     },
     {
       "name": "@azure/ai-form-recognizer@5.0.0"
@@ -28,7 +49,7 @@
       "name": "@azure/ai-text-analytics@5.1.0"
     },
     {
-      "name": "@azure/app-configuration@1.4.1"
+      "name": "@azure/app-configuration@1.8.0"
     },
     {
       "name": "@azure/arm-advisor@3.2.0"
@@ -37,22 +58,28 @@
       "name": "@azure/arm-analysisservices@4.1.3"
     },
     {
-      "name": "@azure/arm-apimanagement@9.1.0"
+      "name": "@azure/arm-apicenter@1.0.0"
     },
     {
-      "name": "@azure/arm-appconfiguration@4.0.0"
+      "name": "@azure/arm-apimanagement@9.2.0"
     },
     {
-      "name": "@azure/arm-appcontainers@2.0.0"
+      "name": "@azure/arm-appcomplianceautomation@1.0.0"
+    },
+    {
+      "name": "@azure/arm-appconfiguration@4.1.0"
+    },
+    {
+      "name": "@azure/arm-appcontainers@2.1.0"
     },
     {
       "name": "@azure/arm-appinsights@4.0.0"
     },
     {
-      "name": "@azure/arm-appplatform@2.0.0"
+      "name": "@azure/arm-appplatform@3.0.0"
     },
     {
-      "name": "@azure/arm-appservice@14.0.0"
+      "name": "@azure/arm-appservice@16.0.0"
     },
     {
       "name": "@azure/arm-appservice-profile-2020-09-01-hybrid@2.1.0"
@@ -73,7 +100,7 @@
       "name": "@azure/arm-automation@10.1.1"
     },
     {
-      "name": "@azure/arm-avs@4.0.0"
+      "name": "@azure/arm-avs@6.0.0"
     },
     {
       "name": "@azure/arm-azureadexternalidentities@1.0.3"
@@ -85,13 +112,13 @@
       "name": "@azure/arm-azurestackhci@3.1.0"
     },
     {
-      "name": "@azure/arm-batch@9.0.0"
+      "name": "@azure/arm-batch@10.0.0"
     },
     {
       "name": "@azure/arm-batchai@2.2.1"
     },
     {
-      "name": "@azure/arm-billing@4.1.0"
+      "name": "@azure/arm-billing@5.0.0"
     },
     {
       "name": "@azure/arm-billingbenefits@1.0.0"
@@ -100,7 +127,7 @@
       "name": "@azure/arm-botservice@4.0.0"
     },
     {
-      "name": "@azure/arm-cdn@8.0.0"
+      "name": "@azure/arm-cdn@9.1.0"
     },
     {
       "name": "@azure/arm-changeanalysis@2.1.0"
@@ -109,7 +136,10 @@
       "name": "@azure/arm-changes@1.1.0"
     },
     {
-      "name": "@azure/arm-cognitiveservices@7.5.0"
+      "name": "@azure/arm-chaos@1.1.0"
+    },
+    {
+      "name": "@azure/arm-cognitiveservices@7.6.0"
     },
     {
       "name": "@azure/arm-commerce@3.0.0"
@@ -121,19 +151,28 @@
       "name": "@azure/arm-commitmentplans@1.3.1"
     },
     {
-      "name": "@azure/arm-communication@4.0.0"
+      "name": "@azure/arm-communication@4.1.0"
     },
     {
-      "name": "@azure/arm-compute@21.1.0"
+      "name": "@azure/arm-compute@22.3.0"
     },
     {
       "name": "@azure/arm-compute-profile-2020-09-01-hybrid@2.1.0"
     },
     {
+      "name": "@azure/arm-computefleet@1.0.0"
+    },
+    {
+      "name": "@azure/arm-computeschedule@1.0.0"
+    },
+    {
       "name": "@azure/arm-confidentialledger@1.2.0"
     },
     {
-      "name": "@azure/arm-confluent@2.2.0"
+      "name": "@azure/arm-confluent@3.1.0"
+    },
+    {
+      "name": "@azure/arm-connectedvmware@1.0.0"
     },
     {
       "name": "@azure/arm-consumption@9.2.0"
@@ -145,16 +184,22 @@
       "name": "@azure/arm-containerregistry@10.1.0"
     },
     {
-      "name": "@azure/arm-containerservice@19.3.0"
+      "name": "@azure/arm-containerservice@21.3.0"
     },
     {
-      "name": "@azure/arm-cosmosdb@15.5.0"
+      "name": "@azure/arm-containerservicefleet@1.1.0"
+    },
+    {
+      "name": "@azure/arm-cosmosdb@16.2.0"
+    },
+    {
+      "name": "@azure/arm-cosmosdbforpostgresql@1.0.0"
     },
     {
       "name": "@azure/arm-customerinsights@4.1.0"
     },
     {
-      "name": "@azure/arm-dashboard@1.0.1"
+      "name": "@azure/arm-dashboard@1.1.0"
     },
     {
       "name": "@azure/arm-databox@5.0.0"
@@ -166,16 +211,16 @@
       "name": "@azure/arm-databoxedge-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-databricks@2.0.0"
+      "name": "@azure/arm-databricks@3.0.0"
     },
     {
       "name": "@azure/arm-datacatalog@4.1.0"
     },
     {
-      "name": "@azure/arm-datadog@3.0.2"
+      "name": "@azure/arm-datadog@3.1.0"
     },
     {
-      "name": "@azure/arm-datafactory@11.1.0"
+      "name": "@azure/arm-datafactory@18.0.0"
     },
     {
       "name": "@azure/arm-datalake-analytics@1.1.1"
@@ -184,22 +229,25 @@
       "name": "@azure/arm-datamigration@2.1.1"
     },
     {
-      "name": "@azure/arm-dataprotection@1.2.0"
+      "name": "@azure/arm-dataprotection@2.1.0"
     },
     {
       "name": "@azure/arm-deploymentmanager@3.1.1"
     },
     {
-      "name": "@azure/arm-desktopvirtualization@1.0.0"
+      "name": "@azure/arm-desktopvirtualization@1.2.0"
     },
     {
-      "name": "@azure/arm-devcenter@1.0.0"
+      "name": "@azure/arm-devcenter@1.1.0"
     },
     {
       "name": "@azure/arm-deviceprovisioningservices@5.1.0"
     },
     {
       "name": "@azure/arm-deviceupdate@1.1.0"
+    },
+    {
+      "name": "@azure/arm-devopsinfrastructure@1.0.0"
     },
     {
       "name": "@azure/arm-devspaces@2.1.0"
@@ -226,13 +274,22 @@
       "name": "@azure/arm-dynatrace@2.0.0"
     },
     {
+      "name": "@azure/arm-elastic@1.0.0"
+    },
+    {
+      "name": "@azure/arm-elasticsan@1.1.0"
+    },
+    {
       "name": "@azure/arm-eventgrid@14.1.0"
     },
     {
-      "name": "@azure/arm-eventhub@5.1.0"
+      "name": "@azure/arm-eventhub@5.2.0"
     },
     {
       "name": "@azure/arm-eventhub-profile-2020-09-01-hybrid@2.1.0"
+    },
+    {
+      "name": "@azure/arm-fabric@1.0.0"
     },
     {
       "name": "@azure/arm-features@3.1.0"
@@ -241,7 +298,7 @@
       "name": "@azure/arm-fluidrelay@1.0.1"
     },
     {
-      "name": "@azure/arm-frontdoor@5.2.0"
+      "name": "@azure/arm-frontdoor@5.3.0"
     },
     {
       "name": "@azure/arm-graphservices@1.0.0"
@@ -259,37 +316,55 @@
       "name": "@azure/arm-healthbot@2.1.0"
     },
     {
-      "name": "@azure/arm-healthcareapis@2.2.0"
+      "name": "@azure/arm-healthcareapis@3.1.0"
     },
     {
-      "name": "@azure/arm-hybridcompute@3.0.0"
+      "name": "@azure/arm-healthdataaiservices@1.0.0"
+    },
+    {
+      "name": "@azure/arm-hybridcompute@4.0.0"
+    },
+    {
+      "name": "@azure/arm-hybridconnectivity@1.0.0"
+    },
+    {
+      "name": "@azure/arm-hybridcontainerservice@1.0.0"
     },
     {
       "name": "@azure/arm-hybridkubernetes@2.1.0"
     },
     {
-      "name": "@azure/arm-imagebuilder@3.0.0"
+      "name": "@azure/arm-imagebuilder@4.1.0"
+    },
+    {
+      "name": "@azure/arm-informaticadatamanagement@1.0.0"
     },
     {
       "name": "@azure/arm-iotcentral@6.0.0"
     },
     {
-      "name": "@azure/arm-iothub@6.2.0"
+      "name": "@azure/arm-iotfirmwaredefense@1.0.0"
+    },
+    {
+      "name": "@azure/arm-iothub@6.3.0"
     },
     {
       "name": "@azure/arm-iothub-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-keyvault@3.0.0"
+      "name": "@azure/arm-iotoperations@1.0.0"
+    },
+    {
+      "name": "@azure/arm-keyvault@3.1.0"
     },
     {
       "name": "@azure/arm-keyvault-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-kubernetesconfiguration@6.0.0"
+      "name": "@azure/arm-kubernetesconfiguration@6.1.0"
     },
     {
-      "name": "@azure/arm-kusto@8.0.0"
+      "name": "@azure/arm-kusto@8.2.0"
     },
     {
       "name": "@azure/arm-labservices@3.1.0"
@@ -310,7 +385,7 @@
       "name": "@azure/arm-logic@8.2.0"
     },
     {
-      "name": "@azure/arm-machinelearning@2.1.1"
+      "name": "@azure/arm-machinelearning@3.0.0"
     },
     {
       "name": "@azure/arm-machinelearningcompute@2.1.1"
@@ -322,7 +397,7 @@
       "name": "@azure/arm-machinelearningservices@5.0.1"
     },
     {
-      "name": "@azure/arm-managedapplications@2.1.0"
+      "name": "@azure/arm-managedapplications@3.0.0"
     },
     {
       "name": "@azure/arm-managednetworkfabric@1.0.0"
@@ -352,7 +427,10 @@
       "name": "@azure/arm-mixedreality@4.0.1"
     },
     {
-      "name": "@azure/arm-mobilenetwork@3.0.0"
+      "name": "@azure/arm-mobilenetwork@6.0.0"
+    },
+    {
+      "name": "@azure/arm-mongocluster@1.0.1"
     },
     {
       "name": "@azure/arm-monitor@7.0.0"
@@ -370,10 +448,10 @@
       "name": "@azure/arm-mysql-flexible@3.1.0"
     },
     {
-      "name": "@azure/arm-netapp@18.1.0"
+      "name": "@azure/arm-netapp@21.3.0"
     },
     {
-      "name": "@azure/arm-network@32.1.0"
+      "name": "@azure/arm-network@33.5.0"
     },
     {
       "name": "@azure/arm-network-profile-2020-09-01-hybrid@2.1.0"
@@ -385,10 +463,10 @@
       "name": "@azure/arm-networkfunction@2.0.0"
     },
     {
-      "name": "@azure/arm-newrelicobservability@1.0.0"
+      "name": "@azure/arm-newrelicobservability@1.1.0"
     },
     {
-      "name": "@azure/arm-nginx@2.0.1"
+      "name": "@azure/arm-nginx@3.0.0"
     },
     {
       "name": "@azure/arm-notificationhubs@2.1.0"
@@ -400,13 +478,19 @@
       "name": "@azure/arm-operations@3.0.0"
     },
     {
+      "name": "@azure/arm-oracledatabase@1.0.0"
+    },
+    {
       "name": "@azure/arm-orbital@2.0.0"
     },
     {
-      "name": "@azure/arm-paloaltonetworksngfw@1.0.0"
+      "name": "@azure/arm-paloaltonetworksngfw@1.1.0"
     },
     {
       "name": "@azure/arm-peering@2.1.0"
+    },
+    {
+      "name": "@azure/arm-playwrighttesting@1.0.0"
     },
     {
       "name": "@azure/arm-policy@5.1.0"
@@ -415,13 +499,13 @@
       "name": "@azure/arm-policy-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-policyinsights@5.0.0"
+      "name": "@azure/arm-policyinsights@6.0.0"
     },
     {
       "name": "@azure/arm-postgresql@6.1.0"
     },
     {
-      "name": "@azure/arm-postgresql-flexible@7.1.0"
+      "name": "@azure/arm-postgresql-flexible@8.0.0"
     },
     {
       "name": "@azure/arm-powerbidedicated@4.0.1"
@@ -430,28 +514,31 @@
       "name": "@azure/arm-powerbiembedded@2.0.2"
     },
     {
-      "name": "@azure/arm-privatedns@3.2.0"
+      "name": "@azure/arm-privatedns@3.3.0"
     },
     {
       "name": "@azure/arm-purview@1.1.0"
     },
     {
-      "name": "@azure/arm-qumulo@1.0.0"
+      "name": "@azure/arm-qumulo@2.0.0"
     },
     {
-      "name": "@azure/arm-recoveryservices@5.4.0"
+      "name": "@azure/arm-quota@1.0.0"
     },
     {
-      "name": "@azure/arm-recoveryservices-siterecovery@5.0.1"
+      "name": "@azure/arm-recoveryservices@6.0.0"
     },
     {
-      "name": "@azure/arm-recoveryservicesbackup@11.0.0"
+      "name": "@azure/arm-recoveryservices-siterecovery@5.2.0"
     },
     {
-      "name": "@azure/arm-rediscache@7.2.0"
+      "name": "@azure/arm-recoveryservicesbackup@13.1.0"
     },
     {
-      "name": "@azure/arm-redisenterprisecache@2.2.0"
+      "name": "@azure/arm-rediscache@8.2.0"
+    },
+    {
+      "name": "@azure/arm-redisenterprisecache@3.0.0"
     },
     {
       "name": "@azure/arm-relay@3.1.1"
@@ -469,7 +556,7 @@
       "name": "@azure/arm-resourcehealth@4.0.0"
     },
     {
-      "name": "@azure/arm-resourcemover@2.1.0"
+      "name": "@azure/arm-resourcemover@2.2.0"
     },
     {
       "name": "@azure/arm-resources@5.2.0"
@@ -481,7 +568,13 @@
       "name": "@azure/arm-resources-subscriptions@2.1.0"
     },
     {
-      "name": "@azure/arm-search@3.1.0"
+      "name": "@azure/arm-resourcesdeploymentstacks@1.0.0"
+    },
+    {
+      "name": "@azure/arm-scvmm@1.0.0"
+    },
+    {
+      "name": "@azure/arm-search@3.2.0"
     },
     {
       "name": "@azure/arm-security@5.0.0"
@@ -496,7 +589,7 @@
       "name": "@azure/arm-servicebus@6.1.0"
     },
     {
-      "name": "@azure/arm-servicefabric@2.1.0"
+      "name": "@azure/arm-servicefabric@3.0.0"
     },
     {
       "name": "@azure/arm-servicefabricmesh@2.2.1"
@@ -508,7 +601,13 @@
       "name": "@azure/arm-servicemap@2.3.1"
     },
     {
+      "name": "@azure/arm-servicenetworking@2.0.0"
+    },
+    {
       "name": "@azure/arm-signalr@5.2.0"
+    },
+    {
+      "name": "@azure/arm-sphere@1.0.0"
     },
     {
       "name": "@azure/arm-sql@10.0.0"
@@ -517,16 +616,19 @@
       "name": "@azure/arm-sqlvirtualmachine@4.1.1"
     },
     {
-      "name": "@azure/arm-storage@18.2.0"
+      "name": "@azure/arm-standbypool@1.0.1"
+    },
+    {
+      "name": "@azure/arm-storage@18.3.0"
     },
     {
       "name": "@azure/arm-storage-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-storagecache@7.0.0"
+      "name": "@azure/arm-storagecache@8.0.0"
     },
     {
-      "name": "@azure/arm-storagemover@1.0.0"
+      "name": "@azure/arm-storagemover@2.1.0"
     },
     {
       "name": "@azure/arm-storagesync@9.1.0"
@@ -541,7 +643,7 @@
       "name": "@azure/arm-subscriptions-profile-2020-09-01-hybrid@2.1.0"
     },
     {
-      "name": "@azure/arm-support@2.1.0"
+      "name": "@azure/arm-support@3.0.0"
     },
     {
       "name": "@azure/arm-synapse@8.0.0"
@@ -565,7 +667,7 @@
       "name": "@azure/arm-voiceservices@1.0.0"
     },
     {
-      "name": "@azure/arm-webpubsub@1.1.0"
+      "name": "@azure/arm-webpubsub@1.2.0"
     },
     {
       "name": "@azure/arm-webservices@1.1.0"
@@ -646,123 +748,138 @@
       "name": "@azure/cognitiveservices-websearch@3.0.1"
     },
     {
-      "name": "@azure/communication-call-automation@1.0.0"
+      "name": "@azure/communication-call-automation@1.3.0"
     },
     {
       "name": "@azure/communication-calling-effects@1.0.1"
     },
     {
-      "name": "@azure/communication-chat@1.3.2"
+      "name": "@azure/communication-chat@1.5.4"
     },
     {
-      "name": "@azure/communication-common@2.2.1"
+      "name": "@azure/communication-common@2.3.1"
     },
     {
       "name": "@azure/communication-email@1.0.0"
     },
     {
-      "name": "@azure/communication-identity@1.2.0"
+      "name": "@azure/communication-identity@1.3.1"
     },
     {
-      "name": "@azure/communication-phone-numbers@1.2.0"
+      "name": "@azure/communication-phone-numbers@1.3.0"
     },
     {
       "name": "@azure/communication-react@1.5.0",
       "folder": "./dist/dist-esm"
     },
     {
-      "name": "@azure/communication-rooms@1.0.0"
+      "name": "@azure/communication-rooms@1.1.1"
     },
     {
-      "name": "@azure/communication-sms@1.0.0"
+      "name": "@azure/communication-sms@1.1.0"
     },
     {
       "name": "@azure/container-registry@1.1.0"
     },
     {
-      "name": "@azure/core-amqp@3.3.0"
+      "name": "@azure/core-amqp@4.3.5"
     },
     {
-      "name": "@azure/core-auth@1.5.0"
+      "name": "@azure/core-auth@1.9.0"
     },
     {
-      "name": "@azure/core-client@1.7.3"
+      "name": "@azure/core-client@1.9.2"
     },
     {
-      "name": "@azure/core-http@3.0.3"
+      "name": "@azure/core-http@3.0.5"
     },
     {
-      "name": "@azure/core-http-compat@2.0.1"
+      "name": "@azure/core-http-compat@2.2.0"
     },
     {
-      "name": "@azure/core-lro@2.5.4"
+      "name": "@azure/core-lro@3.1.0"
     },
     {
-      "name": "@azure/core-paging@1.5.0"
+      "name": "@azure/core-paging@1.6.2"
     },
     {
-      "name": "@azure/core-rest-pipeline@1.12.0",
+      "name": "@azure/core-rest-pipeline@1.19.0",
       "folder": "./types/latest"
     },
     {
-      "name": "@azure/core-sse@1.0.0"
+      "name": "@azure/core-sse@2.1.3"
     },
     {
-      "name": "@azure/core-tracing@1.0.1"
+      "name": "@azure/core-tracing@1.2.0"
     },
     {
-      "name": "@azure/core-util@1.4.0"
+      "name": "@azure/core-util@1.11.0"
     },
     {
-      "name": "@azure/core-xml@1.3.4"
+      "name": "@azure/core-xml@1.4.4"
     },
     {
-      "name": "@azure/cosmos@4.0.0"
+      "name": "@azure/cosmos@4.2.0"
     },
     {
-      "name": "@azure/data-tables@13.2.2"
+      "name": "@azure/data-tables@13.3.0"
     },
     {
       "name": "@azure/digital-twins-core@1.1.0"
     },
     {
-      "name": "@azure/event-hubs@5.11.1"
+      "name": "@azure/event-hubs@5.12.2"
     },
     {
-      "name": "@azure/eventgrid@4.14.0"
+      "name": "@azure/eventgrid@5.11.0"
+    },
+    {
+      "name": "@azure/eventgrid-namespaces@1.0.0"
     },
     {
       "name": "@azure/eventhubs-checkpointstore-blob@1.0.1"
     },
     {
-      "name": "@azure/functions@3.5.1"
+      "name": "@azure/functions@4.0.0"
     },
     {
-      "name": "@azure/identity@3.3.0"
+      "name": "@azure/identity@4.7.0"
     },
     {
-      "name": "@azure/keyvault-admin@4.4.0"
+      "name": "@azure/identity-broker@1.2.0"
     },
     {
-      "name": "@azure/keyvault-certificates@4.7.0"
+      "name": "@azure/identity-cache-persistence@1.2.0"
     },
     {
-      "name": "@azure/keyvault-common@1.0.0"
+      "name": "@azure/identity-vscode@1.0.0"
     },
     {
-      "name": "@azure/keyvault-keys@4.7.2"
+      "name": "@azure/keyvault-admin@4.6.0"
     },
     {
-      "name": "@azure/keyvault-secrets@4.7.0"
+      "name": "@azure/keyvault-certificates@4.9.0"
     },
     {
-      "name": "@azure/logger@1.0.4"
+      "name": "@azure/keyvault-common@2.0.0"
     },
     {
-      "name": "@azure/monitor-ingestion@1.0.0"
+      "name": "@azure/keyvault-keys@4.9.0"
     },
     {
-      "name": "@azure/monitor-query@1.1.1"
+      "name": "@azure/keyvault-secrets@4.9.0"
+    },
+    {
+      "name": "@azure/logger@1.1.4"
+    },
+    {
+      "name": "@azure/monitor-ingestion@1.1.0"
+    },
+    {
+      "name": "@azure/monitor-opentelemetry@1.8.1"
+    },
+    {
+      "name": "@azure/monitor-query@1.3.1"
     },
     {
       "name": "@azure/ms-rest-azure-env@2.0.0"
@@ -777,43 +894,46 @@
       "name": "@azure/ms-rest-nodeauth@3.1.1"
     },
     {
-      "name": "@azure/msal-node@1.14.0"
+      "name": "@azure/notification-hubs@2.0.0"
     },
     {
-      "name": "@azure/notification-hubs@1.0.2"
+      "name": "@azure/schema-registry@1.3.0"
     },
     {
-      "name": "@azure/schema-registry@1.2.0"
+      "name": "@azure/schema-registry-avro@1.1.0"
     },
     {
-      "name": "@azure/schema-registry-avro@1.0.0"
+      "name": "@azure/schema-registry-json@1.0.0"
     },
     {
-      "name": "@azure/search-documents@11.3.2"
+      "name": "@azure/search-documents@12.1.0"
     },
     {
-      "name": "@azure/service-bus@7.9.1"
+      "name": "@azure/service-bus@7.9.5"
     },
     {
       "name": "@azure/servicefabric@5.0.0"
     },
     {
-      "name": "@azure/storage-blob@12.16.0"
+      "name": "@azure/storage-blob@12.26.0"
     },
     {
-      "name": "@azure/storage-file-datalake@12.14.0"
+      "name": "@azure/storage-file-datalake@12.25.0"
     },
     {
-      "name": "@azure/storage-file-share@12.15.0"
+      "name": "@azure/storage-file-share@12.26.0"
     },
     {
-      "name": "@azure/storage-queue@12.14.0"
+      "name": "@azure/storage-queue@12.25.0"
     },
     {
       "name": "@azure/synapse@1.0.0-preview.1"
     },
     {
-      "name": "@azure/web-pubsub@1.1.1"
+      "name": "@azure/web-pubsub@1.1.3"
+    },
+    {
+      "name": "@azure/web-pubsub-client@1.0.2"
     },
     {
       "name": "@azure/web-pubsub-express@1.0.5"
@@ -837,16 +957,16 @@
       "name": "azure-iothub@1.15.1"
     },
     {
-      "name": "durable-functions@2.1.3"
+      "name": "durable-functions@3.0.0"
     },
     {
-      "name": "microsoft-cognitiveservices-speech-sdk@1.32.0"
+      "name": "microsoft-cognitiveservices-speech-sdk@1.42.0"
     }
   ],
+  "source_repos": [],
   "target_repo": {
     "url": "https://github.com/MicrosoftDocs/azure-docs-sdk-node",
     "folder": "./",
     "branch": "smoke-test"
-  },
-  "source_repos": []
+  }
 }

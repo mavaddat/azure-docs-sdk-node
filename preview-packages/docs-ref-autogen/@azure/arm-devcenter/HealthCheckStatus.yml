@@ -10,17 +10,17 @@ summary: >-
    this enum contains the known values that the service supports.
   ### Known values supported by the service
 
+  **Unknown** \
+
   **Pending** \
 
   **Running** \
 
   **Passed** \
 
-  **Failed** \
-
   **Warning** \
 
-  **Unknown**
+  **Failed**
 fullName: HealthCheckStatus
 remarks: ''
 isDeprecated: false

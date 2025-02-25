@@ -17,20 +17,20 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsGetContainerLogsZipSlot200Response |
+        StreamableMethod<WebAppsGetContainerLogsZipSlot200Response |
         WebAppsGetContainerLogsZipSlot204Response |
-        WebAppsGetContainerLogsZipSlotdefaultResponse>
+        WebAppsGetContainerLogsZipSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetContainerLogsZipSlot200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsGetContainerLogsZipSlot204Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetContainerLogsZipSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetContainerLogsZipSlotDefaultResponse"
           />&gt;

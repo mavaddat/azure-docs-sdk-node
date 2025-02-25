@@ -1,8 +1,6 @@
 ---
 title: Azure Changes client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/arm-changes, changes
-author: xirzec
-ms.author: jeffish
 ms.date: 11/18/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -110,7 +108,7 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for JavaScript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fchanges%2Farm-changes%2FREADME.png)
+
 
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

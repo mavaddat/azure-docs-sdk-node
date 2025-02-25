@@ -22,7 +22,7 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, profileName: string,
         ruleSetName: string, options?: RuleSetsDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -41,7 +41,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, RuleSetsDeleteOptionalParams)
     uid: '@azure/arm-cdn.RuleSets.beginDeleteAndWait'
     package: '@azure/arm-cdn'
@@ -167,16 +169,17 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-cdn.RuleSet" />,
-          <xref uid="@azure/arm-cdn.RuleSet" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-cdn.RuleSet" />, <xref uid="@azure/arm-cdn.RuleSet"
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listResourceUsage(string, string, string,
       RuleSetsListResourceUsageOptionalParams)
     uid: '@azure/arm-cdn.RuleSets.listResourceUsage'
     package: '@azure/arm-cdn'
     summary: >-
-      Checks the quota and actual usage of the given AzureFrontDoor rule set
-      under the given CDN profile.
+      Checks the quota and actual usage of endpoints under the given Azure Front
+      Door profile..
     remarks: ''
     isDeprecated: false
     syntax:
@@ -206,5 +209,6 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref uid="@azure/arm-cdn.Usage" />,
-          <xref uid="@azure/arm-cdn.Usage" />[], PageSettings&gt;
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
+          uid="@azure/arm-cdn.Usage" />, <xref uid="@azure/arm-cdn.Usage" />[],
+          <xref uid="@azure/core-paging.PageSettings" />&gt;

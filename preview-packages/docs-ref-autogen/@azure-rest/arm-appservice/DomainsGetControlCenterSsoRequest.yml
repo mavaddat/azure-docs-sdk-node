@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<DomainsGetControlCenterSsoRequest200Response |
-        DomainsGetControlCenterSsoRequestdefaultResponse>
+        StreamableMethod<DomainsGetControlCenterSsoRequest200Response |
+        DomainsGetControlCenterSsoRequestDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.DomainsGetControlCenterSsoRequest200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.DomainsGetControlCenterSsoRequestdefaultResponse"
+          uid="@azure-rest/arm-appservice.DomainsGetControlCenterSsoRequestDefaultResponse"
           />&gt;

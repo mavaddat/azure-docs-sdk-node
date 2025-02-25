@@ -2,7 +2,7 @@
 name: CheckAvailabilityParameters
 uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters'
 package: '@azure/arm-notificationhubs'
-summary: >-
+summary: |-
   Parameters supplied to the Check Name Availability for Namespace and
   NotificationHubs.
 fullName: CheckAvailabilityParameters
@@ -14,7 +14,7 @@ properties:
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.id'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource Id
+      Gets resource Id
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.
@@ -29,9 +29,7 @@ properties:
   - name: isAvailiable
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.isAvailiable'
     package: '@azure/arm-notificationhubs'
-    summary: >-
-      True if the name is available and can be used to create new
-      Namespace/NotificationHub. Otherwise false.
+    summary: Not used and deprecated since API version 2023-01-01-preview
     fullName: isAvailiable
     remarks: ''
     isDeprecated: false
@@ -43,7 +41,7 @@ properties:
   - name: location
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.location'
     package: '@azure/arm-notificationhubs'
-    summary: Resource location
+    summary: Gets or sets resource location
     fullName: location
     remarks: ''
     isDeprecated: false
@@ -55,7 +53,7 @@ properties:
   - name: name
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.name'
     package: '@azure/arm-notificationhubs'
-    summary: Resource name
+    summary: Gets or sets resource name
     fullName: name
     remarks: ''
     isDeprecated: false
@@ -67,7 +65,7 @@ properties:
   - name: sku
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.sku'
     package: '@azure/arm-notificationhubs'
-    summary: The sku of the created namespace
+    summary: The Sku description for a namespace
     fullName: sku
     remarks: ''
     isDeprecated: false
@@ -79,7 +77,7 @@ properties:
   - name: tags
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.tags'
     package: '@azure/arm-notificationhubs'
-    summary: Resource tags
+    summary: Gets or sets resource tags
     fullName: tags
     remarks: ''
     isDeprecated: false
@@ -92,7 +90,7 @@ properties:
     uid: '@azure/arm-notificationhubs.CheckAvailabilityParameters.type'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Resource type
+      Gets resource type
 
       NOTE: This property will not be serialized. It can only be populated by
       the server.

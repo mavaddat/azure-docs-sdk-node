@@ -50,7 +50,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.StorageAppliance" />&gt;, <xref
           uid="@azure/arm-networkcloud.StorageAppliance" />&gt;&gt;
   - name: >-
@@ -110,7 +111,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, storageApplianceName:
         string, options?: StorageAppliancesDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -127,8 +129,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, StorageAppliancesDeleteOptionalParams)
     uid: '@azure/arm-networkcloud.StorageAppliances.beginDeleteAndWait'
     package: '@azure/arm-networkcloud'
@@ -145,7 +149,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         storageApplianceName: string, options?:
-        StorageAppliancesDeleteOptionalParams): Promise<void>
+        StorageAppliancesDeleteOptionalParams): Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -161,7 +165,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
+          />&gt;
   - name: >-
       beginDisableRemoteVendorManagement(string, string,
       StorageAppliancesDisableRemoteVendorManagementOptionalParams)
@@ -176,8 +182,8 @@ methods:
         function beginDisableRemoteVendorManagement(resourceGroupName: string,
         storageApplianceName: string, options?:
         StorageAppliancesDisableRemoteVendorManagementOptionalParams):
-        Promise<SimplePollerLike<OperationState<StorageAppliancesDisableRemoteVendorManagementHeaders>,
-        StorageAppliancesDisableRemoteVendorManagementHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -194,11 +200,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesDisableRemoteVendorManagementHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.StorageAppliancesDisableRemoteVendorManagementHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginDisableRemoteVendorManagementAndWait(string, string,
       StorageAppliancesDisableRemoteVendorManagementOptionalParams)
@@ -213,7 +218,7 @@ methods:
         function beginDisableRemoteVendorManagementAndWait(resourceGroupName:
         string, storageApplianceName: string, options?:
         StorageAppliancesDisableRemoteVendorManagementOptionalParams):
-        Promise<StorageAppliancesDisableRemoteVendorManagementHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -230,8 +235,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesDisableRemoteVendorManagementHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: >-
       beginEnableRemoteVendorManagement(string, string,
@@ -247,8 +251,8 @@ methods:
         function beginEnableRemoteVendorManagement(resourceGroupName: string,
         storageApplianceName: string, options?:
         StorageAppliancesEnableRemoteVendorManagementOptionalParams):
-        Promise<SimplePollerLike<OperationState<StorageAppliancesEnableRemoteVendorManagementHeaders>,
-        StorageAppliancesEnableRemoteVendorManagementHeaders>>
+        Promise<SimplePollerLike<OperationState<OperationStatusResult>,
+        OperationStatusResult>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -265,11 +269,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesEnableRemoteVendorManagementHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.StorageAppliancesEnableRemoteVendorManagementHeaders"
-          />&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;, <xref
+          uid="@azure/arm-networkcloud.OperationStatusResult" />&gt;&gt;
   - name: >-
       beginEnableRemoteVendorManagementAndWait(string, string,
       StorageAppliancesEnableRemoteVendorManagementOptionalParams)
@@ -284,7 +287,7 @@ methods:
         function beginEnableRemoteVendorManagementAndWait(resourceGroupName:
         string, storageApplianceName: string, options?:
         StorageAppliancesEnableRemoteVendorManagementOptionalParams):
-        Promise<StorageAppliancesEnableRemoteVendorManagementHeaders>
+        Promise<OperationStatusResult>
       parameters:
         - id: resourceGroupName
           type: string
@@ -301,97 +304,7 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesEnableRemoteVendorManagementHeaders"
-          />&gt;
-  - name: >-
-      beginRunReadCommands(string, string,
-      StorageApplianceRunReadCommandsParameters,
-      StorageAppliancesRunReadCommandsOptionalParams)
-    uid: '@azure/arm-networkcloud.StorageAppliances.beginRunReadCommands'
-    package: '@azure/arm-networkcloud'
-    summary: >-
-      Run and retrieve output from read only commands on the provided storage
-      appliance.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginRunReadCommands(resourceGroupName: string,
-        storageApplianceName: string, storageApplianceRunReadCommandsParameters:
-        StorageApplianceRunReadCommandsParameters, options?:
-        StorageAppliancesRunReadCommandsOptionalParams):
-        Promise<SimplePollerLike<OperationState<StorageAppliancesRunReadCommandsHeaders>,
-        StorageAppliancesRunReadCommandsHeaders>>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: storageApplianceName
-          type: string
-          description: The name of the storage appliance.
-        - id: storageApplianceRunReadCommandsParameters
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.StorageApplianceRunReadCommandsParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.StorageAppliancesRunReadCommandsOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesRunReadCommandsHeaders"
-          />&gt;, <xref
-          uid="@azure/arm-networkcloud.StorageAppliancesRunReadCommandsHeaders"
-          />&gt;&gt;
-  - name: >-
-      beginRunReadCommandsAndWait(string, string,
-      StorageApplianceRunReadCommandsParameters,
-      StorageAppliancesRunReadCommandsOptionalParams)
-    uid: '@azure/arm-networkcloud.StorageAppliances.beginRunReadCommandsAndWait'
-    package: '@azure/arm-networkcloud'
-    summary: >-
-      Run and retrieve output from read only commands on the provided storage
-      appliance.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function beginRunReadCommandsAndWait(resourceGroupName: string,
-        storageApplianceName: string, storageApplianceRunReadCommandsParameters:
-        StorageApplianceRunReadCommandsParameters, options?:
-        StorageAppliancesRunReadCommandsOptionalParams):
-        Promise<StorageAppliancesRunReadCommandsHeaders>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group. The name is case insensitive.
-        - id: storageApplianceName
-          type: string
-          description: The name of the storage appliance.
-        - id: storageApplianceRunReadCommandsParameters
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.StorageApplianceRunReadCommandsParameters"
-            />
-          description: The request body.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-networkcloud.StorageAppliancesRunReadCommandsOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-networkcloud.StorageAppliancesRunReadCommandsHeaders"
+          Promise&lt;<xref uid="@azure/arm-networkcloud.OperationStatusResult"
           />&gt;
   - name: beginUpdate(string, string, StorageAppliancesUpdateOptionalParams)
     uid: '@azure/arm-networkcloud.StorageAppliances.beginUpdate'
@@ -425,7 +338,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-networkcloud.StorageAppliance" />&gt;, <xref
           uid="@azure/arm-networkcloud.StorageAppliance" />&gt;&gt;
   - name: beginUpdateAndWait(string, string, StorageAppliancesUpdateOptionalParams)
@@ -511,9 +425,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.StorageAppliance" />, <xref
-          uid="@azure/arm-networkcloud.StorageAppliance" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.StorageAppliance" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listBySubscription(StorageAppliancesListBySubscriptionOptionalParams)
     uid: '@azure/arm-networkcloud.StorageAppliances.listBySubscription'
     package: '@azure/arm-networkcloud'
@@ -536,6 +451,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-networkcloud.StorageAppliance" />, <xref
-          uid="@azure/arm-networkcloud.StorageAppliance" />[], PageSettings&gt;
+          uid="@azure/arm-networkcloud.StorageAppliance" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-imagebuilder.Trigger" />&gt;, <xref
           uid="@azure/arm-imagebuilder.Trigger" />&gt;&gt;
   - name: >-
@@ -96,7 +97,8 @@ methods:
       content: >-
         function beginDelete(resourceGroupName: string, imageTemplateName:
         string, triggerName: string, options?: TriggersDeleteOptionalParams):
-        Promise<SimplePollerLike<OperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<TriggersDeleteHeaders>,
+        TriggersDeleteHeaders>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -113,8 +115,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-imagebuilder.TriggersDeleteHeaders" />&gt;, <xref
+          uid="@azure/arm-imagebuilder.TriggersDeleteHeaders" />&gt;&gt;
   - name: beginDeleteAndWait(string, string, string, TriggersDeleteOptionalParams)
     uid: '@azure/arm-imagebuilder.Triggers.beginDeleteAndWait'
     package: '@azure/arm-imagebuilder'
@@ -125,7 +129,7 @@ methods:
       content: >-
         function beginDeleteAndWait(resourceGroupName: string,
         imageTemplateName: string, triggerName: string, options?:
-        TriggersDeleteOptionalParams): Promise<void>
+        TriggersDeleteOptionalParams): Promise<TriggersDeleteHeaders>
       parameters:
         - id: resourceGroupName
           type: string
@@ -141,7 +145,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-imagebuilder.TriggersDeleteHeaders"
+          />&gt;
   - name: get(string, string, string, TriggersGetOptionalParams)
     uid: '@azure/arm-imagebuilder.Triggers.get'
     package: '@azure/arm-imagebuilder'
@@ -199,6 +205,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-imagebuilder.Trigger" />, <xref
-          uid="@azure/arm-imagebuilder.Trigger" />[], PageSettings&gt;
+          uid="@azure/arm-imagebuilder.Trigger" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

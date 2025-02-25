@@ -15,7 +15,24 @@ interfaces:
   - '@azure/core-auth.SASCredential'
   - '@azure/core-auth.TokenCredential'
   - '@azure/core-auth.TracingContext'
+typeAliases:
+  - '@azure/core-auth.HttpMethods'
 functions:
+  - name: isKeyCredential(unknown)
+    uid: '@azure/core-auth.isKeyCredential'
+    package: '@azure/core-auth'
+    summary: Tests an object to determine whether it implements KeyCredential.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isKeyCredential(credential: unknown): credential'
+      parameters:
+        - id: credential
+          type: unknown
+          description: The assumed KeyCredential to be tested.
+      return:
+        description: ''
+        type: credential
   - name: isNamedKeyCredential(unknown)
     uid: '@azure/core-auth.isNamedKeyCredential'
     package: '@azure/core-auth'

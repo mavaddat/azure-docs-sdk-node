@@ -1,16 +1,12 @@
 ---
 title: Azure Storage File Share client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/storage-file-share, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/storage-file-share,
 ms.date: 11/11/2020
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: storage
 ms.subservice: files
 ---
-
 # Azure Storage File Share client library for JavaScript - version 12.3.0 
 
 
@@ -527,5 +523,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 Also refer to [Storage specific guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/storage-file-share_12.3.0/sdk/storage/CONTRIBUTING.md) for additional information on setting up the test environment for storage libraries.
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fstorage%2Fstorage-file-share%2FREADME.png)
+
 

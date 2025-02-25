@@ -1,15 +1,11 @@
 ---
 title: Azure Synapse Spark client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/synapse-spark, synapseanalytics
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 10/05/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: synapse-analytics
 ---
-
 ## Azure Synapse Spark client library for JavaScript - version 1.0.0-beta.4 
 
 
@@ -53,7 +49,7 @@ export async function main(): Promise<void> {
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcdn%2Farm-cdn%2FREADME.png)
+
 
 ## Troubleshooting
 
@@ -73,5 +69,5 @@ In the future, you'll find additional code samples here.
 
 If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/synapse-spark_1.0.0-beta.4/CONTRIBUTING.md) to learn more about how to build and test the code.
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fkeyvault%2Fkeyvault-keys%2FREADME.png)
+
 

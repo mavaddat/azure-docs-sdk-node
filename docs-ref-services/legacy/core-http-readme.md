@@ -1,15 +1,11 @@
 ---
 title: Azure Core HTTP client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/core-http, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/core-http,
 ms.date: 11/06/2020
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: azure
 ---
-
 # Azure Core HTTP client library for JavaScript - version 1.2.0 
 
 
@@ -84,5 +80,5 @@ If you run into issues while using this library, please feel free to [file an is
 
 If you'd like to contribute to this library, please read the [contributing guide](https://github.com/Azure/azure-sdk-for-js/blob/@azure/core-http_1.2.0/CONTRIBUTING.md) to learn more about how to build and test the code.
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcore%2Fcore-http%2FREADME.png)
+
 

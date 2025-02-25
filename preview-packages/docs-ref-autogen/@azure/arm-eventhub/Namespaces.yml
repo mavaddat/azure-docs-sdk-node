@@ -44,7 +44,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-eventhub.EHNamespace" />&gt;, <xref
           uid="@azure/arm-eventhub.EHNamespace" />&gt;&gt;
   - name: >-
@@ -110,8 +111,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: beginDeleteAndWait(string, string, NamespacesDeleteOptionalParams)
     uid: '@azure/arm-eventhub.Namespaces.beginDeleteAndWait'
     package: '@azure/arm-eventhub'
@@ -139,6 +140,66 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
+  - name: beginFailover(string, string, FailOver, NamespacesFailoverOptionalParams)
+    uid: '@azure/arm-eventhub.Namespaces.beginFailover'
+    package: '@azure/arm-eventhub'
+    summary: GeoDR Failover
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginFailover(resourceGroupName: string, namespaceName: string,
+        parameters: FailOver, options?: NamespacesFailoverOptionalParams):
+        Promise<SimplePollerLike<OperationState<FailOver>, FailOver>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group within the azure subscription.
+        - id: namespaceName
+          type: string
+          description: The Namespace name
+        - id: parameters
+          type: <xref uid="@azure/arm-eventhub.FailOver" />
+          description: Parameters for updating a namespace resource.
+        - id: options
+          type: <xref uid="@azure/arm-eventhub.NamespacesFailoverOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-eventhub.FailOver" />&gt;, <xref
+          uid="@azure/arm-eventhub.FailOver" />&gt;&gt;
+  - name: >-
+      beginFailoverAndWait(string, string, FailOver,
+      NamespacesFailoverOptionalParams)
+    uid: '@azure/arm-eventhub.Namespaces.beginFailoverAndWait'
+    package: '@azure/arm-eventhub'
+    summary: GeoDR Failover
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginFailoverAndWait(resourceGroupName: string, namespaceName:
+        string, parameters: FailOver, options?:
+        NamespacesFailoverOptionalParams): Promise<FailOver>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: Name of the resource group within the azure subscription.
+        - id: namespaceName
+          type: string
+          description: The Namespace name
+        - id: parameters
+          type: <xref uid="@azure/arm-eventhub.FailOver" />
+          description: Parameters for updating a namespace resource.
+        - id: options
+          type: <xref uid="@azure/arm-eventhub.NamespacesFailoverOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-eventhub.FailOver" />&gt;
   - name: >-
       checkNameAvailability(CheckNameAvailabilityParameter,
       NamespacesCheckNameAvailabilityOptionalParams)
@@ -374,9 +435,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-eventhub.EHNamespace" />, <xref
-          uid="@azure/arm-eventhub.EHNamespace" />[], PageSettings&gt;
+          uid="@azure/arm-eventhub.EHNamespace" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAuthorizationRules(string, string,
       NamespacesListAuthorizationRulesOptionalParams)
@@ -408,9 +470,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-eventhub.AuthorizationRule" />, <xref
-          uid="@azure/arm-eventhub.AuthorizationRule" />[], PageSettings&gt;
+          uid="@azure/arm-eventhub.AuthorizationRule" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByResourceGroup(string, NamespacesListByResourceGroupOptionalParams)
     uid: '@azure/arm-eventhub.Namespaces.listByResourceGroup'
     package: '@azure/arm-eventhub'
@@ -435,9 +498,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-eventhub.EHNamespace" />, <xref
-          uid="@azure/arm-eventhub.EHNamespace" />[], PageSettings&gt;
+          uid="@azure/arm-eventhub.EHNamespace" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listKeys(string, string, string, NamespacesListKeysOptionalParams)
     uid: '@azure/arm-eventhub.Namespaces.listKeys'
     package: '@azure/arm-eventhub'

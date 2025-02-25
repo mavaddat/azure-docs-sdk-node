@@ -23,6 +23,21 @@ properties:
       return:
         description: ''
         type: string[]
+  - name: capacityReservationGroupID
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.capacityReservationGroupID
+    package: '@azure/arm-containerservice'
+    summary: >-
+      AKS will associate the specified agent pool with the Capacity Reservation
+      Group.
+    fullName: capacityReservationGroupID
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'capacityReservationGroupID?: string'
+      return:
+        description: ''
+        type: string
   - name: count
     uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.count'
     package: '@azure/arm-containerservice'
@@ -151,6 +166,25 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: eTag
+    uid: '@azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.eTag'
+    package: '@azure/arm-containerservice'
+    summary: >-
+      Unique read-only string used to implement optimistic concurrency. The eTag
+      value will change when the resource is updated. Specify an if-match or
+      if-none-match header with the eTag value for a subsequent request to
+      enable optimistic concurrency per the normal etag convention.
+
+      NOTE: This property will not be serialized. It can only be populated by
+      the server.
+    fullName: eTag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'eTag?: string'
+      return:
+        description: ''
+        type: string
   - name: gpuInstanceProfile
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.gpuInstanceProfile
@@ -278,6 +312,19 @@ properties:
       return:
         description: ''
         type: string
+  - name: networkProfile
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.networkProfile
+    package: '@azure/arm-containerservice'
+    summary: Network-related settings of an agent pool.
+    fullName: networkProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'networkProfile?: AgentPoolNetworkProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.AgentPoolNetworkProfile" />
   - name: nodeImageVersion
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.nodeImageVersion
@@ -532,6 +579,19 @@ properties:
       return:
         description: ''
         type: string
+  - name: securityProfile
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.securityProfile
+    package: '@azure/arm-containerservice'
+    summary: The security settings of an agent pool.
+    fullName: securityProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'securityProfile?: AgentPoolSecurityProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.AgentPoolSecurityProfile" />
   - name: spotMaxPrice
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.spotMaxPrice
@@ -620,6 +680,19 @@ properties:
       return:
         description: ''
         type: string
+  - name: windowsProfile
+    uid: >-
+      @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.windowsProfile
+    package: '@azure/arm-containerservice'
+    summary: The Windows agent pool's specific profile.
+    fullName: windowsProfile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'windowsProfile?: AgentPoolWindowsProfile'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-containerservice.AgentPoolWindowsProfile" />
   - name: workloadRuntime
     uid: >-
       @azure/arm-containerservice.ManagedClusterAgentPoolProfileProperties.workloadRuntime

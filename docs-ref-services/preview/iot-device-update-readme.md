@@ -1,15 +1,11 @@
 ---
 title: Azure Device Update for IoT Hub client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/iot-device-update, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/iot-device-update,
 ms.date: 03/04/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: iot-hub-device-update
 ---
-
 # Azure Device Update for IoT Hub client library for JavaScript - version 1.0.0-beta.1 
 
 
@@ -77,5 +73,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fdeviceupdate%2Fiot-device-update%2FREADME.png)
+
 

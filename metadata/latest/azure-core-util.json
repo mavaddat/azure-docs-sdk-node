@@ -1,6 +1,6 @@
 {
   "Name": "@azure/core-util",
-  "Version": "1.4.0",
+  "Version": "1.11.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/core-util",
   "ServiceDirectory": "core",
@@ -10,5 +10,11 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-util",
-  "ReleaseStatus": "2023-08-03"
+  "ReleaseStatus": "2024-10-15",
+  "IncludedForValidation": false,
+  "AdditionalValidationPackages": null,
+  "ArtifactDetails": {
+    "name": "azure-core-util",
+    "safeName": "azurecoreutil"
+  }
 }

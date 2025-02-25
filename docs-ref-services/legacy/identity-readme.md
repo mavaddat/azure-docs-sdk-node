@@ -1,15 +1,11 @@
 ---
 title: Azure Identity client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/identity, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/identity,
 ms.date: 11/11/2020
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: identity
 ---
-
 ## Azure Identity client library for JavaScript - version 1.2.0 
 
 
@@ -251,5 +247,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 [azureclilogindevicecode_image]: https://raw.githubusercontent.com/Azure/azure-sdk-for-js/master/sdk/identity/identity/images/AzureCliLoginDeviceCode.png
 [defaultauthflow_image]: https://raw.githubusercontent.com/Azure/azure-sdk-for-js/master/sdk/identity/identity/images/DefaultAzureCredentialAuthenticationFlow.png
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fidentity%2Fidentity%2FREADME.png)
+
 

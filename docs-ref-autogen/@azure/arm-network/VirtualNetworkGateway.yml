@@ -63,6 +63,21 @@ properties:
       return:
         description: ''
         type: boolean
+  - name: autoScaleConfiguration
+    uid: '@azure/arm-network.VirtualNetworkGateway.autoScaleConfiguration'
+    package: '@azure/arm-network'
+    summary: Autoscale configuration for virutal network gateway
+    fullName: autoScaleConfiguration
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'autoScaleConfiguration?: VirtualNetworkGatewayAutoScaleConfiguration'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/arm-network.VirtualNetworkGatewayAutoScaleConfiguration"
+          />
   - name: bgpSettings
     uid: '@azure/arm-network.VirtualNetworkGateway.bgpSettings'
     package: '@azure/arm-network'
@@ -207,6 +222,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: identity
+    uid: '@azure/arm-network.VirtualNetworkGateway.identity'
+    package: '@azure/arm-network'
+    summary: The identity of the virtual network gateway, if configured.
+    fullName: identity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'identity?: ManagedServiceIdentity'
+      return:
+        description: ''
+        type: <xref uid="@azure/arm-network.ManagedServiceIdentity" />
   - name: inboundDnsForwardingEndpoint
     uid: '@azure/arm-network.VirtualNetworkGateway.inboundDnsForwardingEndpoint'
     package: '@azure/arm-network'
@@ -262,6 +289,20 @@ properties:
     isDeprecated: false
     syntax:
       content: 'provisioningState?: string'
+      return:
+        description: ''
+        type: string
+  - name: resiliencyModel
+    uid: '@azure/arm-network.VirtualNetworkGateway.resiliencyModel'
+    package: '@azure/arm-network'
+    summary: >-
+      Property to indicate if the Express Route Gateway has resiliency model of
+      MultiHomed or SingleHomed
+    fullName: resiliencyModel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resiliencyModel?: string'
       return:
         description: ''
         type: string

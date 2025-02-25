@@ -14,7 +14,15 @@ summary: >-
 
   **Python3_6_5** \
 
-  **Python3_10_8**
+  **Python3_10_8** \
+
+  **Python3_10_8_DL** \
+
+  **PythonCustomImage** \
+
+  **Python3_11_7** \
+
+  **Python3_11_7_DL**
 fullName: LanguageExtensionImageName
 remarks: ''
 isDeprecated: false

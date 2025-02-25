@@ -51,7 +51,7 @@ constructors:
             validate that this URL references a valid Key Vault or Managed HSM
             resource. See https://aka.ms/azsdk/blog/vault-uri for details.
         - id: credential
-          type: TokenCredential
+          type: <xref uid="@azure/core-auth.TokenCredential" />
           description: >-
             An object that implements the `TokenCredential` interface used to
             authenticate requests to the service. Use the @azure/identity
@@ -598,7 +598,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;Uint8Array&gt;
-  - name: importKey(string, JsonWebKey_2, ImportKeyOptions)
+  - name: importKey(string, JsonWebKey, ImportKeyOptions)
     uid: '@azure/keyvault-keys.KeyClient.importKey'
     package: '@azure/keyvault-keys'
     summary: >-
@@ -631,7 +631,7 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function importKey(name: string, key: JsonWebKey_2, options?:
+        function importKey(name: string, key: JsonWebKey, options?:
         ImportKeyOptions): Promise<KeyVaultKey>
       parameters:
         - id: name

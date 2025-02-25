@@ -1,14 +1,11 @@
 ---
 title: Azure Quantum Jobs client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/quantum-jobs, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/quantum-jobs,
 ms.date: 02/05/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: azure-quantum
-
+---
 ## Azure Quantum Jobs client library for JavaScript - version 1.0.0-beta.1 
 
 
@@ -218,5 +215,5 @@ All Quantum Jobs service operations will throw a RequestFailedException on failu
 [style-guide-msft]: https://docs.microsoft.com/style-guide/capitalization
 [style-guide-cloud]: https://aka.ms/azsdk/cloud-style-guide
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fappconfiguration%2Fapp-configuration%2FREADME.png)
+
 

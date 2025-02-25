@@ -9,6 +9,81 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginApproveRollingUpgrade(string, string,
+      VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams)
+    uid: '@azure/arm-compute.VirtualMachineScaleSets.beginApproveRollingUpgrade'
+    package: '@azure/arm-compute'
+    summary: >-
+      Approve upgrade on deferred rolling upgrades for OS disks in the virtual
+      machines in a VM scale set.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginApproveRollingUpgrade(resourceGroupName: string,
+        vmScaleSetName: string, options?:
+        VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams):
+        Promise<SimplePollerLike<OperationState<VirtualMachineScaleSetsApproveRollingUpgradeHeaders>,
+        VirtualMachineScaleSetsApproveRollingUpgradeHeaders>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetsApproveRollingUpgradeHeaders"
+          />&gt;, <xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetsApproveRollingUpgradeHeaders"
+          />&gt;&gt;
+  - name: >-
+      beginApproveRollingUpgradeAndWait(string, string,
+      VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams)
+    uid: >-
+      @azure/arm-compute.VirtualMachineScaleSets.beginApproveRollingUpgradeAndWait
+    package: '@azure/arm-compute'
+    summary: >-
+      Approve upgrade on deferred rolling upgrades for OS disks in the virtual
+      machines in a VM scale set.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginApproveRollingUpgradeAndWait(resourceGroupName: string,
+        vmScaleSetName: string, options?:
+        VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams):
+        Promise<VirtualMachineScaleSetsApproveRollingUpgradeHeaders>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group.
+        - id: vmScaleSetName
+          type: string
+          description: The name of the VM scale set.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-compute.VirtualMachineScaleSetsApproveRollingUpgradeOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-compute.VirtualMachineScaleSetsApproveRollingUpgradeHeaders"
+          />&gt;
+  - name: >-
       beginCreateOrUpdate(string, string, VirtualMachineScaleSet,
       VirtualMachineScaleSetsCreateOrUpdateOptionalParams)
     uid: '@azure/arm-compute.VirtualMachineScaleSets.beginCreateOrUpdate'
@@ -42,7 +117,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />&gt;&gt;
   - name: >-
@@ -116,8 +192,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeallocateAndWait(string, string,
       VirtualMachineScaleSetsDeallocateOptionalParams)
@@ -181,8 +257,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string,
       VirtualMachineScaleSetsDeleteOptionalParams)
@@ -249,8 +325,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteInstancesAndWait(string, string,
       VirtualMachineScaleSetVMInstanceRequiredIDs,
@@ -302,7 +378,7 @@ methods:
 
       details:
 
-      https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-maintenance-notifications
+      https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-maintenance-notifications
     remarks: ''
     isDeprecated: false
     syntax:
@@ -327,8 +403,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPerformMaintenanceAndWait(string, string,
       VirtualMachineScaleSetsPerformMaintenanceOptionalParams)
@@ -343,7 +419,7 @@ methods:
 
       details:
 
-      https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-maintenance-notifications
+      https://learn.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-maintenance-notifications
     remarks: ''
     isDeprecated: false
     syntax:
@@ -379,7 +455,10 @@ methods:
       attached and you are getting charged for the resources. Instead, use
       deallocate to release resources
 
-      and avoid charges.
+      and avoid charges. Additionally, this operation is not allowed on virtual
+      machines in a VM scale set
+
+      that are being deallocated or have already been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -403,8 +482,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginPowerOffAndWait(string, string,
       VirtualMachineScaleSetsPowerOffOptionalParams)
@@ -417,7 +496,10 @@ methods:
       attached and you are getting charged for the resources. Instead, use
       deallocate to release resources
 
-      and avoid charges.
+      and avoid charges. Additionally, this operation is not allowed on virtual
+      machines in a VM scale set
+
+      that are being deallocated or have already been deallocated.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -470,8 +552,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginReapplyAndWait(string, string,
       VirtualMachineScaleSetsReapplyOptionalParams)
@@ -536,8 +618,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRedeployAndWait(string, string,
       VirtualMachineScaleSetsRedeployOptionalParams)
@@ -605,8 +687,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginReimageAll(string, string,
       VirtualMachineScaleSetsReimageAllOptionalParams)
@@ -640,8 +722,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginReimageAllAndWait(string, string,
       VirtualMachineScaleSetsReimageAllOptionalParams)
@@ -738,8 +820,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginRestartAndWait(string, string,
       VirtualMachineScaleSetsRestartOptionalParams)
@@ -805,8 +887,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginSetOrchestrationServiceStateAndWait(string, string,
       OrchestrationServiceStateInput,
@@ -870,8 +952,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginStartAndWait(string, string,
       VirtualMachineScaleSetsStartOptionalParams)
@@ -935,7 +1017,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />&gt;, <xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />&gt;&gt;
   - name: >-
@@ -1012,8 +1095,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginUpdateInstancesAndWait(string, string,
       VirtualMachineScaleSetVMInstanceRequiredIDs,
@@ -1218,9 +1301,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />, <xref
-          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listAll(VirtualMachineScaleSetsListAllOptionalParams)
     uid: '@azure/arm-compute.VirtualMachineScaleSets.listAll'
     package: '@azure/arm-compute'
@@ -1250,9 +1334,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />, <xref
-          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByLocation(string,
       VirtualMachineScaleSetsListByLocationOptionalParams)
@@ -1284,9 +1369,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSet" />, <xref
-          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineScaleSet" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listOSUpgradeHistory(string, string,
       VirtualMachineScaleSetsGetOSUpgradeHistoryOptionalParams)
@@ -1318,10 +1404,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.UpgradeOperationHistoricalStatusInfo" />,
           <xref uid="@azure/arm-compute.UpgradeOperationHistoricalStatusInfo"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listSkus(string, string, VirtualMachineScaleSetsListSkusOptionalParams)
     uid: '@azure/arm-compute.VirtualMachineScaleSets.listSkus'
     package: '@azure/arm-compute'
@@ -1354,7 +1440,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-compute.VirtualMachineScaleSetSku" />, <xref
-          uid="@azure/arm-compute.VirtualMachineScaleSetSku" />[],
-          PageSettings&gt;
+          uid="@azure/arm-compute.VirtualMachineScaleSetSku" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

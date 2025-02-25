@@ -1,8 +1,6 @@
 ---
 title: Azure Communication Short Codes client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure-tools/communication-short-codes, communication
-author: petrsvihlik
-ms.author: petrsvihlik
 ms.date: 08/18/2022
 ms.topic: reference
 ms.devlang: javascript
@@ -315,5 +313,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 [azure_identity]: https://github.com/Azure/azure-sdk-for-js/tree/@azure-tools/communication-short-codes_1.0.0-beta.4/sdk/identity/identity
 [azure_identity_readme]: https://github.com/Azure/azure-sdk-for-js/blob/@azure-tools/communication-short-codes_1.0.0-beta.4/sdk/identity/identity/README.md
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fcommunication%2Fcommunication-phone-numbers%2FREADME.png)
+
 

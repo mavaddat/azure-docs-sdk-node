@@ -9,6 +9,7 @@ isDeprecated: false
 syntax: |
   type SerializationUnion =
     | Serialization
+    | DeltaSerialization
     | ParquetSerialization
     | CustomClrSerialization
     | CsvSerialization

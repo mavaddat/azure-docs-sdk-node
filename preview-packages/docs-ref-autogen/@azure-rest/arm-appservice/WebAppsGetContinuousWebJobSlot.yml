@@ -17,22 +17,22 @@ methods:
     syntax:
       content: >-
         function delete(options?: RequestParameters):
-        Promise<WebAppsDeleteContinuousWebJobSlot200Response |
+        StreamableMethod<WebAppsDeleteContinuousWebJobSlot200Response |
         WebAppsDeleteContinuousWebJobSlot204Response |
-        WebAppsDeleteContinuousWebJobSlotdefaultResponse>
+        WebAppsDeleteContinuousWebJobSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteContinuousWebJobSlot200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteContinuousWebJobSlot204Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsDeleteContinuousWebJobSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsDeleteContinuousWebJobSlotDefaultResponse"
           />&gt;
   - name: get(RequestParameters)
     uid: '@azure-rest/arm-appservice.WebAppsGetContinuousWebJobSlot.get'
@@ -43,20 +43,20 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetContinuousWebJobSlot200Response |
+        StreamableMethod<WebAppsGetContinuousWebJobSlot200Response |
         WebAppsGetContinuousWebJobSlot404Response |
-        WebAppsGetContinuousWebJobSlotdefaultResponse>
+        WebAppsGetContinuousWebJobSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetContinuousWebJobSlot200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsGetContinuousWebJobSlot404Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetContinuousWebJobSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetContinuousWebJobSlotDefaultResponse"
           />&gt;

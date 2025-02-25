@@ -16,7 +16,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'ipAddress?: string'
+      content: 'ipAddress: string'
       return:
         description: ''
         type: string

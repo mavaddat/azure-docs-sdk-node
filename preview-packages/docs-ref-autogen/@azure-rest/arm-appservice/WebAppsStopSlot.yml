@@ -17,14 +17,15 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsStopSlot200Response | WebAppsStopSlotdefaultResponse>
+        StreamableMethod<WebAppsStopSlot200Response |
+        WebAppsStopSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsStopSlot200Response" /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsStopSlotdefaultResponse" />&gt;
+          uid="@azure-rest/arm-appservice.WebAppsStopSlotDefaultResponse" />&gt;

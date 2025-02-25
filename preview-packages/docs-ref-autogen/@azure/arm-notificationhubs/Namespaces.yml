@@ -8,65 +8,82 @@ remarks: ''
 isDeprecated: false
 type: interface
 methods:
-  - name: beginDelete(string, string, NamespacesDeleteOptionalParams)
-    uid: '@azure/arm-notificationhubs.Namespaces.beginDelete'
+  - name: >-
+      beginCreateOrUpdate(string, string, NamespaceResource,
+      NamespacesCreateOrUpdateOptionalParams)
+    uid: '@azure/arm-notificationhubs.Namespaces.beginCreateOrUpdate'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Deletes an existing namespace. This operation also removes all associated
-      notificationHubs under the
-
-      namespace.
+      Creates / Updates a Notification Hub namespace. This operation is
+      idempotent.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function beginDelete(resourceGroupName: string, namespaceName: string,
-        options?: NamespacesDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        function beginCreateOrUpdate(resourceGroupName: string, namespaceName:
+        string, parameters: NamespaceResource, options?:
+        NamespacesCreateOrUpdateOptionalParams):
+        Promise<SimplePollerLike<OperationState<NamespaceResource>,
+        NamespaceResource>>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
+        - id: parameters
+          type: <xref uid="@azure/arm-notificationhubs.NamespaceResource" />
+          description: Request content.
         - id: options
           type: >-
             <xref
-            uid="@azure/arm-notificationhubs.NamespacesDeleteOptionalParams" />
+            uid="@azure/arm-notificationhubs.NamespacesCreateOrUpdateOptionalParams"
+            />
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
-  - name: beginDeleteAndWait(string, string, NamespacesDeleteOptionalParams)
-    uid: '@azure/arm-notificationhubs.Namespaces.beginDeleteAndWait'
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-notificationhubs.NamespaceResource" />&gt;, <xref
+          uid="@azure/arm-notificationhubs.NamespaceResource" />&gt;&gt;
+  - name: >-
+      beginCreateOrUpdateAndWait(string, string, NamespaceResource,
+      NamespacesCreateOrUpdateOptionalParams)
+    uid: '@azure/arm-notificationhubs.Namespaces.beginCreateOrUpdateAndWait'
     package: '@azure/arm-notificationhubs'
     summary: >-
-      Deletes an existing namespace. This operation also removes all associated
-      notificationHubs under the
-
-      namespace.
+      Creates / Updates a Notification Hub namespace. This operation is
+      idempotent.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function beginDeleteAndWait(resourceGroupName: string, namespaceName:
-        string, options?: NamespacesDeleteOptionalParams): Promise<void>
+        function beginCreateOrUpdateAndWait(resourceGroupName: string,
+        namespaceName: string, parameters: NamespaceResource, options?:
+        NamespacesCreateOrUpdateOptionalParams): Promise<NamespaceResource>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
+        - id: parameters
+          type: <xref uid="@azure/arm-notificationhubs.NamespaceResource" />
+          description: Request content.
         - id: options
           type: >-
             <xref
-            uid="@azure/arm-notificationhubs.NamespacesDeleteOptionalParams" />
+            uid="@azure/arm-notificationhubs.NamespacesCreateOrUpdateOptionalParams"
+            />
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;void&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-notificationhubs.NamespaceResource"
+          />&gt;
   - name: >-
       checkAvailability(CheckAvailabilityParameters,
       NamespacesCheckAvailabilityOptionalParams)
@@ -90,7 +107,7 @@ methods:
           type: >-
             <xref uid="@azure/arm-notificationhubs.CheckAvailabilityParameters"
             />
-          description: The namespace name.
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -103,49 +120,8 @@ methods:
           Promise&lt;<xref
           uid="@azure/arm-notificationhubs.CheckAvailabilityResult" />&gt;
   - name: >-
-      createOrUpdate(string, string, NamespaceCreateOrUpdateParameters,
-      NamespacesCreateOrUpdateOptionalParams)
-    uid: '@azure/arm-notificationhubs.Namespaces.createOrUpdate'
-    package: '@azure/arm-notificationhubs'
-    summary: >-
-      Creates/Updates a service namespace. Once created, this namespace's
-      resource manifest is immutable.
-
-      This operation is idempotent.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function createOrUpdate(resourceGroupName: string, namespaceName:
-        string, parameters: NamespaceCreateOrUpdateParameters, options?:
-        NamespacesCreateOrUpdateOptionalParams): Promise<NamespaceResource>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group.
-        - id: namespaceName
-          type: string
-          description: The namespace name.
-        - id: parameters
-          type: >-
-            <xref
-            uid="@azure/arm-notificationhubs.NamespaceCreateOrUpdateParameters"
-            />
-          description: Parameters supplied to create a Namespace Resource.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-notificationhubs.NamespacesCreateOrUpdateOptionalParams"
-            />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref uid="@azure/arm-notificationhubs.NamespaceResource"
-          />&gt;
-  - name: >-
       createOrUpdateAuthorizationRule(string, string, string,
-      SharedAccessAuthorizationRuleCreateOrUpdateParameters,
+      SharedAccessAuthorizationRuleResource,
       NamespacesCreateOrUpdateAuthorizationRuleOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.createOrUpdateAuthorizationRule'
     package: '@azure/arm-notificationhubs'
@@ -156,25 +132,25 @@ methods:
       content: >-
         function createOrUpdateAuthorizationRule(resourceGroupName: string,
         namespaceName: string, authorizationRuleName: string, parameters:
-        SharedAccessAuthorizationRuleCreateOrUpdateParameters, options?:
+        SharedAccessAuthorizationRuleResource, options?:
         NamespacesCreateOrUpdateAuthorizationRuleOptionalParams):
         Promise<SharedAccessAuthorizationRuleResource>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: authorizationRuleName
           type: string
-          description: Authorization Rule Name.
+          description: Authorization Rule Name
         - id: parameters
           type: >-
             <xref
-            uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleCreateOrUpdateParameters"
+            uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
             />
-          description: The shared access authorization rule.
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -187,6 +163,35 @@ methods:
           Promise&lt;<xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
           />&gt;
+  - name: delete(string, string, NamespacesDeleteOptionalParams)
+    uid: '@azure/arm-notificationhubs.Namespaces.delete'
+    package: '@azure/arm-notificationhubs'
+    summary: >-
+      Deletes an existing namespace. This operation also removes all associated
+      notificationHubs under the
+
+      namespace.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function delete(resourceGroupName: string, namespaceName: string,
+        options?: NamespacesDeleteOptionalParams): Promise<void>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: namespaceName
+          type: string
+          description: Namespace name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.NamespacesDeleteOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: >-
       deleteAuthorizationRule(string, string, string,
       NamespacesDeleteAuthorizationRuleOptionalParams)
@@ -203,13 +208,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: authorizationRuleName
           type: string
-          description: Authorization Rule Name.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -222,7 +227,7 @@ methods:
   - name: get(string, string, NamespacesGetOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.get'
     package: '@azure/arm-notificationhubs'
-    summary: Returns the description for the specified namespace.
+    summary: Returns the given namespace.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -232,10 +237,10 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: options
           type: >-
             <xref uid="@azure/arm-notificationhubs.NamespacesGetOptionalParams"
@@ -263,13 +268,13 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name
+          description: Namespace name
         - id: authorizationRuleName
           type: string
-          description: Authorization rule name.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -282,10 +287,41 @@ methods:
           Promise&lt;<xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
           />&gt;
+  - name: >-
+      getPnsCredentials(string, string,
+      NamespacesGetPnsCredentialsOptionalParams)
+    uid: '@azure/arm-notificationhubs.Namespaces.getPnsCredentials'
+    package: '@azure/arm-notificationhubs'
+    summary: Lists the PNS credentials associated with a namespace.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPnsCredentials(resourceGroupName: string, namespaceName:
+        string, options?: NamespacesGetPnsCredentialsOptionalParams):
+        Promise<PnsCredentialsResource>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: namespaceName
+          type: string
+          description: Namespace name
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.NamespacesGetPnsCredentialsOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/arm-notificationhubs.PnsCredentialsResource" />&gt;
   - name: list(string, NamespacesListOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.list'
     package: '@azure/arm-notificationhubs'
-    summary: Lists the available namespaces within a resourceGroup.
+    summary: Lists the available namespaces within a resource group.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -297,10 +333,7 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: >-
-            The name of the resource group. If resourceGroupName value is null
-            the
-                                     method lists all the namespaces within subscription
+          description: The name of the resource group. The name is case insensitive.
         - id: options
           type: >-
             <xref uid="@azure/arm-notificationhubs.NamespacesListOptionalParams"
@@ -309,16 +342,14 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-notificationhubs.NamespaceResource" />, <xref
-          uid="@azure/arm-notificationhubs.NamespaceResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-notificationhubs.NamespaceResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listAll(NamespacesListAllOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.listAll'
     package: '@azure/arm-notificationhubs'
-    summary: >-
-      Lists all the available namespaces within the subscription irrespective of
-      the resourceGroups.
+    summary: Lists all the available namespaces within the subscription.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -335,10 +366,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-notificationhubs.NamespaceResource" />, <xref
-          uid="@azure/arm-notificationhubs.NamespaceResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-notificationhubs.NamespaceResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listAuthorizationRules(string, string,
       NamespacesListAuthorizationRulesOptionalParams)
@@ -357,10 +388,10 @@ methods:
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name
+          description: Namespace name
         - id: options
           type: >-
             <xref
@@ -370,35 +401,32 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
           />, <xref
           uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleResource"
-          />[], PageSettings&gt;
+          />[], <xref uid="@azure/core-paging.PageSettings" />&gt;
   - name: listKeys(string, string, string, NamespacesListKeysOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.listKeys'
     package: '@azure/arm-notificationhubs'
-    summary: Gets the Primary and Secondary ConnectionStrings to the namespace
+    summary: Gets the Primary and Secondary ConnectionStrings to the namespace.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function listKeys(resourceGroupName: string, namespaceName: string,
         authorizationRuleName: string, options?:
-        NamespacesListKeysOptionalParams):
-        Promise<SharedAccessAuthorizationRuleListResult>
+        NamespacesListKeysOptionalParams): Promise<ResourceListKeys>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: authorizationRuleName
           type: string
-          description: |-
-            The connection string of the namespace for the specified
-                                         authorizationRule.
+          description: Authorization Rule Name
         - id: options
           type: >-
             <xref
@@ -408,44 +436,10 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
-          uid="@azure/arm-notificationhubs.SharedAccessAuthorizationRuleListResult"
+          Promise&lt;<xref uid="@azure/arm-notificationhubs.ResourceListKeys"
           />&gt;
   - name: >-
-      patch(string, string, NamespacePatchParameters,
-      NamespacesPatchOptionalParams)
-    uid: '@azure/arm-notificationhubs.Namespaces.patch'
-    package: '@azure/arm-notificationhubs'
-    summary: Patches the existing namespace
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function patch(resourceGroupName: string, namespaceName: string,
-        parameters: NamespacePatchParameters, options?:
-        NamespacesPatchOptionalParams): Promise<NamespaceResource>
-      parameters:
-        - id: resourceGroupName
-          type: string
-          description: The name of the resource group.
-        - id: namespaceName
-          type: string
-          description: The namespace name.
-        - id: parameters
-          type: <xref uid="@azure/arm-notificationhubs.NamespacePatchParameters" />
-          description: Parameters supplied to patch a Namespace Resource.
-        - id: options
-          type: >-
-            <xref
-            uid="@azure/arm-notificationhubs.NamespacesPatchOptionalParams" />
-          description: The options parameters.
-      return:
-        description: ''
-        type: >-
-          Promise&lt;<xref uid="@azure/arm-notificationhubs.NamespaceResource"
-          />&gt;
-  - name: >-
-      regenerateKeys(string, string, string, PolicykeyResource,
+      regenerateKeys(string, string, string, PolicyKeyResource,
       NamespacesRegenerateKeysOptionalParams)
     uid: '@azure/arm-notificationhubs.Namespaces.regenerateKeys'
     package: '@azure/arm-notificationhubs'
@@ -455,26 +449,22 @@ methods:
     syntax:
       content: >-
         function regenerateKeys(resourceGroupName: string, namespaceName:
-        string, authorizationRuleName: string, parameters: PolicykeyResource,
+        string, authorizationRuleName: string, parameters: PolicyKeyResource,
         options?: NamespacesRegenerateKeysOptionalParams):
         Promise<ResourceListKeys>
       parameters:
         - id: resourceGroupName
           type: string
-          description: The name of the resource group.
+          description: The name of the resource group. The name is case insensitive.
         - id: namespaceName
           type: string
-          description: The namespace name.
+          description: Namespace name
         - id: authorizationRuleName
           type: string
-          description: |-
-            The connection string of the namespace for the specified
-                                         authorizationRule.
+          description: Authorization Rule Name
         - id: parameters
-          type: <xref uid="@azure/arm-notificationhubs.PolicykeyResource" />
-          description: >-
-            Parameters supplied to regenerate the Namespace Authorization Rule
-            Key.
+          type: <xref uid="@azure/arm-notificationhubs.PolicyKeyResource" />
+          description: Request content.
         - id: options
           type: >-
             <xref
@@ -485,4 +475,37 @@ methods:
         description: ''
         type: >-
           Promise&lt;<xref uid="@azure/arm-notificationhubs.ResourceListKeys"
+          />&gt;
+  - name: >-
+      update(string, string, NamespacePatchParameters,
+      NamespacesUpdateOptionalParams)
+    uid: '@azure/arm-notificationhubs.Namespaces.update'
+    package: '@azure/arm-notificationhubs'
+    summary: Patches the existing namespace.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function update(resourceGroupName: string, namespaceName: string,
+        parameters: NamespacePatchParameters, options?:
+        NamespacesUpdateOptionalParams): Promise<NamespaceResource>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: The name of the resource group. The name is case insensitive.
+        - id: namespaceName
+          type: string
+          description: Namespace name
+        - id: parameters
+          type: <xref uid="@azure/arm-notificationhubs.NamespacePatchParameters" />
+          description: Request content.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-notificationhubs.NamespacesUpdateOptionalParams" />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/arm-notificationhubs.NamespaceResource"
           />&gt;

@@ -22,7 +22,7 @@ methods:
         string, attachedNetworkConnectionName: string, body:
         AttachedNetworkConnection, options?:
         AttachedNetworksCreateOrUpdateOptionalParams):
-        Promise<PollerLike<PollOperationState<AttachedNetworkConnection>,
+        Promise<SimplePollerLike<OperationState<AttachedNetworkConnection>,
         AttachedNetworkConnection>>
       parameters:
         - id: resourceGroupName
@@ -46,7 +46,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;PollerLike&lt;PollOperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />&gt;, <xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />&gt;&gt;
   - name: >-
@@ -99,7 +100,7 @@ methods:
         function beginDelete(resourceGroupName: string, devCenterName: string,
         attachedNetworkConnectionName: string, options?:
         AttachedNetworksDeleteOptionalParams):
-        Promise<PollerLike<PollOperationState<void>, void>>
+        Promise<SimplePollerLike<OperationState<void>, void>>
       parameters:
         - id: resourceGroupName
           type: string
@@ -117,7 +118,9 @@ methods:
           description: The options parameters.
       return:
         description: ''
-        type: Promise&lt;PollerLike&lt;PollOperationState&lt;void&gt;, void&gt;&gt;
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string,
       AttachedNetworksDeleteOptionalParams)
@@ -249,10 +252,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[],
-          PageSettings&gt;
+          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: listByProject(string, string, AttachedNetworksListByProjectOptionalParams)
     uid: '@azure/arm-devcenter.AttachedNetworks.listByProject'
     package: '@azure/arm-devcenter'
@@ -281,7 +284,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-devcenter.AttachedNetworkConnection" />, <xref
-          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[],
-          PageSettings&gt;
+          uid="@azure/arm-devcenter.AttachedNetworkConnection" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

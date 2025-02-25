@@ -18,17 +18,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<AccountsGetAccessKeys200Response |
-        AccountsGetAccessKeysdefaultResponse>
+        StreamableMethod<AccountsGetAccessKeys200Response |
+        AccountsGetAccessKeysDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/purview-administration.PurviewAccount.Responses.AccountsGetAccessKeys200Response"
           /> | <xref
-          uid="@azure-rest/purview-administration.PurviewAccount.Responses.AccountsGetAccessKeysdefaultResponse"
+          uid="@azure-rest/purview-administration.PurviewAccount.Responses.AccountsGetAccessKeysDefaultResponse"
           />&gt;

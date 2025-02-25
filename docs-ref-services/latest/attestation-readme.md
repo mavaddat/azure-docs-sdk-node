@@ -1,15 +1,11 @@
 ---
 title: Azure Attestation client library for JavaScript
 keywords: Azure, javascript, SDK, API, @azure/attestation, attestation
-author: ramya-rao-a
-ms.author: ramyar
 ms.date: 08/13/2021
 ms.topic: reference
-ms.technology: azure
 ms.devlang: javascript
 ms.service: attestation
 ---
-
 # Azure Attestation client library for JavaScript - version 1.0.0 
 
 
@@ -437,5 +433,5 @@ section of the project.
 
 - [Microsoft Azure SDK for Javascript](https://github.com/Azure/azure-sdk-for-js)
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fattestation%2Fattestation%2FREADME.png)
+
 

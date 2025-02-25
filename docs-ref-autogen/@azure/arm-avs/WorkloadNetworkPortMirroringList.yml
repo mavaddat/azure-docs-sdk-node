@@ -2,7 +2,7 @@
 name: WorkloadNetworkPortMirroringList
 uid: '@azure/arm-avs.WorkloadNetworkPortMirroringList'
 package: '@azure/arm-avs'
-summary: A list of NSX Port Mirroring
+summary: The response of a WorkloadNetworkPortMirroring list operation.
 fullName: WorkloadNetworkPortMirroringList
 remarks: ''
 isDeprecated: false
@@ -11,11 +11,7 @@ properties:
   - name: nextLink
     uid: '@azure/arm-avs.WorkloadNetworkPortMirroringList.nextLink'
     package: '@azure/arm-avs'
-    summary: >-
-      URL to get the next page if any
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The link to the next page of items
     fullName: nextLink
     remarks: ''
     isDeprecated: false
@@ -27,16 +23,12 @@ properties:
   - name: value
     uid: '@azure/arm-avs.WorkloadNetworkPortMirroringList.value'
     package: '@azure/arm-avs'
-    summary: >-
-      The items on the page
-
-      NOTE: This property will not be serialized. It can only be populated by
-      the server.
+    summary: The WorkloadNetworkPortMirroring items on this page
     fullName: value
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'value?: WorkloadNetworkPortMirroring[]'
+      content: 'value: WorkloadNetworkPortMirroring[]'
       return:
         description: ''
         type: <xref uid="@azure/arm-avs.WorkloadNetworkPortMirroring" />[]

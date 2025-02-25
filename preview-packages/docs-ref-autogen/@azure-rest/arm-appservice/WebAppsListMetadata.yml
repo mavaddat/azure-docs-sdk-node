@@ -17,17 +17,17 @@ methods:
     syntax:
       content: >-
         function post(options?: RequestParameters):
-        Promise<WebAppsListMetadata200Response |
-        WebAppsListMetadatadefaultResponse>
+        StreamableMethod<WebAppsListMetadata200Response |
+        WebAppsListMetadataDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsListMetadata200Response" /> |
           <xref
-          uid="@azure-rest/arm-appservice.WebAppsListMetadatadefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsListMetadataDefaultResponse"
           />&gt;

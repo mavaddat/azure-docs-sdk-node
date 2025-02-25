@@ -17,22 +17,22 @@ methods:
     syntax:
       content: >-
         function delete(options?: RequestParameters):
-        Promise<WebAppsDeleteHostNameBindingSlot200Response |
+        StreamableMethod<WebAppsDeleteHostNameBindingSlot200Response |
         WebAppsDeleteHostNameBindingSlot204Response |
-        WebAppsDeleteHostNameBindingSlotdefaultResponse>
+        WebAppsDeleteHostNameBindingSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteHostNameBindingSlot200Response"
           /> | <xref
           uid="@azure-rest/arm-appservice.WebAppsDeleteHostNameBindingSlot204Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsDeleteHostNameBindingSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsDeleteHostNameBindingSlotDefaultResponse"
           />&gt;
   - name: get(RequestParameters)
     uid: '@azure-rest/arm-appservice.WebAppsGetHostNameBindingSlot.get'
@@ -45,19 +45,19 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetHostNameBindingSlot200Response |
-        WebAppsGetHostNameBindingSlotdefaultResponse>
+        StreamableMethod<WebAppsGetHostNameBindingSlot200Response |
+        WebAppsGetHostNameBindingSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetHostNameBindingSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetHostNameBindingSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetHostNameBindingSlotDefaultResponse"
           />&gt;
   - name: put(WebAppsCreateOrUpdateHostNameBindingSlotParameters)
     uid: '@azure-rest/arm-appservice.WebAppsGetHostNameBindingSlot.put'
@@ -69,8 +69,8 @@ methods:
       content: >-
         function put(options:
         WebAppsCreateOrUpdateHostNameBindingSlotParameters):
-        Promise<WebAppsCreateOrUpdateHostNameBindingSlot200Response |
-        WebAppsCreateOrUpdateHostNameBindingSlotdefaultResponse>
+        StreamableMethod<WebAppsCreateOrUpdateHostNameBindingSlot200Response |
+        WebAppsCreateOrUpdateHostNameBindingSlotDefaultResponse>
       parameters:
         - id: options
           type: >-
@@ -81,8 +81,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsCreateOrUpdateHostNameBindingSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsCreateOrUpdateHostNameBindingSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsCreateOrUpdateHostNameBindingSlotDefaultResponse"
           />&gt;

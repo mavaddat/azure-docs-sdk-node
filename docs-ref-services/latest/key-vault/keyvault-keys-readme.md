@@ -1,15 +1,11 @@
 ---
 title: Azure Key Vault Key client library for JavaScript
-keywords: Azure, javascript, SDK, API, @azure/keyvault-keys, 
-author: ramya-rao-a
-ms.author: ramyar
+keywords: Azure, javascript, SDK, API, @azure/keyvault-keys,
 ms.date: 07/29/2021
 ms.topic: article
-ms.technology: azure
 ms.devlang: javascript
 ms.service: key-vault
 ---
-
 # Azure Key Vault Key client library for JavaScript - version 4.3.0 
 
 
@@ -883,5 +879,5 @@ If you'd like to contribute to this library, please read the [contributing guide
 [createkeyvault]: https://docs.microsoft.com/azure/key-vault/quick-create-portal
 [softdelete]: https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-js%2Fsdk%2Fkeyvault%2Fkeyvault-keys%2FREADME.png)
+
 

@@ -14,8 +14,8 @@ methods:
     uid: '@azure/arm-redisenterprisecache.PrivateLinkResources.listByCluster'
     package: '@azure/arm-redisenterprisecache'
     summary: >-
-      Gets the private link resources that need to be created for a
-      RedisEnterprise cluster.
+      Gets the private link resources that need to be created for a Redis
+      Enterprise cluster.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -30,7 +30,7 @@ methods:
           description: The name of the resource group. The name is case insensitive.
         - id: clusterName
           type: string
-          description: The name of the RedisEnterprise cluster.
+          description: The name of the Redis Enterprise cluster.
         - id: options
           type: >-
             <xref
@@ -40,7 +40,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-redisenterprisecache.PrivateLinkResource" />, <xref
-          uid="@azure/arm-redisenterprisecache.PrivateLinkResource" />[],
-          PageSettings&gt;
+          uid="@azure/arm-redisenterprisecache.PrivateLinkResource" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

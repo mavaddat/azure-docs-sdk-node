@@ -9,6 +9,222 @@ isDeprecated: false
 type: interface
 methods:
   - name: >-
+      beginChangeAccessTier(string, string, string, string,
+      ChangeLongTermRetentionBackupAccessTierParameters,
+      LongTermRetentionBackupsChangeAccessTierOptionalParams)
+    uid: '@azure/arm-sql.LongTermRetentionBackups.beginChangeAccessTier'
+    package: '@azure/arm-sql'
+    summary: Change a long term retention backup access tier.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginChangeAccessTier(locationName: string,
+        longTermRetentionServerName: string, longTermRetentionDatabaseName:
+        string, backupName: string, parameters:
+        ChangeLongTermRetentionBackupAccessTierParameters, options?:
+        LongTermRetentionBackupsChangeAccessTierOptionalParams):
+        Promise<SimplePollerLike<OperationState<LongTermRetentionBackup>,
+        LongTermRetentionBackup>>
+      parameters:
+        - id: locationName
+          type: string
+          description: ''
+        - id: longTermRetentionServerName
+          type: string
+          description: ''
+        - id: longTermRetentionDatabaseName
+          type: string
+          description: ''
+        - id: backupName
+          type: string
+          description: ''
+        - id: parameters
+          type: >-
+            <xref
+            uid="@azure/arm-sql.ChangeLongTermRetentionBackupAccessTierParameters"
+            />
+          description: >-
+            Contains the information necessary to change long term retention
+            backup access
+                              tier and related operation mode.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-sql.LongTermRetentionBackupsChangeAccessTierOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;, <xref
+          uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;&gt;
+  - name: >-
+      beginChangeAccessTierAndWait(string, string, string, string,
+      ChangeLongTermRetentionBackupAccessTierParameters,
+      LongTermRetentionBackupsChangeAccessTierOptionalParams)
+    uid: '@azure/arm-sql.LongTermRetentionBackups.beginChangeAccessTierAndWait'
+    package: '@azure/arm-sql'
+    summary: Change a long term retention backup access tier.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginChangeAccessTierAndWait(locationName: string,
+        longTermRetentionServerName: string, longTermRetentionDatabaseName:
+        string, backupName: string, parameters:
+        ChangeLongTermRetentionBackupAccessTierParameters, options?:
+        LongTermRetentionBackupsChangeAccessTierOptionalParams):
+        Promise<LongTermRetentionBackup>
+      parameters:
+        - id: locationName
+          type: string
+          description: ''
+        - id: longTermRetentionServerName
+          type: string
+          description: ''
+        - id: longTermRetentionDatabaseName
+          type: string
+          description: ''
+        - id: backupName
+          type: string
+          description: ''
+        - id: parameters
+          type: >-
+            <xref
+            uid="@azure/arm-sql.ChangeLongTermRetentionBackupAccessTierParameters"
+            />
+          description: >-
+            Contains the information necessary to change long term retention
+            backup access
+                              tier and related operation mode.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-sql.LongTermRetentionBackupsChangeAccessTierOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;
+  - name: >-
+      beginChangeAccessTierByResourceGroup(string, string, string, string,
+      string, ChangeLongTermRetentionBackupAccessTierParameters,
+      LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams)
+    uid: >-
+      @azure/arm-sql.LongTermRetentionBackups.beginChangeAccessTierByResourceGroup
+    package: '@azure/arm-sql'
+    summary: Change a long term retention backup access tier.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginChangeAccessTierByResourceGroup(resourceGroupName: string,
+        locationName: string, longTermRetentionServerName: string,
+        longTermRetentionDatabaseName: string, backupName: string, parameters:
+        ChangeLongTermRetentionBackupAccessTierParameters, options?:
+        LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams):
+        Promise<SimplePollerLike<OperationState<LongTermRetentionBackup>,
+        LongTermRetentionBackup>>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: locationName
+          type: string
+          description: ''
+        - id: longTermRetentionServerName
+          type: string
+          description: ''
+        - id: longTermRetentionDatabaseName
+          type: string
+          description: ''
+        - id: backupName
+          type: string
+          description: ''
+        - id: parameters
+          type: >-
+            <xref
+            uid="@azure/arm-sql.ChangeLongTermRetentionBackupAccessTierParameters"
+            />
+          description: >-
+            Contains the information necessary to change long term retention
+            backup access
+                              tier and related operation mode.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-sql.LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
+          uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;, <xref
+          uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;&gt;
+  - name: >-
+      beginChangeAccessTierByResourceGroupAndWait(string, string, string,
+      string, string, ChangeLongTermRetentionBackupAccessTierParameters,
+      LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams)
+    uid: >-
+      @azure/arm-sql.LongTermRetentionBackups.beginChangeAccessTierByResourceGroupAndWait
+    package: '@azure/arm-sql'
+    summary: Change a long term retention backup access tier.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function beginChangeAccessTierByResourceGroupAndWait(resourceGroupName:
+        string, locationName: string, longTermRetentionServerName: string,
+        longTermRetentionDatabaseName: string, backupName: string, parameters:
+        ChangeLongTermRetentionBackupAccessTierParameters, options?:
+        LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams):
+        Promise<LongTermRetentionBackup>
+      parameters:
+        - id: resourceGroupName
+          type: string
+          description: >-
+            The name of the resource group that contains the resource. You can
+            obtain
+                                     this value from the Azure Resource Manager API or the portal.
+        - id: locationName
+          type: string
+          description: ''
+        - id: longTermRetentionServerName
+          type: string
+          description: ''
+        - id: longTermRetentionDatabaseName
+          type: string
+          description: ''
+        - id: backupName
+          type: string
+          description: ''
+        - id: parameters
+          type: >-
+            <xref
+            uid="@azure/arm-sql.ChangeLongTermRetentionBackupAccessTierParameters"
+            />
+          description: >-
+            Contains the information necessary to change long term retention
+            backup access
+                              tier and related operation mode.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/arm-sql.LongTermRetentionBackupsChangeAccessTierByResourceGroupOptionalParams"
+            />
+          description: The options parameters.
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/arm-sql.LongTermRetentionBackup" />&gt;
+  - name: >-
       beginCopy(string, string, string, string,
       CopyLongTermRetentionBackupParameters,
       LongTermRetentionBackupsCopyOptionalParams)
@@ -49,7 +265,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackupOperationResult" />&gt;,
           <xref uid="@azure/arm-sql.LongTermRetentionBackupOperationResult"
           />&gt;&gt;
@@ -145,7 +362,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackupOperationResult" />&gt;,
           <xref uid="@azure/arm-sql.LongTermRetentionBackupOperationResult"
           />&gt;&gt;
@@ -234,8 +452,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteAndWait(string, string, string, string,
       LongTermRetentionBackupsDeleteOptionalParams)
@@ -314,8 +532,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;void&gt;,
-          void&gt;&gt;
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;void&gt;, void&gt;&gt;
   - name: >-
       beginDeleteByResourceGroupAndWait(string, string, string, string, string,
       LongTermRetentionBackupsDeleteByResourceGroupOptionalParams)
@@ -402,7 +620,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackupOperationResult" />&gt;,
           <xref uid="@azure/arm-sql.LongTermRetentionBackupOperationResult"
           />&gt;&gt;
@@ -502,7 +721,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;SimplePollerLike&lt;OperationState&lt;<xref
+          Promise&lt;<xref uid="@azure/core-lro.SimplePollerLike" />&lt;<xref
+          uid="@azure/core-lro.OperationState" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackupOperationResult" />&gt;,
           <xref uid="@azure/arm-sql.LongTermRetentionBackupOperationResult"
           />&gt;&gt;
@@ -670,9 +890,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByLocation(string,
       LongTermRetentionBackupsListByLocationOptionalParams)
@@ -700,15 +921,18 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroupDatabase(string, string, string, string,
       LongTermRetentionBackupsListByResourceGroupDatabaseOptionalParams)
     uid: '@azure/arm-sql.LongTermRetentionBackups.listByResourceGroupDatabase'
     package: '@azure/arm-sql'
-    summary: Lists all long term retention backups for a database.
+    summary: >-
+      Lists all long term retention backups for a database based on a particular
+      resource group.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -744,15 +968,18 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroupLocation(string, string,
       LongTermRetentionBackupsListByResourceGroupLocationOptionalParams)
     uid: '@azure/arm-sql.LongTermRetentionBackups.listByResourceGroupLocation'
     package: '@azure/arm-sql'
-    summary: Lists the long term retention backups for a given location.
+    summary: >-
+      Lists the long term retention backups for a given location based on
+      resource group.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -781,15 +1008,18 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByResourceGroupServer(string, string, string,
       LongTermRetentionBackupsListByResourceGroupServerOptionalParams)
     uid: '@azure/arm-sql.LongTermRetentionBackups.listByResourceGroupServer'
     package: '@azure/arm-sql'
-    summary: Lists the long term retention backups for a given server.
+    summary: >-
+      Lists the long term retention backups for a given server based on resource
+      groups.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -821,9 +1051,10 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;
   - name: >-
       listByServer(string, string,
       LongTermRetentionBackupsListByServerOptionalParams)
@@ -854,6 +1085,7 @@ methods:
       return:
         description: ''
         type: >-
-          PagedAsyncIterableIterator&lt;<xref
+          <xref uid="@azure/core-paging.PagedAsyncIterableIterator" />&lt;<xref
           uid="@azure/arm-sql.LongTermRetentionBackup" />, <xref
-          uid="@azure/arm-sql.LongTermRetentionBackup" />[], PageSettings&gt;
+          uid="@azure/arm-sql.LongTermRetentionBackup" />[], <xref
+          uid="@azure/core-paging.PageSettings" />&gt;

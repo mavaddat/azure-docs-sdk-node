@@ -41,10 +41,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'dataToExtract?: string'
+      content: 'dataToExtract?: "storageMetadata" | "allMetadata" | "contentAndMetadata"'
       return:
         description: ''
-        type: string
+        type: '"storageMetadata" | "allMetadata" | "contentAndMetadata"'
   - name: delimitedTextDelimiter
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.delimitedTextDelimiter
@@ -114,10 +114,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'executionEnvironment?: string'
+      content: 'executionEnvironment?: "standard" | "private"'
       return:
         description: ''
-        type: string
+        type: '"standard" | "private"'
   - name: failOnUnprocessableDocument
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.failOnUnprocessableDocument
@@ -175,10 +175,12 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'imageAction?: string'
+      content: >-
+        imageAction?: "none" | "generateNormalizedImages" |
+        "generateNormalizedImagePerPage"
       return:
         description: ''
-        type: string
+        type: '"none" | "generateNormalizedImages" | "generateNormalizedImagePerPage"'
   - name: indexedFileNameExtensions
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.indexedFileNameExtensions
@@ -221,10 +223,14 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'parsingMode?: string'
+      content: >-
+        parsingMode?: "text" | "default" | "delimitedText" | "json" |
+        "jsonArray" | "jsonLines"
       return:
         description: ''
-        type: string
+        type: >-
+          "text" | "default" | "delimitedText" | "json" | "jsonArray" |
+          "jsonLines"
   - name: pdfTextRotationAlgorithm
     uid: >-
       @azure/search-documents.IndexingParametersConfiguration.pdfTextRotationAlgorithm
@@ -236,10 +242,10 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'pdfTextRotationAlgorithm?: string'
+      content: 'pdfTextRotationAlgorithm?: "none" | "detectAngles"'
       return:
         description: ''
-        type: string
+        type: '"none" | "detectAngles"'
   - name: queryTimeout
     uid: '@azure/search-documents.IndexingParametersConfiguration.queryTimeout'
     package: '@azure/search-documents'

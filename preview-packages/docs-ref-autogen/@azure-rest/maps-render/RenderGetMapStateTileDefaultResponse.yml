@@ -3,13 +3,10 @@ name: RenderGetMapStateTileDefaultResponse
 uid: '@azure-rest/maps-render.RenderGetMapStateTileDefaultResponse'
 package: '@azure-rest/maps-render'
 summary: >-
-  **Applies to:** see pricing [tiers](https://aka.ms/AzureMapsPricingTier).
-
-
   Fetches state tiles in vector format typically to be integrated into indoor
   maps module of map control or SDK. The map control will call this API after
-  user turns on dynamic styling (see [Zoom Levels and Tile
-  Grid](https://docs.microsoft.com/azure/location-based-services/zoom-levels-and-tile-grid))
+  user turns on dynamic styling. For more information, see [Zoom Levels and Tile
+  Grid](/azure/location-based-services/zoom-levels-and-tile-grid).
 fullName: RenderGetMapStateTileDefaultResponse
 remarks: ''
 isDeprecated: false
@@ -51,7 +48,7 @@ inheritedProperties:
       content: 'headers: RawHttpHeaders'
       return:
         description: ''
-        type: RawHttpHeaders
+        type: <xref uid="@azure/core-rest-pipeline.RawHttpHeaders" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.headers
   - name: request
     uid: '@azure-rest/maps-render.RenderGetMapStateTileDefaultResponse.request'
@@ -64,6 +61,6 @@ inheritedProperties:
       content: 'request: PipelineRequest'
       return:
         description: ''
-        type: PipelineRequest
+        type: <xref uid="@azure/core-rest-pipeline.PipelineRequest" />
     inheritanceDescription: <b>Inherited From</b> HttpResponse.request
-extends: HttpResponse
+extends: <xref uid="@azure-rest/core-client.HttpResponse" />

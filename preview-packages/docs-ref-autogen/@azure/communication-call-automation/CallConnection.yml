@@ -29,7 +29,9 @@ constructors:
           type: string
           description: ''
         - id: credential
-          type: TokenCredential | KeyCredential
+          type: >-
+            <xref uid="@azure/core-auth.TokenCredential" /> | <xref
+            uid="@azure/core-auth.KeyCredential" />
           description: ''
         - id: options
           type: CallAutomationApiClientOptionalParams
@@ -59,6 +61,36 @@ methods:
         type: >-
           Promise&lt;<xref
           uid="@azure/communication-call-automation.AddParticipantResult" />&gt;
+  - name: >-
+      cancelAddParticipantOperation(string,
+      CancelAddParticipantOperationOptions)
+    uid: >-
+      @azure/communication-call-automation.CallConnection.cancelAddParticipantOperation
+    package: '@azure/communication-call-automation'
+    summary: Cancel add participant operation.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function cancelAddParticipantOperation(invitationId: string, options?:
+        CancelAddParticipantOperationOptions):
+        Promise<CancelAddParticipantOperationResult>
+      parameters:
+        - id: invitationId
+          type: string
+          description: Invitation ID used to cancel the add participant request.
+        - id: options
+          type: >-
+            <xref
+            uid="@azure/communication-call-automation.CancelAddParticipantOperationOptions"
+            />
+          description: Additional attributes for cancel add participant operation.
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/communication-call-automation.CancelAddParticipantOperationResult"
+          />&gt;
   - name: getCallConnectionProperties(OperationOptions)
     uid: >-
       @azure/communication-call-automation.CallConnection.getCallConnectionProperties
@@ -72,7 +104,7 @@ methods:
         Promise<CallConnectionProperties>
       parameters:
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/core-client.OperationOptions" />
           description: ''
       return:
         description: ''
@@ -103,10 +135,10 @@ methods:
         options?: OperationOptions): Promise<CallParticipant>
       parameters:
         - id: targetParticipant
-          type: CommunicationIdentifier
+          type: <xref uid="@azure/communication-common.CommunicationIdentifier" />
           description: The communication identifier of requested participant.
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/core-client.OperationOptions" />
           description: ''
       return:
         description: ''
@@ -128,7 +160,7 @@ methods:
           type: boolean
           description: ''
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/core-client.OperationOptions" />
           description: ''
       return:
         description: ''
@@ -145,7 +177,7 @@ methods:
         Promise<ListParticipantsResult>
       parameters:
         - id: options
-          type: OperationOptions
+          type: <xref uid="@azure/core-client.OperationOptions" />
           description: ''
       return:
         description: ''
@@ -165,7 +197,7 @@ methods:
         MuteParticipantOption): Promise<MuteParticipantResult>
       parameters:
         - id: participant
-          type: CommunicationIdentifier
+          type: <xref uid="@azure/communication-common.CommunicationIdentifier" />
           description: Participant to be muted from the call.
         - id: options
           type: >-
@@ -190,7 +222,7 @@ methods:
         options?: RemoveParticipantsOption): Promise<RemoveParticipantResult>
       parameters:
         - id: participant
-          type: CommunicationIdentifier
+          type: <xref uid="@azure/communication-common.CommunicationIdentifier" />
           description: The participant is going to be removed from the call.
         - id: options
           type: >-
@@ -220,7 +252,7 @@ methods:
         Promise<TransferCallResult>
       parameters:
         - id: targetParticipant
-          type: CommunicationIdentifier
+          type: <xref uid="@azure/communication-common.CommunicationIdentifier" />
           description: The target to be transferred to.
         - id: options
           type: >-

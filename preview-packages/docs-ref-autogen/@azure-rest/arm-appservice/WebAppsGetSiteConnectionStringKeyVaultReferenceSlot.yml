@@ -18,17 +18,17 @@ methods:
     syntax:
       content: >-
         function get(options?: RequestParameters):
-        Promise<WebAppsGetSiteConnectionStringKeyVaultReferenceSlot200Response |
-        WebAppsGetSiteConnectionStringKeyVaultReferenceSlotdefaultResponse>
+        StreamableMethod<WebAppsGetSiteConnectionStringKeyVaultReferenceSlot200Response
+        | WebAppsGetSiteConnectionStringKeyVaultReferenceSlotDefaultResponse>
       parameters:
         - id: options
-          type: RequestParameters
+          type: <xref uid="@azure-rest/core-client.RequestParameters" />
           description: ''
       return:
         description: ''
         type: >-
-          Promise&lt;<xref
+          <xref uid="@azure-rest/core-client.StreamableMethod" />&lt;<xref
           uid="@azure-rest/arm-appservice.WebAppsGetSiteConnectionStringKeyVaultReferenceSlot200Response"
           /> | <xref
-          uid="@azure-rest/arm-appservice.WebAppsGetSiteConnectionStringKeyVaultReferenceSlotdefaultResponse"
+          uid="@azure-rest/arm-appservice.WebAppsGetSiteConnectionStringKeyVaultReferenceSlotDefaultResponse"
           />&gt;
